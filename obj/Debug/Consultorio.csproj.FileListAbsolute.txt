@@ -1,0 +1,24 @@
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\bin\Debug\Consultorio.exe.config
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\bin\Debug\Consultorio.exe
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\bin\Debug\Consultorio.pdb
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.csprojAssemblyReference.cache
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.GUILayer.frmAbmPaciente.resources
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.GUILayer.frmLogin.resources
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.frmPrincipal.resources
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.Properties.Resources.resources
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.csproj.GenerateResource.cache
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.csproj.CoreCompileInputs.cache
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.exe
+D:\UNIVERSIDAD\3er año\PAV1\TP\TpCami\Consultorio\Consultorio\obj\Debug\Consultorio.pdb
+C:\Users\flor\Downloads\Consultorio\Consultorio\bin\Debug\Consultorio.exe.config
+C:\Users\flor\Downloads\Consultorio\Consultorio\bin\Debug\Consultorio.exe
+C:\Users\flor\Downloads\Consultorio\Consultorio\bin\Debug\Consultorio.pdb
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.csprojAssemblyReference.cache
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.GUILayer.frmAbmPaciente.resources
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.GUILayer.frmLogin.resources
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.frmPrincipal.resources
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.Properties.Resources.resources
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.csproj.GenerateResource.cache
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.csproj.CoreCompileInputs.cache
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.exe
+C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.pdb
