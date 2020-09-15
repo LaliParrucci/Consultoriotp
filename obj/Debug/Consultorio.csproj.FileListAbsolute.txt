@@ -22,3 +22,15 @@ C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.csproj.Gen
 C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.csproj.CoreCompileInputs.cache
 C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.exe
 C:\Users\flor\Downloads\Consultorio\Consultorio\obj\Debug\Consultorio.pdb
+C:\Users\besac\source\repos\Consultoriotp\bin\Debug\Consultorio.exe.config
+C:\Users\besac\source\repos\Consultoriotp\bin\Debug\Consultorio.exe
+C:\Users\besac\source\repos\Consultoriotp\bin\Debug\Consultorio.pdb
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.csprojAssemblyReference.cache
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmAbmPaciente.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmLogin.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.frmPrincipal.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.Properties.Resources.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.csproj.GenerateResource.cache
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.csproj.CoreCompileInputs.cache
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.exe
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.pdb
