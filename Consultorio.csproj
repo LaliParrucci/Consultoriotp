@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,18 +49,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLayer\InsumoService.cs" />
+    <Compile Include="BussinessLayer\ObraSocialService.cs" />
     <Compile Include="BussinessLayer\PacienteService.cs" />
+    <Compile Include="BussinessLayer\PracticaService.cs" />
+    <Compile Include="BussinessLayer\ProfesionalService.cs" />
     <Compile Include="BussinessLayer\UsuarioService.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
+    <Compile Include="DataAccessLayer\InsumoDao.cs" />
+    <Compile Include="DataAccessLayer\ObraSocialDao.cs" />
     <Compile Include="DataAccessLayer\PacienteDao.cs" />
+    <Compile Include="DataAccessLayer\PracticaDao.cs" />
+    <Compile Include="DataAccessLayer\ProfesionalDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
-    <Compile Include="Entities\Paciente.cs" />
-    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\Insumo.cs" />
+    <Compile Include="Entities\ObraSocial.cs" />
+    <Compile Include="Entities\PacienteE.cs" />
+    <Compile Include="Entities\Practica.cs" />
+    <Compile Include="Entities\ProfesionalE.cs" />
+    <Compile Include="Entities\UsuarioE.cs" />
+    <Compile Include="GUILayer\frmAbmInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmInsumo.Designer.cs">
+      <DependentUpon>frmAbmInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmObraSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmObraSocial.Designer.cs">
+      <DependentUpon>frmAbmObraSocial.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmAbmPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUILayer\frmAbmPaciente.Designer.cs">
       <DependentUpon>frmAbmPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmPractica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmPractica.Designer.cs">
+      <DependentUpon>frmAbmPractica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmProfesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmProfesional.Designer.cs">
+      <DependentUpon>frmAbmProfesional.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmLogin.cs">
       <SubType>Form</SubType>
@@ -71,10 +110,31 @@
     <Compile Include="GUILayer\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmAbmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmUsuario.Designer.cs">
+      <DependentUpon>frmAbmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUILayer\frmAbmInsumo.resx">
+      <DependentUpon>frmAbmInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmObraSocial.resx">
+      <DependentUpon>frmAbmObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmAbmPaciente.resx">
       <DependentUpon>frmAbmPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmPractica.resx">
+      <DependentUpon>frmAbmPractica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmProfesional.resx">
+      <DependentUpon>frmAbmProfesional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmUsuario.resx">
+      <DependentUpon>frmAbmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -92,6 +152,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +201,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo completo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize-size-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

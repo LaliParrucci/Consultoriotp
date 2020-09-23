@@ -7,22 +7,22 @@ using Consultorio.Entities;
 using Consultorio.DataAccessLayer;
 using System.Windows.Forms;
 
-namespace Consultorio.BusinessLayer
+namespace Consultorio.BussinessLayer
 {
     class PacienteService
     {
         private PacienteDao oPacienteDao;
-        private Paciente oPaciente = new Paciente();
+        private PacienteE oPaciente = new PacienteE();
         public PacienteService()
         {
             oPacienteDao = new PacienteDao();
         }
-        public IList<Paciente> recuperarPaciente()
+        public IList<PacienteE> recuperarPaciente()
         {
             return oPacienteDao.GetAll();
         }
 
-        public Paciente recuperarPacientePorDni(int dni)
+        public PacienteE recuperarPacientePorDni(int dni)
         {
             return oPacienteDao.GetPaciente(dni);
         }
@@ -33,7 +33,17 @@ namespace Consultorio.BusinessLayer
             {
                 MessageBox.Show("El nombre está vacío...");
                 return false;
-            } //SEGUIR VALIDACIONES
+            }
+            if (oPaciente.Apellido == string.Empty)
+            {
+                MessageBox.Show("El apellido está vacío...");
+                return false;
+            }
+            if (oPaciente.Domicilio == string.Empty)
+            {
+                MessageBox.Show("El domicilio está vacío...");
+                return false;
+            }//seguir validaciones!!!!!
             return true;
         }
         public bool existePaciente(int dni)
@@ -41,7 +51,7 @@ namespace Consultorio.BusinessLayer
             if (oPacienteDao.GetPaciente(dni) != null) { return true; }
             return false;
         }
-        public void altaPaciente(Paciente ob, bool esAlta)
+        public void altaPaciente(PacienteE ob, bool esAlta)
         {
             string nom = ob.Nombre;
             string ape = ob.Apellido;

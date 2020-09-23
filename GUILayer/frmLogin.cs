@@ -16,7 +16,7 @@ namespace Consultorio.GUILayer
     {
         private UsuarioService oUsuarioService;
 
-        private Usuario usr;
+        private UsuarioE usr;
         private Form f;
 
 
@@ -26,7 +26,7 @@ namespace Consultorio.GUILayer
             oUsuarioService = new UsuarioService(); 
         }
 
-        internal Usuario Usr { get => usr; set => usr = value; }
+        internal UsuarioE Usr { get => usr; set => usr = value; }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {

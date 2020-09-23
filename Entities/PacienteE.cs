@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Consultorio.Entities
 {
-    class Paciente
+    class PacienteE
     {
         private int dni;
         private string telefono;

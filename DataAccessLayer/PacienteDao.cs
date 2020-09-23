@@ -11,9 +11,9 @@ namespace Consultorio.DataAccessLayer
     class PacienteDao
     {
         string sentencia;
-        public IList<Paciente> GetAll()
+        public IList<PacienteE> GetAll()
         {
-            List<Paciente> listadoPrac = new List<Paciente>();
+            List<PacienteE> listadoPacie = new List<PacienteE>();
 
             var strSql = "SELECT dni, nombre, apellido, telefono, domicilio, email FROM paciente where borrado=0";
 
@@ -21,12 +21,12 @@ namespace Consultorio.DataAccessLayer
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoPrac.Add(crearObjPrac(row));
+                listadoPacie.Add(crearObjPrac(row));
             }
 
-            return listadoPrac;
+            return listadoPacie;
         }
-        public Paciente GetPaciente(int dni)
+        public PacienteE GetPaciente(int dni)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
             String consultaSql = string.Concat(" SELECT dni, nombre, apellido, telefono, domicilio, email",
@@ -44,9 +44,9 @@ namespace Consultorio.DataAccessLayer
 
             return null;
         }
-        private Paciente crearObjPrac(DataRow row)
+        private PacienteE crearObjPrac(DataRow row)
         {//creo nueva instancia de usuario con los parámetros de abajo
-            Paciente oPaciente = new Paciente();
+            PacienteE oPaciente = new PacienteE();
             oPaciente.Nombre = row[1].ToString();
             oPaciente.Apellido = row[2].ToString();
             oPaciente.Telefono = row[3].ToString();

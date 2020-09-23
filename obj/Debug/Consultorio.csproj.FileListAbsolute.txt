@@ -34,3 +34,10 @@ C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.csproj.GenerateR
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.csproj.CoreCompileInputs.cache
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.exe
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.pdb
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmAbmProfesional.resources
+C:\Users\besac\source\repos\Consultoriotp\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.csproj.CopyComplete
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.Usuario.frmAbmUsuario.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmAbmPractica.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmAbmObraSocial.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmAbmInsumo.resources

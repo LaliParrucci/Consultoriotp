@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Consultorio.BusinessLayer;
+using Consultorio.BussinessLayer;
 using Consultorio.Entities;
+
 
 namespace Consultorio.GUILayer
 {
     public partial class frmAbmPaciente : Form
     {
         bool esNuevo = false;
-        Paciente oPaciente = new Paciente();
+        PacienteE oPaciente = new PacienteE();
         PacienteService oPacienteService = new PacienteService();
         public frmAbmPaciente()
         {
@@ -32,10 +33,10 @@ namespace Consultorio.GUILayer
             txtNombre.Text = txtApellido.Text = txtTelefono.Text = txtDNI.Text = txtDomicilio.Text = txtEmail.Text = "";
         }
 
-        private void cargarGrilla(DataGridView grilla, IList<Paciente> lista)
+        private void cargarGrilla(DataGridView grilla, IList<Entities.PacienteE> lista)
         {
             grilla.Rows.Clear();
-            foreach (Paciente p in lista)
+            foreach (Entities.PacienteE p in lista)
             {
                 grilla.Rows.Add(p.Dni, p.Nombre, p.Apellido, p.Telefono, p.Domicilio, p.Email);
             }
@@ -139,7 +140,7 @@ namespace Consultorio.GUILayer
             esNuevo = false;
         }
 
-        private void sentenciaYCarga(Paciente ob, DataGridView grilla, PacienteService obS, bool esAlta)
+        private void sentenciaYCarga(PacienteE ob, DataGridView grilla, PacienteService obS, bool esAlta)
         {
             obS.altaPaciente(ob, esAlta);
             cargarGrilla(grilla, obS.recuperarPaciente());
