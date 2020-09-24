@@ -69,7 +69,11 @@ namespace Consultorio.DataAccessLayer
             Practica oPractica = new Practica();
             oPractica.Nombre = row[0].ToString();
             oPractica.Descripcion = row[1].ToString();
-            oPractica.Importe = Convert.ToInt32(row[3].ToString());
+            if (row[3].ToString() != "")
+            {
+                oPractica.Importe = Convert.ToInt32(row[3].ToString());
+            }
+            else { oPractica.Importe = 0; }
             oPractica.Id_practica = Convert.ToInt32(row[2].ToString());
             return oPractica;
         }
@@ -79,14 +83,24 @@ namespace Consultorio.DataAccessLayer
             string sentencia;
             if (esAlta)
             {
-                sentencia = string.Concat("INSERT INTO practica(nombre, descripcion, importe, borrado) VALUES('", nom, "', '", desc, "', ", imp, ", 0);");
+                if (imp == 0)
+                {
+                    sentencia = string.Concat("INSERT INTO practica(nombre, descripcion, borrado) VALUES('", nom, "', '", desc, "', 0);");
+                }
+                else
+                {
+                    sentencia = string.Concat("INSERT INTO practica(nombre, descripcion, importe, borrado) VALUES('", nom, "', '", desc, "', ", imp, ", 0);");
+                }
             }
             else
             {
                 sentencia = string.Concat("UPDATE practica SET nombre = '", nom,
-                                                             "', descripcion = '", desc,
-                                                             "', importe =", imp,
-                                                             " WHERE id_practica = ", id);
+                                                             "', descripcion = '", desc, "'");
+                if (imp != 0)
+                {
+                    sentencia += ", importe =" + imp;
+                }
+                sentencia += " WHERE id_practica = " + id;
             }
             DBHelper.GetDBHelper().ConsultaSQL(sentencia);
         }
