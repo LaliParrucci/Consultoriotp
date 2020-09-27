@@ -60,3 +60,4 @@ C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.csproj.CoreC
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.csproj.CopyComplete
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.exe
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.pdb
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmRegistrarTurno.resources

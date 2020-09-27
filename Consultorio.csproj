@@ -54,19 +54,23 @@
     <Compile Include="BussinessLayer\PacienteService.cs" />
     <Compile Include="BussinessLayer\PracticaService.cs" />
     <Compile Include="BussinessLayer\ProfesionalService.cs" />
+    <Compile Include="BussinessLayer\TurnoService.cs" />
     <Compile Include="BussinessLayer\UsuarioService.cs" />
+    <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
     <Compile Include="DataAccessLayer\InsumoDao.cs" />
     <Compile Include="DataAccessLayer\ObraSocialDao.cs" />
     <Compile Include="DataAccessLayer\PacienteDao.cs" />
     <Compile Include="DataAccessLayer\PracticaDao.cs" />
     <Compile Include="DataAccessLayer\ProfesionalDao.cs" />
+    <Compile Include="DataAccessLayer\TurnoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Insumo.cs" />
     <Compile Include="Entities\ObraSocial.cs" />
     <Compile Include="Entities\PacienteE.cs" />
     <Compile Include="Entities\Practica.cs" />
     <Compile Include="Entities\ProfesionalE.cs" />
+    <Compile Include="Entities\Turno.cs" />
     <Compile Include="Entities\UsuarioE.cs" />
     <Compile Include="GUILayer\frmAbmInsumo.cs">
       <SubType>Form</SubType>
@@ -116,6 +120,12 @@
     <Compile Include="GUILayer\frmAbmUsuario.Designer.cs">
       <DependentUpon>frmAbmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmRegistrarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarTurno.Designer.cs">
+      <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUILayer\frmAbmInsumo.resx">
@@ -141,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
+      <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
