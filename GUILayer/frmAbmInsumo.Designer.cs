@@ -45,8 +45,11 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.pnlGrilla = new System.Windows.Forms.Panel();
             this.grdInsumo = new System.Windows.Forms.DataGridView();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
             this.pnlBotones.SuspendLayout();
@@ -76,6 +79,8 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Controls.Add(this.txtStock);
+            this.pnlCuerpo.Controls.Add(this.label1);
             this.pnlCuerpo.Controls.Add(this.txtNombre);
             this.pnlCuerpo.Controls.Add(this.txtId);
             this.pnlCuerpo.Controls.Add(this.lblNombre);
@@ -83,13 +88,13 @@
             this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCuerpo.Location = new System.Drawing.Point(0, 50);
             this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(661, 95);
+            this.pnlCuerpo.Size = new System.Drawing.Size(661, 118);
             this.pnlCuerpo.TabIndex = 1;
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(426, 30);
+            this.txtNombre.Location = new System.Drawing.Point(426, 42);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(136, 24);
             this.txtNombre.TabIndex = 3;
@@ -97,7 +102,7 @@
             // txtId
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtId.Location = new System.Drawing.Point(139, 30);
+            this.txtId.Location = new System.Drawing.Point(139, 42);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(136, 24);
             this.txtId.TabIndex = 2;
@@ -106,7 +111,7 @@
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(354, 33);
+            this.lblNombre.Location = new System.Drawing.Point(354, 45);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 1;
@@ -116,7 +121,7 @@
             // 
             this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(57, 33);
+            this.lblId.Location = new System.Drawing.Point(57, 45);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(76, 18);
             this.lblId.TabIndex = 0;
@@ -224,9 +229,9 @@
             // 
             this.pnlGrilla.Controls.Add(this.grdInsumo);
             this.pnlGrilla.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGrilla.Location = new System.Drawing.Point(0, 145);
+            this.pnlGrilla.Location = new System.Drawing.Point(0, 168);
             this.pnlGrilla.Name = "pnlGrilla";
-            this.pnlGrilla.Size = new System.Drawing.Size(661, 252);
+            this.pnlGrilla.Size = new System.Drawing.Size(661, 229);
             this.pnlGrilla.TabIndex = 3;
             // 
             // grdInsumo
@@ -235,12 +240,31 @@
             this.grdInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdInsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.nombre});
-            this.grdInsumo.Location = new System.Drawing.Point(18, 21);
+            this.nombre,
+            this.stock});
+            this.grdInsumo.Location = new System.Drawing.Point(18, 28);
             this.grdInsumo.Name = "grdInsumo";
             this.grdInsumo.Size = new System.Drawing.Size(618, 161);
             this.grdInsumo.TabIndex = 0;
             this.grdInsumo.SelectionChanged += new System.EventHandler(this.grdInsumo_SelectionChanged);
+            // 
+            // txtStock
+            // 
+            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStock.Location = new System.Drawing.Point(139, 77);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(136, 24);
+            this.txtStock.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Stock:";
             // 
             // id
             // 
@@ -254,6 +278,11 @@
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
+            // 
+            // stock
+            // 
+            this.stock.HeaderText = "Stock";
+            this.stock.Name = "stock";
             // 
             // frmAbmInsumo
             // 
@@ -303,7 +332,10 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Panel pnlGrilla;
         private System.Windows.Forms.DataGridView grdInsumo;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
     }
 }

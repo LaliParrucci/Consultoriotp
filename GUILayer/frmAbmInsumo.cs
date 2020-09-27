@@ -33,7 +33,7 @@ namespace Consultorio.GUILayer
 
         private void limpiarCampos()
         {
-            txtNombre.Text = txtId.Text = "";
+            txtNombre.Text = txtId.Text = txtStock.Text = "";
         }
 
         private void cargarGrilla(DataGridView grilla, IList<Insumo> lista)
@@ -41,7 +41,7 @@ namespace Consultorio.GUILayer
             grilla.Rows.Clear();
             foreach (Insumo p in lista)
             {
-                grilla.Rows.Add(p.Id, p.Nombre);
+                grilla.Rows.Add(p.Id, p.Nombre, p.Stock);
             }
         }
 
@@ -108,10 +108,10 @@ namespace Consultorio.GUILayer
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            oInsumo.Nombre = txtNombre.Text;
-
-            if (oInsumoService.validarInsumo())
+            if (oInsumoService.validarInsumo(txtNombre.Text, txtStock.Text))
             {
+                oInsumo.Nombre = txtNombre.Text;
+                oInsumo.Stock = Convert.ToInt32(txtStock.Text);
                 if (this.esNuevo)
                 {
                     sentenciaYCarga(oInsumo, grdInsumo, oInsumoService, esNuevo);                    
@@ -123,6 +123,7 @@ namespace Consultorio.GUILayer
                 }
             }
             habilitar(false);
+            limpiarCampos();
             esNuevo = false;
         }
 
@@ -131,6 +132,7 @@ namespace Consultorio.GUILayer
             oInsumo = oInsumoService.recuperarInsumoPorId(id);
             txtNombre.Text = oInsumo.Nombre;
             txtId.Text = oInsumo.Id.ToString();
+            txtStock.Text = oInsumo.Stock.ToString();
         }
 
         private void grdInsumo_SelectionChanged(object sender, EventArgs e)

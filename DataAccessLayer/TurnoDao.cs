@@ -10,6 +10,8 @@ namespace Consultorio.DataAccessLayer
 {
     class TurnoDao
     {
+
+        Service s = new Service();
         public IList<Turno> GetAll()
         {
             List<Turno> listadoTurno = new List<Turno>();
@@ -93,7 +95,7 @@ namespace Consultorio.DataAccessLayer
         public void conectarConTransaccion()
         {
             string sentencia = "";
-            DBHelper.GetDBHelper().EjecutarSQLConTransaccion(sentencia);
+            //DBHelper.GetDBHelper().EjecutarSQLConTransaccion(sentencia);
         }
     }
 }

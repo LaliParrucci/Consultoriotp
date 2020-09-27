@@ -10,6 +10,7 @@ namespace Consultorio.DataAccessLayer
 {
     class ProfesionalDao
     {
+
         public IList<ProfesionalE> GetAll()
         {
             List<ProfesionalE> listadoProfe = new List<ProfesionalE>();

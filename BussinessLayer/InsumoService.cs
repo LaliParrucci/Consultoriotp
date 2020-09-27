@@ -27,13 +27,18 @@ namespace Consultorio.BussinessLayer
             return oInsumoDao.GetInsumo(id);
         }
 
-        public bool validarInsumo()
+        public bool validarInsumo(string n, string s)
         {
-            if (oInsumo.Nombre == string.Empty)
+            if (n == string.Empty)
             {
-                MessageBox.Show("El nombre está vacío...");
+                MessageBox.Show("Ingrese un nombre, por favor", "Nombre de insumo vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            } //SEGUIR VALIDACIONES
+            }
+            try { Convert.ToInt32(s); }
+            catch {
+                MessageBox.Show("Ingrese una cantidad válida para el stock, por favor", "Stock asignado inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return true;
         }
         public bool existeInsumo(int id)
@@ -45,7 +50,8 @@ namespace Consultorio.BussinessLayer
         {
             string nom = ob.Nombre;
             int id = ob.Id;
-            oInsumoDao.actualizacion(nom, id, esAlta);
+            int s = ob.Stock;
+            oInsumoDao.actualizacion(nom, id, s, esAlta);
         }
         public void bajaInsumo (int id)
         {

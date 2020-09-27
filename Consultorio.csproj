@@ -63,6 +63,7 @@
     <Compile Include="DataAccessLayer\PacienteDao.cs" />
     <Compile Include="DataAccessLayer\PracticaDao.cs" />
     <Compile Include="DataAccessLayer\ProfesionalDao.cs" />
+    <Compile Include="DataAccessLayer\Service.cs" />
     <Compile Include="DataAccessLayer\TurnoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Insumo.cs" />

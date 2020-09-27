@@ -14,7 +14,7 @@ namespace Consultorio.DataAccessLayer
         {
             UsuarioE oUsuario = new UsuarioE
             {
-                Id_usuario = Convert.ToInt32(row["id_usuario"]),
+                Id_usuario = Convert.ToInt32(row["id_usuario"].ToString()),
                 Nombre_usuario = row["nombre_usuario"].ToString(),
                 Contraseña = row["contraseña"].ToString()
             };

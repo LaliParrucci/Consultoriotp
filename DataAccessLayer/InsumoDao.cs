@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using Consultorio.Entities;
 using System.Data;
+using Consultorio.BussinessLayer;
 
 namespace Consultorio.DataAccessLayer
 {
     class InsumoDao
     {
         string sentencia;
+        Service s = new Service();
 
         public IList<Insumo> GetAll()
         {
             List<Insumo> listadoPrac = new List<Insumo>();
 
-            var strSql = "SELECT id_insumo, nombre FROM insumo where borrado=0";
+            var strSql = "SELECT id_insumo, nombre, stock FROM insumo where borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -26,7 +28,7 @@ namespace Consultorio.DataAccessLayer
         }
         public Insumo GetInsumo(int id)
         {
-            String consultaSql = string.Concat(" SELECT id_insumo, nombre",
+            String consultaSql = string.Concat(" SELECT id_insumo, nombre, stock",
                                                "   FROM insumo ",
                                                "  WHERE id_insumo = ", id);
 
@@ -44,21 +46,22 @@ namespace Consultorio.DataAccessLayer
             Insumo oInsumo = new Insumo();
             oInsumo.Nombre = row[1].ToString();
             oInsumo.Id = Convert.ToInt32(row[0].ToString());
+            oInsumo.Stock = s.convertirA0(row["stock"]);
             return oInsumo;
         }
 
-        public void actualizacion(string nom, int id, bool esAlta)
+        public void actualizacion(string nom, int id, int s, bool esAlta)
         {
 
             if (esAlta)
             {
-                sentencia = string.Concat("INSERT INTO insumo(nombre, borrado)" +
-                                          " VALUES('", nom, "', 0)");
+                sentencia = string.Concat("INSERT INTO insumo(nombre, stock, borrado)" +
+                                          " VALUES('", nom, "', ", s,", 0)");
             }
             else
             {
                 sentencia = string.Concat("UPDATE insumo SET nombre = '", nom,
-                                                             "' WHERE id_insumo = ", id);
+                                                             "', stock =", s," WHERE id_insumo = ", id);
             }
             DBHelper.GetDBHelper().abm(sentencia);
         }

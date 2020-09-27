@@ -18,7 +18,7 @@ namespace Consultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrarTurno());
+            Application.Run(new frmAbmInsumo());
         }
     }
 }
