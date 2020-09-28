@@ -152,7 +152,8 @@
             this.txtApellidoProfesional.Name = "txtApellidoProfesional";
             this.txtApellidoProfesional.Size = new System.Drawing.Size(123, 24);
             this.txtApellidoProfesional.TabIndex = 8;
-            this.txtApellidoProfesional.TextChanged += new System.EventHandler(this.txtApellidoProfesional_TextChanged);
+            this.txtApellidoProfesional.Click += new System.EventHandler(this.txtApellidoProfesional_Click);
+            this.txtApellidoProfesional.Enter += new System.EventHandler(this.txtApellidoProfesional_Enter);
             // 
             // label4
             // 
@@ -226,6 +227,8 @@
             this.txtApellidoPaciente.Name = "txtApellidoPaciente";
             this.txtApellidoPaciente.Size = new System.Drawing.Size(138, 24);
             this.txtApellidoPaciente.TabIndex = 10;
+            this.txtApellidoPaciente.Click += new System.EventHandler(this.txtApellidoPaciente_Click);
+            this.txtApellidoPaciente.Enter += new System.EventHandler(this.txtApellidoPaciente_Enter);
             // 
             // txtNombrePaciente
             // 
@@ -253,6 +256,7 @@
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(140, 24);
             this.txtDni.TabIndex = 14;
+            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
             // 
             // label8
             // 
@@ -297,6 +301,7 @@
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel2
             // 

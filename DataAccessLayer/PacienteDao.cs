@@ -28,7 +28,7 @@ namespace Consultorio.DataAccessLayer
         }
         public PacienteE GetPaciente(int dni)
         {
-            //Construimos la consulta sql para buscar el usuario en la base de datos.
+            //Construimos la consulta sql para buscar el paciente en la base de datos.
             String consultaSql = string.Concat(" SELECT dni, nombre, apellido, telefono, domicilio, email",
                                                "   FROM paciente ",
                                                "  WHERE dni = ", dni);
@@ -45,7 +45,7 @@ namespace Consultorio.DataAccessLayer
             return null;
         }
         private PacienteE crearObjPrac(DataRow row)
-        {//creo nueva instancia de usuario con los parámetros de abajo
+        {//creo nueva instancia de paciente con los parámetros de abajo
             PacienteE oPaciente = new PacienteE();
             oPaciente.Nombre = row[1].ToString();
             oPaciente.Apellido = row[2].ToString();
@@ -54,6 +54,21 @@ namespace Consultorio.DataAccessLayer
             oPaciente.Domicilio = row[4].ToString();
             oPaciente.Email = row[5].ToString();
             return oPaciente;
+        }
+
+
+
+        internal int GetPacientePorNA(string nom, string ape)
+        {
+            //Construimos la consulta sql para buscar el paciente en la base de datos.
+            String consultaSql = string.Concat(" SELECT dni",
+                                               "   FROM paciente ",
+                                               "  WHERE nombre = '", nom, "' AND apellido = '", ape, "'" );
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            int dni = Convert.ToInt32(resultado.Rows[0].ToString());
+            return dni;
         }
 
         public void actualizacion(string nom, string ape, string tl, int dni, string dom, string email, bool esAlta)

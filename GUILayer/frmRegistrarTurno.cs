@@ -14,6 +14,8 @@ namespace Consultorio.GUILayer
 {
     public partial class frmRegistrarTurno : Form
     {
+        bool activoProfesional = false;
+        bool activoPaciente = false;
         TurnoService oTurnoService = new TurnoService();
         ProfesionalService oProfesionalService = new ProfesionalService();
         ObraSocialService oObraSocialService = new ObraSocialService();
@@ -37,6 +39,7 @@ namespace Consultorio.GUILayer
             }
         }
 
+
         public void autocompletar(TextBox otextBox)
         {
             otextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -44,11 +47,6 @@ namespace Consultorio.GUILayer
             AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
             addItems(coleccion);
             otextBox.AutoCompleteCustomSource = coleccion;
-        }
-
-        private void txtApellidoProfesional_TextChanged(object sender, EventArgs e)
-        {
-            autocompletar(txtApellidoProfesional);
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, string value)
@@ -59,7 +57,51 @@ namespace Consultorio.GUILayer
             cbo.SelectedIndex = -1;
         }
 
-        
+        private void txtApellidoProfesional_Click(object sender, EventArgs e)
+        {
+            if (!activoProfesional)
+            {
+                autocompletar(txtApellidoProfesional);
+                activoProfesional = true;
+            }
 
+        }
+
+        private void txtApellidoProfesional_Enter(object sender, EventArgs e)
+        {
+            if (!activoProfesional)
+            {
+                autocompletar(txtApellidoProfesional);
+                activoProfesional = true;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void txtApellidoPaciente_Click(object sender, EventArgs e)
+        {
+            if (!activoPaciente)
+            {
+                autocompletar(txtApellidoPaciente);
+                activoPaciente = true;
+            }
+        }
+
+        private void txtApellidoPaciente_Enter(object sender, EventArgs e)
+        {
+            if (!activoPaciente)
+            {
+                autocompletar(txtApellidoPaciente);
+                activoPaciente = true;
+            }
+        }
+
+        private void txtDni_Enter(object sender, EventArgs e)
+        {
+            txtDni.Text = (oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text)).ToString();
+        }
     }
 }
