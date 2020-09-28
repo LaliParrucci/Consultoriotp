@@ -15,6 +15,7 @@ namespace Consultorio.GUILayer
     public partial class frmRegistrarTurno : Form
     {
         TurnoService oTurnoService = new TurnoService();
+        ProfesionalService oProfesionalService = new ProfesionalService();
         public frmRegistrarTurno()
         {
             InitializeComponent();
@@ -22,20 +23,30 @@ namespace Consultorio.GUILayer
 
         private void frmRegistrarTurno_Load(object sender, EventArgs e)
         {
-            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
-            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            addItems(coleccion);
-            textBox1.AutoCompleteCustomSource = coleccion;
+            
         }
 
         public void addItems(AutoCompleteStringCollection col)
         {
-            IList<Turno> lst = oTurnoService.recuperarTurnos();
-            foreach (Turno X in lst)
+            List<ProfesionalE> lst = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
+            foreach (ProfesionalE X in lst)
             {
-                col.Add(X.ToString());
+                col.Add(X.Apellido.ToString());
             }
+        }
+
+        public void autocompletar()
+        {
+            txtApellidoProfesional.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtApellidoProfesional.AutoCompleteMode = AutoCompleteMode.Suggest;
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            addItems(coleccion);
+            txtApellidoProfesional.AutoCompleteCustomSource = coleccion;
+        }
+
+        private void txtApellidoProfesional_TextChanged(object sender, EventArgs e)
+        {
+            autocompletar();
         }
     }
 }

@@ -11,7 +11,6 @@ namespace Consultorio.DataAccessLayer
     class TurnoDao
     {
 
-        Service s = new Service();
         public IList<Turno> GetAll()
         {
             List<Turno> listadoTurno = new List<Turno>();

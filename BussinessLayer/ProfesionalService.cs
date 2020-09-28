@@ -28,9 +28,14 @@ namespace Consultorio.BussinessLayer
             oProfesionalDao.baja(matricula);
         }
 
+        public List<ProfesionalE> recuperarProfesionalPorNombre(string nom)
+        {
+            return oProfesionalDao.GetProfesionalNom(nom);
+        }
+
         public ProfesionalE recuperarProfesionalPorMatricula(int matricula)
         {
-            return oProfesionalDao.GetProfecional(matricula);
+            return oProfesionalDao.GetProfesional(matricula);
         }
 
         internal bool validarProfesional()
@@ -55,7 +60,7 @@ namespace Consultorio.BussinessLayer
 
         internal bool existeProfesional(int matricula)
         {
-            if (oProfesionalDao.GetProfecional(matricula) != null) 
+            if (oProfesionalDao.GetProfesional(matricula) != null) 
             { 
                 return true; 
             }

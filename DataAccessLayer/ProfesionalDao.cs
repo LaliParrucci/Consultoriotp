@@ -38,7 +38,7 @@ namespace Consultorio.DataAccessLayer
             return oProfesional;
         }
 
-        public ProfesionalE GetProfecional(int matricula)
+        public ProfesionalE GetProfesional(int matricula)
         {
             //Construimos la consulta sql para buscar al Profecional
             String consultaSql = string.Concat("SELECT matricula, nombre, apellido, especialidad, domicilio",
@@ -46,12 +46,37 @@ namespace Consultorio.DataAccessLayer
                                                " WHERE matricula = " + matricula);
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
 
-            if(resultado.Rows.Count > 0)
+            if (resultado.Rows.Count > 0)
             {
                 return crearObjProfe(resultado.Rows[0]);
             }
 
             return null;
+        }
+
+        private ProfesionalE mapeo(DataRow row)
+        {
+            //Creo nueva instancia de Profesional con los parametros de abajo
+            ProfesionalE oProfesional = new ProfesionalE();
+            oProfesional.Nombre = row["nombre"].ToString();
+            oProfesional.Apellido = row["apellido"].ToString();
+            return oProfesional;
+        }
+
+        public List<ProfesionalE> GetProfesionalNom(string nom)
+        {
+            List<ProfesionalE> listadoProfe = new List<ProfesionalE>();
+            //Construimos la consulta sql para buscar al Profecional
+            String consultaSql = string.Concat("SELECT nombre, apellido",
+                                               " FROM profesional",
+                                               " WHERE nombre = '" + nom + "'");
+            DataTable resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                listadoProfe.Add(mapeo(row));
+            }
+            return listadoProfe;
         }
 
         public void baja(int matricula)
