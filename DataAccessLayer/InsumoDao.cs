@@ -9,7 +9,6 @@ namespace Consultorio.DataAccessLayer
     class InsumoDao
     {
         string sentencia;
-        Service s = new Service();
 
         public IList<Insumo> GetAll()
         {
@@ -46,7 +45,7 @@ namespace Consultorio.DataAccessLayer
             Insumo oInsumo = new Insumo();
             oInsumo.Nombre = row[1].ToString();
             oInsumo.Id = Convert.ToInt32(row[0].ToString());
-            oInsumo.Stock = s.convertirA0(row["stock"]);
+            oInsumo.Stock = Service.convertirA0(row["stock"]);
             return oInsumo;
         }
 

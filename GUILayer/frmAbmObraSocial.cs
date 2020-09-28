@@ -23,8 +23,9 @@ namespace Consultorio.GUILayer
         }
         private void habilitar(bool x)
         {
-            txtNombre.Enabled = txtCodigo.Enabled = btnGrabar.Enabled = btnCancelar.Enabled = txtPorcentaje.Enabled = x;
+            txtNombre.Enabled = btnGrabar.Enabled = btnCancelar.Enabled = txtPorcentaje.Enabled = x;
             btnNuevo.Enabled = btnEditar.Enabled = btnBorrar.Enabled = btnSalir.Enabled = !x;
+            txtCodigo.Enabled = false;
         }
         private void limpiarCampos()
         {
@@ -104,22 +105,15 @@ namespace Consultorio.GUILayer
         {
             if (oObraSocialService.validarObraSocial(txtNombre.Text, txtPorcentaje.Text))
             {
-                oObraSocial.Codigo = Convert.ToInt32(txtCodigo.Text);
                 oObraSocial.Nombre = txtNombre.Text;
                 oObraSocial.Porcentaje = Convert.ToInt32(txtPorcentaje.Text);
                 if (this.esNuevo)
                 {
-                    if (!oObraSocialService.existeObraSocial(oObraSocial.Codigo))
-                    {
-                        sentenciaYCarga(oObraSocial, grdObraSocial, oObraSocialService, esNuevo);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error", "Ya existe la obra social! No puede cargarla", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    sentenciaYCarga(oObraSocial, grdObraSocial, oObraSocialService, esNuevo);
                 }
                 else
                 {
+                    oObraSocial.Codigo = Convert.ToInt32(txtCodigo.Text);
                     sentenciaYCarga(oObraSocial, grdObraSocial, oObraSocialService, esNuevo);
                 }
             }

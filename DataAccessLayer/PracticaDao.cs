@@ -11,7 +11,6 @@ namespace Consultorio.DataAccessLayer
     class PracticaDao
     {
 
-        Service s = new Service();
         public IList<Practica> GetAll()
         {
             List<Practica> listadoPrac = new List<Practica>();
@@ -71,7 +70,7 @@ namespace Consultorio.DataAccessLayer
             Practica oPractica = new Practica();
             oPractica.Nombre = row[0].ToString();
             oPractica.Descripcion = row[1].ToString();
-            oPractica.Importe = s.convertirA0(row[3]);
+            oPractica.Importe = Service.convertirA0(row[3]);
             oPractica.Id_practica = Convert.ToInt32(row[2].ToString());
             return oPractica;
         }

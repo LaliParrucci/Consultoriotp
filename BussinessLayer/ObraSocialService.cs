@@ -42,6 +42,10 @@ namespace Consultorio.BussinessLayer
                 MessageBox.Show("El nombre está vacío...");
                 return false;
             } 
+
+            if(Convert.ToInt32(porcentaje) > 100 || Convert.ToInt32(porcentaje) < 0) {
+                MessageBox.Show("Ingrese un porcentaje válido, por favor", "Porcentaje asignado inválido", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                return false; }
             return true;
         }
         public bool existeObraSocial(int codigo)

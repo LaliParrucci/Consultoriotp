@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Consultorio.DataAccessLayer
 {
-    class Service
+    static class Service
     {
-        public int convertirA0(Object row)
+        public static int convertirA0(Object row)
         {
             int num;
             if (row.ToString() == "")

@@ -44,11 +44,11 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.pnlGrilla = new System.Windows.Forms.Panel();
+            this.txtPorcentaje = new System.Windows.Forms.TextBox();
+            this.lblPorcentaje = new System.Windows.Forms.Label();
             this.grdObraSocial = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblPorcentaje = new System.Windows.Forms.Label();
-            this.txtPorcentaje = new System.Windows.Forms.TextBox();
             this.Porcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
@@ -73,7 +73,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(710, 52);
+            this.lblTitulo.Size = new System.Drawing.Size(487, 33);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Administración de Obras Sociales";
             // 
@@ -94,7 +94,7 @@
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Location = new System.Drawing.Point(428, 35);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(130, 33);
+            this.txtNombre.Size = new System.Drawing.Size(130, 24);
             this.txtNombre.TabIndex = 3;
             // 
             // txtCodigo
@@ -102,7 +102,7 @@
             this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodigo.Location = new System.Drawing.Point(123, 35);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(130, 33);
+            this.txtCodigo.Size = new System.Drawing.Size(130, 24);
             this.txtCodigo.TabIndex = 2;
             // 
             // lblNombre
@@ -111,7 +111,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(356, 38);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(107, 29);
+            this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -121,7 +121,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(57, 38);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(98, 29);
+            this.lblCodigo.Size = new System.Drawing.Size(60, 18);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
@@ -234,6 +234,25 @@
             this.pnlGrilla.Size = new System.Drawing.Size(661, 253);
             this.pnlGrilla.TabIndex = 3;
             // 
+            // txtPorcentaje
+            // 
+            this.txtPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPorcentaje.Location = new System.Drawing.Point(234, 203);
+            this.txtPorcentaje.Name = "txtPorcentaje";
+            this.txtPorcentaje.Size = new System.Drawing.Size(130, 24);
+            this.txtPorcentaje.TabIndex = 4;
+            // 
+            // lblPorcentaje
+            // 
+            this.lblPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPorcentaje.AutoSize = true;
+            this.lblPorcentaje.Location = new System.Drawing.Point(98, 203);
+            this.lblPorcentaje.Name = "lblPorcentaje";
+            this.lblPorcentaje.Size = new System.Drawing.Size(83, 18);
+            this.lblPorcentaje.TabIndex = 4;
+            this.lblPorcentaje.Text = "Porcentaje:";
+            this.lblPorcentaje.Click += new System.EventHandler(this.label1_Click);
+            // 
             // grdObraSocial
             // 
             this.grdObraSocial.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -265,25 +284,6 @@
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             // 
-            // lblPorcentaje
-            // 
-            this.lblPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPorcentaje.AutoSize = true;
-            this.lblPorcentaje.Location = new System.Drawing.Point(98, 203);
-            this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(135, 29);
-            this.lblPorcentaje.TabIndex = 4;
-            this.lblPorcentaje.Text = "Porcentaje:";
-            this.lblPorcentaje.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtPorcentaje
-            // 
-            this.txtPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPorcentaje.Location = new System.Drawing.Point(239, 203);
-            this.txtPorcentaje.Name = "txtPorcentaje";
-            this.txtPorcentaje.Size = new System.Drawing.Size(130, 33);
-            this.txtPorcentaje.TabIndex = 4;
-            // 
             // Porcentaje
             // 
             this.Porcentaje.HeaderText = "Porcentaje";
@@ -294,7 +294,7 @@
             // 
             // frmAbmObraSocial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));

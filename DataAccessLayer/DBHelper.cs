@@ -15,9 +15,9 @@ namespace Consultorio.DataAccessLayer
 
         private DBHelper()
         {
-            //string_conexion = @"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
+            string_conexion = @"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
             //string_conexion = @"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Persist Security Info=True;User ID=sa;Password=19671970";
-            string_conexion = @"Data Source=LAPTOP-E7G93F2V\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
+            //string_conexion = @"Data Source=LAPTOP-E7G93F2V\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
         }
 
         public static DBHelper GetDBHelper()
