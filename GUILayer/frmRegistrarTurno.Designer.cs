@@ -166,7 +166,7 @@
             // chDisponibles
             // 
             this.chDisponibles.AutoSize = true;
-            this.chDisponibles.Location = new System.Drawing.Point(455, 12);
+            this.chDisponibles.Location = new System.Drawing.Point(500, 12);
             this.chDisponibles.Name = "chDisponibles";
             this.chDisponibles.Size = new System.Drawing.Size(104, 22);
             this.chDisponibles.TabIndex = 4;
@@ -176,16 +176,16 @@
             // txtTurnos
             // 
             this.txtTurnos.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtTurnos.Location = new System.Drawing.Point(455, 39);
+            this.txtTurnos.Location = new System.Drawing.Point(500, 40);
             this.txtTurnos.Multiline = true;
             this.txtTurnos.Name = "txtTurnos";
             this.txtTurnos.ReadOnly = true;
-            this.txtTurnos.Size = new System.Drawing.Size(194, 135);
+            this.txtTurnos.Size = new System.Drawing.Size(149, 135);
             this.txtTurnos.TabIndex = 3;
             // 
             // calendario
             // 
-            this.calendario.Location = new System.Drawing.Point(238, 12);
+            this.calendario.Location = new System.Drawing.Point(240, 12);
             this.calendario.Name = "calendario";
             this.calendario.TabIndex = 2;
             // 
