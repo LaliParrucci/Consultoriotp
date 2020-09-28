@@ -15,7 +15,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<ObraSocial> listadoObras = new List<ObraSocial>();
 
-            var strSql = "SELECT cod_obra_social, nombre FROM obra_social WHERE borrado=0";
+            var strSql = "SELECT cod_obra_social, nombre, porcentaje FROM obra_social WHERE borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -39,7 +39,7 @@ namespace Consultorio.DataAccessLayer
         public ObraSocial GetObraSocial(int codigo)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT cod_obra_social,nombre",
+            String consultaSql = string.Concat(" SELECT cod_obra_social,nombre,porcentaje",
                                                "   FROM obra_social ",
                                                "  WHERE cod_obra_social = ", codigo);
 
@@ -54,18 +54,19 @@ namespace Consultorio.DataAccessLayer
 
             return null;
         }
-        public void actualizar(int codigo, string nombre,bool esAlta)
+        public void actualizar(int codigo, string nombre,bool esAlta, int porc)
         {
             if (esAlta)
             {
-                sentencia = string.Concat("INSERT INTO obra_social(cod_obra_social, nombre, borrado)" +
-                                          " VALUES(", codigo, ", '", nombre, "',0)");
+                sentencia = string.Concat("INSERT INTO obra_social(cod_obra_social, nombre,porcentaje, borrado)" +
+                                          " VALUES(", codigo, ", '", nombre,"', ",porc,",0)");
             }
             else
             {
                 sentencia = string.Concat("UPDATE obra_social SET cod_obra_social = ", codigo,
                                                              ", nombre = '", nombre,
-                                                             "' WHERE cod_obra_social = ", codigo);
+                                                             "', porcentaje = ", porc,
+                                                             " WHERE cod_obra_social = ", codigo);
             }
             DBHelper.GetDBHelper().abm(sentencia);
         }

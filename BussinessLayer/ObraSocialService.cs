@@ -27,8 +27,16 @@ namespace Consultorio.BussinessLayer
         {
             return oObraSocialDao.GetObraSocial(codigo);
         }
-        public bool validarObraSocial()
+        public bool validarObraSocial(string nombre, string porcentaje)
         {
+           
+            try { Convert.ToInt32(porcentaje); }
+            catch
+            {
+                MessageBox.Show("Ingrese un valor entero para el porcentaje , por favor", "Porcentaje asignado inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (oObraSocial.Nombre == string.Empty)
             {
                 MessageBox.Show("El nombre está vacío...");
@@ -43,9 +51,10 @@ namespace Consultorio.BussinessLayer
         }
         public void altaObraSocial(ObraSocial ob, bool esAlta)
         {
-            string nombre = ob.Nombre;           
+            string nombre = ob.Nombre;
+            int porcentaje = ob.Porcentaje;
             int codigo = ob.Codigo;
-            oObraSocialDao.actualizar(codigo, nombre, esAlta);
+            oObraSocialDao.actualizar(codigo, nombre, esAlta, porcentaje);
         }
         public void bajaObraSocial(int codigo)
         {

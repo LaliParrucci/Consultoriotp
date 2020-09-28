@@ -23,19 +23,19 @@ namespace Consultorio.GUILayer
         }
         private void habilitar(bool x)
         {
-            txtNombre.Enabled = txtCodigo.Enabled = btnGrabar.Enabled = btnCancelar.Enabled = x;
+            txtNombre.Enabled = txtCodigo.Enabled = btnGrabar.Enabled = btnCancelar.Enabled = txtPorcentaje.Enabled = x;
             btnNuevo.Enabled = btnEditar.Enabled = btnBorrar.Enabled = btnSalir.Enabled = !x;
         }
         private void limpiarCampos()
         {
-            txtNombre.Text = txtCodigo.Text = "";
+            txtNombre.Text = txtCodigo.Text = txtPorcentaje.Text = "";
         }
         private void cargarGrilla(DataGridView grilla, IList<ObraSocial> lista)
         {
             grilla.Rows.Clear();
             foreach (ObraSocial p in lista)
             {
-                grilla.Rows.Add(p.Codigo, p.Nombre);
+                grilla.Rows.Add(p.Codigo, p.Nombre,p.Porcentaje);
             }
         }
         private void frmAbmObraSocial_Load(object sender, EventArgs e)
@@ -56,6 +56,7 @@ namespace Consultorio.GUILayer
             oObraSocial = oObraSocialService.recuperarObraSocialPorCodigo(codigo);
             txtCodigo.Text = oObraSocial.Codigo.ToString();
             txtNombre.Text = oObraSocial.Nombre;
+            txtPorcentaje.Text = oObraSocial.Porcentaje.ToString();
 
         }
 
@@ -101,13 +102,11 @@ namespace Consultorio.GUILayer
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-
-            oObraSocial.Codigo = Convert.ToInt32(txtCodigo.Text);
-            oObraSocial.Nombre = txtNombre.Text;
-
-            //;
-            if (oObraSocialService.validarObraSocial())
+            if (oObraSocialService.validarObraSocial(txtNombre.Text, txtPorcentaje.Text))
             {
+                oObraSocial.Codigo = Convert.ToInt32(txtCodigo.Text);
+                oObraSocial.Nombre = txtNombre.Text;
+                oObraSocial.Porcentaje = Convert.ToInt32(txtPorcentaje.Text);
                 if (this.esNuevo)
                 {
                     if (!oObraSocialService.existeObraSocial(oObraSocial.Codigo))
@@ -138,6 +137,11 @@ namespace Consultorio.GUILayer
             habilitar(false);
             esNuevo = false;
             limpiarCampos();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
