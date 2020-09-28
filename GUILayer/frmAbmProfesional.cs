@@ -24,20 +24,20 @@ namespace Consultorio.GUILayer
         }
         private void habilitar(bool x)
         {
-            txtNombre.Enabled = txtApellido.Enabled = txtDomicilio.Enabled = btnGrabar.Enabled = btnCancelar.Enabled = x;
+            txtNombre.Enabled = txtApellido.Enabled = txtDomicilio.Enabled = btnGrabar.Enabled = txtEspecialidad.Enabled = btnCancelar.Enabled = x;
             btnNuevo.Enabled = btnEditar.Enabled = btnBorrar.Enabled = btnSalir.Enabled = !x;
             txtMatricula.Enabled = false;
         }
         private void limpiarCampos()
         {
-            txtMatricula.Text = txtNombre.Text = txtApellido.Text = txtDomicilio.Text = "";
+            txtMatricula.Text = txtNombre.Text = txtApellido.Text = txtDomicilio.Text = txtEspecialidad.Text = "";
         }
         private void cargarGrilla(DataGridView grilla, IList<ProfesionalE> lista)
         {
             grilla.Rows.Clear();
             foreach (ProfesionalE p in lista)
             {
-                grilla.Rows.Add(p.Matricula, p.Nombre, p.Apellido, p.Domicilio);
+                grilla.Rows.Add(p.Matricula, p.Nombre, p.Apellido, p.Especialidad, p.Domicilio);
             }
         }
 
@@ -57,7 +57,7 @@ namespace Consultorio.GUILayer
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Está seguro que quiere elimminar este profesional? \n" + txtNombre.Text, "PACIENTE ELIMINADO",
+            if (MessageBox.Show("Está seguro que quiere elimminar este profesional? \n" + txtNombre.Text, "PROFESIONAL ELIMINADO",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -96,6 +96,7 @@ namespace Consultorio.GUILayer
             txtMatricula.Text = oProfesional.Matricula.ToString();
             txtNombre.Text = oProfesional.Nombre;
             txtApellido.Text = oProfesional.Apellido;
+            txtEspecialidad.Text = oProfesional.Especialidad;
             txtDomicilio.Text = oProfesional.Domicilio;
         }
 
@@ -109,6 +110,7 @@ namespace Consultorio.GUILayer
         {
             oProfesional.Nombre = txtNombre.Text;
             oProfesional.Apellido = txtApellido.Text;
+            oProfesional.Especialidad = txtEspecialidad.Text;
             oProfesional.Domicilio = txtDomicilio.Text;
 
             if (oProfesionalService.validarProfesional())

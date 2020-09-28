@@ -42,6 +42,7 @@
             this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -51,6 +52,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
             this.pnlBotones = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grdProfesional)).BeginInit();
@@ -75,7 +78,7 @@
             // 
             this.lblMatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMatricula.AutoSize = true;
-            this.lblMatricula.Location = new System.Drawing.Point(56, 28);
+            this.lblMatricula.Location = new System.Drawing.Point(205, 24);
             this.lblMatricula.Name = "lblMatricula";
             this.lblMatricula.Size = new System.Drawing.Size(72, 18);
             this.lblMatricula.TabIndex = 1;
@@ -85,7 +88,7 @@
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(62, 61);
+            this.lblNombre.Location = new System.Drawing.Point(86, 60);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 2;
@@ -95,7 +98,7 @@
             // 
             this.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(338, 31);
+            this.lblApellido.Location = new System.Drawing.Point(89, 90);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(63, 18);
             this.lblApellido.TabIndex = 3;
@@ -105,7 +108,7 @@
             // 
             this.lblDomicilio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDomicilio.AutoSize = true;
-            this.lblDomicilio.Location = new System.Drawing.Point(327, 61);
+            this.lblDomicilio.Location = new System.Drawing.Point(372, 93);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.Size = new System.Drawing.Size(74, 18);
             this.lblDomicilio.TabIndex = 4;
@@ -114,34 +117,34 @@
             // txtMatricula
             // 
             this.txtMatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMatricula.Location = new System.Drawing.Point(134, 25);
+            this.txtMatricula.Location = new System.Drawing.Point(283, 21);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(168, 24);
-            this.txtMatricula.TabIndex = 6;
+            this.txtMatricula.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(134, 58);
+            this.txtNombre.Location = new System.Drawing.Point(158, 57);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 24);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 0;
             // 
             // txtApellido
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtApellido.Location = new System.Drawing.Point(407, 22);
+            this.txtApellido.Location = new System.Drawing.Point(158, 87);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(168, 24);
-            this.txtApellido.TabIndex = 8;
+            this.txtApellido.TabIndex = 1;
             // 
             // txtDomicilio
             // 
             this.txtDomicilio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDomicilio.Location = new System.Drawing.Point(407, 58);
+            this.txtDomicilio.Location = new System.Drawing.Point(452, 90);
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(168, 24);
-            this.txtDomicilio.TabIndex = 9;
+            this.txtDomicilio.TabIndex = 3;
             // 
             // grdProfesional
             // 
@@ -151,12 +154,13 @@
             this.matricula,
             this.nombre,
             this.apellido,
+            this.especialidad,
             this.domicilio});
-            this.grdProfesional.Location = new System.Drawing.Point(12, 25);
+            this.grdProfesional.Location = new System.Drawing.Point(12, 23);
             this.grdProfesional.Name = "grdProfesional";
             this.grdProfesional.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdProfesional.Size = new System.Drawing.Size(637, 150);
-            this.grdProfesional.TabIndex = 10;
+            this.grdProfesional.TabIndex = 0;
             this.grdProfesional.SelectionChanged += new System.EventHandler(this.grdProfesional_SelectionChanged);
             // 
             // matricula
@@ -170,14 +174,17 @@
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
-            this.nombre.Width = 125;
             // 
             // apellido
             // 
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
-            this.apellido.Width = 125;
+            // 
+            // especialidad
+            // 
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.Name = "especialidad";
             // 
             // domicilio
             // 
@@ -196,7 +203,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(24, 8);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(52, 52);
-            this.btnNuevo.TabIndex = 11;
+            this.btnNuevo.TabIndex = 0;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -210,7 +217,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(82, 8);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(52, 52);
-            this.btnBorrar.TabIndex = 12;
+            this.btnBorrar.TabIndex = 1;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
@@ -224,7 +231,7 @@
             this.btnEditar.Location = new System.Drawing.Point(158, 8);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(52, 52);
-            this.btnEditar.TabIndex = 13;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -238,7 +245,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(326, 8);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(52, 52);
-            this.btnGrabar.TabIndex = 14;
+            this.btnGrabar.TabIndex = 3;
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
@@ -252,7 +259,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(384, 8);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(52, 52);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -266,7 +273,7 @@
             this.btnSalir.Location = new System.Drawing.Point(584, 8);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(52, 52);
-            this.btnSalir.TabIndex = 16;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -281,6 +288,8 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Controls.Add(this.txtEspecialidad);
+            this.pnlCuerpo.Controls.Add(this.lblEspecialidad);
             this.pnlCuerpo.Controls.Add(this.txtMatricula);
             this.pnlCuerpo.Controls.Add(this.lblMatricula);
             this.pnlCuerpo.Controls.Add(this.lblNombre);
@@ -292,8 +301,26 @@
             this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCuerpo.Location = new System.Drawing.Point(0, 50);
             this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(661, 100);
+            this.pnlCuerpo.Size = new System.Drawing.Size(661, 142);
             this.pnlCuerpo.TabIndex = 18;
+            // 
+            // txtEspecialidad
+            // 
+            this.txtEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEspecialidad.Location = new System.Drawing.Point(452, 54);
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.Size = new System.Drawing.Size(168, 24);
+            this.txtEspecialidad.TabIndex = 2;
+            // 
+            // lblEspecialidad
+            // 
+            this.lblEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Location = new System.Drawing.Point(351, 57);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(95, 18);
+            this.lblEspecialidad.TabIndex = 10;
+            this.lblEspecialidad.Text = "Especialidad:";
             // 
             // pnlBotones
             // 
@@ -313,9 +340,9 @@
             // 
             this.panel1.Controls.Add(this.grdProfesional);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 150);
+            this.panel1.Location = new System.Drawing.Point(0, 192);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(661, 255);
+            this.panel1.Size = new System.Drawing.Size(661, 213);
             this.panel1.TabIndex = 20;
             // 
             // frmAbmProfesional
@@ -360,10 +387,6 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtDomicilio;
         private System.Windows.Forms.DataGridView grdProfesional;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matricula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
@@ -374,5 +397,12 @@
         private System.Windows.Forms.Panel pnlCuerpo;
         private System.Windows.Forms.Panel pnlBotones;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn especialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
+        private System.Windows.Forms.TextBox txtEspecialidad;
+        private System.Windows.Forms.Label lblEspecialidad;
     }
 }

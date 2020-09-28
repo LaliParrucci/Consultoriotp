@@ -67,8 +67,9 @@ namespace Consultorio.BussinessLayer
             int mat = ob.Matricula;
             string nom = ob.Nombre;
             string ape = ob.Apellido;
+            string esp = ob.Especialidad;
             string dom = ob.Domicilio;
-            oProfesionalDao.actualizacion(mat, nom, ape, dom, esAlta);
+            oProfesionalDao.actualizacion(mat, nom, ape, esp, dom, esAlta);
         }
     }
 

@@ -15,7 +15,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<ProfesionalE> listadoProfe = new List<ProfesionalE>();
 
-            var strSQL = "SELECT matricula,nombre, apellido, domicilio FROM profesional WHERE  borrado = 0";
+            var strSQL = "SELECT matricula,nombre, apellido, especialidad, domicilio FROM profesional WHERE  borrado = 0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSQL);
 
@@ -33,14 +33,15 @@ namespace Consultorio.DataAccessLayer
             oProfesional.Matricula = Convert.ToInt32(row[0].ToString());
             oProfesional.Nombre = row[1].ToString();
             oProfesional.Apellido = row[2].ToString();
-            oProfesional.Domicilio = row[3].ToString();
+            oProfesional.Especialidad = row[3].ToString();
+            oProfesional.Domicilio = row[4].ToString();
             return oProfesional;
         }
 
         public ProfesionalE GetProfecional(int matricula)
         {
             //Construimos la consulta sql para buscar al Profecional
-            String consultaSql = string.Concat("SELECT matricula, nombre, apellido, domicilio",
+            String consultaSql = string.Concat("SELECT matricula, nombre, apellido, especialidad, domicilio",
                                                " FROM profesional",
                                                " WHERE matricula = " + matricula);
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
@@ -59,18 +60,19 @@ namespace Consultorio.DataAccessLayer
             DBHelper.GetDBHelper().ConsultaSQL(sentencia);
         }
 
-        public void actualizacion(int mat, string nom, string ape, string dom, bool esAlta)
+        public void actualizacion(int mat, string nom, string ape,string esp, string dom, bool esAlta)
         {
             string sentencia;
             if (esAlta)
             {
-                sentencia = string.Concat("INSERT INTO profesional (nombre, apellido, domicilio, borrado) ",
-                                          "VALUES ('", nom, "', '", ape, "', '", dom, "' , 0)");
+                sentencia = string.Concat("INSERT INTO profesional (nombre, apellido, especialidad, domicilio, borrado) ",
+                                          "VALUES ('", nom, "', '", ape, "', '", esp, "', '", dom, "' , 0)");
             }
             else
             {
                 sentencia = string.Concat("UPDATE profesional SET nombre = '", nom,
                                                              "', apellido = '", ape,
+                                                             "', especialidad = '", esp,
                                                             "', domicilio = '", dom,
                                                             "' WHERE matricula = ", mat);
             }
