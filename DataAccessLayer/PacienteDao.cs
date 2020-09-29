@@ -58,17 +58,28 @@ namespace Consultorio.DataAccessLayer
 
 
 
-        internal int GetPacientePorNA(string nom, string ape)
+        internal IList<PacienteE> GetPacientePorNA(string nom, string ape)
         {
             //Construimos la consulta sql para buscar el paciente en la base de datos.
+            List<PacienteE> listado = new List<PacienteE>();
             String consultaSql = string.Concat(" SELECT dni",
                                                "   FROM paciente ",
                                                "  WHERE nombre = '", nom, "' AND apellido = '", ape, "'" );
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
-            int dni = Convert.ToInt32(resultado.Rows[0].ToString());
-            return dni;
+            DataTable resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+            foreach (DataRow row in resultado.Rows)
+            {
+                listado.Add(mapeo(row));
+            }
+            return listado;
+        }
+
+        public PacienteE mapeo(DataRow row)
+        {
+            PacienteE oPaciente = new PacienteE();
+            oPaciente.Dni = Convert.ToInt32(row[0].ToString());
+            return oPaciente;
         }
 
         public void actualizacion(string nom, string ape, string tl, int dni, string dom, string email, bool esAlta)

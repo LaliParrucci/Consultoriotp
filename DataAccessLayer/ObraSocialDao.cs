@@ -36,6 +36,31 @@ namespace Consultorio.DataAccessLayer
             return oObraSocial;
         }
 
+        public ObraSocial getObraSocialNom(string nom)
+        {
+            String consultaSql = string.Concat(" SELECT cod_obra_social",
+                                               "   FROM obra_social ",
+                                               "  WHERE nombre = '", nom, "'");
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return mapeo(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
+        public ObraSocial mapeo(DataRow row)
+        {
+            ObraSocial os = new ObraSocial();
+            os.Codigo = Convert.ToInt32(row[0].ToString());
+            return os;
+        }
+
         public ObraSocial GetObraSocial(int codigo)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.

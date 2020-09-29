@@ -15,11 +15,11 @@ namespace Consultorio.GUILayer
     public partial class frmRegistrarTurno : Form
     {
         bool activoProfesional = false;
-        bool activoPaciente = false;
         TurnoService oTurnoService = new TurnoService();
         ProfesionalService oProfesionalService = new ProfesionalService();
         ObraSocialService oObraSocialService = new ObraSocialService();
         PacienteService oPacienteService = new PacienteService();
+        Turno oTurno = new Turno();
         public frmRegistrarTurno()
         {
             InitializeComponent();
@@ -39,7 +39,6 @@ namespace Consultorio.GUILayer
             }
         }
 
-
         public void autocompletar(TextBox otextBox)
         {
             otextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -57,23 +56,23 @@ namespace Consultorio.GUILayer
             cbo.SelectedIndex = -1;
         }
 
+        private void activoAutocompletar(TextBox txt, bool bandera)
+        {
+            if (!bandera)
+            {
+                autocompletar(txt);
+                bandera = true;
+            }
+        }
+
         private void txtApellidoProfesional_Click(object sender, EventArgs e)
         {
-            if (!activoProfesional)
-            {
-                autocompletar(txtApellidoProfesional);
-                activoProfesional = true;
-            }
-
+            activoAutocompletar(txtApellidoProfesional, activoProfesional);
         }
 
         private void txtApellidoProfesional_Enter(object sender, EventArgs e)
         {
-            if (!activoProfesional)
-            {
-                autocompletar(txtApellidoProfesional);
-                activoProfesional = true;
-            }
+            activoAutocompletar(txtApellidoProfesional, activoProfesional);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -81,27 +80,53 @@ namespace Consultorio.GUILayer
             this.Dispose();
         }
 
-        private void txtApellidoPaciente_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (!activoPaciente)
+            IList<PacienteE> lista = oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text);
+            if (lista.Count() == 1)
             {
-                autocompletar(txtApellidoPaciente);
-                activoPaciente = true;
+                cboDni.Enabled = false;
+                cboDni.SelectedIndex = -1;
+                txtDni.Text = lista[0].Dni.ToString();
+            }
+            else
+            {
+                cboDni.Enabled = true;
+                txtDni.Text = ""; txtDni.Enabled = false;
+                LlenarCombo(cboDni, lista, "dni", "dni");
             }
         }
 
-        private void txtApellidoPaciente_Enter(object sender, EventArgs e)
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (!activoPaciente)
+            int mat = 0, dni = 0;
+            List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
+            foreach (ProfesionalE p in ls)
             {
-                autocompletar(txtApellidoPaciente);
-                activoPaciente = true;
+                if (p.Apellido == txtApellidoProfesional.Text)
+                {
+                    mat = p.Matricula;
+                }
             }
+            if (txtDni.Text != "")
+            {
+                dni = Convert.ToInt32(txtDni.Text);
+            }
+            else { dni = Convert.ToInt32(cboDni.SelectedItem); }
+            oTurno.Fecha_hora = txtFecha.Text;
+            oTurno.Id_profesional = mat;
+            oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
+            oTurno.Id_paciente = dni;
+            oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text);
         }
 
-        private void txtDni_Enter(object sender, EventArgs e)
+        private void calendario_DateChanged(object sender, DateRangeEventArgs e)
         {
-            txtDni.Text = (oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text)).ToString();
+            this.txtFecha.Text = calendario.SelectionRange.Start.Date.ToLongDateString();
+            // LlenarCombo(cboHora, oTurnoService.recuperarTurnos(), "hora", "num_turno");
+            txtTurnos.Text = "Horarios disponibles para el día " + this.txtFecha.Text + ", para el profesional seleccionado: " +
+                "turno 1 - turno 2 - turno 3";
         }
     }
 }

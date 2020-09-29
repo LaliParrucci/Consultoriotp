@@ -1,20 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using System.Data.SqlClient;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 
 // para usar el msgbox como depurador
 using System.Windows.Forms;
-namespace BugTracker.DataAccessLayer
+namespace Consultorio.DataAccessLayer
 {
 public class DataManager
 {
     private SqlConnection dbConnection;
     private SqlTransaction dbTransaction;
 
-    private string string_conexion = @"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog = BugsTracker; Persist Security Info=True;User ID = sa; Password=19671970";
-
+        private string string_conexion= 
+        //string_conexion = @"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog = BugsTracker; Persist Security Info=True;User ID = sa; Password=19671970";
+        @"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
     public DataManager()
     {
         dbConnection = new SqlConnection();

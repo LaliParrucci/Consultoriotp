@@ -15,11 +15,12 @@ namespace Consultorio.BussinessLayer
             throw new NotImplementedException();
         }
 
-        private TurnoDao oTurnoDao;
-        private Practica oPractica = new Practica();
-        public void comenzarTransaccion()
+        private TurnoDao oTurnoDao = new TurnoDao();
+
+        public bool crearTurnoConHistorial(Turno oTurno, string obs)
         {
-            oTurnoDao.conectarConTransaccion();
+            return oTurnoDao.crearTurnoConHistorial(oTurno, obs);
         }
+
     }
 }

@@ -67,7 +67,7 @@ namespace Consultorio.BussinessLayer
             oPacienteDao.baja(dni);
         }
 
-        internal int recuperarPacientePorNA(string nom, string ape)
+        internal IList<PacienteE> recuperarPacientePorNA(string nom, string ape)
         {
             return oPacienteDao.GetPacientePorNA(nom, ape);
         }

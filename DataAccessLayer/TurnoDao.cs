@@ -49,7 +49,7 @@ namespace Consultorio.DataAccessLayer
         {//creo nueva instancia de usuario con los parámetros de abajo
             Turno oTurno = new Turno();
             oTurno.Num_turno = Convert.ToInt32(row[0].ToString());
-            oTurno.Fecha_hora = Convert.ToDateTime(row[1].ToString());
+            oTurno.Fecha_hora = row[1].ToString();
             oTurno.Id_paciente = Convert.ToInt32(row[2].ToString());
             oTurno.Id_profesional = Convert.ToInt32(row[3].ToString());
             oTurno.Estado = row[4].ToString();
@@ -91,10 +91,48 @@ namespace Consultorio.DataAccessLayer
             DBHelper.GetDBHelper().ConsultaSQL(sentencia);
         }
 
-        public void conectarConTransaccion()
+        public bool crearTurnoConHistorial(Turno oTurno, string observacion)
         {
-            string sentencia = "";
-            //DBHelper.GetDBHelper().EjecutarSQLConTransaccion(sentencia);
+            DataManager dm = new DataManager();
+            try
+            {
+                //Select @@identity obtiene el identity insertado
+                string sql = "INSERT INTO turno(fecha_hora, id_paciente, id_profesional, id_obra_social, borrado) " +
+                            "   VALUES('" 
+                            + oTurno.Fecha_hora + "', " +
+                            + oTurno.Id_paciente + ", " +
+                            oTurno.Id_profesional + ", " +
+                            oTurno.Id_obra_social + ", 0)";
+
+                dm.Open();
+                dm.BeginTransaction();
+
+                //Ejecuto el insert del turno
+                dm.EjecutarSQL(sql);
+
+                var numTurno = dm.ConsultaSQLScalar(" SELECT @@IDENTITY");
+
+                //Guarda en numTurno el identity generado
+
+                oTurno.Num_turno = Convert.ToInt32(numTurno);
+
+                string sqlhisto = "INSERT INTO historial_turnos(num_turno, borrado, estado) VALUES(" + oTurno.Num_turno + ", 0, '"+ observacion+"')";
+                
+                dm.EjecutarSQL(sqlhisto);
+
+                dm.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                return false;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
         }
     }
 }

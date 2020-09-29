@@ -60,6 +60,7 @@ namespace Consultorio.DataAccessLayer
             ProfesionalE oProfesional = new ProfesionalE();
             oProfesional.Nombre = row["nombre"].ToString();
             oProfesional.Apellido = row["apellido"].ToString();
+            oProfesional.Matricula = Convert.ToInt32(row["matricula"].ToString());
             return oProfesional;
         }
 
@@ -67,7 +68,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<ProfesionalE> listadoProfe = new List<ProfesionalE>();
             //Construimos la consulta sql para buscar al Profecional
-            String consultaSql = string.Concat("SELECT nombre, apellido",
+            String consultaSql = string.Concat("SELECT nombre, apellido, matricula",
                                                " FROM profesional",
                                                " WHERE nombre = '" + nom + "'");
             DataTable resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);

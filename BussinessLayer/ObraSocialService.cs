@@ -27,6 +27,11 @@ namespace Consultorio.BussinessLayer
         {
             return oObraSocialDao.GetObraSocial(codigo);
         }
+
+        public ObraSocial recuperarObraSocialPorNom(string nom)
+        {
+            return oObraSocialDao.getObraSocialNom(nom);
+        }
         public bool validarObraSocial(string nombre, string porcentaje)
         {
            

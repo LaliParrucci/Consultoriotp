@@ -49,12 +49,16 @@
             this.txtNombrePaciente = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDni = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.cboDni = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -66,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 138);
+            this.label1.Location = new System.Drawing.Point(11, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 0;
@@ -93,6 +97,8 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Controls.Add(this.txtFecha);
+            this.pnlCuerpo.Controls.Add(this.label9);
             this.pnlCuerpo.Controls.Add(this.cboObraSocial);
             this.pnlCuerpo.Controls.Add(this.groupBox2);
             this.pnlCuerpo.Controls.Add(this.chDisponibles);
@@ -108,7 +114,7 @@
             // cboObraSocial
             // 
             this.cboObraSocial.FormattingEnabled = true;
-            this.cboObraSocial.Location = new System.Drawing.Point(107, 135);
+            this.cboObraSocial.Location = new System.Drawing.Point(107, 121);
             this.cboObraSocial.Name = "cboObraSocial";
             this.cboObraSocial.Size = new System.Drawing.Size(121, 26);
             this.cboObraSocial.TabIndex = 10;
@@ -189,6 +195,7 @@
             this.calendario.Location = new System.Drawing.Point(240, 12);
             this.calendario.Name = "calendario";
             this.calendario.TabIndex = 2;
+            this.calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateChanged);
             // 
             // panel1
             // 
@@ -227,8 +234,6 @@
             this.txtApellidoPaciente.Name = "txtApellidoPaciente";
             this.txtApellidoPaciente.Size = new System.Drawing.Size(138, 24);
             this.txtApellidoPaciente.TabIndex = 10;
-            this.txtApellidoPaciente.Click += new System.EventHandler(this.txtApellidoPaciente_Click);
-            this.txtApellidoPaciente.Enter += new System.EventHandler(this.txtApellidoPaciente_Enter);
             // 
             // txtNombrePaciente
             // 
@@ -240,6 +245,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtDni);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.cboDni);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtObservaciones);
@@ -252,16 +259,35 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(251, 55);
+            this.txtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDni.Location = new System.Drawing.Point(284, 55);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(140, 24);
-            this.txtDni.TabIndex = 14;
-            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtDni.Size = new System.Drawing.Size(117, 26);
+            this.txtDni.TabIndex = 17;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(549, 23);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 16;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // cboDni
+            // 
+            this.cboDni.FormattingEnabled = true;
+            this.cboDni.Location = new System.Drawing.Point(139, 55);
+            this.cboDni.Name = "cboDni";
+            this.cboDni.Size = new System.Drawing.Size(121, 26);
+            this.cboDni.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(205, 58);
+            this.label8.Location = new System.Drawing.Point(96, 58);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 18);
             this.label8.TabIndex = 14;
@@ -292,6 +318,7 @@
             this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar Turno";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnCancelar
             // 
@@ -312,6 +339,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(661, 53);
             this.panel2.TabIndex = 5;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtFecha.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtFecha.Location = new System.Drawing.Point(107, 153);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(123, 24);
+            this.txtFecha.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 156);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 18);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Fecha:";
             // 
             // frmRegistrarTurno
             // 
@@ -368,10 +413,14 @@
         private System.Windows.Forms.TextBox txtApellidoProfesional;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cboDni;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.Label label9;
     }
 }
