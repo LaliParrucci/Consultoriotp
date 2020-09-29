@@ -15,7 +15,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Turno> listadoTurno = new List<Turno>();
 
-            var strSql = "SELECT num_turno, fecha_turno, hora_turno, id_paciente, id_profesional, estado from turno where borrado=0";
+            var strSql = "SELECT num_turno, fecha_hora, id_paciente, id_profesional from turno where borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -29,7 +29,7 @@ namespace Consultorio.DataAccessLayer
         public Turno GetTurno(int id)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT num_turno, fecha_turno, hora_turno, id_paciente, id_profesional, estado",
+            String consultaSql = string.Concat(" SELECT num_turno, fecha_hora, id_paciente, id_profesional",
                                                "   FROM turno ",
                                                "  WHERE num_turno = ", id);
 
@@ -45,6 +45,25 @@ namespace Consultorio.DataAccessLayer
             return null;
         }
 
+        public IList<Turno> GetTurnoFecha(string fecha)
+        {
+            String consultaSql = string.Concat(" SELECT num_turno, fecha_hora, id_paciente, id_profesional, id_obra_social",
+                                               "   FROM turno ",
+                                               "  WHERE fecha_hora = '",fecha, "'");
+            List<Turno> listadoTurno = new List<Turno>();
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            foreach (DataRow row in resultado.Rows)
+            {
+                listadoTurno.Add(crearObjTurno(row));
+            }
+
+            return listadoTurno;
+        }
+
         private Turno crearObjTurno(DataRow row)
         {//creo nueva instancia de usuario con los parámetros de abajo
             Turno oTurno = new Turno();
@@ -52,8 +71,7 @@ namespace Consultorio.DataAccessLayer
             oTurno.Fecha_hora = row[1].ToString();
             oTurno.Id_paciente = Convert.ToInt32(row[2].ToString());
             oTurno.Id_profesional = Convert.ToInt32(row[3].ToString());
-            oTurno.Estado = row[4].ToString();
-            oTurno.Id_obra_social = Convert.ToInt32(row[5].ToString());
+            oTurno.Id_obra_social = Convert.ToInt32(row[4].ToString());
             return oTurno;
         }
 
@@ -116,7 +134,7 @@ namespace Consultorio.DataAccessLayer
 
                 oTurno.Num_turno = Convert.ToInt32(numTurno);
 
-                string sqlhisto = "INSERT INTO historial_turnos(num_turno, borrado, estado) VALUES(" + oTurno.Num_turno + ", 0, '"+ observacion+"')";
+                string sqlhisto = "INSERT INTO historial_turnos(num_turno, borrado, observacion) VALUES(" + oTurno.Num_turno + ", 0, '"+ observacion+"')";
                 
                 dm.EjecutarSQL(sqlhisto);
 

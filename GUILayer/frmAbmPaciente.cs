@@ -18,10 +18,22 @@ namespace Consultorio.GUILayer
         bool esNuevo = false;
         PacienteE oPaciente = new PacienteE();
         PacienteService oPacienteService = new PacienteService();
+        bool bandera = false;
+        string n, a;
+        
         public frmAbmPaciente()
         {
             InitializeComponent();
         }
+
+        public frmAbmPaciente(string nom, string ape)
+        {
+            InitializeComponent();
+            a = ape;
+            n = nom;
+            bandera = true;
+        }
+
         private void habilitar(bool x)
         {
             txtNombre.Enabled = txtApellido.Enabled = txtTelefono.Enabled = txtDomicilio.Enabled = txtEmail.Enabled = btnGrabar.Enabled = btnCancelar.Enabled = txtDNI.Enabled = x;
@@ -50,8 +62,18 @@ namespace Consultorio.GUILayer
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            if (bandera)
+            {
+                txtNombre.Text = n;
+                txtApellido.Text = a;
+                txtNombre.Enabled = txtApellido.Enabled = false;
+                txtDNI.Text = txtDomicilio.Text = txtEmail.Text = txtTelefono.Text = "";
+            }
+            else
+            {
+                limpiarCampos();
+            }
             habilitar(true);
-            limpiarCampos();
             this.txtDNI.Focus();
             esNuevo = true;
         }
@@ -125,6 +147,10 @@ namespace Consultorio.GUILayer
                     if (!oPacienteService.existePaciente(oPaciente.Dni))
                     {
                         sentenciaYCarga(oPaciente, grdPaciente, oPacienteService, esNuevo);
+                        if (bandera)
+                        {
+                            this.Dispose();
+                        }
                     }
                     else
                     {

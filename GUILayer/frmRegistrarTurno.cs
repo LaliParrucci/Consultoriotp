@@ -20,6 +20,7 @@ namespace Consultorio.GUILayer
         ObraSocialService oObraSocialService = new ObraSocialService();
         PacienteService oPacienteService = new PacienteService();
         Turno oTurno = new Turno();
+        frmAbmPaciente formPaciente;
         public frmRegistrarTurno()
         {
             InitializeComponent();
@@ -83,18 +84,25 @@ namespace Consultorio.GUILayer
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             IList<PacienteE> lista = oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text);
-            if (lista.Count() == 1)
+            if(lista.Count == 0)
             {
-                cboDni.Enabled = false;
-                cboDni.SelectedIndex = -1;
-                txtDni.Text = lista[0].Dni.ToString();
+                if(MessageBox.Show("No se encontró el paciente que busca, ¿desea registrarlo?", "Búsqueda no encontrada", MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+        MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    //    txtApellidoPaciente.Text = txtNombrePaciente.Text = "";
+                    formPaciente = new frmAbmPaciente(this.txtNombrePaciente.Text, this.txtApellidoPaciente.Text);
+                    formPaciente.ShowDialog();
+                    txtNombrePaciente.Focus();
+                    lista = oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Falló el registro del turno", "Cancelación de turno");
+                }
             }
-            else
-            {
-                cboDni.Enabled = true;
-                txtDni.Text = ""; txtDni.Enabled = false;
-                LlenarCombo(cboDni, lista, "dni", "dni");
-            }
+            LlenarCombo(cboDni, lista, "dni", "dni");
+            cboDni.SelectedIndex = 0;
+
         }
 
 
@@ -109,24 +117,54 @@ namespace Consultorio.GUILayer
                     mat = p.Matricula;
                 }
             }
-            if (txtDni.Text != "")
+            if (cboDni.Text != "")
             {
-                dni = Convert.ToInt32(txtDni.Text);
+                dni = Convert.ToInt32(cboDni.Text);
             }
-            else { dni = Convert.ToInt32(cboDni.SelectedItem); }
+            else { dni = Convert.ToInt32(cboDni.Text); }
             oTurno.Fecha_hora = txtFecha.Text;
             oTurno.Id_profesional = mat;
             oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
             oTurno.Id_paciente = dni;
-            oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text);
+            if (oTurnoService.validarTurno(oTurno))
+            {
+                if(oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
+                {
+                    MessageBox.Show("Se registró el turno correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un problema con el registro de turno");
+                }
+            }
+            limpiarCampos();
         }
 
         private void calendario_DateChanged(object sender, DateRangeEventArgs e)
         {
             this.txtFecha.Text = calendario.SelectionRange.Start.Date.ToLongDateString();
             // LlenarCombo(cboHora, oTurnoService.recuperarTurnos(), "hora", "num_turno");
-            txtTurnos.Text = "Horarios disponibles para el día " + this.txtFecha.Text + ", para el profesional seleccionado: " +
-                "turno 1 - turno 2 - turno 3";
+            IList<Turno> lista = oTurnoService.recuperarTurnoFecha(this.txtFecha.Text);
+            if (lista.Count == 0) { txtTurnos.Text = "No hay turnos registrados para la fecha"; }
+            else
+            {
+                txtTurnos.Text = "Horarios disponibles para el día " + this.txtFecha.Text + ", para el profesional seleccionado:\n";
+                foreach (Turno t in lista)
+                {
+                    txtTurnos.Text += "\nNúmero de turno: " + t.Num_turno + " - Paciente: " + t.Id_paciente;
+                }
+            }
+        }
+
+        private void limpiarCampos()
+        {
+            cboDni.SelectedIndex = cboObraSocial.SelectedIndex = -1;
+            txtApellidoPaciente.Text = txtApellidoProfesional.Text = txtFecha.Text = txtNombrePaciente.Text = txtNombreProfesional.Text = txtObservaciones.Text = "";
+        }
+
+        private void txtApellidoPaciente_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
