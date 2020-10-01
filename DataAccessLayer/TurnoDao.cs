@@ -15,7 +15,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Turno> listadoTurno = new List<Turno>();
 
-            var strSql = "SELECT num_turno, fecha_hora, id_paciente, id_profesional from turno where borrado=0";
+            var strSql = "SELECT num_turno, fecha, hora, id_paciente, id_profesional from turno where borrado=0";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -26,10 +26,44 @@ namespace Consultorio.DataAccessLayer
 
             return listadoTurno;
         }
+
+        internal IList<Disponibilidad> GetTodos(string matricula, string fecha)
+        {
+            List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
+
+            var strSql = "SELECT matricula, semana, hora FROM disponibilidad_Profesional WHERE matricula = '"+ matricula + "' AND semana LIKE '" + fecha + "%'" ;
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoTodosTurnos.Add(crearObjDisponibilidad(row));
+            }
+
+            return listadoTodosTurnos;
+        }
+
+        internal IList<Disponibilidad> GetTodosDisp(string matricula, string fecha)
+        {
+            List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
+
+            var strSql = "SELECT d.matricula, d.semana, d.hora FROM disponibilidad_Profesional d JOIN Turno t ON (d.matricula = t.id_profesional AND d.hora = t.hora) WHERE matricula = '" + matricula + "' AND t.fecha Like '" + fecha + "' AND d.semana Like '" + fecha + "%'";
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoTodosTurnos.Add(crearObjDisponibilidad(row));
+            }
+
+            return listadoTodosTurnos;
+        }
+
+
         public Turno GetTurno(int id)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT num_turno, fecha_hora, id_paciente, id_profesional",
+            String consultaSql = string.Concat(" SELECT num_turno, fecha, id_paciente, id_profesional",
                                                "   FROM turno ",
                                                "  WHERE num_turno = ", id);
 
@@ -47,9 +81,9 @@ namespace Consultorio.DataAccessLayer
 
         public IList<Turno> GetTurnoFecha(string fecha)
         {
-            String consultaSql = string.Concat(" SELECT num_turno, fecha_hora, id_paciente, id_profesional, id_obra_social",
+            String consultaSql = string.Concat(" SELECT num_turno, fecha, id_paciente, id_profesional, id_obra_social",
                                                "   FROM turno ",
-                                               "  WHERE fecha_hora = '",fecha, "'");
+                                               "  WHERE fecha = '",fecha, "'");
             List<Turno> listadoTurno = new List<Turno>();
 
             //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
@@ -68,11 +102,21 @@ namespace Consultorio.DataAccessLayer
         {//creo nueva instancia de usuario con los parámetros de abajo
             Turno oTurno = new Turno();
             oTurno.Num_turno = Convert.ToInt32(row[0].ToString());
-            oTurno.Fecha_hora = row[1].ToString();
+            oTurno.Fecha = row[1].ToString();
             oTurno.Id_paciente = Convert.ToInt32(row[2].ToString());
             oTurno.Id_profesional = Convert.ToInt32(row[3].ToString());
             oTurno.Id_obra_social = Convert.ToInt32(row[4].ToString());
+            oTurno.Hora = row["Hora"].ToString();
             return oTurno;
+        }
+
+        private Disponibilidad crearObjDisponibilidad(DataRow row)
+        {//creo nueva instancia de usuario con los parámetros de abajo
+            Disponibilidad oDisponibilidad = new Disponibilidad();
+            oDisponibilidad.Matricula = Convert.ToInt32(row["Matricula"].ToString());
+            oDisponibilidad.Semana = row["Semana"].ToString();
+            oDisponibilidad.Hora = row["Hora"].ToString();
+            return oDisponibilidad;
         }
 
         public void actualizacion(string nom, string desc, int imp, int id, bool esAlta)
@@ -93,7 +137,7 @@ namespace Consultorio.DataAccessLayer
             else
             {
                 sentencia = string.Concat("UPDATE practica SET nombre = '", nom,
-                                                             "', descripcion = '", desc, "'");
+                                                      "', descripcion = '", desc, "'");
                 if (imp != 0)
                 {
                     sentencia += ", importe =" + imp;
@@ -115,12 +159,13 @@ namespace Consultorio.DataAccessLayer
             try
             {
                 //Select @@identity obtiene el identity insertado
-                string sql = "INSERT INTO turno(fecha_hora, id_paciente, id_profesional, id_obra_social, borrado) " +
+                string sql = "INSERT INTO turno(fecha, hora, id_paciente, id_profesional, id_obra_social, borrado) " +
                             "   VALUES('" 
-                            + oTurno.Fecha_hora + "', " +
-                            + oTurno.Id_paciente + ", " +
-                            oTurno.Id_profesional + ", " +
-                            oTurno.Id_obra_social + ", 0)";
+                            + oTurno.Fecha + "', '" 
+                            + oTurno.Hora + "' , " 
+                            + oTurno.Id_paciente + ", " 
+                            + oTurno.Id_profesional + ", " 
+                            + oTurno.Id_obra_social + ", 0)";
 
                 dm.Open();
                 dm.BeginTransaction();

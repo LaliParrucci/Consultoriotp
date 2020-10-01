@@ -30,9 +30,9 @@ namespace Consultorio.BussinessLayer
 
         public bool validarTurno(Turno ob)
         {
-            if(ob.Fecha_hora == "")
+            if(ob.Fecha == "")
             {
-                MessageBox.Show("Debe seleccionar una fecha y hora válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

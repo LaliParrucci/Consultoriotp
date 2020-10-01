@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLayer\DisponibilidadService.cs" />
     <Compile Include="BussinessLayer\InsumoService.cs" />
     <Compile Include="BussinessLayer\ObraSocialService.cs" />
     <Compile Include="BussinessLayer\PacienteService.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="DataAccessLayer\Service.cs" />
     <Compile Include="DataAccessLayer\TurnoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
+    <Compile Include="Entities\Disponibilidad.cs" />
     <Compile Include="Entities\Insumo.cs" />
     <Compile Include="Entities\ObraSocial.cs" />
     <Compile Include="Entities\PacienteE.cs" />

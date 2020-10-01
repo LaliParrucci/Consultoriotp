@@ -99,7 +99,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(200, 555);
+            this.pnlMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlMenu.TabIndex = 3;
             // 
             // btnObrasSociales
@@ -337,7 +337,7 @@
             this.pnlTitulobarra.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulobarra.Location = new System.Drawing.Point(200, 0);
             this.pnlTitulobarra.Name = "pnlTitulobarra";
-            this.pnlTitulobarra.Size = new System.Drawing.Size(661, 69);
+            this.pnlTitulobarra.Size = new System.Drawing.Size(750, 69);
             this.pnlTitulobarra.TabIndex = 4;
             this.pnlTitulobarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitulobarra_MouseDown);
             // 
@@ -352,7 +352,7 @@
             this.btnInicioSesion.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(245)))), ((int)(((byte)(239)))));
             this.btnInicioSesion.IconSize = 32;
             this.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicioSesion.Location = new System.Drawing.Point(492, 29);
+            this.btnInicioSesion.Location = new System.Drawing.Point(581, 29);
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Rotation = 0D;
             this.btnInicioSesion.Size = new System.Drawing.Size(169, 34);
@@ -374,7 +374,7 @@
             this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconSize = 16;
-            this.btnSalir.Location = new System.Drawing.Point(638, 0);
+            this.btnSalir.Location = new System.Drawing.Point(727, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Rotation = 0D;
             this.btnSalir.Size = new System.Drawing.Size(23, 23);
@@ -393,7 +393,7 @@
             this.btnMax.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnMax.IconColor = System.Drawing.Color.Black;
             this.btnMax.IconSize = 16;
-            this.btnMax.Location = new System.Drawing.Point(609, 0);
+            this.btnMax.Location = new System.Drawing.Point(698, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Rotation = 0D;
             this.btnMax.Size = new System.Drawing.Size(23, 23);
@@ -412,7 +412,7 @@
             this.btnMini.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnMini.IconColor = System.Drawing.Color.Black;
             this.btnMini.IconSize = 16;
-            this.btnMini.Location = new System.Drawing.Point(580, 0);
+            this.btnMini.Location = new System.Drawing.Point(669, 0);
             this.btnMini.Name = "btnMini";
             this.btnMini.Rotation = 0D;
             this.btnMini.Size = new System.Drawing.Size(23, 23);
@@ -450,23 +450,25 @@
             this.pnlSombra.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSombra.Location = new System.Drawing.Point(200, 69);
             this.pnlSombra.Name = "pnlSombra";
-            this.pnlSombra.Size = new System.Drawing.Size(661, 9);
+            this.pnlSombra.Size = new System.Drawing.Size(750, 9);
             this.pnlSombra.TabIndex = 5;
             // 
             // pnlInicio
             // 
+            this.pnlInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
             this.pnlInicio.Controls.Add(this.pbInicio);
             this.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInicio.Location = new System.Drawing.Point(200, 78);
             this.pnlInicio.Name = "pnlInicio";
-            this.pnlInicio.Size = new System.Drawing.Size(661, 477);
+            this.pnlInicio.Size = new System.Drawing.Size(750, 572);
             this.pnlInicio.TabIndex = 6;
             // 
             // pbInicio
             // 
             this.pbInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
             this.pbInicio.Image = global::Consultorio.Properties.Resources.Logo_completo;
-            this.pbInicio.Location = new System.Drawing.Point(118, 43);
+            this.pbInicio.Location = new System.Drawing.Point(165, 62);
             this.pbInicio.Name = "pbInicio";
             this.pbInicio.Size = new System.Drawing.Size(416, 348);
             this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -479,7 +481,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(861, 555);
+            this.ClientSize = new System.Drawing.Size(950, 650);
             this.ControlBox = false;
             this.Controls.Add(this.pnlInicio);
             this.Controls.Add(this.pnlSombra);
