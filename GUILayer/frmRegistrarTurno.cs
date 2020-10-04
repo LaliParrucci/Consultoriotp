@@ -88,25 +88,24 @@ namespace Consultorio.GUILayer
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            IList<PacienteE> lista = oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text);
-            if (lista.Count == 0)
+            PacienteE p = oPacienteService.recuperarPacientePorDni(Convert.ToInt32(this.txtDni.Text));
+            if (p == null)
             {
-                if (MessageBox.Show("No se encontró el paciente que busca, ¿desea registrarlo?", "Búsqueda no encontrada", MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                if (MessageBox.Show("Búsqueda no encontrada", "No se encontró el paciente que busca, ¿desea registrarlo?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     //    txtApellidoPaciente.Text = txtNombrePaciente.Text = "";
-                    formPaciente = new frmAbmPaciente(this.txtNombrePaciente.Text, this.txtApellidoPaciente.Text);
+                    formPaciente = new frmAbmPaciente(this.txtDni.Text);
                     formPaciente.ShowDialog();
-                    txtNombrePaciente.Focus();
-                    lista = oPacienteService.recuperarPacientePorNA(txtNombrePaciente.Text, txtApellidoPaciente.Text);
+                    p = oPacienteService.recuperarPacientePorDni(Convert.ToInt32(this.txtDni.Text));
                 }
                 else
                 {
-                    MessageBox.Show("Falló el registro del turno", "Cancelación de turno");
+                    MessageBox.Show("Cancelación de turno", "No logró registrarse el turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            LlenarCombo(cboDni, lista, "dni", "dni");
-            cboDni.SelectedIndex = 0;
+            txtPaciente.Text = (p.Apellido + ", " + p.Nombre);
+            txtPaciente.Enabled = false;
 
         }
 
@@ -118,17 +117,17 @@ namespace Consultorio.GUILayer
                 oTurno.Fecha = txtFecha.Text;
                 oTurno.Id_profesional = oProfesional.Matricula;
                 oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
-                oTurno.Id_paciente = Convert.ToInt32(cboDni.Text);
+                oTurno.Id_paciente = Convert.ToInt32(txtDni.Text);
                 oTurno.Hora = grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString();
                 if (oTurnoService.validarTurno(oTurno))
                 {
                     if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
                     {
-                        MessageBox.Show("Se registró el turno correctamente");
+                        MessageBox.Show("Turno registrado", "Se registró el turno correctamente", MessageBoxButtons.O, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
-                        MessageBox.Show("Hubo un problema con el registro de turno");
+                        MessageBox.Show("Error en registro", "Hubo un problema con el registro de turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -139,30 +138,34 @@ namespace Consultorio.GUILayer
 
         public bool validarCampos()
         {
-            if (cboDni.Text == "")
+            if (txtNombreProfesional.Text == "")
             {
-                MessageBox.Show("Seleccione un paciente");
+                MessageBox.Show("Faltan datos", "Ingrese un nombre válido para el profesional!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (txtApellidoProfesional.Text == "")
+            {
+                MessageBox.Show("Faltan datos", "Ingrese un nombre válido para el profesional!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (cboObraSocial.Text == "")
             {
-                MessageBox.Show("Seleccione una obra social");
+                MessageBox.Show("Faltan datos", "Seleccione una obra social!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtNombrePaciente.Text == "")
+            if (txtFecha.Text == "")
             {
-                MessageBox.Show("Ingrese un nombre válido para el paciente!");
+                MessageBox.Show("Faltan datos", "Seleccione una fecha!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtApellidoPaciente.Text == "")
+            if (txtDni.Text == "")
             {
-                MessageBox.Show("Ingrese un apellido válido para el paciente!");
+                MessageBox.Show("Faltan datos", "Ingrese un DNI para el paciente!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
-            if (txtApellidoProfesional.Text == "" && txtNombreProfesional.Text == "")
+            if (txtPaciente.Text == "")
             {
-                MessageBox.Show("No se encontró el profesional buscado. Seleccione otro", "Odontólogo no encontrado");
+                MessageBox.Show("Faltan datos", "Ingrese un nombre válido para el paciente!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -215,18 +218,10 @@ namespace Consultorio.GUILayer
 
         private void limpiarCampos()
         {
-            cboDni.SelectedIndex = cboObraSocial.SelectedIndex = -1;
-            txtApellidoPaciente.Text = txtApellidoProfesional.Text = txtFecha.Text = txtNombrePaciente.Text = txtNombreProfesional.Text = txtObservaciones.Text = "";
+            cboObraSocial.SelectedIndex = -1;
+            txtPaciente.Text = txtApellidoProfesional.Text = txtFecha.Text = txtDni.Text = txtNombreProfesional.Text = txtObservaciones.Text = "";
         }
 
-        private void txtApellidoPaciente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlCuerpo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
     }
 }

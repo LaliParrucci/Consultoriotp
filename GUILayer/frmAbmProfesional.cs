@@ -76,6 +76,16 @@ namespace Consultorio.GUILayer
         {
             habilitar(true);
             this.txtNombre.Focus();
+            var fila = grdProfesional.CurrentRow.Cells[0].Value;
+            if (fila != null)
+            {
+                actualizarCampos((int)grdProfesional.CurrentRow.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                habilitar(false);
+            }
         }
         private void grdProfesional_SelectionChanged(object sender, EventArgs e)
         {
@@ -86,7 +96,8 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("¡No se selecciono ninguna fila!");
+                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                habilitar(false);
             }
 
         }

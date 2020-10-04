@@ -19,18 +19,17 @@ namespace Consultorio.GUILayer
         PacienteE oPaciente = new PacienteE();
         PacienteService oPacienteService = new PacienteService();
         bool bandera = false;
-        string n, a;
+        string documento;
         
         public frmAbmPaciente()
         {
             InitializeComponent();
         }
 
-        public frmAbmPaciente(string nom, string ape)
+        public frmAbmPaciente(string d)
         {
             InitializeComponent();
-            a = ape;
-            n = nom;
+            documento = d;
             bandera = true;
         }
 
@@ -64,10 +63,9 @@ namespace Consultorio.GUILayer
         {
             if (bandera)
             {
-                txtNombre.Text = n;
-                txtApellido.Text = a;
-                txtNombre.Enabled = txtApellido.Enabled = false;
-                txtDNI.Text = txtDomicilio.Text = txtEmail.Text = txtTelefono.Text = "";
+                txtDNI.Text = documento;
+                txtDNI.Enabled = false;
+                txtNombre.Text = txtApellido.Text = txtDomicilio.Text = txtEmail.Text = txtTelefono.Text = "";
             }
             else
             {
@@ -83,9 +81,9 @@ namespace Consultorio.GUILayer
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("¿Está seguro de eliminar a este Paciente?\n" + txtNombre.Text, "PACIENTE ELIMINANDO",
+            if (MessageBox.Show("Eliminar paciente", "¿Está seguro de eliminar este paciente?\n" + txtNombre.Text,
                     MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning,
+                    MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes) //si el resultado del dialogo del MB es YES
             {
                 limpiarCampos();
@@ -94,7 +92,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("No se ha eliminado al paciente", "Borrado cancelado", MessageBoxButtons.OK);
+                MessageBox.Show("Borrado cancelado", "No se ha eliminado al paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -103,6 +101,16 @@ namespace Consultorio.GUILayer
         {
             habilitar(true);
             this.txtNombre.Focus();
+            var fila = grdPaciente.CurrentRow.Cells[0].Value;
+            if (fila != null)
+            {
+                actualizarCampos((int)grdPaciente.CurrentRow.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                habilitar(false);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -117,6 +125,7 @@ namespace Consultorio.GUILayer
             {
                 actualizarCampos((int)grdPaciente.CurrentRow.Cells[0].Value);
             }
+            else { MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void actualizarCampos(int dni)
@@ -154,7 +163,7 @@ namespace Consultorio.GUILayer
                     }
                     else
                     {
-                        MessageBox.Show("Error", "Ya existe este paciente! No puede cargarla", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error", "Ya existe este paciente! No puede cargarlo nuevamente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

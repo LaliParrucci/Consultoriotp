@@ -44,12 +44,8 @@
             this.cboObraSocial = new System.Windows.Forms.ComboBox();
             this.calendario = new System.Windows.Forms.MonthCalendar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtApellidoPaciente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
-            this.cboDni = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -58,8 +54,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlFechas = new System.Windows.Forms.Panel();
             this.grdTurnosDisp = new System.Windows.Forms.DataGridView();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
             this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponibilidad = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
@@ -74,7 +73,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(357, 33);
+            this.label1.Location = new System.Drawing.Point(352, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 0;
@@ -104,7 +103,7 @@
             // 
             this.chDisponibles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chDisponibles.AutoSize = true;
-            this.chDisponibles.Location = new System.Drawing.Point(278, 23);
+            this.chDisponibles.Location = new System.Drawing.Point(237, 23);
             this.chDisponibles.Name = "chDisponibles";
             this.chDisponibles.Size = new System.Drawing.Size(104, 22);
             this.chDisponibles.TabIndex = 0;
@@ -129,7 +128,7 @@
             this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFecha.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtFecha.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtFecha.Location = new System.Drawing.Point(450, 60);
+            this.txtFecha.Location = new System.Drawing.Point(448, 60);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(225, 24);
             this.txtFecha.TabIndex = 1;
@@ -138,7 +137,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(394, 63);
+            this.label9.Location = new System.Drawing.Point(389, 63);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 18);
             this.label9.TabIndex = 11;
@@ -201,7 +200,7 @@
             this.cboObraSocial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboObraSocial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboObraSocial.FormattingEnabled = true;
-            this.cboObraSocial.Location = new System.Drawing.Point(450, 30);
+            this.cboObraSocial.Location = new System.Drawing.Point(448, 28);
             this.cboObraSocial.Name = "cboObraSocial";
             this.cboObraSocial.Size = new System.Drawing.Size(225, 26);
             this.cboObraSocial.TabIndex = 0;
@@ -217,12 +216,10 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtPaciente);
+            this.groupBox1.Controls.Add(this.txtDni);
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.txtApellidoPaciente);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtNombrePaciente);
-            this.groupBox1.Controls.Add(this.cboDni);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtObservaciones);
@@ -233,19 +230,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Paciente";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(338, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Apellido:";
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(588, 23);
+            this.btnBuscar.Location = new System.Drawing.Point(323, 26);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 16;
@@ -253,43 +241,19 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtApellidoPaciente
-            // 
-            this.txtApellidoPaciente.Location = new System.Drawing.Point(407, 23);
-            this.txtApellidoPaciente.Name = "txtApellidoPaciente";
-            this.txtApellidoPaciente.Size = new System.Drawing.Size(175, 24);
-            this.txtApellidoPaciente.TabIndex = 1;
-            this.txtApellidoPaciente.TextChanged += new System.EventHandler(this.txtApellidoPaciente_TextChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(70, 26);
+            this.label6.Location = new System.Drawing.Point(70, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 11;
             this.label6.Text = "Nombre:";
             // 
-            // txtNombrePaciente
-            // 
-            this.txtNombrePaciente.Location = new System.Drawing.Point(142, 23);
-            this.txtNombrePaciente.Name = "txtNombrePaciente";
-            this.txtNombrePaciente.Size = new System.Drawing.Size(175, 24);
-            this.txtNombrePaciente.TabIndex = 0;
-            // 
-            // cboDni
-            // 
-            this.cboDni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDni.FormattingEnabled = true;
-            this.cboDni.Location = new System.Drawing.Point(142, 55);
-            this.cboDni.Name = "cboDni";
-            this.cboDni.Size = new System.Drawing.Size(175, 26);
-            this.cboDni.TabIndex = 2;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(99, 58);
+            this.label8.Location = new System.Drawing.Point(99, 28);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 18);
             this.label8.TabIndex = 14;
@@ -361,27 +325,47 @@
             this.grdTurnosDisp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdTurnosDisp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdTurnosDisp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Hora,
             this.Lunes,
+            this.Hora,
+            this.Paciente,
             this.disponibilidad});
-            this.grdTurnosDisp.Location = new System.Drawing.Point(278, 51);
+            this.grdTurnosDisp.Location = new System.Drawing.Point(237, 51);
             this.grdTurnosDisp.Name = "grdTurnosDisp";
-            this.grdTurnosDisp.Size = new System.Drawing.Size(454, 134);
+            this.grdTurnosDisp.Size = new System.Drawing.Size(495, 134);
             this.grdTurnosDisp.TabIndex = 2;
+            // 
+            // txtDni
+            // 
+            this.txtDni.Location = new System.Drawing.Point(142, 26);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(175, 24);
+            this.txtDni.TabIndex = 17;
+            // 
+            // txtPaciente
+            // 
+            this.txtPaciente.Location = new System.Drawing.Point(142, 56);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(175, 24);
+            this.txtPaciente.TabIndex = 18;
+            // 
+            // Lunes
+            // 
+            this.Lunes.HeaderText = "Fecha";
+            this.Lunes.Name = "Lunes";
             // 
             // Hora
             // 
             this.Hora.HeaderText = "Hora";
             this.Hora.Name = "Hora";
             // 
-            // Lunes
+            // Paciente
             // 
-            this.Lunes.HeaderText = "Dia";
-            this.Lunes.Name = "Lunes";
+            this.Paciente.HeaderText = "Paciente";
+            this.Paciente.Name = "Paciente";
             // 
             // disponibilidad
             // 
-            this.disponibilidad.HeaderText = "Disponibilidad";
+            this.disponibilidad.HeaderText = "Disponible";
             this.disponibilidad.Name = "disponibilidad";
             this.disponibilidad.Width = 120;
             // 
@@ -431,10 +415,7 @@
         private System.Windows.Forms.MonthCalendar calendario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombrePaciente;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtApellidoPaciente;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.ComboBox cboObraSocial;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -445,14 +426,16 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cboDni;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnlFechas;
         private System.Windows.Forms.DataGridView grdTurnosDisp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.TextBox txtPaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lunes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Paciente;
         private System.Windows.Forms.DataGridViewCheckBoxColumn disponibilidad;
     }
 }

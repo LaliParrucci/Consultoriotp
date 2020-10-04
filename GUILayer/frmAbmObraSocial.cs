@@ -51,6 +51,8 @@ namespace Consultorio.GUILayer
             {
                 actualizarCampos((int)grdObraSocial.CurrentRow.Cells[0].Value);
             }
+            else { MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+
         }
         private void actualizarCampos(int codigo)
         {
@@ -74,9 +76,9 @@ namespace Consultorio.GUILayer
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("¿Está seguro de eliminar a esta Obra Social?\n" + txtNombre.Text, "ELIMINADA",
+            if (MessageBox.Show("Eliminar obra social", "¿Está seguro de eliminar esta Obra Social?\n" + txtNombre.Text,
                     MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning,
+                    MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 limpiarCampos();
@@ -85,7 +87,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("No se ha eliminado la obra social", "Borrado cancelado", MessageBoxButtons.OK);
+                MessageBox.Show("Borrado cancelado", "No se ha eliminado la obra social", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -94,6 +96,16 @@ namespace Consultorio.GUILayer
         {
             habilitar(true);
             this.txtNombre.Focus();
+            var fila = grdObraSocial.CurrentRow.Cells[0].Value;
+            if (fila != null)
+            {
+                actualizarCampos((int)grdObraSocial.CurrentRow.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                habilitar(false);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

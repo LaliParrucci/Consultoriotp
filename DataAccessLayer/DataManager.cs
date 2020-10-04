@@ -13,8 +13,8 @@ public class DataManager
     private SqlConnection dbConnection;
     private SqlTransaction dbTransaction;
 
-        private string string_conexion=@"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog = BugsTracker; Persist Security Info=True;User ID = sa; Password=19671970";
-        //private string string_conexion =@"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
+        //private string string_conexion=@"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog = BugsTracker; Persist Security Info=True;User ID = sa; Password=19671970";
+        private string string_conexion =@"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
         //private string string_conexion = @"Data Source=DESKTOP-0RHOTN8\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
         //private string string_conexion = @"Data Source=LAPTOP-E7G93F2V\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
         public DataManager()

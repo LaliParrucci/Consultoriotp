@@ -59,9 +59,9 @@ namespace Consultorio.GUILayer.Usuario
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Está seguro que quiere elimminar este Usuario? \n" + txtNombre.Text, "USUARIO ELIMINADO",
+            if (MessageBox.Show("Eliminar usuario", "Está seguro de eliminar este usuario? \n" + txtNombre.Text, 
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning,
+                MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 limpiarCampos();
@@ -70,7 +70,7 @@ namespace Consultorio.GUILayer.Usuario
             }
             else
             {
-                MessageBox.Show("No se ha eliminado al Usuario", "Borrado cancelado", MessageBoxButtons.OK);
+                MessageBox.Show("Borrado cancelado", "No se ha eliminado al Usuario",  MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -78,7 +78,18 @@ namespace Consultorio.GUILayer.Usuario
         {
             habilitar(true);
             this.txtNombre.Focus();
+            var fila = grdUsuario.CurrentRow.Cells[0].Value;
+            if (fila != null)
+            {
+                actualizarCampos((int)grdUsuario.CurrentRow.Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                habilitar(false);
+            }
         }
+
         private void grdUsuario_SelectionChanged(object sender, EventArgs e)
         {
             var fila = grdUsuario.CurrentRow.Cells[0].Value;
@@ -88,7 +99,8 @@ namespace Consultorio.GUILayer.Usuario
             }
             else
             {
-                MessageBox.Show("¡No se selecciono ninguna fila!");
+                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                habilitar(false);
             }
 
         }
