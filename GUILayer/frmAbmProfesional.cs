@@ -83,7 +83,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "No seleccionó ninguna fila!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
         }
