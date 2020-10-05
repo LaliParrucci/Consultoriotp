@@ -9,11 +9,15 @@ namespace Consultorio.Entities
     class Disponibilidad
     {
         private int matricula;
-        private string semana;
+        private string fecha;
         private string hora;
+        private int paciente;
+        private bool disponible;
 
         public int Matricula { get => matricula; set => matricula = value; }
-        public string Semana { get => semana; set => semana = value; }
         public string Hora { get => hora; set => hora = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
+        public int Paciente { get => paciente; set => paciente = value; }
+        public bool Disponible { get => disponible; set => disponible = value; }
     }
 }

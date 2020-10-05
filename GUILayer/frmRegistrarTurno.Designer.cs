@@ -44,6 +44,8 @@
             this.cboObraSocial = new System.Windows.Forms.ComboBox();
             this.calendario = new System.Windows.Forms.MonthCalendar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,12 +56,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlFechas = new System.Windows.Forms.Panel();
             this.grdTurnosDisp = new System.Windows.Forms.DataGridView();
-            this.txtDni = new System.Windows.Forms.TextBox();
-            this.txtPaciente = new System.Windows.Forms.TextBox();
             this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.disponibilidad = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.disponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,6 +109,7 @@
             this.chDisponibles.TabIndex = 0;
             this.chDisponibles.Text = "Disponibles";
             this.chDisponibles.UseVisualStyleBackColor = true;
+            this.chDisponibles.CheckedChanged += new System.EventHandler(this.chDisponibles_CheckedChanged);
             // 
             // pnlCuerpo
             // 
@@ -183,7 +184,6 @@
             this.txtApellidoProfesional.Name = "txtApellidoProfesional";
             this.txtApellidoProfesional.Size = new System.Drawing.Size(175, 24);
             this.txtApellidoProfesional.TabIndex = 1;
-            this.txtApellidoProfesional.Click += new System.EventHandler(this.txtApellidoProfesional_Click);
             this.txtApellidoProfesional.Enter += new System.EventHandler(this.txtApellidoProfesional_Enter);
             // 
             // label4
@@ -211,7 +211,7 @@
             this.calendario.Location = new System.Drawing.Point(18, 23);
             this.calendario.Name = "calendario";
             this.calendario.TabIndex = 1;
-            this.calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateChanged);
+            this.calendario.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateSelected);
             // 
             // groupBox1
             // 
@@ -229,6 +229,20 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Paciente";
+            // 
+            // txtPaciente
+            // 
+            this.txtPaciente.Location = new System.Drawing.Point(142, 56);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(175, 24);
+            this.txtPaciente.TabIndex = 18;
+            // 
+            // txtDni
+            // 
+            this.txtDni.Location = new System.Drawing.Point(142, 26);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(175, 24);
+            this.txtDni.TabIndex = 17;
             // 
             // btnBuscar
             // 
@@ -328,25 +342,11 @@
             this.Lunes,
             this.Hora,
             this.Paciente,
-            this.disponibilidad});
+            this.disponible});
             this.grdTurnosDisp.Location = new System.Drawing.Point(237, 51);
             this.grdTurnosDisp.Name = "grdTurnosDisp";
             this.grdTurnosDisp.Size = new System.Drawing.Size(495, 134);
             this.grdTurnosDisp.TabIndex = 2;
-            // 
-            // txtDni
-            // 
-            this.txtDni.Location = new System.Drawing.Point(142, 26);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(175, 24);
-            this.txtDni.TabIndex = 17;
-            // 
-            // txtPaciente
-            // 
-            this.txtPaciente.Location = new System.Drawing.Point(142, 56);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(175, 24);
-            this.txtPaciente.TabIndex = 18;
             // 
             // Lunes
             // 
@@ -363,11 +363,11 @@
             this.Paciente.HeaderText = "Paciente";
             this.Paciente.Name = "Paciente";
             // 
-            // disponibilidad
+            // disponible
             // 
-            this.disponibilidad.HeaderText = "Disponible";
-            this.disponibilidad.Name = "disponibilidad";
-            this.disponibilidad.Width = 120;
+            this.disponible.HeaderText = "Disponible";
+            this.disponible.Name = "disponible";
+            this.disponible.ReadOnly = true;
             // 
             // frmRegistrarTurno
             // 
@@ -436,6 +436,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Lunes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paciente;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn disponibilidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn disponible;
     }
 }

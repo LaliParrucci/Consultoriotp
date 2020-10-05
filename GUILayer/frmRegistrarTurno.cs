@@ -71,10 +71,7 @@ namespace Consultorio.GUILayer
             }
         }
 
-        private void txtApellidoProfesional_Click(object sender, EventArgs e)
-        {
-            activoAutocompletar(txtApellidoProfesional, activoProfesional);
-        }
+      
 
         private void txtApellidoProfesional_Enter(object sender, EventArgs e)
         {
@@ -91,7 +88,7 @@ namespace Consultorio.GUILayer
             PacienteE p = oPacienteService.recuperarPacientePorDni(Convert.ToInt32(this.txtDni.Text));
             if (p == null)
             {
-                if (MessageBox.Show("Búsqueda no encontrada", "No se encontró el paciente que busca, ¿desea registrarlo?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                if (MessageBox.Show("No se encontró el paciente que busca, ¿desea registrarlo?", "Búsqueda no encontrada", MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     //    txtApellidoPaciente.Text = txtNombrePaciente.Text = "";
@@ -101,7 +98,7 @@ namespace Consultorio.GUILayer
                 }
                 else
                 {
-                    MessageBox.Show("Cancelación de turno", "No logró registrarse el turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No logró registrarse el turno", "Cancelación de turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             txtPaciente.Text = (p.Apellido + ", " + p.Nombre);
@@ -123,11 +120,11 @@ namespace Consultorio.GUILayer
                 {
                     if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
                     {
-                        MessageBox.Show("Turno registrado", "Se registró el turno correctamente", MessageBoxButtons.O, MessageBoxIcon.Exclamation);
+                        MessageBox.Show( "Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
-                        MessageBox.Show("Error en registro", "Hubo un problema con el registro de turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Hubo un problema con el registro de turno", "Error en registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -140,80 +137,67 @@ namespace Consultorio.GUILayer
         {
             if (txtNombreProfesional.Text == "")
             {
-                MessageBox.Show("Faltan datos", "Ingrese un nombre válido para el profesional!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un nombre válido para el profesional!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtApellidoProfesional.Text == "")
             {
-                MessageBox.Show("Faltan datos", "Ingrese un nombre válido para el profesional!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un nombre válido para el profesional!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (cboObraSocial.Text == "")
             {
-                MessageBox.Show("Faltan datos", "Seleccione una obra social!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione una obra social!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtFecha.Text == "")
             {
-                MessageBox.Show("Faltan datos", "Seleccione una fecha!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione una fecha!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtDni.Text == "")
             {
-                MessageBox.Show("Faltan datos", "Ingrese un DNI para el paciente!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un DNI para el paciente!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (txtPaciente.Text == "")
             {
-                MessageBox.Show("Faltan datos", "Ingrese un nombre válido para el paciente!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show( "Ingrese un nombre válido para el paciente!", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             return true;
 
         }
-
-        private void calendario_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            this.txtFecha.Text = calendario.SelectionRange.Start.Date.ToLongDateString();
-            //// LlenarCombo(cboHora, oTurnoService.recuperarTurnos(), "hora", "num_turno");
-            //IList<Turno> lista = oTurnoService.recuperarTurnoFecha(this.txtFecha.Text);
-            //if (lista.Count == 0) { txtTurnos.Text = "No hay turnos registrados para la fecha"; }
-            //else
-            //{
-            //    txtTurnos.Text = "Horarios disponibles para el día " + this.txtFecha.Text + ", para el profesional seleccionado:\n";
-            //    foreach (Turno t in lista)
-            //    {
-            //        txtTurnos.Text += "\nNúmero de turno: " + t.Num_turno + " - Paciente: " + t.Id_paciente;
-            //    }
-            //}
-            List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
-            foreach (ProfesionalE p in ls)
-            {
-                if (p.Apellido == txtApellidoProfesional.Text)
-                {
-                    oProfesional = p;
-                }
-            }
-            if (chDisponibles.Checked)
-            {
-                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), oTurno.Fecha));
-            }
-            else
-            {
-                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurno(oProfesional.Matricula.ToString(), oTurno.Fecha));
-            }
-        }
+       
         private void cargarGrilla(DataGridView grilla, IList<Entities.Disponibilidad> lista)
         {
-     
+            string disponible;
             grilla.Rows.Clear();
             foreach (Entities.Disponibilidad d in lista)
             {
-                grilla.Rows.Add(d.Hora, d.Semana);
+                if (!d.Disponible) {
+                    disponible = "SÍ";
+                }
+                else
+                {
+                    disponible = "NO";
+                }
+                grilla.Rows.Add(d.Fecha, d.Hora, d.Paciente, disponible);
+                
             }
+        }
 
-            
+        public void clickChBox()
+        {
+            if (chDisponibles.Checked)
+            {
+                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), this.txtFecha.Text));
+            }
+            else
+            {
+                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurno(oProfesional.Matricula.ToString(), this.txtFecha.Text));
+            }
         }
 
         private void limpiarCampos()
@@ -222,6 +206,30 @@ namespace Consultorio.GUILayer
             txtPaciente.Text = txtApellidoProfesional.Text = txtFecha.Text = txtDni.Text = txtNombreProfesional.Text = txtObservaciones.Text = "";
         }
 
-   
+        private void chDisponibles_CheckedChanged(object sender, EventArgs e)
+        {
+            clickChBox();
+        }
+
+        private void calendario_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            this.txtFecha.Text = calendario.SelectionRange.Start.Date.ToShortDateString();
+            List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
+            foreach (ProfesionalE p in ls)
+            {
+                if (p.Apellido == txtApellidoProfesional.Text)
+                {
+                    oProfesional = p;
+                }
+            }
+            if (txtApellidoProfesional.Text == "" || txtNombreProfesional.Text == "")
+            {
+                MessageBox.Show("Ingrese el profesional que busca", "Seleccione profesional", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                limpiarCampos();
+                return;
+            }
+            // int a = Convert.ToInt32((grdTurnosDisp.CurrentCell).ToString());
+            clickChBox();
+        }
     }
 }
