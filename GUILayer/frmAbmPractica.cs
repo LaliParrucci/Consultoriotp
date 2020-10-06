@@ -94,7 +94,7 @@ namespace Consultorio.GUILayer
             this.txtCodigo.Enabled = false;
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Eliminar práctica", "¿Está seguro de eliminar esta práctica?\n" + txtNombre.Text,
+            if (MessageBox.Show("¿Está seguro de eliminar esta práctica?\n" + txtNombre.Text,"Eliminar práctica", 
                    MessageBoxButtons.YesNo,
                    MessageBoxIcon.Question,
                    MessageBoxDefaultButton.Button2) == DialogResult.Yes)  //si el resultado del dialogo del MB es YES
@@ -105,7 +105,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Borrado cancelado", "No se ha eliminado la práctica", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se ha eliminado la práctica","Borrado cancelado",  MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -122,7 +122,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No seleccionó ninguna fila!!","Error",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
 
@@ -140,7 +140,7 @@ namespace Consultorio.GUILayer
             {
                 actualizarCampos((int)grdPractica.CurrentRow.Cells[0].Value);
             }
-            else { MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else { MessageBox.Show( "No seleccionó ninguna fila!!","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void actualizarCampos(int id)

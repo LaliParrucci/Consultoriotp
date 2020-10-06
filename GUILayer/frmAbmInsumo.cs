@@ -84,7 +84,7 @@ namespace Consultorio.GUILayer
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Eliminar insumo", "¿Está seguro de eliminar este insumo?\n" + txtNombre.Text,
+            if (MessageBox.Show("¿Está seguro de eliminar este insumo?\n" + txtNombre.Text, "Eliminar insumo",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -95,7 +95,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Borrado cancelado", "No se ha eliminado el insumo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se ha eliminado el insumo", "Borrado cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -142,7 +142,7 @@ namespace Consultorio.GUILayer
             {
                 actualizarCampos((int)grdInsumo.CurrentRow.Cells[0].Value);
             }
-            else { MessageBox.Show("Selecione fila", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else { MessageBox.Show("No seleccionó ninguna fila!!","Selecione fila",  MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
     }
 }

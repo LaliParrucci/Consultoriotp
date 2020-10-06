@@ -59,8 +59,8 @@ namespace Consultorio.GUILayer.Usuario
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Eliminar usuario", "Está seguro de eliminar este usuario? \n" + txtNombre.Text, 
-                MessageBoxButtons.YesNo,
+            if (MessageBox.Show( "Está seguro de eliminar este usuario? \n" + txtNombre.Text, 
+                "Eliminar usuario", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
@@ -70,7 +70,7 @@ namespace Consultorio.GUILayer.Usuario
             }
             else
             {
-                MessageBox.Show("Borrado cancelado", "No se ha eliminado al Usuario",  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show( "No se ha eliminado al Usuario","Borrado cancelado",  MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -85,7 +85,7 @@ namespace Consultorio.GUILayer.Usuario
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No seleccionó ninguna fila!!","Error",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
         }
@@ -99,7 +99,7 @@ namespace Consultorio.GUILayer.Usuario
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show( "No seleccionó ninguna fila!!","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
 

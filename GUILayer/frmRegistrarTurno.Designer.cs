@@ -60,6 +60,9 @@
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnRegistrarTurno = new System.Windows.Forms.Button();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -293,18 +296,18 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrar.Location = new System.Drawing.Point(169, 15);
+            this.btnRegistrar.Location = new System.Drawing.Point(459, 9);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(128, 26);
+            this.btnRegistrar.Size = new System.Drawing.Size(139, 38);
             this.btnRegistrar.TabIndex = 0;
-            this.btnRegistrar.Text = "Registrar Turno";
+            this.btnRegistrar.Text = "Guardar cambios";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.Location = new System.Drawing.Point(360, 15);
+            this.btnCancelar.Location = new System.Drawing.Point(604, 15);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(128, 26);
             this.btnCancelar.TabIndex = 1;
@@ -314,6 +317,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnRegistrarTurno);
+            this.panel2.Controls.Add(this.btnModificar);
+            this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -368,6 +374,39 @@
             this.disponible.HeaderText = "Disponible";
             this.disponible.Name = "disponible";
             this.disponible.ReadOnly = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.Location = new System.Drawing.Point(286, 15);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(128, 26);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar Turno";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.Location = new System.Drawing.Point(152, 15);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(128, 26);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar Turno";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnRegistrarTurno
+            // 
+            this.btnRegistrarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(18, 15);
+            this.btnRegistrarTurno.Name = "btnRegistrarTurno";
+            this.btnRegistrarTurno.Size = new System.Drawing.Size(128, 26);
+            this.btnRegistrarTurno.TabIndex = 4;
+            this.btnRegistrarTurno.Text = "Registrar Turno";
+            this.btnRegistrarTurno.UseVisualStyleBackColor = true;
+            this.btnRegistrarTurno.Click += new System.EventHandler(this.btnRegistrarTurno_Click);
             // 
             // frmRegistrarTurno
             // 
@@ -437,5 +476,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn disponible;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnRegistrarTurno;
     }
 }

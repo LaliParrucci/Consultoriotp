@@ -57,7 +57,7 @@ namespace Consultorio.GUILayer
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Está seguro que quiere elimminar este profesional? \n" + txtNombre.Text, "PROFESIONAL ELIMINADO",
+            if (MessageBox.Show("Está seguro que quiere elimminar este profesional? \n" + txtNombre.Text, "Eliminar profesional",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -83,7 +83,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No seleccionó ninguna fila!","Error",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
         }
@@ -96,7 +96,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show( "No seleccionó ninguna fila!!", "Error",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
 

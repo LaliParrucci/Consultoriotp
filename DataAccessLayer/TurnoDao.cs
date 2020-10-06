@@ -47,7 +47,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
 
-            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible FROM disponibilidad_Profesional d JOIN Turno t ON (d.matricula = t.id_profesional AND d.hora = t.hora) WHERE matricula = '" + matricula + "' AND t.fecha Like '" + fecha + "' AND disponible = 0 AND d.fecha Like '%" + fecha + "%'";
+            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible FROM disponibilidad_Profesional d JOIN Turno t ON (d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha Like '" + fecha + "' AND disponible = 1 AND d.fecha Like '%" + fecha + "%'";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -64,7 +64,7 @@ namespace Consultorio.DataAccessLayer
         public Turno GetTurno(int id)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT num_turno, fecha, id_paciente, id_profesional",
+            String consultaSql = string.Concat(" SELECT num_turno, fecha, hora, id_paciente, id_profesional",
                                                "   FROM turno ",
                                                "  WHERE num_turno = ", id);
 
@@ -80,9 +80,25 @@ namespace Consultorio.DataAccessLayer
             return null;
         }
 
+        public Turno getTurnoFechaHoraProf(string fecha, string hora, int mat)
+        {
+            string consultaSql = string.Concat(" SELECT num_turno, fecha, hora, id_paciente, id_profesional, id_obra_social",
+                                               "   FROM turno ",
+                                               "  WHERE fecha = '", fecha, "' AND hora = '", hora, "' AND id_profesional = ",mat);
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return crearObjTurno(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
         public IList<Turno> GetTurnoFecha(string fecha)
         {
-            String consultaSql = string.Concat(" SELECT num_turno, fecha, id_paciente, id_profesional, id_obra_social",
+            String consultaSql = string.Concat(" SELECT num_turno, fecha, hora, id_paciente, id_profesional, id_obra_social",
                                                "   FROM turno ",
                                                "  WHERE fecha = '",fecha, "'");
             List<Turno> listadoTurno = new List<Turno>();
@@ -104,9 +120,9 @@ namespace Consultorio.DataAccessLayer
             Turno oTurno = new Turno();
             oTurno.Num_turno = Convert.ToInt32(row[0].ToString());
             oTurno.Fecha = row[1].ToString();
-            oTurno.Id_paciente = Convert.ToInt32(row[2].ToString());
-            oTurno.Id_profesional = Convert.ToInt32(row[3].ToString());
-            oTurno.Id_obra_social = Convert.ToInt32(row[4].ToString());
+            oTurno.Id_paciente = Convert.ToInt32(row[3].ToString());
+            oTurno.Id_profesional = Convert.ToInt32(row[4].ToString());
+            oTurno.Id_obra_social = Convert.ToInt32(row["Id_obra_social"].ToString());
             oTurno.Hora = row["Hora"].ToString();
             return oTurno;
         }
@@ -117,8 +133,7 @@ namespace Consultorio.DataAccessLayer
             oDisponibilidad.Matricula = Convert.ToInt32(row["Matricula"].ToString());
             oDisponibilidad.Fecha = row["fecha"].ToString();
             oDisponibilidad.Hora = row["Hora"].ToString();
-            oDisponibilidad.Disponible = row["Disponible"].ToString();
-            //ERROR
+            oDisponibilidad.Disponible =Convert.ToBoolean(row["Disponible"]);
             return oDisponibilidad;
         }
 
@@ -174,5 +189,83 @@ namespace Consultorio.DataAccessLayer
                 dm.Close();
             }
         }
+
+        public bool modificarTurnoConHistorial(Turno oTurno, string observacion, Turno turnoViejo)
+        {
+            DataManager dm = new DataManager();
+            try
+            {
+                //Select @@identity obtiene el identity insertado
+                string sqlhisto = "INSERT INTO historial_turnos(num_turno, borrado, estado, id_paciente, id_profesional, fecha, hora) VALUES(" + turnoViejo.Num_turno + ", 0, 'modificado', " + oTurno.Id_paciente + ", " + oTurno.Id_profesional + ", '" + oTurno.Fecha + "', '"
+                            + oTurno.Hora + "')";
+
+                dm.Open();
+                dm.BeginTransaction();
+
+                dm.EjecutarSQL(sqlhisto);
+                //Ejecuto el insert del turno
+                dm.EjecutarSQL(sqlhisto);
+                string sql = "UPDATE turno SET fecha = "
+                            + oTurno.Fecha + "', hora ='"
+                            + oTurno.Hora + "', id_obra_social = "
+                            + oTurno.Id_obra_social + ", id_profesional = "
+                            + oTurno.Id_profesional + " WHERE num_turno = "+ turnoViejo.Num_turno;
+                dm.EjecutarSQL(sql);
+
+                string sqldispo = "UPDATE disponibilidad_profesional SET disponible = 1 WHERE matricula = " + oTurno.Id_profesional + " AND fecha = '" + oTurno.Fecha + "' AND hora = '" + oTurno.Hora + "' AND borrado = 0";
+
+                dm.EjecutarSQL(sqldispo);
+
+                dm.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                return false;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+        }
+
+        public bool eliminarTurnoConHistorial(Turno oTurno)
+        {
+            DataManager dm = new DataManager();
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
+                string sqlhisto = "INSERT INTO historial_turnos(num_turno, borrado, estado, id_paciente, id_profesional, fecha, hora) VALUES(" + oTurno.Num_turno + ", 0, 'cancelado', " + oTurno.Id_paciente + ", " + oTurno.Id_profesional + ", '" + oTurno.Fecha + "', '"
+                            + oTurno.Hora + "')";
+
+                dm.EjecutarSQL(sqlhisto);
+                
+                string sql = "UPDATE turno SET borrado = 1 WHERE num_turno = " + oTurno.Num_turno;
+                //Ejecuto el insert del turno
+                dm.EjecutarSQL(sql);
+
+
+                string sqldispo = "UPDATE disponibilidad_profesional SET disponible = 1 WHERE matricula = " + oTurno.Id_profesional + " AND fecha = '" + oTurno.Fecha + "' AND hora = '" + oTurno.Hora + "' AND borrado = 0";
+
+                dm.EjecutarSQL(sqldispo);
+
+                dm.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                return false;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+        }
+
     }
 }

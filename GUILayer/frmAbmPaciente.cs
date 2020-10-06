@@ -81,7 +81,7 @@ namespace Consultorio.GUILayer
         {
             this.txtNombre.Focus();
 
-            if (MessageBox.Show("Eliminar paciente", "¿Está seguro de eliminar este paciente?\n" + txtNombre.Text,
+            if (MessageBox.Show("¿Está seguro de eliminar este paciente?\n" + txtNombre.Text,"Eliminar paciente", 
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes) //si el resultado del dialogo del MB es YES
@@ -92,7 +92,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Borrado cancelado", "No se ha eliminado al paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show( "No se ha eliminado al paciente","Borrado cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             habilitar(false);
         }
@@ -108,7 +108,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No seleccionó ninguna fila!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 habilitar(false);
             }
         }
@@ -125,7 +125,7 @@ namespace Consultorio.GUILayer
             {
                 actualizarCampos((int)grdPaciente.CurrentRow.Cells[0].Value);
             }
-            else { MessageBox.Show("Error", "No seleccionó ninguna fila!!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else { MessageBox.Show("No seleccionó ninguna fila!!", "Error",MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void actualizarCampos(int dni)
@@ -163,7 +163,7 @@ namespace Consultorio.GUILayer
                     }
                     else
                     {
-                        MessageBox.Show("Error", "Ya existe este paciente! No puede cargarlo nuevamente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show( "Ya existe este paciente! No puede cargarlo nuevamente", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

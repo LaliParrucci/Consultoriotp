@@ -28,15 +28,34 @@ namespace Consultorio.BussinessLayer
             return oTurnoDao.GetTurnoFecha(fecha);
         }
 
-        public bool validarTurno(Turno ob)
+        public bool validarTurno(Turno ob, string disp)
         {
             if(ob.Fecha == "")
             {
                 MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            if (disp == "NO")
+            {
+                MessageBox.Show("Debe seleccionar una hora que esté disponible", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return true;
         }
 
+        public Turno getTurnoFechaHoraProfesional(string fecha, string hora, int id)
+        {
+            return oTurnoDao.getTurnoFechaHoraProf(fecha, hora, id);
+        }
+
+        public bool eliminarTurnoConHistorial(Turno oTurno)
+        {
+            return oTurnoDao.eliminarTurnoConHistorial(oTurno);
+        }
+
+        public bool modificarTurnoConHistorialS(Turno oTurno, string observacion, Turno turnoViejo)
+        {
+            return oTurnoDao.modificarTurnoConHistorial(oTurno, observacion, turnoViejo);
+        }
     }
 }
