@@ -31,7 +31,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
 
-            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible FROM disponibilidad_Profesional d JOIN Turno t ON(d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
+            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d JOIN Turno t ON(d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -47,7 +47,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
 
-            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible FROM disponibilidad_Profesional d JOIN Turno t ON (d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND disponible = 1 AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
+            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d JOIN Turno t ON (d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND disponible = 1 AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -134,6 +134,7 @@ namespace Consultorio.DataAccessLayer
             oDisponibilidad.Fecha = Convert.ToDateTime(row["fecha"].ToString());
             oDisponibilidad.Hora = row["Hora"].ToString();
             oDisponibilidad.Disponible =Convert.ToBoolean(row["Disponible"]);
+            oDisponibilidad.Paciente = Service.convertirA0(row["Id_paciente"]);
             return oDisponibilidad;
         }
 
