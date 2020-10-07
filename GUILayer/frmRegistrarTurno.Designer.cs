@@ -106,6 +106,7 @@
             // 
             this.chDisponibles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chDisponibles.AutoSize = true;
+            this.chDisponibles.Enabled = false;
             this.chDisponibles.Location = new System.Drawing.Point(285, 6);
             this.chDisponibles.Name = "chDisponibles";
             this.chDisponibles.Size = new System.Drawing.Size(104, 22);
@@ -328,7 +329,7 @@
             // btnRegistrarTurno
             // 
             this.btnRegistrarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrarTurno.Location = new System.Drawing.Point(459, 15);
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(470, 15);
             this.btnRegistrarTurno.Name = "btnRegistrarTurno";
             this.btnRegistrarTurno.Size = new System.Drawing.Size(128, 26);
             this.btnRegistrarTurno.TabIndex = 0;
@@ -339,9 +340,9 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(286, 174);
+            this.btnModificar.Location = new System.Drawing.Point(285, 174);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(128, 26);
+            this.btnModificar.Size = new System.Drawing.Size(125, 26);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar Turno";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -350,7 +351,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(420, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(459, 174);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(128, 26);
             this.btnEliminar.TabIndex = 4;

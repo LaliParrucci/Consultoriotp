@@ -119,7 +119,7 @@ namespace Consultorio.GUILayer
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if(nuevo)
+            if (nuevo)
             {
                 if (validarCampos())
                 {
@@ -134,6 +134,7 @@ namespace Consultorio.GUILayer
                         if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
                         {
                             MessageBox.Show("Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            clickChBox();
                         }
                         else
                         {
@@ -141,8 +142,9 @@ namespace Consultorio.GUILayer
                         }
                     }
                 }
+
             }
-            if (modif)
+            else if (modif)
             {
                 oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                 txtDni.Text = turnoViejo.Id_paciente.ToString();
@@ -160,6 +162,7 @@ namespace Consultorio.GUILayer
                     if (oTurnoService.modificarTurnoConHistorialS(oTurno, txtObservaciones.Text, turnoViejo))
                     {
                         MessageBox.Show("Se modificó el turno correctamente", "Turno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clickChBox();
                     }
                     else
                     {
@@ -167,6 +170,7 @@ namespace Consultorio.GUILayer
                     }
                 }
             }
+
             else
             {
                 List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
@@ -290,6 +294,7 @@ namespace Consultorio.GUILayer
                 return;
             }
             // int a = Convert.ToInt32((grdTurnosDisp.CurrentCell).ToString());
+            chDisponibles.Enabled = true;
             clickChBox();
         }
 

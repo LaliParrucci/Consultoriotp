@@ -31,13 +31,12 @@ namespace Consultorio.DataAccessLayer
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
 
-            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d JOIN Turno t ON(d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
-
+            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d LEFT JOIN Turno t ON(d.matricula = t.id_profesional AND d.fecha = t.fecha AND d.hora = t.hora) WHERE matricula = " + matricula + " AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoTodosTurnos.Add(crearObjDisponibilidad(row));
+                listadoTodosTurnos.Add(crearObjDisponibilidadPaciente(row));
             }
 
             return listadoTodosTurnos;
@@ -47,7 +46,8 @@ namespace Consultorio.DataAccessLayer
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
 
-            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d JOIN Turno t ON (d.matricula = t.id_profesional AND d.fecha = t.fecha) WHERE matricula = '" + matricula + "' AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND disponible = 1 AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
+            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible FROM disponibilidad_Profesional d " +
+                " WHERE matricula = '" + matricula + "' AND D.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' AND disponible = 1";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
@@ -127,18 +127,29 @@ namespace Consultorio.DataAccessLayer
             return oTurno;
         }
 
-        private Disponibilidad crearObjDisponibilidad(DataRow row)
+        private Disponibilidad crearObjDisponibilidadPaciente(DataRow row)
         {//creo nueva instancia de usuario con los parámetros de abajo
             Disponibilidad oDisponibilidad = new Disponibilidad();
             oDisponibilidad.Matricula = Convert.ToInt32(row["Matricula"].ToString());
             oDisponibilidad.Fecha = Convert.ToDateTime(row["fecha"].ToString());
             oDisponibilidad.Hora = row["Hora"].ToString();
             oDisponibilidad.Disponible =Convert.ToBoolean(row["Disponible"]);
-            oDisponibilidad.Paciente = Service.convertirA0(row["Id_paciente"]);
+            oDisponibilidad.Paciente = Service.convertirA0(row["id_paciente"].ToString());
             return oDisponibilidad;
         }
 
-       
+        private Disponibilidad crearObjDisponibilidad(DataRow row)
+        {//creo nueva instancia de usuario con los parámetros de abajo
+            Disponibilidad oDisponibilidad = new Disponibilidad();
+            oDisponibilidad.Matricula = Convert.ToInt32(row["Matricula"].ToString());
+            oDisponibilidad.Fecha = Convert.ToDateTime(row["fecha"].ToString());
+            oDisponibilidad.Hora = row["Hora"].ToString();
+            oDisponibilidad.Disponible = Convert.ToBoolean(row["Disponible"]);
+            //oDisponibilidad.Paciente = Service.convertirA0(row["id_paciente"].ToString());
+            return oDisponibilidad;
+        }
+
+
 
         public bool crearTurnoConHistorial(Turno oTurno, string observacion)
         {
