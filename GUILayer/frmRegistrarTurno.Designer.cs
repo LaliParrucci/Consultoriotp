@@ -106,10 +106,10 @@
             // 
             this.chDisponibles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chDisponibles.AutoSize = true;
-            this.chDisponibles.Location = new System.Drawing.Point(285, 23);
+            this.chDisponibles.Location = new System.Drawing.Point(285, 6);
             this.chDisponibles.Name = "chDisponibles";
             this.chDisponibles.Size = new System.Drawing.Size(104, 22);
-            this.chDisponibles.TabIndex = 0;
+            this.chDisponibles.TabIndex = 1;
             this.chDisponibles.Text = "Disponibles";
             this.chDisponibles.UseVisualStyleBackColor = true;
             this.chDisponibles.CheckedChanged += new System.EventHandler(this.chDisponibles_CheckedChanged);
@@ -213,7 +213,7 @@
             this.calendario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.calendario.Location = new System.Drawing.Point(18, 23);
             this.calendario.Name = "calendario";
-            this.calendario.TabIndex = 1;
+            this.calendario.TabIndex = 0;
             this.calendario.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateSelected);
             // 
             // groupBox1
@@ -238,14 +238,14 @@
             this.txtPaciente.Location = new System.Drawing.Point(142, 56);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(175, 24);
-            this.txtPaciente.TabIndex = 18;
+            this.txtPaciente.TabIndex = 2;
             // 
             // txtDni
             // 
             this.txtDni.Location = new System.Drawing.Point(142, 26);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(175, 24);
-            this.txtDni.TabIndex = 17;
+            this.txtDni.TabIndex = 0;
             // 
             // btnBuscar
             // 
@@ -253,7 +253,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(323, 26);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 16;
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -296,10 +296,10 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrar.Location = new System.Drawing.Point(459, 15);
+            this.btnRegistrar.Location = new System.Drawing.Point(593, 174);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(139, 26);
-            this.btnRegistrar.TabIndex = 0;
+            this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Guardar cambios";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -318,10 +318,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnRegistrarTurno);
-            this.panel2.Controls.Add(this.btnModificar);
-            this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnCancelar);
-            this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 519);
             this.panel2.Name = "panel2";
@@ -331,10 +328,10 @@
             // btnRegistrarTurno
             // 
             this.btnRegistrarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrarTurno.Location = new System.Drawing.Point(18, 15);
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(459, 15);
             this.btnRegistrarTurno.Name = "btnRegistrarTurno";
             this.btnRegistrarTurno.Size = new System.Drawing.Size(128, 26);
-            this.btnRegistrarTurno.TabIndex = 4;
+            this.btnRegistrarTurno.TabIndex = 0;
             this.btnRegistrarTurno.Text = "Registrar Turno";
             this.btnRegistrarTurno.UseVisualStyleBackColor = true;
             this.btnRegistrarTurno.Click += new System.EventHandler(this.btnRegistrarTurno_Click);
@@ -342,7 +339,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(152, 15);
+            this.btnModificar.Location = new System.Drawing.Point(286, 174);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(128, 26);
             this.btnModificar.TabIndex = 3;
@@ -353,10 +350,10 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(286, 15);
+            this.btnEliminar.Location = new System.Drawing.Point(420, 174);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(128, 26);
-            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar Turno";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -364,6 +361,9 @@
             // pnlFechas
             // 
             this.pnlFechas.Controls.Add(this.grdTurnosDisp);
+            this.pnlFechas.Controls.Add(this.btnEliminar);
+            this.pnlFechas.Controls.Add(this.btnRegistrar);
+            this.pnlFechas.Controls.Add(this.btnModificar);
             this.pnlFechas.Controls.Add(this.calendario);
             this.pnlFechas.Controls.Add(this.chDisponibles);
             this.pnlFechas.Dock = System.Windows.Forms.DockStyle.Top;
@@ -382,7 +382,7 @@
             this.Hora,
             this.Paciente,
             this.disponible});
-            this.grdTurnosDisp.Location = new System.Drawing.Point(285, 51);
+            this.grdTurnosDisp.Location = new System.Drawing.Point(285, 34);
             this.grdTurnosDisp.Name = "grdTurnosDisp";
             this.grdTurnosDisp.Size = new System.Drawing.Size(447, 134);
             this.grdTurnosDisp.TabIndex = 2;
