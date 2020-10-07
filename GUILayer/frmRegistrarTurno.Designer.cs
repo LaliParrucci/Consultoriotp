@@ -54,15 +54,15 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRegistrarTurno = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.pnlFechas = new System.Windows.Forms.Panel();
             this.grdTurnosDisp = new System.Windows.Forms.DataGridView();
             this.Lunes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnRegistrarTurno = new System.Windows.Forms.Button();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,7 +106,7 @@
             // 
             this.chDisponibles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chDisponibles.AutoSize = true;
-            this.chDisponibles.Location = new System.Drawing.Point(237, 23);
+            this.chDisponibles.Location = new System.Drawing.Point(285, 23);
             this.chDisponibles.Name = "chDisponibles";
             this.chDisponibles.Size = new System.Drawing.Size(104, 22);
             this.chDisponibles.TabIndex = 0;
@@ -296,9 +296,9 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrar.Location = new System.Drawing.Point(459, 9);
+            this.btnRegistrar.Location = new System.Drawing.Point(459, 15);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(139, 38);
+            this.btnRegistrar.Size = new System.Drawing.Size(139, 26);
             this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Text = "Guardar cambios";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -328,6 +328,39 @@
             this.panel2.Size = new System.Drawing.Size(750, 53);
             this.panel2.TabIndex = 5;
             // 
+            // btnRegistrarTurno
+            // 
+            this.btnRegistrarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(18, 15);
+            this.btnRegistrarTurno.Name = "btnRegistrarTurno";
+            this.btnRegistrarTurno.Size = new System.Drawing.Size(128, 26);
+            this.btnRegistrarTurno.TabIndex = 4;
+            this.btnRegistrarTurno.Text = "Registrar Turno";
+            this.btnRegistrarTurno.UseVisualStyleBackColor = true;
+            this.btnRegistrarTurno.Click += new System.EventHandler(this.btnRegistrarTurno_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.Location = new System.Drawing.Point(152, 15);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(128, 26);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar Turno";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.Location = new System.Drawing.Point(286, 15);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(128, 26);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar Turno";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // pnlFechas
             // 
             this.pnlFechas.Controls.Add(this.grdTurnosDisp);
@@ -349,9 +382,9 @@
             this.Hora,
             this.Paciente,
             this.disponible});
-            this.grdTurnosDisp.Location = new System.Drawing.Point(237, 51);
+            this.grdTurnosDisp.Location = new System.Drawing.Point(285, 51);
             this.grdTurnosDisp.Name = "grdTurnosDisp";
-            this.grdTurnosDisp.Size = new System.Drawing.Size(495, 134);
+            this.grdTurnosDisp.Size = new System.Drawing.Size(447, 134);
             this.grdTurnosDisp.TabIndex = 2;
             // 
             // Lunes
@@ -374,39 +407,6 @@
             this.disponible.HeaderText = "Disponible";
             this.disponible.Name = "disponible";
             this.disponible.ReadOnly = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(286, 15);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(128, 26);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar Turno";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(152, 15);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(128, 26);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar Turno";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnRegistrarTurno
-            // 
-            this.btnRegistrarTurno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrarTurno.Location = new System.Drawing.Point(18, 15);
-            this.btnRegistrarTurno.Name = "btnRegistrarTurno";
-            this.btnRegistrarTurno.Size = new System.Drawing.Size(128, 26);
-            this.btnRegistrarTurno.TabIndex = 4;
-            this.btnRegistrarTurno.Text = "Registrar Turno";
-            this.btnRegistrarTurno.UseVisualStyleBackColor = true;
-            this.btnRegistrarTurno.Click += new System.EventHandler(this.btnRegistrarTurno_Click);
             // 
             // frmRegistrarTurno
             // 

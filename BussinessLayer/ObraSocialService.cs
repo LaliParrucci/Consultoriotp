@@ -35,10 +35,10 @@ namespace Consultorio.BussinessLayer
         public bool validarObraSocial(string nombre, string porcentaje)
         {
            
-            try { Convert.ToInt32(porcentaje); }
+            try { Convert.ToSingle(porcentaje); }
             catch
             {
-                MessageBox.Show("Ingrese un valor entero para el porcentaje , por favor", "Porcentaje asignado inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese un porcentaje con coma, por favor", "Porcentaje asignado inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -48,7 +48,7 @@ namespace Consultorio.BussinessLayer
                 return false;
             } 
 
-            if(Convert.ToInt32(porcentaje) > 100 || Convert.ToInt32(porcentaje) < 0) {
+            if(Convert.ToSingle(porcentaje) > 1 || Convert.ToSingle(porcentaje) < 0) {
                 MessageBox.Show("Ingrese un porcentaje válido, por favor", "Porcentaje asignado inválido", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                 return false; }
             return true;
@@ -61,7 +61,7 @@ namespace Consultorio.BussinessLayer
         public void altaObraSocial(ObraSocial ob, bool esAlta)
         {
             string nombre = ob.Nombre;
-            int porcentaje = ob.Porcentaje;
+            float porcentaje = ob.Porcentaje;
             int codigo = ob.Codigo;
             oObraSocialDao.actualizar(codigo, nombre, esAlta, porcentaje);
         }

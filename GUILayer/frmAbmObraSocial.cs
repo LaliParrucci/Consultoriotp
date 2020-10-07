@@ -118,7 +118,7 @@ namespace Consultorio.GUILayer
             if (oObraSocialService.validarObraSocial(txtNombre.Text, txtPorcentaje.Text))
             {
                 oObraSocial.Nombre = txtNombre.Text;
-                oObraSocial.Porcentaje = Convert.ToInt32(txtPorcentaje.Text);
+                oObraSocial.Porcentaje = Convert.ToSingle(txtPorcentaje.Text);
                 if (this.esNuevo)
                 {
                     sentenciaYCarga(oObraSocial, grdObraSocial, oObraSocialService, esNuevo);

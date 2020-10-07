@@ -11,12 +11,12 @@ namespace Consultorio.BussinessLayer
     class DisponibilidadService
     {
         TurnoDao oTurnoDao = new TurnoDao();
-        public IList<Disponibilidad> recuperarTurno(string matricula, string fecha)
+        public IList<Disponibilidad> recuperarTurno(string matricula, DateTime fecha)
         {
             return oTurnoDao.GetTodos(matricula, fecha); 
         }
 
-        public IList<Disponibilidad> recuperarTurnoDisp(string matricula, string fecha)
+        public IList<Disponibilidad> recuperarTurnoDisp(string matricula, DateTime fecha)
         {
             return oTurnoDao.GetTodosDisp(matricula, fecha);
         }

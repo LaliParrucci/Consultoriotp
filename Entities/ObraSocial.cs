@@ -11,11 +11,11 @@ namespace Consultorio.Entities
         private int codigo;
         private string nombre;
         private bool borrado;
-        private int porcentaje;
+        private float porcentaje;
 
         public int Codigo { get => codigo; set => codigo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public bool Borrado { get => borrado; set => borrado = value; }
-        public int Porcentaje { get => porcentaje; set => porcentaje = value; }
+        public float Porcentaje { get => porcentaje; set => porcentaje = value; }
     }
 }

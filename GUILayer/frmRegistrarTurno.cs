@@ -123,7 +123,7 @@ namespace Consultorio.GUILayer
             {
                 if (validarCampos())
                 {
-                    oTurno.Fecha = txtFecha.Text;
+                    oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                     oTurno.Id_profesional = oProfesional.Matricula;
                     oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
                     oTurno.Id_paciente = Convert.ToInt32(txtDni.Text);
@@ -144,7 +144,7 @@ namespace Consultorio.GUILayer
             }
             else if (modif)
             {
-                oTurno.Fecha = txtFecha.Text;
+                oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                 txtDni.Text = turnoViejo.Id_paciente.ToString();
                 cboObraSocial.Text = oObraSocialService.recuperarObraSocialPorCodigo(turnoViejo.Id_obra_social).Nombre;
                 oTurno.Id_profesional = oProfesional.Matricula;
@@ -174,7 +174,7 @@ namespace Consultorio.GUILayer
                         oProfesional = p;
                     }
                 }
-                oTurno = oTurnoService.getTurnoFechaHoraProfesional(txtFecha.Text, grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
+                oTurno = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
                 if (oTurnoService.eliminarTurnoConHistorial(oTurno))
                 {
                     MessageBox.Show("Se eliminó el turno correctamente", "Turno eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -249,13 +249,14 @@ namespace Consultorio.GUILayer
         {
             if (chDisponibles.Checked)
             {
-                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), this.txtFecha.Text));
+                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), Convert.ToDateTime(this.txtFecha.Text)));
             }
             else
             {
-                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurno(oProfesional.Matricula.ToString(), this.txtFecha.Text));
+                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurno(oProfesional.Matricula.ToString(), Convert.ToDateTime(this.txtFecha.Text)));
             }
         }
+
 
         private void limpiarCampos()
         {
@@ -291,7 +292,7 @@ namespace Consultorio.GUILayer
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            turnoViejo = oTurnoService.getTurnoFechaHoraProfesional(txtFecha.Text, grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
+            turnoViejo = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
             modif = true;
             habilitar(true);
             txtPaciente.Enabled = txtDni.Enabled = false;

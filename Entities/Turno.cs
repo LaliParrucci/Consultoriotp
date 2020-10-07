@@ -9,7 +9,7 @@ namespace Consultorio.Entities
     class Turno
     {
         private int num_turno;
-        private string fecha;
+        private DateTime fecha;
         private string hora;
         private int id_paciente;
         private int id_profesional;
@@ -18,7 +18,7 @@ namespace Consultorio.Entities
         private int id_obra_social;
 
         public int Num_turno { get => num_turno; set => num_turno = value; }
-        public string Fecha { get => fecha; set => fecha = value; }
+        public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Hora { get => hora; set => hora = value; }
         public int Id_paciente { get => id_paciente; set => id_paciente = value; }
         public int Id_profesional { get => id_profesional; set => id_profesional = value; }

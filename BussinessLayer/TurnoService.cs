@@ -23,14 +23,14 @@ namespace Consultorio.BussinessLayer
             return oTurnoDao.crearTurnoConHistorial(oTurno, obs);
         }
 
-        public IList<Turno> recuperarTurnoFecha(string fecha)
+        public IList<Turno> recuperarTurnoFecha(DateTime fecha)
         {
             return oTurnoDao.GetTurnoFecha(fecha);
         }
 
         public bool validarTurno(Turno ob, string disp)
         {
-            if(ob.Fecha == "")
+            if(ob.Fecha == null )
             {
                 MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -43,7 +43,7 @@ namespace Consultorio.BussinessLayer
             return true;
         }
 
-        public Turno getTurnoFechaHoraProfesional(string fecha, string hora, int id)
+        public Turno getTurnoFechaHoraProfesional(DateTime fecha, string hora, int id)
         {
             return oTurnoDao.getTurnoFechaHoraProf(fecha, hora, id);
         }

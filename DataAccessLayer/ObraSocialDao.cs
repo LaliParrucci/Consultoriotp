@@ -32,7 +32,7 @@ namespace Consultorio.DataAccessLayer
             ObraSocial oObraSocial = new ObraSocial();           
             oObraSocial.Codigo = Convert.ToInt32(row[0].ToString());
             oObraSocial.Nombre = row[1].ToString();
-            oObraSocial.Porcentaje = Service.convertirA0(row[2]);
+            oObraSocial.Porcentaje =Convert.ToSingle(row[2].ToString());
             return oObraSocial;
         }
 
@@ -79,17 +79,17 @@ namespace Consultorio.DataAccessLayer
 
             return null;
         }
-        public void actualizar(int codigo, string nombre,bool esAlta, int porc)
+        public void actualizar(int codigo, string nombre,bool esAlta, float porc)
         {
             if (esAlta)
             {
                 sentencia = string.Concat("INSERT INTO obra_social(nombre,porcentaje, borrado)" +
-                                          " VALUES('", nombre,"', ",porc,",0)");
+                                          " VALUES('", nombre,"', ", porc.ToString().Replace(",", "."), ",0)");
             }
             else
             {
                 sentencia = string.Concat("UPDATE obra_social SET nombre = '", nombre,
-                                                             "', porcentaje = ", porc,
+                                                             "', porcentaje = ", porc.ToString().Replace(",", "."),
                                                              " WHERE cod_obra_social = ", codigo);
             }
             DBHelper.GetDBHelper().abm(sentencia);
