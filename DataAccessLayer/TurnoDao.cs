@@ -31,7 +31,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
 
-            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d LEFT JOIN Turno t ON(d.matricula = t.id_profesional AND d.fecha = t.fecha AND d.hora = t.hora) WHERE matricula = " + matricula + " AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
+            var strSql = "SELECT d.matricula, d.fecha, d.hora, d.disponible, t.id_paciente FROM disponibilidad_Profesional d LEFT JOIN turno t ON(d.matricula = t.id_profesional AND d.fecha = t.fecha AND d.hora = t.hora AND t.borrado = 0) WHERE matricula = " + matricula + " AND d.fecha = '" + fecha.ToString("yyyy-MM-dd") + "'";
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
@@ -223,7 +223,9 @@ namespace Consultorio.DataAccessLayer
                             + oTurno.Id_profesional + " WHERE num_turno = "+ turnoViejo.Num_turno;
                 dm.EjecutarSQL(sql);
 
-                string sqldispo = "UPDATE disponibilidad_profesional SET disponible = 1 WHERE matricula = " + oTurno.Id_profesional + " AND fecha = '" + oTurno.Fecha.ToString("yyyy-MM-dd") + "' AND hora = '" + oTurno.Hora + "' AND borrado = 0";
+                string sqldispo = "UPDATE disponibilidad_profesional SET disponible = 0 WHERE matricula = " + oTurno.Id_profesional + " AND fecha = '" + oTurno.Fecha.ToString("yyyy-MM-dd") + "' AND hora = '" + oTurno.Hora + "' AND borrado = 0" +
+                                 " UPDATE disponibilidad_profesional SEt disponible = 1 WHERE matricula = " + turnoViejo.Id_profesional + " AND fecha = '" + turnoViejo.Fecha.ToString("yyyy-MM-dd") + "' AND hora = '" + turnoViejo.Hora + "' AND borrado = 0";
+
 
                 dm.EjecutarSQL(sqldispo);
 

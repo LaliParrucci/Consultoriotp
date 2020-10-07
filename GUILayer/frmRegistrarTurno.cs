@@ -119,32 +119,7 @@ namespace Consultorio.GUILayer
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (nuevo)
-            {
-                if (validarCampos())
-                {
-                    oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
-                    oTurno.Id_profesional = oProfesional.Matricula;
-                    oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
-                    oTurno.Id_paciente = Convert.ToInt32(txtDni.Text);
-                    oTurno.Hora = grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString();
-                    string disponible = grdTurnosDisp.CurrentRow.Cells["Disponible"].Value.ToString();
-                    if (oTurnoService.validarTurno(oTurno, disponible))
-                    {
-                        if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
-                        {
-                            MessageBox.Show("Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            clickChBox();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Hubo un problema con el registro de turno", "Error en registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-
-            }
-            else if (modif)
+            if (modif)
             {
                 oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                 txtDni.Text = turnoViejo.Id_paciente.ToString();
@@ -170,31 +145,8 @@ namespace Consultorio.GUILayer
                     }
                 }
             }
-
-            else
-            {
-                List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
-                foreach (ProfesionalE p in ls)
-                {
-                    if (p.Apellido == txtApellidoProfesional.Text)
-                    {
-                        oProfesional = p;
-                    }
-                }
-                oTurno = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
-                if (oTurnoService.eliminarTurnoConHistorial(oTurno))
-                {
-                    MessageBox.Show("Se eliminó el turno correctamente", "Turno eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show("Hubo un problema con la eliminación del turno", "Error en eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                limpiarCampos();
-                habilitar(true);
-                cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), oTurno.Fecha));
-            }
-            nuevo = modif = false;
+            modif = false;
+            btnRegistrar.Enabled = false;
         }
 
         public bool validarCampos()
@@ -304,18 +256,66 @@ namespace Consultorio.GUILayer
             modif = true;
             habilitar(true);
             txtPaciente.Enabled = txtDni.Enabled = false;
+            btnRegistrar.Enabled = true;
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            habilitar(false);
-            txtNombreProfesional.Enabled = txtApellidoProfesional.Enabled = true;
+            if (MessageBox.Show("¿Esta seguro que quiere eliminar este turno?", "Atencion! Eliminacion de Turno", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
+                foreach (ProfesionalE p in ls)
+                {
+                    if (p.Apellido == txtApellidoProfesional.Text)
+                    {
+                        oProfesional = p;
+                    }
+                }
+                if (grdTurnosDisp.CurrentRow.Cells["Disponible"].Value.ToString() == "NO")
+                {
+                    oTurno = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
+                    if (oTurnoService.eliminarTurnoConHistorial(oTurno))
+                    {
+                        MessageBox.Show("Se eliminó el turno correctamente", "Turno eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un problema con la eliminación del turno", "Error en eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    limpiarCampos();
+                    cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), oTurno.Fecha));
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un turno ocupado para eliminarlo", "Error de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnRegistrarTurno_Click(object sender, EventArgs e)
         {
-            nuevo = true;
-            habilitar(true);
+            if (validarCampos())
+            {
+                oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
+                oTurno.Id_profesional = oProfesional.Matricula;
+                oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
+                oTurno.Id_paciente = Convert.ToInt32(txtDni.Text);
+                oTurno.Hora = grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString();
+                string disponible = grdTurnosDisp.CurrentRow.Cells["Disponible"].Value.ToString();
+                if (oTurnoService.validarTurno(oTurno, disponible))
+                {
+                    if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
+                    {
+                        MessageBox.Show("Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        clickChBox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un problema con el registro de turno", "Error en registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }
