@@ -142,7 +142,7 @@ namespace Consultorio.GUILayer
                     }
                 }
             }
-            else if (modif)
+            if (modif)
             {
                 oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                 txtDni.Text = turnoViejo.Id_paciente.ToString();
