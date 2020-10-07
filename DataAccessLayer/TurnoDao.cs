@@ -202,10 +202,9 @@ namespace Consultorio.DataAccessLayer
                 dm.Open();
                 dm.BeginTransaction();
 
-                dm.EjecutarSQL(sqlhisto);
                 //Ejecuto el insert del turno
                 dm.EjecutarSQL(sqlhisto);
-                string sql = "UPDATE turno SET fecha = "
+                string sql = "UPDATE turno SET fecha = '"
                             + oTurno.Fecha.ToString("yyyy-MM-dd") + "', hora ='"
                             + oTurno.Hora + "', id_obra_social = "
                             + oTurno.Id_obra_social + ", id_profesional = "

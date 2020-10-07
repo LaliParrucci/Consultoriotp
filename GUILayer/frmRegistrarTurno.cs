@@ -146,7 +146,10 @@ namespace Consultorio.GUILayer
             {
                 oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                 txtDni.Text = turnoViejo.Id_paciente.ToString();
-                cboObraSocial.Text = oObraSocialService.recuperarObraSocialPorCodigo(turnoViejo.Id_obra_social).Nombre;
+                if (cboObraSocial.SelectedIndex == -1)
+                {
+                    cboObraSocial.Text = oObraSocialService.recuperarObraSocialPorCodigo(turnoViejo.Id_obra_social).Nombre;
+                }
                 oTurno.Id_profesional = oProfesional.Matricula;
                 oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
                 oTurno.Id_paciente = Convert.ToInt32(txtDni.Text);
@@ -156,7 +159,7 @@ namespace Consultorio.GUILayer
                 {
                     if (oTurnoService.modificarTurnoConHistorialS(oTurno, txtObservaciones.Text, turnoViejo))
                     {
-                        MessageBox.Show("Se modificó el turno correctamente", "Turno modificado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Se modificó el turno correctamente", "Turno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
