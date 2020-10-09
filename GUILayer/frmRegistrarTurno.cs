@@ -74,10 +74,16 @@ namespace Consultorio.GUILayer
 
         private void activoAutocompletar(TextBox txt, bool bandera)
         {
-            if (!bandera)
+            try
             {
-                autocompletar(txt);
-                bandera = true;
+                if (!bandera)
+                {
+                    autocompletar(txt);
+                    bandera = true;
+                }
+            }catch(Exception e)
+            {
+                return;
             }
         }
 
@@ -316,6 +322,11 @@ namespace Consultorio.GUILayer
                     }
                 }
             }
+        }
+
+        private void txtApellidoProfesional_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

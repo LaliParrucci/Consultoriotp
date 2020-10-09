@@ -188,6 +188,7 @@
             this.txtApellidoProfesional.Name = "txtApellidoProfesional";
             this.txtApellidoProfesional.Size = new System.Drawing.Size(175, 24);
             this.txtApellidoProfesional.TabIndex = 1;
+            this.txtApellidoProfesional.TextChanged += new System.EventHandler(this.txtApellidoProfesional_TextChanged);
             this.txtApellidoProfesional.Enter += new System.EventHandler(this.txtApellidoProfesional_Enter);
             // 
             // label4
