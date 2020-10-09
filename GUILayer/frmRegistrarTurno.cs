@@ -142,7 +142,7 @@ namespace Consultorio.GUILayer
                 {
                     if (oTurnoService.modificarTurnoConHistorialS(oTurno, txtObservaciones.Text, turnoViejo))
                     {
-                        MessageBox.Show("Se modificó el turno correctamente", "Turno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Se modificó el turno", "Turno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clickChBox();
                     }
                     else
