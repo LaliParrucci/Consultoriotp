@@ -258,43 +258,63 @@ namespace Consultorio.GUILayer
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            turnoViejo = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
-            modif = true;
-            habilitar(true);
-            txtPaciente.Enabled = txtDni.Enabled = false;
-            btnRegistrar.Enabled = true;
-
+            try
+            {
+                turnoViejo = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
+                modif = true;
+                habilitar(true);
+                txtPaciente.Enabled = txtDni.Enabled = false;
+                btnRegistrar.Enabled = true;
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un turno para modificar", "Seleccione un turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro que quiere eliminar este turno?", "Atencion! Eliminacion de Turno", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (txtFecha.Text == "" || txtApellidoProfesional.Text == "" || txtNombreProfesional.Text == "")
             {
-                List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
-                foreach (ProfesionalE p in ls)
+                MessageBox.Show("Debe seleccionar un turno para eliminar", "Seleccione un turno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                if (MessageBox.Show("¿Esta seguro que quiere eliminar este turno?", "Atencion! Eliminacion de Turno", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    if (p.Apellido == txtApellidoProfesional.Text)
+
+                    try
                     {
-                        oProfesional = p;
+                        List<ProfesionalE> ls = oProfesionalService.recuperarProfesionalPorNombre(txtNombreProfesional.Text);
+                        foreach (ProfesionalE p in ls)
+                        {
+                            if (p.Apellido == txtApellidoProfesional.Text)
+                            {
+                                oProfesional = p;
+                            }
+                        }
+                        if (grdTurnosDisp.CurrentRow.Cells["Disponible"].Value.ToString() == "NO")
+                        {
+                            oTurno = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
+                            if (oTurnoService.eliminarTurnoConHistorial(oTurno))
+                            {
+                                MessageBox.Show("Se eliminó el turno correctamente", "Turno eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Hubo un problema con la eliminación del turno", "Error en eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            limpiarCampos();
+                            cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), oTurno.Fecha));
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe seleccionar un turno ocupado para eliminarlo", "Error de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                }
-                if (grdTurnosDisp.CurrentRow.Cells["Disponible"].Value.ToString() == "NO")
-                {
-                    oTurno = oTurnoService.getTurnoFechaHoraProfesional(Convert.ToDateTime(txtFecha.Text), grdTurnosDisp.CurrentRow.Cells["Hora"].Value.ToString(), oProfesional.Matricula);
-                    if (oTurnoService.eliminarTurnoConHistorial(oTurno))
+                    catch
                     {
-                        MessageBox.Show("Se eliminó el turno correctamente", "Turno eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
                     }
-                    else
-                    {
-                        MessageBox.Show("Hubo un problema con la eliminación del turno", "Error en eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    limpiarCampos();
-                    cargarGrilla(grdTurnosDisp, oDisponibilidadService.recuperarTurnoDisp(oProfesional.Matricula.ToString(), oTurno.Fecha));
-                }
-                else
-                {
-                    MessageBox.Show("Debe seleccionar un turno ocupado para eliminarlo", "Error de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
