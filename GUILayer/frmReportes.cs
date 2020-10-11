@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Consultorio.GUILayer.Informes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace Consultorio.GUILayer
         private void btnPXO_Click(object sender, EventArgs e)
         {
             frmReportePXO frm = new frmReportePXO();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmListadoTurnosDiarios frm = new frmListadoTurnosDiarios();
             frm.ShowDialog();
         }
     }

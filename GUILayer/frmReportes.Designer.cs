@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
             this.pnlTitulo1 = new System.Windows.Forms.Panel();
-            this.pnlCuerpoListados = new System.Windows.Forms.Panel();
-            this.pnlTitulo2 = new System.Windows.Forms.Panel();
-            this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
             this.lblListados = new System.Windows.Forms.Label();
-            this.lblEstadis = new System.Windows.Forms.Label();
+            this.pnlCuerpoListados = new System.Windows.Forms.Panel();
             this.lblLpXo1 = new System.Windows.Forms.Label();
-            this.lblpXo2 = new System.Windows.Forms.Label();
             this.btnPXO = new System.Windows.Forms.Button();
+            this.lblpXo2 = new System.Windows.Forms.Label();
+            this.pnlTitulo2 = new System.Windows.Forms.Panel();
+            this.lblEstadis = new System.Windows.Forms.Label();
+            this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -52,34 +53,6 @@
             this.pnlTitulo1.Size = new System.Drawing.Size(734, 50);
             this.pnlTitulo1.TabIndex = 0;
             // 
-            // pnlCuerpoListados
-            // 
-            this.pnlCuerpoListados.Controls.Add(this.lblLpXo1);
-            this.pnlCuerpoListados.Controls.Add(this.btnPXO);
-            this.pnlCuerpoListados.Controls.Add(this.lblpXo2);
-            this.pnlCuerpoListados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCuerpoListados.Location = new System.Drawing.Point(0, 50);
-            this.pnlCuerpoListados.Name = "pnlCuerpoListados";
-            this.pnlCuerpoListados.Size = new System.Drawing.Size(734, 236);
-            this.pnlCuerpoListados.TabIndex = 1;
-            // 
-            // pnlTitulo2
-            // 
-            this.pnlTitulo2.Controls.Add(this.lblEstadis);
-            this.pnlTitulo2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitulo2.Location = new System.Drawing.Point(0, 286);
-            this.pnlTitulo2.Name = "pnlTitulo2";
-            this.pnlTitulo2.Size = new System.Drawing.Size(734, 50);
-            this.pnlTitulo2.TabIndex = 2;
-            // 
-            // pnlCuerpoEstadisticas
-            // 
-            this.pnlCuerpoEstadisticas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlCuerpoEstadisticas.Location = new System.Drawing.Point(0, 336);
-            this.pnlCuerpoEstadisticas.Name = "pnlCuerpoEstadisticas";
-            this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
-            this.pnlCuerpoEstadisticas.TabIndex = 3;
-            // 
             // lblListados
             // 
             this.lblListados.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -91,15 +64,17 @@
             this.lblListados.TabIndex = 0;
             this.lblListados.Text = "Listados";
             // 
-            // lblEstadis
+            // pnlCuerpoListados
             // 
-            this.lblEstadis.AutoSize = true;
-            this.lblEstadis.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadis.Location = new System.Drawing.Point(12, 10);
-            this.lblEstadis.Name = "lblEstadis";
-            this.lblEstadis.Size = new System.Drawing.Size(184, 33);
-            this.lblEstadis.TabIndex = 0;
-            this.lblEstadis.Text = "Estadísticas";
+            this.pnlCuerpoListados.Controls.Add(this.button1);
+            this.pnlCuerpoListados.Controls.Add(this.lblLpXo1);
+            this.pnlCuerpoListados.Controls.Add(this.btnPXO);
+            this.pnlCuerpoListados.Controls.Add(this.lblpXo2);
+            this.pnlCuerpoListados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCuerpoListados.Location = new System.Drawing.Point(0, 50);
+            this.pnlCuerpoListados.Name = "pnlCuerpoListados";
+            this.pnlCuerpoListados.Size = new System.Drawing.Size(734, 236);
+            this.pnlCuerpoListados.TabIndex = 1;
             // 
             // lblLpXo1
             // 
@@ -110,16 +85,6 @@
             this.lblLpXo1.Size = new System.Drawing.Size(117, 18);
             this.lblLpXo1.TabIndex = 0;
             this.lblLpXo1.Text = "Listado Paciente";
-            // 
-            // lblpXo2
-            // 
-            this.lblpXo2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblpXo2.AutoSize = true;
-            this.lblpXo2.Location = new System.Drawing.Point(407, 86);
-            this.lblpXo2.Name = "lblpXo2";
-            this.lblpXo2.Size = new System.Drawing.Size(113, 18);
-            this.lblpXo2.TabIndex = 1;
-            this.lblpXo2.Text = "por Odontologo";
             // 
             // btnPXO
             // 
@@ -133,6 +98,53 @@
             this.btnPXO.TabIndex = 2;
             this.btnPXO.UseVisualStyleBackColor = true;
             this.btnPXO.Click += new System.EventHandler(this.btnPXO_Click);
+            // 
+            // lblpXo2
+            // 
+            this.lblpXo2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblpXo2.AutoSize = true;
+            this.lblpXo2.Location = new System.Drawing.Point(407, 86);
+            this.lblpXo2.Name = "lblpXo2";
+            this.lblpXo2.Size = new System.Drawing.Size(113, 18);
+            this.lblpXo2.TabIndex = 1;
+            this.lblpXo2.Text = "por Odontologo";
+            // 
+            // pnlTitulo2
+            // 
+            this.pnlTitulo2.Controls.Add(this.lblEstadis);
+            this.pnlTitulo2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitulo2.Location = new System.Drawing.Point(0, 286);
+            this.pnlTitulo2.Name = "pnlTitulo2";
+            this.pnlTitulo2.Size = new System.Drawing.Size(734, 50);
+            this.pnlTitulo2.TabIndex = 2;
+            // 
+            // lblEstadis
+            // 
+            this.lblEstadis.AutoSize = true;
+            this.lblEstadis.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadis.Location = new System.Drawing.Point(12, 10);
+            this.lblEstadis.Name = "lblEstadis";
+            this.lblEstadis.Size = new System.Drawing.Size(184, 33);
+            this.lblEstadis.TabIndex = 0;
+            this.lblEstadis.Text = "Estadísticas";
+            // 
+            // pnlCuerpoEstadisticas
+            // 
+            this.pnlCuerpoEstadisticas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlCuerpoEstadisticas.Location = new System.Drawing.Point(0, 336);
+            this.pnlCuerpoEstadisticas.Name = "pnlCuerpoEstadisticas";
+            this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
+            this.pnlCuerpoEstadisticas.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmReportes
             // 
@@ -172,5 +184,6 @@
         private System.Windows.Forms.Button btnPXO;
         private System.Windows.Forms.Label lblpXo2;
         private System.Windows.Forms.Label lblEstadis;
+        private System.Windows.Forms.Button button1;
     }
 }
