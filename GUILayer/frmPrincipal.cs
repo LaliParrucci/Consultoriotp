@@ -109,6 +109,7 @@ namespace Consultorio
                 btnInicioSesion.Text = usuarioActual.Nombre_usuario;
                 btnInicioSesion.Enabled = false;
                 btnInicioSesion.IconColor = colorRGB.color1;
+                btnInicioSesion.ForeColor = colorRGB.color1;
                 habilitar(true);
 
             }
@@ -119,7 +120,7 @@ namespace Consultorio
 
         private void habilitar(bool x)
         {
-            btnConsulta.Enabled = btnTurno.Enabled = btnPacientes.Enabled = btnUsuarios.Enabled = btnInsumos.Enabled = btnObrasSociales.Enabled = btnProfesionales.Enabled = btnPractica.Enabled = x;   
+            btnConsulta.Enabled = btnTurno.Enabled = btnPacientes.Enabled = btnUsuarios.Enabled = btnInsumos.Enabled = btnObrasSociales.Enabled = btnProfesionales.Enabled = btnPractica.Enabled = btnReportes.Enabled =  x;   
         }
 
 
@@ -222,6 +223,10 @@ namespace Consultorio
             WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            activarBtn(sender, colorRGB.color1);
+            abrirFormHijo(new frmReportes());
+        }
     }
 }

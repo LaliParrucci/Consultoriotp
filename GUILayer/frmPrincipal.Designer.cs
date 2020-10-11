@@ -32,6 +32,7 @@
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.BtnHome = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnReportes = new FontAwesome.Sharp.IconButton();
             this.btnObrasSociales = new FontAwesome.Sharp.IconButton();
             this.btnInsumos = new FontAwesome.Sharp.IconButton();
             this.btnPractica = new FontAwesome.Sharp.IconButton();
@@ -85,6 +86,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(177)))), ((int)(((byte)(159)))));
+            this.pnlMenu.Controls.Add(this.btnReportes);
             this.pnlMenu.Controls.Add(this.btnObrasSociales);
             this.pnlMenu.Controls.Add(this.btnInsumos);
             this.pnlMenu.Controls.Add(this.btnPractica);
@@ -101,6 +103,29 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(200, 650);
             this.pnlMenu.TabIndex = 3;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(245)))), ((int)(((byte)(239)))));
+            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
+            this.btnReportes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(245)))), ((int)(((byte)(239)))));
+            this.btnReportes.IconSize = 32;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 520);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnReportes.Rotation = 0D;
+            this.btnReportes.Size = new System.Drawing.Size(200, 40);
+            this.btnReportes.TabIndex = 11;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnObrasSociales
             // 
@@ -533,6 +558,7 @@
         private FontAwesome.Sharp.IconButton btnMax;
         private System.Windows.Forms.PictureBox pbInicio;
         private FontAwesome.Sharp.IconButton btnInicioSesion;
+        private FontAwesome.Sharp.IconButton btnReportes;
     }
 }
 
