@@ -92,6 +92,7 @@
     <Compile Include="DataAccessLayer\TurnoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
     <Compile Include="Entities\Disponibilidad.cs" />
+    <Compile Include="Entities\FiltrosReportePracticas.cs" />
     <Compile Include="Entities\Insumo.cs" />
     <Compile Include="Entities\ObraSocial.cs" />
     <Compile Include="Entities\PacienteE.cs" />
