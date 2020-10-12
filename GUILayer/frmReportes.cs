@@ -30,5 +30,11 @@ namespace Consultorio.GUILayer
             frmListadoTurnosDiarios frm = new frmListadoTurnosDiarios();
             frm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listadoPracticas ventana = new listadoPracticas();
+            ventana.ShowDialog();
+        }
     }
 }

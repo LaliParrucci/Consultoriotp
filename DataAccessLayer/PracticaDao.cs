@@ -26,6 +26,15 @@ namespace Consultorio.DataAccessLayer
 
             return listadoPrac;
         }
+        public DataTable ObtenerListadoPracticas()
+        {
+
+            var strSql = "SELECT nombre, descripcion, id_practica, importe from practica ";
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);        
+
+            return resultadoConsulta;
+        }
         public Practica GetPractica(int id)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.

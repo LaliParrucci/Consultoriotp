@@ -19,7 +19,7 @@ namespace Consultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListadoTurnosDiarios());
+            Application.Run(new frmReportes());
         }
     }
 }

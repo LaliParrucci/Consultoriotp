@@ -22,7 +22,10 @@ namespace Consultorio.BussinessLayer
         {
             return oPracticaDao.GetAll();
         }
-
+        public DataTable recuPracticas()
+        {
+            return oPracticaDao.ObtenerListadoPracticas();
+        }
         public Practica recuperarPracticasPorId(int id)
         {
             return oPracticaDao.GetPractica(id);
