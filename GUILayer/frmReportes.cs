@@ -42,5 +42,11 @@ namespace Consultorio.GUILayer
             frmReportePrXOb frm = new frmReportePrXOb();
             frm.ShowDialog();
         }
+
+        private void btnOMUtilizadas_Click(object sender, EventArgs e)
+        {
+            frmReporteObrasMasUtilizadas frm = new frmReporteObrasMasUtilizadas();
+            frm.ShowDialog();
+        }
     }
 }

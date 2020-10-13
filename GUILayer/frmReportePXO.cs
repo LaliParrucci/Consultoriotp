@@ -78,7 +78,6 @@ namespace Consultorio.GUILayer
                 ReportDataSource ds = new ReportDataSource("rpPXO", tabla);
                 rpPXO.LocalReport.DataSources.Clear();
                 rpPXO.LocalReport.DataSources.Add(ds);
-                rpPXO.?.txtFechaDesde = dtpDesde.Text.ToString();
                 this.rpPXO.RefreshReport();
             }
 

@@ -32,18 +32,20 @@
             this.pnlTitulo1 = new System.Windows.Forms.Panel();
             this.lblListados = new System.Windows.Forms.Label();
             this.pnlCuerpoListados = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblLPrXOb2 = new System.Windows.Forms.Label();
+            this.lblLPrXOb1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblLpXo1 = new System.Windows.Forms.Label();
-            this.btnPXO = new System.Windows.Forms.Button();
             this.lblpXo2 = new System.Windows.Forms.Label();
             this.pnlTitulo2 = new System.Windows.Forms.Panel();
             this.lblEstadis = new System.Windows.Forms.Label();
             this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnOMUtilizadas = new System.Windows.Forms.Button();
             this.btnPrXOb = new System.Windows.Forms.Button();
-            this.lblLPrXOb1 = new System.Windows.Forms.Label();
-            this.lblLPrXOb2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnPXO = new System.Windows.Forms.Button();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -71,6 +73,8 @@
             // 
             // pnlCuerpoListados
             // 
+            this.pnlCuerpoListados.Controls.Add(this.label2);
+            this.pnlCuerpoListados.Controls.Add(this.btnOMUtilizadas);
             this.pnlCuerpoListados.Controls.Add(this.lblLPrXOb2);
             this.pnlCuerpoListados.Controls.Add(this.lblLPrXOb1);
             this.pnlCuerpoListados.Controls.Add(this.btnPrXOb);
@@ -86,18 +90,23 @@
             this.pnlCuerpoListados.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoListados.TabIndex = 1;
             // 
-            // button2
+            // lblLPrXOb2
             // 
-            this.button2.BackgroundImage = global::Consultorio.Properties.Resources.equipo;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(211, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 60);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lblLPrXOb2.AutoSize = true;
+            this.lblLPrXOb2.Location = new System.Drawing.Point(574, 86);
+            this.lblLPrXOb2.Name = "lblLPrXOb2";
+            this.lblLPrXOb2.Size = new System.Drawing.Size(112, 18);
+            this.lblLPrXOb2.TabIndex = 9;
+            this.lblLPrXOb2.Text = "por Obra Social";
+            // 
+            // lblLPrXOb1
+            // 
+            this.lblLPrXOb1.AutoSize = true;
+            this.lblLPrXOb1.Location = new System.Drawing.Point(569, 69);
+            this.lblLPrXOb1.Name = "lblLPrXOb1";
+            this.lblLPrXOb1.Size = new System.Drawing.Size(122, 18);
+            this.lblLPrXOb1.TabIndex = 8;
+            this.lblLPrXOb1.Text = "Listado Practicas";
             // 
             // label1
             // 
@@ -128,19 +137,6 @@
             this.lblLpXo1.Size = new System.Drawing.Size(117, 18);
             this.lblLpXo1.TabIndex = 0;
             this.lblLpXo1.Text = "Listado Paciente";
-            // 
-            // btnPXO
-            // 
-            this.btnPXO.BackgroundImage = global::Consultorio.Properties.Resources.equipo;
-            this.btnPXO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPXO.FlatAppearance.BorderSize = 0;
-            this.btnPXO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPXO.Location = new System.Drawing.Point(429, 10);
-            this.btnPXO.Name = "btnPXO";
-            this.btnPXO.Size = new System.Drawing.Size(60, 60);
-            this.btnPXO.TabIndex = 2;
-            this.btnPXO.UseVisualStyleBackColor = true;
-            this.btnPXO.Click += new System.EventHandler(this.btnPXO_Click);
             // 
             // lblpXo2
             // 
@@ -179,11 +175,35 @@
             this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoEstadisticas.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(379, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 18);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Listado Obras Sociales";
+            // 
+            // btnOMUtilizadas
+            // 
+            this.btnOMUtilizadas.BackgroundImage = global::Consultorio.Properties.Resources.medical_book;
+            this.btnOMUtilizadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOMUtilizadas.FlatAppearance.BorderSize = 0;
+            this.btnOMUtilizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOMUtilizadas.Location = new System.Drawing.Point(430, 131);
+            this.btnOMUtilizadas.Name = "btnOMUtilizadas";
+            this.btnOMUtilizadas.Size = new System.Drawing.Size(60, 60);
+            this.btnOMUtilizadas.TabIndex = 10;
+            this.btnOMUtilizadas.UseVisualStyleBackColor = true;
+            this.btnOMUtilizadas.Click += new System.EventHandler(this.btnOMUtilizadas_Click);
+            // 
             // btnPrXOb
             // 
             this.btnPrXOb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.btnPrXOb.BackgroundImage = global::Consultorio.Properties.Resources.equipo;
+            this.btnPrXOb.BackgroundImage = global::Consultorio.Properties.Resources.dentistry;
             this.btnPrXOb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrXOb.FlatAppearance.BorderSize = 0;
             this.btnPrXOb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrXOb.Location = new System.Drawing.Point(593, 10);
             this.btnPrXOb.Name = "btnPrXOb";
@@ -192,23 +212,31 @@
             this.btnPrXOb.UseVisualStyleBackColor = false;
             this.btnPrXOb.Click += new System.EventHandler(this.btnPrXOb_Click);
             // 
-            // lblLPrXOb1
+            // button2
             // 
-            this.lblLPrXOb1.AutoSize = true;
-            this.lblLPrXOb1.Location = new System.Drawing.Point(570, 68);
-            this.lblLPrXOb1.Name = "lblLPrXOb1";
-            this.lblLPrXOb1.Size = new System.Drawing.Size(122, 18);
-            this.lblLPrXOb1.TabIndex = 8;
-            this.lblLPrXOb1.Text = "Listado Practicas";
+            this.button2.BackgroundImage = global::Consultorio.Properties.Resources.comfortable1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(211, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 60);
+            this.button2.TabIndex = 6;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblLPrXOb2
+            // btnPXO
             // 
-            this.lblLPrXOb2.AutoSize = true;
-            this.lblLPrXOb2.Location = new System.Drawing.Point(570, 86);
-            this.lblLPrXOb2.Name = "lblLPrXOb2";
-            this.lblLPrXOb2.Size = new System.Drawing.Size(112, 18);
-            this.lblLPrXOb2.TabIndex = 9;
-            this.lblLPrXOb2.Text = "por Obra Social";
+            this.btnPXO.BackgroundImage = global::Consultorio.Properties.Resources.equipo;
+            this.btnPXO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPXO.FlatAppearance.BorderSize = 0;
+            this.btnPXO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPXO.Location = new System.Drawing.Point(430, 6);
+            this.btnPXO.Name = "btnPXO";
+            this.btnPXO.Size = new System.Drawing.Size(60, 60);
+            this.btnPXO.TabIndex = 2;
+            this.btnPXO.UseVisualStyleBackColor = true;
+            this.btnPXO.Click += new System.EventHandler(this.btnPXO_Click);
             // 
             // frmReportes
             // 
@@ -254,5 +282,7 @@
         private System.Windows.Forms.Label lblLPrXOb2;
         private System.Windows.Forms.Label lblLPrXOb1;
         private System.Windows.Forms.Button btnPrXOb;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnOMUtilizadas;
     }
 }

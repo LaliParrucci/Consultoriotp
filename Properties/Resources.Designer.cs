@@ -113,6 +113,26 @@ namespace Consultorio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comfortable1 {
+            get {
+                object obj = ResourceManager.GetObject("comfortable1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dentistry {
+            get {
+                object obj = ResourceManager.GetObject("dentistry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap editar {
             get {
                 object obj = ResourceManager.GetObject("editar", resourceCulture);
@@ -196,6 +216,16 @@ namespace Consultorio.Properties {
         internal static System.Drawing.Bitmap maximize_size_option {
             get {
                 object obj = ResourceManager.GetObject("maximize-size-option", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medical_book {
+            get {
+                object obj = ResourceManager.GetObject("medical-book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

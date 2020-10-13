@@ -60,6 +60,14 @@ namespace Consultorio.DataAccessLayer
             return os;
         }
 
+        internal DataTable getObraSocialPorFechas(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            String consultaSql = string.Concat("SELECT DISTINCT t.id_obra_social as cod_obra_social, o.nombre as nombre, o.porcentaje porcentaje ",
+                                               "FROM turno t JOIN obra_social o ON(t.id_obra_social = o.cod_obra_social) ",
+                                               "WHERE(t.fecha BETWEEN '", fechaDesde.ToString("yyyy-MM-dd"), "' AND '", fechaHasta.ToString("yyyy-MM-dd"), " 23:59:59') AND t.borrado = 0 ");
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+        }
+
         public ObraSocial GetObraSocial(int codigo)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.

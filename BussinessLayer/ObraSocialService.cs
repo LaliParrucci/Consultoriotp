@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Consultorio.Entities;
 using Consultorio.DataAccessLayer;
 using System.Windows.Forms;
+using System.Data;
+using System.Net.Http;
 
 namespace Consultorio.BussinessLayer
 {
@@ -53,6 +55,12 @@ namespace Consultorio.BussinessLayer
                 return false; }
             return true;
         }
+
+        internal DataTable recuperarObraSocialPorfecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            return oObraSocialDao.getObraSocialPorFechas(fechaDesde, fechaHasta);
+        }
+
         public bool existeObraSocial(int codigo)
         {
             if (oObraSocialDao.GetObraSocial(codigo) != null) { return true; }

@@ -196,6 +196,12 @@
     <Compile Include="GUILayer\frmRegistrarTurno.Designer.cs">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.Designer.cs">
+      <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmReportePrXOb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,9 @@
     <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReporteObrasMasUtilizadas.resx">
+      <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmReportePrXOb.resx">
       <DependentUpon>frmReportePrXOb.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +287,7 @@
     <EmbeddedResource Include="GUILayer\Informes\informeMontosOOSS.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\lstTurnosDiarios.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\ReporteListadoPracticas.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\rpObrasMasUtilizadas.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpPXO.rdlc" />
     <EmbeddedResource Include="GUILayer\ReporteListadoPracticas.resx">
       <DependentUpon>ReporteListadoPracticas.cs</DependentUpon>
@@ -428,6 +438,9 @@
     <None Include="Resources\equipo1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\comfortable1.png" />
+    <None Include="Resources\medical-book.png" />
+    <None Include="Resources\dentistry.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -442,9 +455,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUILayer\Informes\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
