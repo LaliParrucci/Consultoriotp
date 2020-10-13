@@ -12,8 +12,12 @@
   <xs:element name="dsMontosOOSS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMontosOOSS" msprop:Generator_UserDSName="dsMontosOOSS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dTableObrasSociales" msprop:Generator_TableClassName="dTableObrasSocialesDataTable" msprop:Generator_TableVarName="tabledTableObrasSociales" msprop:Generator_TablePropName="dTableObrasSociales" msprop:Generator_RowDeletingName="dTableObrasSocialesRowDeleting" msprop:Generator_RowChangingName="dTableObrasSocialesRowChanging" msprop:Generator_RowEvHandlerName="dTableObrasSocialesRowChangeEventHandler" msprop:Generator_RowDeletedName="dTableObrasSocialesRowDeleted" msprop:Generator_UserTableName="dTableObrasSociales" msprop:Generator_RowChangedName="dTableObrasSocialesRowChanged" msprop:Generator_RowEvArgName="dTableObrasSocialesRowChangeEvent" msprop:Generator_RowClassName="dTableObrasSocialesRow">
+        <xs:element name="dTableObrasSociales" msprop:Generator_TableClassName="dTableObrasSocialesDataTable" msprop:Generator_TableVarName="tabledTableObrasSociales" msprop:Generator_RowChangedName="dTableObrasSocialesRowChanged" msprop:Generator_TablePropName="dTableObrasSociales" msprop:Generator_RowDeletingName="dTableObrasSocialesRowDeleting" msprop:Generator_RowChangingName="dTableObrasSocialesRowChanging" msprop:Generator_RowEvHandlerName="dTableObrasSocialesRowChangeEventHandler" msprop:Generator_RowDeletedName="dTableObrasSocialesRowDeleted" msprop:Generator_RowClassName="dTableObrasSocialesRow" msprop:Generator_UserTableName="dTableObrasSociales" msprop:Generator_RowEvArgName="dTableObrasSocialesRowChangeEvent">
           <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="monto" msprop:Generator_ColumnVarNameInTable="columnmonto" msprop:Generator_ColumnPropNameInRow="monto" msprop:Generator_ColumnPropNameInTable="montoColumn" msprop:Generator_UserColumnName="monto" type="xs:int" minOccurs="0" />
+            </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>

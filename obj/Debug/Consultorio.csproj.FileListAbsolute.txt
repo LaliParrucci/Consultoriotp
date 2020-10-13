@@ -447,3 +447,4 @@ C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.listado
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\RdlCompile.cache
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\RdlCompile.compiled
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
+C:\Users\lucca\OneDrive\Escritorio\Juan\Flor pav\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources

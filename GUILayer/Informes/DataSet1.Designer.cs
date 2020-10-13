@@ -279,6 +279,10 @@ namespace Consultorio.GUILayer.Informes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class dTableObrasSocialesDataTable : global::System.Data.TypedTableBase<dTableObrasSocialesRow> {
             
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columnmonto;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dTableObrasSocialesDataTable() {
@@ -310,6 +314,22 @@ namespace Consultorio.GUILayer.Informes {
             protected dTableObrasSocialesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn montoColumn {
+                get {
+                    return this.columnmonto;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -349,9 +369,11 @@ namespace Consultorio.GUILayer.Informes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dTableObrasSocialesRow AdddTableObrasSocialesRow() {
+            public dTableObrasSocialesRow AdddTableObrasSocialesRow(string nombre, int monto) {
                 dTableObrasSocialesRow rowdTableObrasSocialesRow = ((dTableObrasSocialesRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
+                object[] columnValuesArray = new object[] {
+                        nombre,
+                        monto};
                 rowdTableObrasSocialesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdTableObrasSocialesRow);
                 return rowdTableObrasSocialesRow;
@@ -374,11 +396,17 @@ namespace Consultorio.GUILayer.Informes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnnombre = base.Columns["nombre"];
+                this.columnmonto = base.Columns["monto"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columnmonto = new global::System.Data.DataColumn("monto", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmonto);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -517,6 +545,62 @@ namespace Consultorio.GUILayer.Informes {
             internal dTableObrasSocialesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabledTableObrasSociales = ((dTableObrasSocialesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tabledTableObrasSociales.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'dTableObrasSociales\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledTableObrasSociales.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int monto {
+                get {
+                    try {
+                        return ((int)(this[this.tabledTableObrasSociales.montoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'monto\' de la tabla \'dTableObrasSociales\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledTableObrasSociales.montoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tabledTableObrasSociales.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tabledTableObrasSociales.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsmontoNull() {
+                return this.IsNull(this.tabledTableObrasSociales.montoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetmontoNull() {
+                this[this.tabledTableObrasSociales.montoColumn] = global::System.Convert.DBNull;
             }
         }
         

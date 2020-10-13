@@ -279,5 +279,16 @@ namespace Consultorio.DataAccessLayer
             }
         }
 
+        public DataTable datasetTurnosReporte(string fecha)
+        {
+            string sql = "SELECT t.num_turno, t.hora, pa.dni as id_paciente , prof.matricula as id_profesional, prof.apellido" +
+                " FROM paciente pa INNER JOIN" +
+                " turno t ON pa.dni = t.id_paciente INNER JOIN" +
+                " profesional prof ON t.id_profesional = prof.matricula" +
+                " WHERE (t.borrado = 0) AND t.fecha = '" + fecha + "'" +
+                " ORDER BY t.num_turno";
+            return DBHelper.GetDBHelper().reporte(sql);
+        }
+
     }
 }

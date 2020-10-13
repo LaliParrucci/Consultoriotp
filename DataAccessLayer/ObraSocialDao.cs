@@ -107,16 +107,15 @@ namespace Consultorio.DataAccessLayer
             DBHelper.GetDBHelper().ConsultaSQL(sentencia);
         }
 
-        public DataTable datasetObrasSociales(string fecha)
+        public DataTable datasetObrasSocialesReporte(string fechaDesde, string fechaHasta)
         {
-            string sql = "SELECT t.num_turno, t.hora, pa.dni, prof.matricula, prof.apellido" +
-                " FROM paciente pa INNER JOIN" +
-                " turno t ON pa.dni = t.id_paciente INNER JOIN" +
-                " profesional prof ON t.id_profesional = prof.matricula" +
-                " WHERE (t.borrado = 0) AND t.fecha = '"+ fecha +"'";
+            string sql = "select o.nombre, SUM(c.monto*o.porcentaje) as monto" +
+                " from obra_social o" +
+                " join turno t on t.id_obra_social = o.cod_obra_social" +
+                " join consulta c on c.num_turno = t.num_turno" +
+                " where t.borrado = 0 and c.borrado = 0 and o.borrado = 0 and (t.fecha BETWEEN '" + fechaDesde + "' and '" + fechaHasta +
+                "') group by o.cod_obra_social, o.nombre";
             return DBHelper.GetDBHelper().reporte(sql);
-
-
         }
     }
 }

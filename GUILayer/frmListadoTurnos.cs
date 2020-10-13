@@ -14,7 +14,7 @@ namespace Consultorio.GUILayer
 {
     public partial class frmListadoTurnos : Form
     {
-        ObraSocialDao oObraSocialDao = new ObraSocialDao();
+        TurnoDao oTDao = new TurnoDao();
         public frmListadoTurnos()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Consultorio.GUILayer
         {
            
             DataTable tabla = new DataTable();
-            tabla = oObraSocialDao.datasetObrasSociales(dtpFecha.Value.Date.ToShortDateString());
+            tabla = oTDao.datasetTurnosReporte(dtpFecha.Value.Date.ToShortDateString());
 
             ReportDataSource rp = new ReportDataSource("DataSet1", tabla);
 
@@ -46,7 +46,7 @@ namespace Consultorio.GUILayer
         private void rpvTurnosDiarios_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = oObraSocialDao.datasetObrasSociales(dtpFecha.Value.Date.ToShortDateString());
+            tabla = oTDao.datasetTurnosReporte(dtpFecha.Value.Date.ToShortDateString());
 
             ReportDataSource rp = new ReportDataSource("DataSet1", tabla);
 
