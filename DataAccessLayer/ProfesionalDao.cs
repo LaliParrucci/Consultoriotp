@@ -43,7 +43,7 @@ namespace Consultorio.DataAccessLayer
             //Construimos la consulta sql para buscar al Profecional
             String consultaSql = string.Concat("SELECT matricula, nombre, apellido, especialidad, domicilio",
                                                " FROM profesional",
-                                               " WHERE matricula = " + matricula);
+                                               " WHERE matricula = " + matricula + " AND borrado = 0");
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
 
             if (resultado.Rows.Count > 0)
@@ -70,7 +70,7 @@ namespace Consultorio.DataAccessLayer
             //Construimos la consulta sql para buscar al Profecional
             String consultaSql = string.Concat("SELECT nombre, apellido, matricula",
                                                " FROM profesional",
-                                               " WHERE nombre = '" + nom + "'");
+                                               " WHERE nombre = '" + nom + "' AND borrado = 0");
             DataTable resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
 
             foreach (DataRow row in resultado.Rows)
@@ -103,6 +103,14 @@ namespace Consultorio.DataAccessLayer
                                                             "' WHERE matricula = ", mat);
             }
             DBHelper.GetDBHelper().abm(sentencia);
+        }
+
+        public DataTable recuperarTodos()
+        {
+            string sentencia = string.Concat("SELECT matricula, nombre, apellido",
+                                               " FROM profesional",
+                                               " WHERE borrado = 0");
+            return DataManager.GetInstance().ConsultaSQL(sentencia);
         }
     }
 }

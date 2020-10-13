@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Consultorio.Entities;
 using Consultorio.DataAccessLayer;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Consultorio.BussinessLayer
 {
@@ -75,6 +76,11 @@ namespace Consultorio.BussinessLayer
             string esp = ob.Especialidad;
             string dom = ob.Domicilio;
             oProfesionalDao.actualizacion(mat, nom, ape, esp, dom, esAlta);
+        }
+
+        public DataTable recuperarTodos()
+        {
+            return oProfesionalDao.recuperarTodos();
         }
     }
 

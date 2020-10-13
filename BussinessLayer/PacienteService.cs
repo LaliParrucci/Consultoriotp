@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Consultorio.Entities;
 using Consultorio.DataAccessLayer;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Consultorio.BussinessLayer
 {
@@ -70,6 +71,11 @@ namespace Consultorio.BussinessLayer
         internal IList<PacienteE> recuperarPacientePorNA(string nom, string ape)
         {
             return oPacienteDao.GetPacientePorNA(nom, ape);
+        }
+
+        internal DataTable recuperarPacientePorFecha(string profesional, DateTime desde, DateTime hasta)
+        {
+            return oPacienteDao.recuperarPacientePorFecha(profesional, desde, hasta);
         }
     }
 }

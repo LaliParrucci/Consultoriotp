@@ -150,7 +150,6 @@ namespace Consultorio.DataAccessLayer
         }
 
 
-
         public bool crearTurnoConHistorial(Turno oTurno, string observacion)
         {
             DataManager dm = new DataManager();

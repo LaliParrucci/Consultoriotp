@@ -75,6 +75,16 @@ namespace Consultorio.DataAccessLayer
             return listado;
         }
 
+        internal DataTable recuperarPacientePorFecha(string profesional, DateTime desde, DateTime hasta)
+        {
+            String consultaSql = string.Concat("SELECT p.apellido as id_profesional, pa.dni as id_paciente, pa.nombre as id_obra_social, pa.apellido as observacion, pa.telefono as borrado, t.num_turno as num_turno ",
+                                               "FROM profesional p JOIN turno t ON(p.matricula = t.id_profesional) JOIN paciente pa ON(t.id_paciente = pa.dni) ",
+                                               "WHERE (t.fecha BETWEEN '", desde.ToString("yyyy-MM-dd") ,"' AND '", hasta.ToString("yyyy-MM-dd"), " 23:59:59') AND t.borrado = 0");
+            if (profesional != "")
+                consultaSql += " AND p.matricula = " + profesional;
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+        }
+
         public PacienteE mapeo(DataRow row)
         {
             PacienteE oPaciente = new PacienteE();
