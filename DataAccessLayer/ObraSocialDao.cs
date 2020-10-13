@@ -29,10 +29,10 @@ namespace Consultorio.DataAccessLayer
 
         private ObraSocial crearObjObras(DataRow row)
         {//creo nueva instancia de obras
-            ObraSocial oObraSocial = new ObraSocial();           
+            ObraSocial oObraSocial = new ObraSocial();
             oObraSocial.Codigo = Convert.ToInt32(row[0].ToString());
             oObraSocial.Nombre = row[1].ToString();
-            oObraSocial.Porcentaje =Convert.ToSingle(row[2].ToString());
+            oObraSocial.Porcentaje = Convert.ToSingle(row[2].ToString());
             return oObraSocial;
         }
 
@@ -78,12 +78,12 @@ namespace Consultorio.DataAccessLayer
 
             return null;
         }
-        public void actualizar(int codigo, string nombre,bool esAlta, float porc)
+        public void actualizar(int codigo, string nombre, bool esAlta, float porc)
         {
             if (esAlta)
             {
                 sentencia = string.Concat("INSERT INTO obra_social(nombre,porcentaje, borrado)" +
-                                          " VALUES('", nombre,"', ", porc.ToString().Replace(",", "."), ",0)");
+                                          " VALUES('", nombre, "', ", porc.ToString().Replace(",", "."), ",0)");
             }
             else
             {
@@ -97,6 +97,18 @@ namespace Consultorio.DataAccessLayer
         {
             string sentencia = string.Concat("UPDATE obra_social SET borrado = 1 WHERE cod_obra_social =", codigo);
             DBHelper.GetDBHelper().ConsultaSQL(sentencia);
+        }
+
+        public DataTable datasetObrasSociales(string fecha)
+        {
+            string sql = "SELECT t.num_turno, t.hora, pa.dni, prof.matricula, prof.apellido" +
+                " FROM paciente pa INNER JOIN" +
+                " turno t ON pa.dni = t.id_paciente INNER JOIN" +
+                " profesional prof ON t.id_profesional = prof.matricula" +
+                " WHERE (t.borrado = 0) AND t.fecha = '"+ fecha +"'";
+            return DBHelper.GetDBHelper().reporte(sql);
+
+
         }
     }
 }

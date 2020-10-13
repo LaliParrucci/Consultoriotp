@@ -20,17 +20,17 @@ namespace Consultorio.GUILayer.Informes {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsTurnosDiario")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsMontosOOSS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsTurnosDiario : global::System.Data.DataSet {
+    public partial class dsMontosOOSS : global::System.Data.DataSet {
         
-        private dtTurnosDataTable tabledtTurnos;
+        private dTableObrasSocialesDataTable tabledTableObrasSociales;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dsTurnosDiario() {
+        public dsMontosOOSS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Consultorio.GUILayer.Informes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dsTurnosDiario(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsMontosOOSS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Consultorio.GUILayer.Informes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["dtTurnos"] != null)) {
-                    base.Tables.Add(new dtTurnosDataTable(ds.Tables["dtTurnos"]));
+                if ((ds.Tables["dTableObrasSociales"] != null)) {
+                    base.Tables.Add(new dTableObrasSocialesDataTable(ds.Tables["dTableObrasSociales"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Consultorio.GUILayer.Informes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dtTurnosDataTable dtTurnos {
+        public dTableObrasSocialesDataTable dTableObrasSociales {
             get {
-                return this.tabledtTurnos;
+                return this.tabledTableObrasSociales;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Consultorio.GUILayer.Informes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsTurnosDiario cln = ((dsTurnosDiario)(base.Clone()));
+            dsMontosOOSS cln = ((dsMontosOOSS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Consultorio.GUILayer.Informes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["dtTurnos"] != null)) {
-                    base.Tables.Add(new dtTurnosDataTable(ds.Tables["dtTurnos"]));
+                if ((ds.Tables["dTableObrasSociales"] != null)) {
+                    base.Tables.Add(new dTableObrasSocialesDataTable(ds.Tables["dTableObrasSociales"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Consultorio.GUILayer.Informes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabledtTurnos = ((dtTurnosDataTable)(base.Tables["dtTurnos"]));
+            this.tabledTableObrasSociales = ((dTableObrasSocialesDataTable)(base.Tables["dTableObrasSociales"]));
             if ((initTable == true)) {
-                if ((this.tabledtTurnos != null)) {
-                    this.tabledtTurnos.InitVars();
+                if ((this.tabledTableObrasSociales != null)) {
+                    this.tabledTableObrasSociales.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Consultorio.GUILayer.Informes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsTurnosDiario";
+            this.DataSetName = "dsMontosOOSS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsTurnosDiario.xsd";
+            this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabledtTurnos = new dtTurnosDataTable();
-            base.Tables.Add(this.tabledtTurnos);
+            this.tabledTableObrasSociales = new dTableObrasSocialesDataTable();
+            base.Tables.Add(this.tabledTableObrasSociales);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializedtTurnos() {
+        private bool ShouldSerializedTableObrasSociales() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Consultorio.GUILayer.Informes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsTurnosDiario ds = new dsTurnosDiario();
+            dsMontosOOSS ds = new dsMontosOOSS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,19 +270,19 @@ namespace Consultorio.GUILayer.Informes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void dtTurnosRowChangeEventHandler(object sender, dtTurnosRowChangeEvent e);
+        public delegate void dTableObrasSocialesRowChangeEventHandler(object sender, dTableObrasSocialesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dtTurnosDataTable : global::System.Data.TypedTableBase<dtTurnosRow> {
+        public partial class dTableObrasSocialesDataTable : global::System.Data.TypedTableBase<dTableObrasSocialesRow> {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtTurnosDataTable() {
-                this.TableName = "dtTurnos";
+            public dTableObrasSocialesDataTable() {
+                this.TableName = "dTableObrasSociales";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -290,7 +290,7 @@ namespace Consultorio.GUILayer.Informes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dtTurnosDataTable(global::System.Data.DataTable table) {
+            internal dTableObrasSocialesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -307,7 +307,7 @@ namespace Consultorio.GUILayer.Informes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected dtTurnosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dTableObrasSocialesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -323,44 +323,44 @@ namespace Consultorio.GUILayer.Informes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtTurnosRow this[int index] {
+            public dTableObrasSocialesRow this[int index] {
                 get {
-                    return ((dtTurnosRow)(this.Rows[index]));
+                    return ((dTableObrasSocialesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dtTurnosRowChangeEventHandler dtTurnosRowChanging;
+            public event dTableObrasSocialesRowChangeEventHandler dTableObrasSocialesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dtTurnosRowChangeEventHandler dtTurnosRowChanged;
+            public event dTableObrasSocialesRowChangeEventHandler dTableObrasSocialesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dtTurnosRowChangeEventHandler dtTurnosRowDeleting;
+            public event dTableObrasSocialesRowChangeEventHandler dTableObrasSocialesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dtTurnosRowChangeEventHandler dtTurnosRowDeleted;
+            public event dTableObrasSocialesRowChangeEventHandler dTableObrasSocialesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AdddtTurnosRow(dtTurnosRow row) {
+            public void AdddTableObrasSocialesRow(dTableObrasSocialesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtTurnosRow AdddtTurnosRow() {
-                dtTurnosRow rowdtTurnosRow = ((dtTurnosRow)(this.NewRow()));
+            public dTableObrasSocialesRow AdddTableObrasSocialesRow() {
+                dTableObrasSocialesRow rowdTableObrasSocialesRow = ((dTableObrasSocialesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[0];
-                rowdtTurnosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdtTurnosRow);
-                return rowdtTurnosRow;
+                rowdTableObrasSocialesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdTableObrasSocialesRow);
+                return rowdTableObrasSocialesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dtTurnosDataTable cln = ((dtTurnosDataTable)(base.Clone()));
+                dTableObrasSocialesDataTable cln = ((dTableObrasSocialesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -368,7 +368,7 @@ namespace Consultorio.GUILayer.Informes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dtTurnosDataTable();
+                return new dTableObrasSocialesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -383,28 +383,28 @@ namespace Consultorio.GUILayer.Informes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtTurnosRow NewdtTurnosRow() {
-                return ((dtTurnosRow)(this.NewRow()));
+            public dTableObrasSocialesRow NewdTableObrasSocialesRow() {
+                return ((dTableObrasSocialesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dtTurnosRow(builder);
+                return new dTableObrasSocialesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dtTurnosRow);
+                return typeof(dTableObrasSocialesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dtTurnosRowChanged != null)) {
-                    this.dtTurnosRowChanged(this, new dtTurnosRowChangeEvent(((dtTurnosRow)(e.Row)), e.Action));
+                if ((this.dTableObrasSocialesRowChanged != null)) {
+                    this.dTableObrasSocialesRowChanged(this, new dTableObrasSocialesRowChangeEvent(((dTableObrasSocialesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -412,8 +412,8 @@ namespace Consultorio.GUILayer.Informes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dtTurnosRowChanging != null)) {
-                    this.dtTurnosRowChanging(this, new dtTurnosRowChangeEvent(((dtTurnosRow)(e.Row)), e.Action));
+                if ((this.dTableObrasSocialesRowChanging != null)) {
+                    this.dTableObrasSocialesRowChanging(this, new dTableObrasSocialesRowChangeEvent(((dTableObrasSocialesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -421,8 +421,8 @@ namespace Consultorio.GUILayer.Informes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dtTurnosRowDeleted != null)) {
-                    this.dtTurnosRowDeleted(this, new dtTurnosRowChangeEvent(((dtTurnosRow)(e.Row)), e.Action));
+                if ((this.dTableObrasSocialesRowDeleted != null)) {
+                    this.dTableObrasSocialesRowDeleted(this, new dTableObrasSocialesRowChangeEvent(((dTableObrasSocialesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -430,14 +430,14 @@ namespace Consultorio.GUILayer.Informes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dtTurnosRowDeleting != null)) {
-                    this.dtTurnosRowDeleting(this, new dtTurnosRowChangeEvent(((dtTurnosRow)(e.Row)), e.Action));
+                if ((this.dTableObrasSocialesRowDeleting != null)) {
+                    this.dTableObrasSocialesRowDeleting(this, new dTableObrasSocialesRowChangeEvent(((dTableObrasSocialesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovedtTurnosRow(dtTurnosRow row) {
+            public void RemovedTableObrasSocialesRow(dTableObrasSocialesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -446,7 +446,7 @@ namespace Consultorio.GUILayer.Informes {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsTurnosDiario ds = new dsTurnosDiario();
+                dsMontosOOSS ds = new dsMontosOOSS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -464,7 +464,7 @@ namespace Consultorio.GUILayer.Informes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dtTurnosDataTable";
+                attribute2.FixedValue = "dTableObrasSocialesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -508,15 +508,15 @@ namespace Consultorio.GUILayer.Informes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dtTurnosRow : global::System.Data.DataRow {
+        public partial class dTableObrasSocialesRow : global::System.Data.DataRow {
             
-            private dtTurnosDataTable tabledtTurnos;
+            private dTableObrasSocialesDataTable tabledTableObrasSociales;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dtTurnosRow(global::System.Data.DataRowBuilder rb) : 
+            internal dTableObrasSocialesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledtTurnos = ((dtTurnosDataTable)(this.Table));
+                this.tabledTableObrasSociales = ((dTableObrasSocialesDataTable)(this.Table));
             }
         }
         
@@ -524,22 +524,22 @@ namespace Consultorio.GUILayer.Informes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class dtTurnosRowChangeEvent : global::System.EventArgs {
+        public class dTableObrasSocialesRowChangeEvent : global::System.EventArgs {
             
-            private dtTurnosRow eventRow;
+            private dTableObrasSocialesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtTurnosRowChangeEvent(dtTurnosRow row, global::System.Data.DataRowAction action) {
+            public dTableObrasSocialesRowChangeEvent(dTableObrasSocialesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtTurnosRow Row {
+            public dTableObrasSocialesRow Row {
                 get {
                     return this.eventRow;
                 }

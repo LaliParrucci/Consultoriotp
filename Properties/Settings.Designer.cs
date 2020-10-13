@@ -44,5 +44,16 @@ namespace Consultorio.Properties {
                 return ((string)(this["consultorio_odontologicoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-TQQ8R9R\\SQLEXPRESS;Initial Catalog=consultorio_odontologico;I" +
+            "ntegrated Security=True")]
+        public string consultorio_odontologicoConnectionString2 {
+            get {
+                return ((string)(this["consultorio_odontologicoConnectionString2"]));
+            }
+        }
     }
 }

@@ -19,7 +19,8 @@ namespace Consultorio.DataAccessLayer
             //string_conexion = @"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
             //string_conexion = @"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Persist Security Info=True;User ID=sa;Password=19671970";
             //string_conexion = @"Data Source=LAPTOP-E7G93F2V\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
-            string_conexion = @"Data Source=DESKTOP-0RHOTN8\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
+            //string_conexion = @"Data Source=DESKTOP-0RHOTN8\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
+            string_conexion = @"Data Source=DESKTOP-TQQ8R9R\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
         }
 
         public static DBHelper GetDBHelper()
@@ -265,6 +266,36 @@ namespace Consultorio.DataAccessLayer
                 this.CloseConnection(cnn);
             }
 
+        }
+
+        public DataTable reporte(string sql)
+        {
+            SqlConnection cnn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                cnn.ConnectionString = string_conexion;
+                cnn.Open();
+                cmd.Connection = cnn;
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+
+                //Agregamos a la colección de parámetros del comando los filtros recibidos
+                
+                tabla.Load(cmd.ExecuteReader());
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                CloseConnection(cnn);
+            }
         }
     }
 }

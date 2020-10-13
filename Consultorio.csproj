@@ -13,6 +13,21 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,6 +96,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="consultorio_odontologicoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultorio_odontologicoDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
     <Compile Include="DataAccessLayer\InsumoDao.cs" />
@@ -130,6 +155,18 @@
     <Compile Include="GUILayer\frmAbmProfesional.Designer.cs">
       <DependentUpon>frmAbmProfesional.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmInformeMontosOOSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmInformeMontosOOSS.Designer.cs">
+      <DependentUpon>frmInformeMontosOOSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmListadoTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmListadoTurnos.Designer.cs">
+      <DependentUpon>frmListadoTurnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,16 +209,15 @@
     <Compile Include="GUILayer\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\Informes\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\Informes\dsTurnosDiario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GUILayer\frmListadoTurnosDiarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\frmListadoTurnosDiarios.Designer.cs">
-      <DependentUpon>frmListadoTurnosDiarios.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\ReporteListadoPracticas.cs">
       <SubType>Form</SubType>
@@ -210,6 +246,12 @@
     <EmbeddedResource Include="GUILayer\frmAbmUsuario.resx">
       <DependentUpon>frmAbmUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmInformeMontosOOSS.resx">
+      <DependentUpon>frmInformeMontosOOSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmListadoTurnos.resx">
+      <DependentUpon>frmListadoTurnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,9 +270,7 @@
     <EmbeddedResource Include="GUILayer\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmListadoTurnosDiarios.resx">
-      <DependentUpon>frmListadoTurnosDiarios.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Informes\informeMontosOOSS.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\lstTurnosDiarios.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\ReporteListadoPracticas.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpPXO.rdlc" />
@@ -258,6 +298,39 @@
     </None>
     <None Include="consultorio_odontologicoDataSet.xss">
       <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet1.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet1.xss">
+      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet2.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet2.xss">
+      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Informes\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Informes\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUILayer\Informes\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="GUILayer\Informes\dsTurnosDiario.xsc">
       <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
@@ -355,6 +428,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUILayer\Informes\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

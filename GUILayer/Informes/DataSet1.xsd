@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMontosOOSS" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMontosOOSS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMontosOOSS" msprop:Generator_UserDSName="dsMontosOOSS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dTableObrasSociales" msprop:Generator_TableClassName="dTableObrasSocialesDataTable" msprop:Generator_TableVarName="tabledTableObrasSociales" msprop:Generator_TablePropName="dTableObrasSociales" msprop:Generator_RowDeletingName="dTableObrasSocialesRowDeleting" msprop:Generator_RowChangingName="dTableObrasSocialesRowChanging" msprop:Generator_RowEvHandlerName="dTableObrasSocialesRowChangeEventHandler" msprop:Generator_RowDeletedName="dTableObrasSocialesRowDeleted" msprop:Generator_UserTableName="dTableObrasSociales" msprop:Generator_RowChangedName="dTableObrasSocialesRowChanged" msprop:Generator_RowEvArgName="dTableObrasSocialesRowChangeEvent" msprop:Generator_RowClassName="dTableObrasSocialesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -27,7 +27,7 @@ namespace Consultorio.GUILayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmListadoTurnosDiarios frm = new frmListadoTurnosDiarios();
+            frmListadoTurnos frm = new frmListadoTurnos();
             frm.ShowDialog();
         }
 
