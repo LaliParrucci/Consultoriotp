@@ -35,6 +35,14 @@ namespace Consultorio.DataAccessLayer
 
             return resultadoConsulta;
         }
+        public DataTable ObtenerListadoPracticasConObraSocial(int id_obra_social)
+        {
+          var strSql = "SELECT id_practica, nombre, descripcion, importe FROM practica pr RIGHT JOIN consulta c ON(pr.id_practica = c.practicas_realizadas) LEFT JOIN turno t ON(c.fecha=t.fecha and c.id_paciente=t.id_paciente and c.id_profesional=t.id_profesional) WHERE t.id_obra_social = " + id_obra_social + "";
+            
+           var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            return resultadoConsulta;
+        }
         public Practica GetPractica(int id)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.

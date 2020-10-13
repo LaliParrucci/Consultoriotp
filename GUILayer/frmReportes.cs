@@ -36,5 +36,11 @@ namespace Consultorio.GUILayer
             listadoPracticas ventana = new listadoPracticas();
             ventana.ShowDialog();
         }
+
+        private void btnPrXOb_Click(object sender, EventArgs e)
+        {
+            frmReportePrXOb frm = new frmReportePrXOb();
+            frm.ShowDialog();
+        }
     }
 }

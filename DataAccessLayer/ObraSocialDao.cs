@@ -50,7 +50,6 @@ namespace Consultorio.DataAccessLayer
             {
                 return mapeo(resultado.Rows[0]);
             }
-
             return null;
         }
 

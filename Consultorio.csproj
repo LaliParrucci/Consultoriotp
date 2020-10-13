@@ -154,6 +154,12 @@
     <Compile Include="GUILayer\frmRegistrarTurno.Designer.cs">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmReportePrXOb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePrXOb.Designer.cs">
+      <DependentUpon>frmReportePrXOb.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmReportePXO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReportePrXOb.resx">
+      <DependentUpon>frmReportePrXOb.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmReportePXO.resx">
       <DependentUpon>frmReportePXO.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="GUILayer\Informes\rpPrXOb.rdlc" />
     <None Include="consultorio_odontologicoDataSet.xsc">
       <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
     </None>
