@@ -30,7 +30,7 @@ namespace Consultorio.GUILayer
             DataTable table = new DataTable();
             table = generador();
 
-            ReportDataSource rp = new ReportDataSource("DataSet1", table);
+            ReportDataSource rp = new ReportDataSource("DataInsumos", table);
 
             reportViewer2.LocalReport.DataSources.Clear();
             reportViewer2.LocalReport.DataSources.Add(rp);
