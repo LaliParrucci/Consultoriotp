@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.lblObraSocial = new System.Windows.Forms.Label();
+            this.obrasocialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obra_socialTableAdapter = new Consultorio.consultorio_odontologicoDataSet3TableAdapters.obra_socialTableAdapter();
+            this.consultorio_odontologicoDataSet31 = new Consultorio.consultorio_odontologicoDataSet3();
             this.cboObraSocial = new System.Windows.Forms.ComboBox();
             this.gbxFiltros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.obrasocialBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoDataSet31)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -48,6 +55,7 @@
             // gbxFiltros
             // 
             this.gbxFiltros.Controls.Add(this.cboObraSocial);
+            this.gbxFiltros.Controls.Add(this.btnGenerar);
             this.gbxFiltros.Controls.Add(this.lblObraSocial);
             this.gbxFiltros.Location = new System.Drawing.Point(9, 12);
             this.gbxFiltros.Name = "gbxFiltros";
@@ -55,6 +63,16 @@
             this.gbxFiltros.TabIndex = 1;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(665, 88);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(92, 24);
+            this.btnGenerar.TabIndex = 3;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // lblObraSocial
             // 
@@ -65,13 +83,23 @@
             this.lblObraSocial.TabIndex = 1;
             this.lblObraSocial.Text = "Obra Social:";
             // 
+            // obra_socialTableAdapter
+            // 
+            this.obra_socialTableAdapter.ClearBeforeFill = true;
+            // 
+            // consultorio_odontologicoDataSet31
+            // 
+            this.consultorio_odontologicoDataSet31.DataSetName = "consultorio_odontologicoDataSet3";
+            this.consultorio_odontologicoDataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cboObraSocial
             // 
             this.cboObraSocial.FormattingEnabled = true;
             this.cboObraSocial.Location = new System.Drawing.Point(325, 39);
             this.cboObraSocial.Name = "cboObraSocial";
-            this.cboObraSocial.Size = new System.Drawing.Size(188, 21);
-            this.cboObraSocial.TabIndex = 2;
+            this.cboObraSocial.Size = new System.Drawing.Size(148, 21);
+            this.cboObraSocial.TabIndex = 4;
+            this.cboObraSocial.SelectedIndexChanged += new System.EventHandler(this.cboObraSocial_SelectedIndexChanged);
             // 
             // frmReportePrXOb
             // 
@@ -85,6 +113,8 @@
             this.Load += new System.EventHandler(this.frmReportePrXOb_Load);
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.obrasocialBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoDataSet31)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,6 +124,10 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.GroupBox gbxFiltros;
         private System.Windows.Forms.Label lblObraSocial;
+        private System.Windows.Forms.BindingSource obrasocialBindingSource;
+        private consultorio_odontologicoDataSet3TableAdapters.obra_socialTableAdapter obra_socialTableAdapter;
+        private consultorio_odontologicoDataSet3 consultorio_odontologicoDataSet31;
+        private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.ComboBox cboObraSocial;
     }
 }

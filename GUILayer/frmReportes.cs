@@ -54,5 +54,11 @@ namespace Consultorio.GUILayer
             frmInformeMontosOOSS frm = new frmInformeMontosOOSS();
             frm.ShowDialog();
         }
+
+        private void btnPrXP_Click(object sender, EventArgs e)
+        {
+            frmReportePrXP frm = new frmReportePrXP();
+            frm.ShowDialog();
+        }
     }
 }

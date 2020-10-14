@@ -283,7 +283,6 @@ C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.f
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmRegistrarTurno.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePXO.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportes.resources
-C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.Informes.frmListadoTurnosDiarios.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.listadoPracticas.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.Properties.Resources.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.csproj.GenerateResource.cache
@@ -448,3 +447,7 @@ C:\Users\besac\source\repos\Consultoriotp\obj\Debug\RdlCompile.cache
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\RdlCompile.compiled
 C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
 C:\Users\lucca\OneDrive\Escritorio\Juan\Flor pav\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
+C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmInformeMontosOOSS.resources
+C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmListadoTurnos.resources
+C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
+C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources

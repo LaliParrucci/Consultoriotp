@@ -32,6 +32,9 @@
             this.pnlTitulo1 = new System.Windows.Forms.Panel();
             this.lblListados = new System.Windows.Forms.Label();
             this.pnlCuerpoListados = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOMUtilizadas = new System.Windows.Forms.Button();
             this.lblLPrXOb2 = new System.Windows.Forms.Label();
@@ -46,9 +49,9 @@
             this.pnlTitulo2 = new System.Windows.Forms.Panel();
             this.lblEstadis = new System.Windows.Forms.Label();
             this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnPrXP = new System.Windows.Forms.Button();
+            this.lblPRXP1 = new System.Windows.Forms.Label();
+            this.lblPrXP2 = new System.Windows.Forms.Label();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -76,6 +79,9 @@
             // 
             // pnlCuerpoListados
             // 
+            this.pnlCuerpoListados.Controls.Add(this.lblPrXP2);
+            this.pnlCuerpoListados.Controls.Add(this.lblPRXP1);
+            this.pnlCuerpoListados.Controls.Add(this.btnPrXP);
             this.pnlCuerpoListados.Controls.Add(this.label4);
             this.pnlCuerpoListados.Controls.Add(this.label3);
             this.pnlCuerpoListados.Controls.Add(this.button1);
@@ -96,11 +102,39 @@
             this.pnlCuerpoListados.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoListados.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(29, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 55);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Informe de montos a cobrar - Obras Sociales";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(49, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 55);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Listado de turnos diarios";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(57, 142);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 194);
+            this.label2.Location = new System.Drawing.Point(358, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 18);
             this.label2.TabIndex = 11;
@@ -112,7 +146,7 @@
             this.btnOMUtilizadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOMUtilizadas.FlatAppearance.BorderSize = 0;
             this.btnOMUtilizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOMUtilizadas.Location = new System.Drawing.Point(430, 131);
+            this.btnOMUtilizadas.Location = new System.Drawing.Point(410, 131);
             this.btnOMUtilizadas.Name = "btnOMUtilizadas";
             this.btnOMUtilizadas.Size = new System.Drawing.Size(60, 60);
             this.btnOMUtilizadas.TabIndex = 10;
@@ -188,7 +222,7 @@
             // 
             this.lblLpXo1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLpXo1.AutoSize = true;
-            this.lblLpXo1.Location = new System.Drawing.Point(403, 68);
+            this.lblLpXo1.Location = new System.Drawing.Point(385, 68);
             this.lblLpXo1.Name = "lblLpXo1";
             this.lblLpXo1.Size = new System.Drawing.Size(117, 18);
             this.lblLpXo1.TabIndex = 0;
@@ -200,7 +234,7 @@
             this.btnPXO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPXO.FlatAppearance.BorderSize = 0;
             this.btnPXO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPXO.Location = new System.Drawing.Point(430, 6);
+            this.btnPXO.Location = new System.Drawing.Point(410, 5);
             this.btnPXO.Name = "btnPXO";
             this.btnPXO.Size = new System.Drawing.Size(60, 60);
             this.btnPXO.TabIndex = 2;
@@ -211,7 +245,7 @@
             // 
             this.lblpXo2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblpXo2.AutoSize = true;
-            this.lblpXo2.Location = new System.Drawing.Point(407, 86);
+            this.lblpXo2.Location = new System.Drawing.Point(385, 86);
             this.lblpXo2.Name = "lblpXo2";
             this.lblpXo2.Size = new System.Drawing.Size(113, 18);
             this.lblpXo2.TabIndex = 1;
@@ -244,33 +278,35 @@
             this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoEstadisticas.TabIndex = 3;
             // 
-            // button1
+            // btnPrXP
             // 
-            this.button1.Location = new System.Drawing.Point(57, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnPrXP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.btnPrXP.BackgroundImage = global::Consultorio.Properties.Resources.lista_de_verificacion;
+            this.btnPrXP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrXP.Location = new System.Drawing.Point(593, 123);
+            this.btnPrXP.Name = "btnPrXP";
+            this.btnPrXP.Size = new System.Drawing.Size(60, 60);
+            this.btnPrXP.TabIndex = 15;
+            this.btnPrXP.UseVisualStyleBackColor = false;
+            this.btnPrXP.Click += new System.EventHandler(this.btnPrXP_Click);
             // 
-            // label3
+            // lblPRXP1
             // 
-            this.label3.Location = new System.Drawing.Point(49, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 55);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Listado de turnos diarios";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPRXP1.AutoSize = true;
+            this.lblPRXP1.Location = new System.Drawing.Point(549, 186);
+            this.lblPRXP1.Name = "lblPRXP1";
+            this.lblPRXP1.Size = new System.Drawing.Size(142, 18);
+            this.lblPRXP1.TabIndex = 16;
+            this.lblPRXP1.Text = "Listado de Practicas";
             // 
-            // label4
+            // lblPrXP2
             // 
-            this.label4.Location = new System.Drawing.Point(29, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 55);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Informe de montos a cobrar - Obras Sociales";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPrXP2.AutoSize = true;
+            this.lblPrXP2.Location = new System.Drawing.Point(526, 204);
+            this.lblPrXP2.Name = "lblPrXP2";
+            this.lblPrXP2.Size = new System.Drawing.Size(180, 18);
+            this.lblPrXP2.TabIndex = 17;
+            this.lblPrXP2.Text = "realizadas por Profesional";
             // 
             // frmReportes
             // 
@@ -321,5 +357,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblPrXP2;
+        private System.Windows.Forms.Label lblPRXP1;
+        private System.Windows.Forms.Button btnPrXP;
     }
 }

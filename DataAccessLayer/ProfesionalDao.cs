@@ -79,6 +79,28 @@ namespace Consultorio.DataAccessLayer
             }
             return listadoProfe;
         }
+        public ProfesionalE GetProfesionalPorApellido(string ape)
+        {
+            String consultaSql = string.Concat(" SELECT matricula",
+                                               "  FROM profesional ",
+                                               "  WHERE apellido = '", ape, "'");
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return mapeoMatricula(resultado.Rows[0]);
+            }
+            return null;
+        }
+        public ProfesionalE mapeoMatricula(DataRow row)
+        {
+            ProfesionalE pr = new ProfesionalE();
+            pr.Matricula = Convert.ToInt32(row[0].ToString());
+            return pr;
+        }
 
         public void baja(int matricula)
         {

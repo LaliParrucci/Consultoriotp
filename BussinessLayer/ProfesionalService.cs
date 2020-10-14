@@ -33,6 +33,10 @@ namespace Consultorio.BussinessLayer
         {
             return oProfesionalDao.GetProfesionalNom(nom);
         }
+        public ProfesionalE recuProfesionalApe(string ape)
+        {
+            return oProfesionalDao.GetProfesionalPorApellido(ape);
+        }
 
         public ProfesionalE recuperarProfesionalPorMatricula(int matricula)
         {

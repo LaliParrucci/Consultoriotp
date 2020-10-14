@@ -25,6 +25,8 @@ namespace Consultorio.GUILayer
         private void frmReportePrXOb_Load(object sender, EventArgs e)
         {
             LlenarCombo(cboObraSocial, oObraSocialService.recuperarObraSocial(), "nombre", "codigo");
+            // TODO: esta línea de código carga datos en la tabla 'consultorio_odontologicoTodas.obra_social' Puede moverla o quitarla según sea necesario.
+            this.obra_socialTableAdapter.Fill(this.consultorio_odontologicoDataSet31.obra_social);
             this.reportViewer1.RefreshReport();
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, string value)
@@ -34,23 +36,34 @@ namespace Consultorio.GUILayer
             cbo.ValueMember = value;
             cbo.SelectedIndex = -1;
         }
-
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-           DataTable tabla = new DataTable();
-            tabla = oPracticaService.recuPracticasObraSocial(ObraSocial());
-            ReportDataSource ds = new ReportDataSource("DatosPractica", tabla);
-
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(ds);
-            reportViewer1.LocalReport.Refresh();
+           
         }
         private int ObraSocial()
         {
             int id;
-            id = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
-
+            id = oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text).Codigo;
             return id;
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = oPracticaService.recuPracticasObraSocial(ObraSocial()); ;
+
+            ReportDataSource rp = new ReportDataSource("dsPracticas", tabla);
+
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(rp);
+            reportViewer1.LocalReport.Refresh();
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void cboObraSocial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
