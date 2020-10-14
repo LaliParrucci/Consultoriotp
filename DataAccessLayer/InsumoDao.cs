@@ -25,6 +25,15 @@ namespace Consultorio.DataAccessLayer
 
             return listadoPrac;
         }
+        public DataTable ObtenerListadoInsumos()
+        {
+
+            var strSql = "SELECT id_insumo, nombre, stock FROM insumo";
+
+            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            return resultadoConsulta;
+        }
         public Insumo GetInsumo(int id)
         {
             String consultaSql = string.Concat(" SELECT id_insumo, nombre, stock",

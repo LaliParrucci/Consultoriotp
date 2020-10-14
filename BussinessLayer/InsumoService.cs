@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Consultorio.Entities;
 using Consultorio.DataAccessLayer;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Consultorio.BussinessLayer
 {
@@ -20,6 +21,10 @@ namespace Consultorio.BussinessLayer
         public IList<Insumo> recuperarInsumo()
         {
             return oInsumoDao.GetAll();
+        }
+        public DataTable recuInsumos()
+        {
+            return oInsumoDao.ObtenerListadoInsumos();
         }
 
         public Insumo recuperarInsumoPorId(int id)

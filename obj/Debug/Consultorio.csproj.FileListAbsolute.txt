@@ -205,7 +205,6 @@ C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\bin\Debug\zh-CHS\Microsoft.
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePXO.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportes.resources
-C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.Informes.frmListadoTurnosDiarios.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\RdlCompile.cache
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\RdlCompile.compiled
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.listadoPracticas.resources
@@ -451,3 +450,9 @@ C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.G
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmListadoTurnos.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmInformeMontosOOSS.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmListadoTurnos.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteListadoInsumos.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXOb.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources

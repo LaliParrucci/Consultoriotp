@@ -60,5 +60,11 @@ namespace Consultorio.GUILayer
             frmReportePrXP frm = new frmReportePrXP();
             frm.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmReporteListadoInsumos ventana = new frmReporteListadoInsumos();
+            ventana.ShowDialog();
+        }
     }
 }

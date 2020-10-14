@@ -106,6 +106,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="consultorio_odontologicoDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="consultorio_odontologicoDataSetLu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,7 +131,18 @@
     <Compile Include="DataAccessLayer\Service.cs" />
     <Compile Include="DataAccessLayer\TurnoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Disponibilidad.cs" />
+    <Compile Include="Entities\FiltrosReporteInsumos.cs" />
     <Compile Include="Entities\FiltrosReportePracticas.cs" />
     <Compile Include="Entities\Insumo.cs" />
     <Compile Include="Entities\ObraSocial.cs" />
@@ -200,6 +216,12 @@
     </Compile>
     <Compile Include="GUILayer\frmRegistrarTurno.Designer.cs">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteListadoInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteListadoInsumos.Designer.cs">
+      <DependentUpon>frmReporteListadoInsumos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.cs">
       <SubType>Form</SubType>
@@ -283,6 +305,9 @@
     <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReporteListadoInsumos.resx">
+      <DependentUpon>frmReporteListadoInsumos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmReporteObrasMasUtilizadas.resx">
       <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +325,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Informes\informeMontosOOSS.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\lstTurnosDiarios.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\ReporteListadoInsumos.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpPrXP.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\ReporteListadoPracticas.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpObrasMasUtilizadas.rdlc" />
@@ -351,6 +377,17 @@
     <None Include="consultorio_odontologicoDataSet2.xss">
       <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="consultorio_odontologicoDataSet4.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet4.xss">
+      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="consultorio_odontologicoDataSetLu.xsc">
       <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
     </None>
@@ -372,6 +409,28 @@
     </None>
     <None Include="consultorio_odontologicoTodas.xss">
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="GUILayer\Informes\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
