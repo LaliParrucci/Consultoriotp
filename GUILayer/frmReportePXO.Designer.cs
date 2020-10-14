@@ -83,7 +83,7 @@
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(96, 30);
             this.btnConsultar.TabIndex = 7;
-            this.btnConsultar.Text = "Colsultar";
+            this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
@@ -92,7 +92,7 @@
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Location = new System.Drawing.Point(328, 85);
             this.lblFechaHasta.Name = "lblFechaHasta";
-            this.lblFechaHasta.Size = new System.Drawing.Size(96, 18);
+            this.lblFechaHasta.Size = new System.Drawing.Size(121, 24);
             this.lblFechaHasta.TabIndex = 6;
             this.lblFechaHasta.Text = "Fecha Hasta:";
             // 
@@ -101,7 +101,7 @@
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHasta.Location = new System.Drawing.Point(430, 80);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(113, 24);
+            this.dtpHasta.Size = new System.Drawing.Size(113, 29);
             this.dtpHasta.TabIndex = 5;
             // 
             // dtpDesde
@@ -109,7 +109,7 @@
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDesde.Location = new System.Drawing.Point(158, 80);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(111, 24);
+            this.dtpDesde.Size = new System.Drawing.Size(111, 29);
             this.dtpDesde.TabIndex = 4;
             // 
             // lblPeriodo
@@ -118,7 +118,7 @@
             this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodo.Location = new System.Drawing.Point(17, 54);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(67, 18);
+            this.lblPeriodo.Size = new System.Drawing.Size(83, 24);
             this.lblPeriodo.TabIndex = 3;
             this.lblPeriodo.Text = "Periódo";
             // 
@@ -127,7 +127,7 @@
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Location = new System.Drawing.Point(52, 85);
             this.lblFechaDesde.Name = "lblFechaDesde";
-            this.lblFechaDesde.Size = new System.Drawing.Size(100, 18);
+            this.lblFechaDesde.Size = new System.Drawing.Size(129, 24);
             this.lblFechaDesde.TabIndex = 2;
             this.lblFechaDesde.Text = "Fecha Desde:";
             // 
@@ -136,7 +136,7 @@
             this.cboProfesional.FormattingEnabled = true;
             this.cboProfesional.Location = new System.Drawing.Point(125, 18);
             this.cboProfesional.Name = "cboProfesional";
-            this.cboProfesional.Size = new System.Drawing.Size(165, 26);
+            this.cboProfesional.Size = new System.Drawing.Size(165, 32);
             this.cboProfesional.TabIndex = 1;
             // 
             // lblOdontologo
@@ -145,7 +145,7 @@
             this.lblOdontologo.Location = new System.Drawing.Point(27, 21);
             this.lblOdontologo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOdontologo.Name = "lblOdontologo";
-            this.lblOdontologo.Size = new System.Drawing.Size(91, 18);
+            this.lblOdontologo.Size = new System.Drawing.Size(115, 24);
             this.lblOdontologo.TabIndex = 0;
             this.lblOdontologo.Text = "Odontologo:";
             // 
@@ -164,7 +164,7 @@
             // 
             // frmReportePXO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 591);
             this.Controls.Add(this.rpPXO);

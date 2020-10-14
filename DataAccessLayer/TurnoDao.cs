@@ -285,7 +285,7 @@ namespace Consultorio.DataAccessLayer
                 " FROM paciente pa INNER JOIN" +
                 " turno t ON pa.dni = t.id_paciente INNER JOIN" +
                 " profesional prof ON t.id_profesional = prof.matricula" +
-                " WHERE (t.borrado = 0) AND t.fecha = '" + fecha + "'" +
+                " WHERE (t.borrado = 0) AND t.fecha = '2020/10/14'" +
                 " ORDER BY t.num_turno";
             return DBHelper.GetDBHelper().reporte(sql);
         }
