@@ -60,6 +60,21 @@ namespace Consultorio.DataAccessLayer
 
         }
 
+        internal Turno GetTurnoFechaDni(DateTime fecha, string dni)
+        {
+            String consultaSql = string.Concat(" SELECT num_turno, fecha, hora, id_paciente, id_profesional, id_obra_social",
+                                               "   FROM turno ",
+                                               "  WHERE id_paciente = ", dni, " AND fecha = '", fecha.ToString("yyyy-MM-dd"), "'");
+
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
+
+            if (resultado.Rows.Count > 0)
+            {
+                return crearObjTurno(resultado.Rows[0]);
+            }
+
+            return null;
+        }
 
         public Turno GetTurno(int id)
         {

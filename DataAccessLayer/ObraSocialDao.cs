@@ -71,7 +71,7 @@ namespace Consultorio.DataAccessLayer
         public ObraSocial GetObraSocial(int codigo)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consultaSql = string.Concat(" SELECT cod_obra_social,nombre,porcentaje",
+            String consultaSql = string.Concat(" SELECT cod_obra_social, nombre, porcentaje",
                                                "   FROM obra_social ",
                                                "  WHERE cod_obra_social = ", codigo);
 

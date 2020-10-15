@@ -139,6 +139,7 @@ namespace Consultorio
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             activarBtn(sender, colorRGB.color1);
+            abrirFormHijo(new frmRegistrarConsulta());
         }
 
         private void btnTurno_Click(object sender, EventArgs e)

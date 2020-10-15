@@ -462,3 +462,6 @@ C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frm
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXOb.resources
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.listadoPracticas.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmRegistrarConsulta.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteListadoInsumos.resources
+C:\Users\besac\source\repos\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources

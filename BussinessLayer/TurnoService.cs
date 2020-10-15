@@ -48,6 +48,11 @@ namespace Consultorio.BussinessLayer
             return oTurnoDao.getTurnoFechaHoraProf(fecha, hora, id);
         }
 
+        internal Turno recuperarTurnoFechaDni(DateTime today, string dni)
+        {
+            return oTurnoDao.GetTurnoFechaDni(today, dni);
+        }
+
         public bool eliminarTurnoConHistorial(Turno oTurno)
         {
             return oTurnoDao.eliminarTurnoConHistorial(oTurno);

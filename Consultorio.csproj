@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLayer\ConsultaService.cs" />
     <Compile Include="BussinessLayer\DisponibilidadService.cs" />
     <Compile Include="BussinessLayer\InsumoService.cs" />
     <Compile Include="BussinessLayer\ObraSocialService.cs" />
@@ -121,6 +122,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataAccessLayer\ConsultaDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
     <Compile Include="DataAccessLayer\InsumoDao.cs" />
@@ -141,6 +143,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Consulta.cs" />
     <Compile Include="Entities\Disponibilidad.cs" />
     <Compile Include="Entities\FiltrosReporteInsumos.cs" />
     <Compile Include="Entities\FiltrosReportePracticas.cs" />
@@ -210,6 +213,12 @@
     </Compile>
     <Compile Include="GUILayer\frmAbmUsuario.Designer.cs">
       <DependentUpon>frmAbmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarConsulta.Designer.cs">
+      <DependentUpon>frmRegistrarConsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmRegistrarTurno.cs">
       <SubType>Form</SubType>
@@ -301,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmRegistrarConsulta.resx">
+      <DependentUpon>frmRegistrarConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
