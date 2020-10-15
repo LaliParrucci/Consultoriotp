@@ -86,7 +86,6 @@ C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frm
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportes.resources
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\RdlCompile.cache
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\RdlCompile.compiled
-C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.Informes.frmListadoTurnosDiarios.resources
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\flor\Desktop\repoProfe\Consultoriotp\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -456,3 +455,10 @@ C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILa
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXOb.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmInformeMontosOOSS.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmListadoTurnos.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteListadoInsumos.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReporteObrasMasUtilizadas.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXOb.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.frmReportePrXP.resources
+C:\Users\flor\Desktop\repoProfe\Consultoriotp\obj\Debug\Consultorio.GUILayer.listadoPracticas.resources

@@ -46,7 +46,8 @@ namespace Consultorio.GUILayer
         private void rpvTurnosDiarios_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            tabla = oTDao.datasetTurnosReporte(dtpFecha.Value.Date.ToShortDateString());
+            string fecha = dtpFecha.Value.Date.ToString("yyyy/MM/dd");
+            tabla = oTDao.datasetTurnosReporte(fecha);
 
             ReportDataSource rp = new ReportDataSource("DataSet1", tabla);
 

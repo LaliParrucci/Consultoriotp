@@ -37,7 +37,10 @@ namespace Consultorio.GUILayer
 
             if (dtpDesde.Value < dtpHasta.Value)
             {
-                tabla = oDao.datasetObrasSocialesReporte(dtpDesde.Value.Date.ToShortDateString(), dtpHasta.Value.Date.ToShortDateString());
+                string fecha_desde = dtpDesde.Value.Date.ToString("yyyy/MM/dd");
+                string fecha_hasta = dtpHasta.Value.Date.ToString("yyyy/MM/dd");
+                //tabla = oDao.datasetObrasSocialesReporte(dtpDesde.Value.Date.ToShortDateString(), dtpHasta.Value.Date.ToShortDateString());
+                tabla = oDao.datasetObrasSocialesReporte(fecha_desde, fecha_hasta);
 
                 ReportDataSource rp = new ReportDataSource("DataSet1", tabla);
 
