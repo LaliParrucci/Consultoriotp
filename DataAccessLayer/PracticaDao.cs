@@ -69,9 +69,9 @@ namespace Consultorio.DataAccessLayer
             return null;
         }
 
-        public IList<Practica> GetPracticaNom(string nom)
+        public Practica GetPracticaNom(string nom)
         {
-            List<Practica> listadoPrac = new List<Practica>();
+            Practica Prac = new Practica();
             //Construimos la consulta sql para buscar el usuario en la base de datos.
             String consultaSql = string.Concat(" SELECT nombre, descripcion, id_practica, importe",
                                                "   FROM practica ",
@@ -81,12 +81,11 @@ namespace Consultorio.DataAccessLayer
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(consultaSql);
 
             // Validamos que el resultado tenga al menos una fila.
-            foreach (DataRow row in resultado.Rows)
+            if (resultado.Rows.Count > 0)
             {
-                listadoPrac.Add(crearObjPrac(row));
+                return crearObjPrac(resultado.Rows[0]);
             }
-
-            return listadoPrac;
+            return null;
         }
 
         private Practica crearObjPrac(DataRow row)

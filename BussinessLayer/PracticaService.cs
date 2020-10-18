@@ -39,7 +39,7 @@ namespace Consultorio.BussinessLayer
             return oPracticaDao.GetPractica(id);
         }
 
-        public IList<Practica> recuperarPracticasPorNom(string nom)
+        public Practica recuperarPracticasPorNom(string nom)
         {
             return oPracticaDao.GetPracticaNom(nom);
         }

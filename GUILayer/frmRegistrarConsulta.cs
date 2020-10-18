@@ -1,4 +1,5 @@
 ﻿using Consultorio.BussinessLayer;
+using Consultorio.DataAccessLayer;
 using Consultorio.Entities;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,8 @@ namespace Consultorio.GUILayer
         Consulta oConsulta = new Consulta();
         ConsultaService oConsultaService = new ConsultaService();
         int importeS;
-        float importeTotal;
+        string practicas="";
+        float importeTotal = 500;
         public frmRegistrarConsulta()
         {
             InitializeComponent();
@@ -48,18 +50,30 @@ namespace Consultorio.GUILayer
             if (validarCampos())
             {
                 this.habilitar(true);
-                oPaciente = oPacienteService.recuperarPacientePorDni(Convert.ToInt32(txtDni.Text));
-                oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
-                oObraSocial = oObraSocialService.recuperarObraSocialPorCodigo(oTurno.Id_obra_social);
-                oProfesionalE = oProfesionalService.recuperarProfesionalPorMatricula(oTurno.Id_profesional);
+                if (Service.esInt(txtDni.Text) != 0)
+                {
+                    oPaciente = oPacienteService.recuperarPacientePorDni(Convert.ToInt32(txtDni.Text));
+                }
+                else { MessageBox.Show("Ingrese un número de DNI válido", "DNI incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                if (oPaciente != null)
+                {
+                    oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
+                    oObraSocial = oObraSocialService.recuperarObraSocialPorCodigo(oTurno.Id_obra_social);
+                    oProfesionalE = oProfesionalService.recuperarProfesionalPorMatricula(oTurno.Id_profesional);
 
-                txtPaciente.Text = oPaciente.Apellido + ", " + oPaciente.Nombre;
-                txtObraSocial.Text = oObraSocial.Nombre;
-                txtNombreProfesional.Text = oProfesionalE.Nombre;
-                txtApellidoProfesional.Text = oProfesionalE.Apellido;
-                txtDescuento.Text = oObraSocial.Porcentaje.ToString();
+                    txtPaciente.Text = oPaciente.Apellido + ", " + oPaciente.Nombre;
+                    txtObraSocial.Text = oObraSocial.Nombre;
+                    txtNombreProfesional.Text = oProfesionalE.Nombre;
+                    txtApellidoProfesional.Text = oProfesionalE.Apellido;
+                    txtDescuento.Text = oObraSocial.Porcentaje.ToString();
 
-                cargarCombo(cboPracticas, oPracticaService.recuperarPracticas(), "nombre", "id_practica");
+                    cargarCombo(cboPracticas, oPracticaService.recuperarPracticas(), "nombre", "id_practica");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró al paciente que busca", "Búsqueda finalizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
 
         }
@@ -76,6 +90,10 @@ namespace Consultorio.GUILayer
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if(cboPracticas.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una práctica para cargar", "Seleccione una práctica", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             oPractica = oPracticaService.recuperarPracticasPorId(Convert.ToInt32(cboPracticas.SelectedValue));
 
             cargarGrilla(dgvPracticas, oPractica);
@@ -102,9 +120,15 @@ namespace Consultorio.GUILayer
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Linea = dgvPracticas.CurrentRow;
-
-            removerGrilla(dgvPracticas, Linea);
+            if (dgvPracticas.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una práctica para eliminar", "Seleccione una práctica", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DataGridViewRow Linea = dgvPracticas.CurrentRow;
+                removerGrilla(dgvPracticas, Linea);
+            }
         }
 
         private void removerGrilla(DataGridView grilla, DataGridViewRow r)
@@ -116,37 +140,38 @@ namespace Consultorio.GUILayer
         {
             if (validarCampos())
             {
+                string[] listaPracticas;
+                foreach (DataGridViewRow Datarow in dgvPracticas.Rows)
+                {
+                    if (Datarow.Cells[0].Value != null)
+                    {
+                        practicas += oPracticaService.recuperarPracticasPorNom(Datarow.Cells[0].Value.ToString()).Id_practica + ", ";
+                    }
+                }
+                
                 oConsulta.Fecha = DateTime.Today;
                 oConsulta.Id_paciente = oPaciente.Dni;
-                //oConsulta.Practicas_realizadas;
-                //oConsulta.Cobrado = ; Tendriamos que poner un checkbox o algo asi!!
+                oConsulta.Practicas_realizadas = practicas;
+                oConsulta.Cobrado = Convert.ToBoolean(chCobrado);
                 oConsulta.Id_profesional = oProfesionalE.Matricula;
-                //oConsulta.Monto = hay que ponerlo en float
+                oConsulta.Monto = Convert.ToInt32(txtImporteTotal);
                 oConsulta.Num_turno = oTurno.Num_turno;
                 oConsulta.Observacion = txtObservaciones.Text;
-                
-                //Quedamos aca!!
-                //string disponible = grdTurnosDisp.CurrentRow.Cells["Disponible"].Value.ToString();
-                //if (oTurnoService.validarTurno(oTurno, disponible))
-                //{
-                //    if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
-                //    {
-                //        MessageBox.Show("Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //        clickChBox();
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Hubo un problema con el registro de turno", "Error en registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //}
+
+                oConsultaService.crearConsultaTransaccion(oConsulta);
             }
         }
 
         private bool validarCampos()
         {
-            if(txtDni.Text == "")
+            if (txtDni.Text == "")
             {
-                MessageBox.Show("Debe Ingresar un dni...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar un dni...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if(txtPaciente.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un paciente primero...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;

@@ -32,51 +32,52 @@
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtObraSocial = new System.Windows.Forms.TextBox();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.txtNombreProfesional = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtApellidoProfesional = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlFechas = new System.Windows.Forms.Panel();
+            this.lblObservacion = new System.Windows.Forms.Label();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrarTurno = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.txtDni = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtObraSocial = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblPractica = new System.Windows.Forms.Label();
-            this.cboPracticas = new System.Windows.Forms.ComboBox();
+            this.chCobrado = new System.Windows.Forms.CheckBox();
+            this.txtImporte = new System.Windows.Forms.TextBox();
+            this.lblImporte = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.lblDescuento = new System.Windows.Forms.Label();
+            this.txtImporteTotal = new System.Windows.Forms.TextBox();
+            this.lblImporteTotal = new System.Windows.Forms.Label();
             this.dgvPracticas = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblImporteTotal = new System.Windows.Forms.Label();
-            this.txtImporteTotal = new System.Windows.Forms.TextBox();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.lblObservacion = new System.Windows.Forms.Label();
-            this.lblDescuento = new System.Windows.Forms.Label();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.lblImporte = new System.Windows.Forms.Label();
-            this.txtImporte = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.cboPracticas = new System.Windows.Forms.ComboBox();
+            this.lblPractica = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnlFechas.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPracticas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +110,106 @@
             this.pnlCuerpo.Size = new System.Drawing.Size(750, 105);
             this.pnlCuerpo.TabIndex = 4;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Controls.Add(this.txtObraSocial);
+            this.groupBox1.Controls.Add(this.txtPaciente);
+            this.groupBox1.Controls.Add(this.txtDni);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblNombre);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Location = new System.Drawing.Point(13, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(720, 93);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Información del Paciente";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel4.Location = new System.Drawing.Point(455, 77);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(135, 1);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(142, 77);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(140, 1);
+            this.panel3.TabIndex = 10;
+            // 
+            // txtObraSocial
+            // 
+            this.txtObraSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.txtObraSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtObraSocial.Location = new System.Drawing.Point(458, 54);
+            this.txtObraSocial.Name = "txtObraSocial";
+            this.txtObraSocial.Size = new System.Drawing.Size(110, 17);
+            this.txtObraSocial.TabIndex = 15;
+            // 
+            // txtPaciente
+            // 
+            this.txtPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.txtPaciente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPaciente.Location = new System.Drawing.Point(142, 58);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(141, 17);
+            this.txtPaciente.TabIndex = 2;
+            // 
+            // txtDni
+            // 
+            this.txtDni.Location = new System.Drawing.Point(142, 26);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(175, 24);
+            this.txtDni.TabIndex = 0;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(323, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Obra Social:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(70, 56);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(66, 18);
+            this.lblNombre.TabIndex = 11;
+            this.lblNombre.Text = "Nombre:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(99, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 18);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "DNI:";
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -124,6 +225,22 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información del Profesional";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel6.Location = new System.Drawing.Point(96, 77);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(140, 1);
+            this.panel6.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel5.Location = new System.Drawing.Point(96, 47);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(140, 1);
+            this.panel5.TabIndex = 11;
             // 
             // txtNombreProfesional
             // 
@@ -165,16 +282,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Apellido:";
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Obra Social:";
-            // 
             // pnlFechas
             // 
             this.pnlFechas.Controls.Add(this.lblObservacion);
@@ -185,6 +292,25 @@
             this.pnlFechas.Name = "pnlFechas";
             this.pnlFechas.Size = new System.Drawing.Size(750, 105);
             this.pnlFechas.TabIndex = 15;
+            // 
+            // lblObservacion
+            // 
+            this.lblObservacion.AutoSize = true;
+            this.lblObservacion.Location = new System.Drawing.Point(333, 36);
+            this.lblObservacion.Name = "lblObservacion";
+            this.lblObservacion.Size = new System.Drawing.Size(112, 18);
+            this.lblObservacion.TabIndex = 8;
+            this.lblObservacion.Text = "Observaciones:";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtObservaciones.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtObservaciones.Location = new System.Drawing.Point(451, 33);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(263, 54);
+            this.txtObservaciones.TabIndex = 8;
             // 
             // btnEliminar
             // 
@@ -242,6 +368,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chCobrado);
             this.panel1.Controls.Add(this.txtImporte);
             this.panel1.Controls.Add(this.lblImporte);
             this.panel1.Controls.Add(this.txtDescuento);
@@ -259,112 +386,72 @@
             this.panel1.Size = new System.Drawing.Size(750, 259);
             this.panel1.TabIndex = 17;
             // 
-            // groupBox1
+            // chCobrado
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.txtObraSocial);
-            this.groupBox1.Controls.Add(this.txtPaciente);
-            this.groupBox1.Controls.Add(this.txtDni);
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(13, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 93);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información del Paciente";
+            this.chCobrado.AutoSize = true;
+            this.chCobrado.Location = new System.Drawing.Point(511, 44);
+            this.chCobrado.Name = "chCobrado";
+            this.chCobrado.Size = new System.Drawing.Size(85, 22);
+            this.chCobrado.TabIndex = 23;
+            this.chCobrado.Text = "Cobrado";
+            this.chCobrado.UseVisualStyleBackColor = true;
             // 
-            // txtPaciente
+            // txtImporte
             // 
-            this.txtPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.txtPaciente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPaciente.Location = new System.Drawing.Point(142, 58);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(141, 17);
-            this.txtPaciente.TabIndex = 2;
+            this.txtImporte.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtImporte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtImporte.Location = new System.Drawing.Point(643, 135);
+            this.txtImporte.Name = "txtImporte";
+            this.txtImporte.Size = new System.Drawing.Size(84, 24);
+            this.txtImporte.TabIndex = 22;
             // 
-            // txtDni
+            // lblImporte
             // 
-            this.txtDni.Location = new System.Drawing.Point(142, 26);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(175, 24);
-            this.txtDni.TabIndex = 0;
+            this.lblImporte.AutoSize = true;
+            this.lblImporte.Location = new System.Drawing.Point(575, 138);
+            this.lblImporte.Name = "lblImporte";
+            this.lblImporte.Size = new System.Drawing.Size(62, 18);
+            this.lblImporte.TabIndex = 21;
+            this.lblImporte.Text = "Importe:";
             // 
-            // btnBuscar
+            // txtDescuento
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(323, 26);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtDescuento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtDescuento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtDescuento.Location = new System.Drawing.Point(643, 169);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(84, 24);
+            this.txtDescuento.TabIndex = 8;
             // 
-            // lblNombre
+            // lblDescuento
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(70, 56);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(66, 18);
-            this.lblNombre.TabIndex = 11;
-            this.lblNombre.Text = "Nombre:";
+            this.lblDescuento.AutoSize = true;
+            this.lblDescuento.Location = new System.Drawing.Point(553, 175);
+            this.lblDescuento.Name = "lblDescuento";
+            this.lblDescuento.Size = new System.Drawing.Size(84, 18);
+            this.lblDescuento.TabIndex = 20;
+            this.lblDescuento.Text = "Descuento:";
             // 
-            // label8
+            // txtImporteTotal
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(99, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 18);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "DNI:";
+            this.txtImporteTotal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtImporteTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtImporteTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImporteTotal.Location = new System.Drawing.Point(643, 203);
+            this.txtImporteTotal.Name = "txtImporteTotal";
+            this.txtImporteTotal.Size = new System.Drawing.Size(84, 29);
+            this.txtImporteTotal.TabIndex = 8;
+            this.txtImporteTotal.Text = "500";
             // 
-            // txtObraSocial
+            // lblImporteTotal
             // 
-            this.txtObraSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.txtObraSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtObraSocial.Location = new System.Drawing.Point(458, 54);
-            this.txtObraSocial.Name = "txtObraSocial";
-            this.txtObraSocial.Size = new System.Drawing.Size(110, 17);
-            this.txtObraSocial.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(142, 77);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(140, 1);
-            this.panel3.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel4.Location = new System.Drawing.Point(455, 77);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(135, 1);
-            this.panel4.TabIndex = 11;
-            // 
-            // lblPractica
-            // 
-            this.lblPractica.AutoSize = true;
-            this.lblPractica.Location = new System.Drawing.Point(15, 14);
-            this.lblPractica.Name = "lblPractica";
-            this.lblPractica.Size = new System.Drawing.Size(151, 18);
-            this.lblPractica.TabIndex = 10;
-            this.lblPractica.Text = "Practicas Realizadas:";
-            // 
-            // cboPracticas
-            // 
-            this.cboPracticas.FormattingEnabled = true;
-            this.cboPracticas.Location = new System.Drawing.Point(172, 11);
-            this.cboPracticas.Name = "cboPracticas";
-            this.cboPracticas.Size = new System.Drawing.Size(200, 26);
-            this.cboPracticas.TabIndex = 11;
+            this.lblImporteTotal.AutoSize = true;
+            this.lblImporteTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImporteTotal.Location = new System.Drawing.Point(507, 206);
+            this.lblImporteTotal.Name = "lblImporteTotal";
+            this.lblImporteTotal.Size = new System.Drawing.Size(130, 24);
+            this.lblImporteTotal.TabIndex = 19;
+            this.lblImporteTotal.Text = "Importe total:";
             // 
             // dgvPracticas
             // 
@@ -397,96 +484,22 @@
             this.importe.Name = "importe";
             this.importe.ReadOnly = true;
             // 
-            // lblImporteTotal
+            // cboPracticas
             // 
-            this.lblImporteTotal.AutoSize = true;
-            this.lblImporteTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImporteTotal.Location = new System.Drawing.Point(507, 206);
-            this.lblImporteTotal.Name = "lblImporteTotal";
-            this.lblImporteTotal.Size = new System.Drawing.Size(130, 24);
-            this.lblImporteTotal.TabIndex = 19;
-            this.lblImporteTotal.Text = "Importe total:";
+            this.cboPracticas.FormattingEnabled = true;
+            this.cboPracticas.Location = new System.Drawing.Point(172, 11);
+            this.cboPracticas.Name = "cboPracticas";
+            this.cboPracticas.Size = new System.Drawing.Size(200, 26);
+            this.cboPracticas.TabIndex = 11;
             // 
-            // txtImporteTotal
+            // lblPractica
             // 
-            this.txtImporteTotal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtImporteTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtImporteTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImporteTotal.Location = new System.Drawing.Point(643, 203);
-            this.txtImporteTotal.Name = "txtImporteTotal";
-            this.txtImporteTotal.Size = new System.Drawing.Size(84, 29);
-            this.txtImporteTotal.TabIndex = 8;
-            // 
-            // txtObservaciones
-            // 
-            this.txtObservaciones.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtObservaciones.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtObservaciones.Location = new System.Drawing.Point(451, 33);
-            this.txtObservaciones.Multiline = true;
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(263, 54);
-            this.txtObservaciones.TabIndex = 8;
-            // 
-            // lblObservacion
-            // 
-            this.lblObservacion.AutoSize = true;
-            this.lblObservacion.Location = new System.Drawing.Point(333, 36);
-            this.lblObservacion.Name = "lblObservacion";
-            this.lblObservacion.Size = new System.Drawing.Size(112, 18);
-            this.lblObservacion.TabIndex = 8;
-            this.lblObservacion.Text = "Observaciones:";
-            // 
-            // lblDescuento
-            // 
-            this.lblDescuento.AutoSize = true;
-            this.lblDescuento.Location = new System.Drawing.Point(553, 175);
-            this.lblDescuento.Name = "lblDescuento";
-            this.lblDescuento.Size = new System.Drawing.Size(84, 18);
-            this.lblDescuento.TabIndex = 20;
-            this.lblDescuento.Text = "Descuento:";
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtDescuento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtDescuento.Location = new System.Drawing.Point(643, 169);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(84, 24);
-            this.txtDescuento.TabIndex = 8;
-            // 
-            // lblImporte
-            // 
-            this.lblImporte.AutoSize = true;
-            this.lblImporte.Location = new System.Drawing.Point(575, 138);
-            this.lblImporte.Name = "lblImporte";
-            this.lblImporte.Size = new System.Drawing.Size(62, 18);
-            this.lblImporte.TabIndex = 21;
-            this.lblImporte.Text = "Importe:";
-            // 
-            // txtImporte
-            // 
-            this.txtImporte.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtImporte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtImporte.Location = new System.Drawing.Point(643, 135);
-            this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(84, 24);
-            this.txtImporte.TabIndex = 22;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel5.Location = new System.Drawing.Point(96, 47);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(140, 1);
-            this.panel5.TabIndex = 11;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel6.Location = new System.Drawing.Point(96, 77);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(140, 1);
-            this.panel6.TabIndex = 12;
+            this.lblPractica.AutoSize = true;
+            this.lblPractica.Location = new System.Drawing.Point(15, 14);
+            this.lblPractica.Name = "lblPractica";
+            this.lblPractica.Size = new System.Drawing.Size(151, 18);
+            this.lblPractica.TabIndex = 10;
+            this.lblPractica.Text = "Practicas Realizadas:";
             // 
             // frmRegistrarConsulta
             // 
@@ -502,7 +515,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistrarConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistrarConsulta";
@@ -510,6 +523,8 @@
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.pnlCuerpo.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.pnlFechas.ResumeLayout(false);
@@ -517,8 +532,6 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPracticas)).EndInit();
             this.ResumeLayout(false);
 
@@ -567,5 +580,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.CheckBox chCobrado;
     }
 }
