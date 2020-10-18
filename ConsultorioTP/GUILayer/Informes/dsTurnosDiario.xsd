@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTurnosDiario" targetNamespace="http://tempuri.org/dsTurnosDiario.xsd" xmlns:mstns="http://tempuri.org/dsTurnosDiario.xsd" xmlns="http://tempuri.org/dsTurnosDiario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="consultorio_odontologicoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="consultorio_odontologicoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Consultorio.Properties.Settings.GlobalReference.Default.consultorio_odontologicoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTurnosDiario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTurnosDiario" msprop:Generator_UserDSName="dsTurnosDiario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtTurnos" msprop:Generator_TableClassName="dtTurnosDataTable" msprop:Generator_TableVarName="tabledtTurnos" msprop:Generator_TablePropName="dtTurnos" msprop:Generator_RowDeletingName="dtTurnosRowDeleting" msprop:Generator_RowChangingName="dtTurnosRowChanging" msprop:Generator_RowEvHandlerName="dtTurnosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTurnosRowDeleted" msprop:Generator_UserTableName="dtTurnos" msprop:Generator_RowChangedName="dtTurnosRowChanged" msprop:Generator_RowEvArgName="dtTurnosRowChangeEvent" msprop:Generator_RowClassName="dtTurnosRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

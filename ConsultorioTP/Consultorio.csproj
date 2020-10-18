@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF30AFEB-91A5-4788-B468-C6F1B6D4B5F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Consultorio</RootNamespace>
+    <AssemblyName>Consultorio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinessLayer\ConsultaService.cs" />
+    <Compile Include="BussinessLayer\DisponibilidadService.cs" />
+    <Compile Include="BussinessLayer\InsumoService.cs" />
+    <Compile Include="BussinessLayer\ObraSocialService.cs" />
+    <Compile Include="BussinessLayer\PacienteService.cs" />
+    <Compile Include="BussinessLayer\PracticaService.cs" />
+    <Compile Include="BussinessLayer\ProfesionalService.cs" />
+    <Compile Include="BussinessLayer\TurnoService.cs" />
+    <Compile Include="BussinessLayer\UsuarioService.cs" />
+    <Compile Include="consultorio_odontologicoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultorio_odontologicoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultorio_odontologicoDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultorio_odontologicoDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultorio_odontologicoDataSetLu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultorio_odontologicoTodas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ConsultaDao.cs" />
+    <Compile Include="DataAccessLayer\DataManager.cs" />
+    <Compile Include="DataAccessLayer\DBHelper.cs" />
+    <Compile Include="DataAccessLayer\InsumoDao.cs" />
+    <Compile Include="DataAccessLayer\ObraSocialDao.cs" />
+    <Compile Include="DataAccessLayer\PacienteDao.cs" />
+    <Compile Include="DataAccessLayer\PracticaDao.cs" />
+    <Compile Include="DataAccessLayer\ProfesionalDao.cs" />
+    <Compile Include="DataAccessLayer\Service.cs" />
+    <Compile Include="DataAccessLayer\TurnoDao.cs" />
+    <Compile Include="DataAccessLayer\UsuarioDao.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Consulta.cs" />
+    <Compile Include="Entities\Disponibilidad.cs" />
+    <Compile Include="Entities\FiltrosReporteInsumos.cs" />
+    <Compile Include="Entities\FiltrosReportePracticas.cs" />
+    <Compile Include="Entities\Insumo.cs" />
+    <Compile Include="Entities\ObraSocial.cs" />
+    <Compile Include="Entities\PacienteE.cs" />
+    <Compile Include="Entities\Practica.cs" />
+    <Compile Include="Entities\ProfesionalE.cs" />
+    <Compile Include="Entities\Turno.cs" />
+    <Compile Include="Entities\UsuarioE.cs" />
+    <Compile Include="GUILayer\frmAbmInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmInsumo.Designer.cs">
+      <DependentUpon>frmAbmInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmObraSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmObraSocial.Designer.cs">
+      <DependentUpon>frmAbmObraSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmPaciente.Designer.cs">
+      <DependentUpon>frmAbmPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmPractica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmPractica.Designer.cs">
+      <DependentUpon>frmAbmPractica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmProfesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmProfesional.Designer.cs">
+      <DependentUpon>frmAbmProfesional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmInformeMontosOOSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmInformeMontosOOSS.Designer.cs">
+      <DependentUpon>frmInformeMontosOOSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmListadoTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmListadoTurnos.Designer.cs">
+      <DependentUpon>frmListadoTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmAbmUsuario.Designer.cs">
+      <DependentUpon>frmAbmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarConsulta.Designer.cs">
+      <DependentUpon>frmRegistrarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmRegistrarTurno.Designer.cs">
+      <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteListadoInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteListadoInsumos.Designer.cs">
+      <DependentUpon>frmReporteListadoInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.Designer.cs">
+      <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePrXOb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePrXOb.Designer.cs">
+      <DependentUpon>frmReportePrXOb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePrXP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePrXP.Designer.cs">
+      <DependentUpon>frmReportePrXP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePXO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReportePXO.Designer.cs">
+      <DependentUpon>frmReportePXO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Informes\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Informes\dsTurnosDiario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ReporteListadoPracticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ReporteListadoPracticas.Designer.cs">
+      <DependentUpon>ReporteListadoPracticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUILayer\frmAbmInsumo.resx">
+      <DependentUpon>frmAbmInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmObraSocial.resx">
+      <DependentUpon>frmAbmObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmPaciente.resx">
+      <DependentUpon>frmAbmPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmPractica.resx">
+      <DependentUpon>frmAbmPractica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmProfesional.resx">
+      <DependentUpon>frmAbmProfesional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmAbmUsuario.resx">
+      <DependentUpon>frmAbmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmInformeMontosOOSS.resx">
+      <DependentUpon>frmInformeMontosOOSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmListadoTurnos.resx">
+      <DependentUpon>frmListadoTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmRegistrarConsulta.resx">
+      <DependentUpon>frmRegistrarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
+      <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReporteListadoInsumos.resx">
+      <DependentUpon>frmReporteListadoInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReporteObrasMasUtilizadas.resx">
+      <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReportePrXOb.resx">
+      <DependentUpon>frmReportePrXOb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReportePrXP.resx">
+      <DependentUpon>frmReportePrXP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReportePXO.resx">
+      <DependentUpon>frmReportePXO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Informes\informeMontosOOSS.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\lstTurnosDiarios.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\ReporteListadoInsumos.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\rpPrXP.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\ReporteListadoPracticas.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\rpObrasMasUtilizadas.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\rpPXO.rdlc" />
+    <EmbeddedResource Include="GUILayer\ReporteListadoPracticas.resx">
+      <DependentUpon>ReporteListadoPracticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GUILayer\Informes\rpPrXOb.rdlc" />
+    <None Include="consultorio_odontologicoDataSet.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet.xss">
+      <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet1.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet1.xss">
+      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet2.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet2.xss">
+      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet4.xsc">
+      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSet4.xss">
+      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSetLu.xsc">
+      <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoDataSetLu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoDataSetLu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoDataSetLu.xss">
+      <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoTodas.xsc">
+      <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
+    </None>
+    <None Include="consultorio_odontologicoTodas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>consultorio_odontologicoTodas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="consultorio_odontologicoTodas.xss">
+      <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Informes\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Informes\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUILayer\Informes\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Informes\dsTurnosDiario.xsc">
+      <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
+    </None>
+    <None Include="GUILayer\Informes\dsTurnosDiario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTurnosDiario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GUILayer\Informes\dsTurnosDiario.xss">
+      <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comfortable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo completo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize-size-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comfortable1.png" />
+    <None Include="Resources\medical-book.png" />
+    <None Include="Resources\dentistry.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
