@@ -92,32 +92,7 @@
     <Compile Include="BussinessLayer\ProfesionalService.cs" />
     <Compile Include="BussinessLayer\TurnoService.cs" />
     <Compile Include="BussinessLayer\UsuarioService.cs" />
-    <Compile Include="consultorio_odontologicoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="consultorio_odontologicoDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="consultorio_odontologicoDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="consultorio_odontologicoDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="consultorio_odontologicoDataSetLu.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="consultorio_odontologicoTodas.Designer.cs">
+    <Compile Include="GUILayer\consultorio_odontologicoTodas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
@@ -133,16 +108,6 @@
     <Compile Include="DataAccessLayer\Service.cs" />
     <Compile Include="DataAccessLayer\TurnoDao.cs" />
     <Compile Include="DataAccessLayer\UsuarioDao.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Entities\Consulta.cs" />
     <Compile Include="Entities\Disponibilidad.cs" />
     <Compile Include="Entities\FiltrosReporteInsumos.cs" />
@@ -262,16 +227,6 @@
     <Compile Include="GUILayer\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\Informes\DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GUILayer\Informes\dsTurnosDiario.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GUILayer\ReporteListadoPracticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,9 +290,9 @@
     <EmbeddedResource Include="GUILayer\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Informes\informeMontosOOSS.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\lstTurnosDiarios.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\ReporteListadoInsumos.rdlc" />
+    <EmbeddedResource Include="GUILayer\Informes\rpInformeMontosOOSS.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpPrXP.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\ReporteListadoPracticas.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpObrasMasUtilizadas.rdlc" />
@@ -356,115 +311,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="GUILayer\Informes\rpPrXOb.rdlc" />
-    <None Include="consultorio_odontologicoDataSet.xsc">
-      <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>consultorio_odontologicoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="consultorio_odontologicoDataSet.xss">
-      <DependentUpon>consultorio_odontologicoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet1.xsc">
-      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>consultorio_odontologicoDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="consultorio_odontologicoDataSet1.xss">
-      <DependentUpon>consultorio_odontologicoDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet2.xsc">
-      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>consultorio_odontologicoDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="consultorio_odontologicoDataSet2.xss">
-      <DependentUpon>consultorio_odontologicoDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet4.xsc">
-      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>consultorio_odontologicoDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="consultorio_odontologicoDataSet4.xss">
-      <DependentUpon>consultorio_odontologicoDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSetLu.xsc">
-      <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoDataSetLu.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>consultorio_odontologicoDataSetLu.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="consultorio_odontologicoDataSetLu.xss">
-      <DependentUpon>consultorio_odontologicoDataSetLu.xsd</DependentUpon>
-    </None>
-    <None Include="consultorio_odontologicoTodas.xsc">
+    <None Include="GUILayer\consultorio_odontologicoTodas.xsc">
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
     </None>
-    <None Include="consultorio_odontologicoTodas.xsd">
+    <None Include="GUILayer\consultorio_odontologicoTodas.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>consultorio_odontologicoTodas.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="consultorio_odontologicoTodas.xss">
+    <None Include="GUILayer\consultorio_odontologicoTodas.xss">
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet2.xsc">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet2.xss">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="GUILayer\Informes\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GUILayer\Informes\DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="GUILayer\Informes\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GUILayer\Informes\dsTurnosDiario.xsc">
-      <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
-    </None>
-    <None Include="GUILayer\Informes\dsTurnosDiario.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsTurnosDiario.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="GUILayer\Informes\dsTurnosDiario.xss">
-      <DependentUpon>dsTurnosDiario.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -538,6 +394,9 @@
     <None Include="Resources\comfortable1.png" />
     <None Include="Resources\medical-book.png" />
     <None Include="Resources\dentistry.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\asistencia-medica.png" />
+    <None Include="Resources\perfiles.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

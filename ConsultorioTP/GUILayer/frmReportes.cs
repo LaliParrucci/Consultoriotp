@@ -1,4 +1,4 @@
-﻿using Consultorio.GUILayer.Informes;
+﻿using Consultorio.GUILayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,8 +33,7 @@ namespace Consultorio.GUILayer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listadoPracticas ventana = new listadoPracticas();
-            ventana.ShowDialog();
+            
         }
 
         private void btnPrXOb_Click(object sender, EventArgs e)
@@ -49,11 +48,7 @@ namespace Consultorio.GUILayer
             frm.ShowDialog();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmInformeMontosOOSS frm = new frmInformeMontosOOSS();
-            frm.ShowDialog();
-        }
+    
 
         private void btnPrXP_Click(object sender, EventArgs e)
         {
@@ -62,6 +57,23 @@ namespace Consultorio.GUILayer
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnMontosCobrar_Click(object sender, EventArgs e)
+        {
+            frmInformeMontosOOSS frm = new frmInformeMontosOOSS();
+            frm.ShowDialog();
+        }
+
+        private void btnPracticas_Click(object sender, EventArgs e)
+        {
+            listadoPracticas ventana = new listadoPracticas();
+            ventana.ShowDialog();
+        }
+
+        private void btnLInsumos_Click(object sender, EventArgs e)
         {
             frmReporteListadoInsumos ventana = new frmReporteListadoInsumos();
             ventana.ShowDialog();

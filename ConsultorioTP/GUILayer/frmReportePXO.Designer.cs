@@ -32,7 +32,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePXO));
             this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultorio_odontologicoTodas = new Consultorio.consultorio_odontologicoTodas();
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblFechaHasta = new System.Windows.Forms.Label();

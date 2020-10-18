@@ -21,7 +21,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.84891cm</Top>
-        <Left>4.8387cm</Left>
+        <Left>6.26745cm</Left>
         <Height>0.6cm</Height>
         <Width>7.47417cm</Width>
         <Style>
@@ -50,7 +50,7 @@
       <Line Name="Line1">
         <Top>2.69558cm</Top>
         <Height>0cm</Height>
-        <Width>17.19792cm</Width>
+        <Width>18.70287cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -62,21 +62,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.75016cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.75016cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.75016cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.75016cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.22177cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -87,7 +87,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id practica</Value>
+                              <Value>ID práctica</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -100,6 +100,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -117,7 +118,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nombre</Value>
+                              <Value>Nombre</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -130,6 +131,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -147,7 +149,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>descripcion</Value>
+                              <Value>Descripción</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -160,6 +162,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -177,7 +180,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>importe</Value>
+                              <Value>Importe</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -190,6 +193,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -201,7 +205,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.22177cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -346,10 +350,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsPracticas</DataSetName>
-        <Top>3.64808cm</Top>
-        <Left>3.51578cm</Left>
-        <Height>1.2cm</Height>
-        <Width>10cm</Width>
+        <Top>3.93912cm</Top>
+        <Left>1.8489cm</Left>
+        <Height>2.44354cm</Height>
+        <Width>15.00063cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -357,11 +361,40 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Today</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Left>16.13641cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>3.75in</Height>
     <Style />
   </Body>
-  <Width>7.33717in</Width>
+  <Width>7.36333in</Width>
   <Page>
     <PageFooter>
       <Height>2.54cm</Height>
@@ -397,6 +430,35 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="ReportName">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ReportName</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ReportName</rd:DefaultName>
+          <Top>1.94cm</Top>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -415,18 +477,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="consultorio_odontologicoDataSet3">
+    <DataSource Name="consultorio_odontologicoTodas">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a742a81e-0dfc-4f73-9b72-f10128c2fb27</rd:DataSourceID>
+      <rd:DataSourceID>9b676ff6-64ea-4a35-a7d5-9a600c808553</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="dsPracticas">
       <Query>
-        <DataSourceName>consultorio_odontologicoDataSet3</DataSourceName>
+        <DataSourceName>consultorio_odontologicoTodas</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -452,8 +514,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>consultorio_odontologicoDataSet3</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\consultorio_odontologicoDataSetLu.xsd</rd:SchemaPath>
+        <rd:DataSetName>consultorio_odontologicoTodas</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
         <rd:TableName>practica</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

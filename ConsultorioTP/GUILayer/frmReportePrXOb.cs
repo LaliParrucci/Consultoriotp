@@ -26,7 +26,7 @@ namespace Consultorio.GUILayer
         {
             LlenarCombo(cboObraSocial, oObraSocialService.recuperarObraSocial(), "nombre", "codigo");
             // TODO: esta línea de código carga datos en la tabla 'consultorio_odontologicoTodas.obra_social' Puede moverla o quitarla según sea necesario.
-            this.obra_socialTableAdapter.Fill(this.consultorio_odontologicoDataSet31.obra_social);
+            //this.obra_socialTableAdapter.Fill(this.consultorio_odontologicoTodas);
             this.reportViewer1.RefreshReport();
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, string value)
@@ -49,16 +49,23 @@ namespace Consultorio.GUILayer
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            DataTable tabla = new DataTable();
-            tabla = oPracticaService.recuPracticasObraSocial(ObraSocial()); ;
+            if (cboObraSocial.SelectedValue != null)
+            {
+                DataTable tabla = new DataTable();
+                tabla = oPracticaService.recuPracticasObraSocial(ObraSocial()); ;
 
-            ReportDataSource rp = new ReportDataSource("dsPracticas", tabla);
+                ReportDataSource rp = new ReportDataSource("dsPracticas", tabla);
 
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(rp);
-            reportViewer1.LocalReport.Refresh();
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(rp);
+                reportViewer1.LocalReport.Refresh();
 
-            this.reportViewer1.RefreshReport();
+                this.reportViewer1.RefreshReport();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una Obra social", "Campo vacio!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cboObraSocial_SelectedIndexChanged(object sender, EventArgs e)

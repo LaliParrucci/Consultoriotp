@@ -42,7 +42,7 @@ namespace Consultorio.GUILayer
                 //tabla = oDao.datasetObrasSocialesReporte(dtpDesde.Value.Date.ToShortDateString(), dtpHasta.Value.Date.ToShortDateString());
                 tabla = oDao.datasetObrasSocialesReporte(fecha_desde, fecha_hasta);
 
-                ReportDataSource rp = new ReportDataSource("DataSet1", tabla);
+                ReportDataSource rp = new ReportDataSource("DataSetMontos", tabla);
 
                 rpvMontos.LocalReport.DataSources.Clear();
                 rpvMontos.LocalReport.DataSources.Add(rp);

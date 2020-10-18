@@ -31,14 +31,13 @@ namespace Consultorio.GUILayer
         {
            
             DataTable tabla = new DataTable();
-            tabla = oTDao.datasetTurnosReporte(dtpFecha.Value.Date.ToShortDateString());
+            tabla = oTDao.datasetTurnosReporte(dtpFecha.Value);
 
             ReportDataSource rp = new ReportDataSource("DataSet1", tabla);
 
             rpvTurnosDiarios.LocalReport.DataSources.Clear();
             rpvTurnosDiarios.LocalReport.DataSources.Add(rp);
             rpvTurnosDiarios.LocalReport.Refresh();
-
             this.rpvTurnosDiarios.RefreshReport();
 
         }
@@ -46,7 +45,7 @@ namespace Consultorio.GUILayer
         private void rpvTurnosDiarios_Load(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            string fecha = dtpFecha.Value.Date.ToString("yyyy/MM/dd");
+            DateTime fecha = dtpFecha.Value;
             tabla = oTDao.datasetTurnosReporte(fecha);
 
             ReportDataSource rp = new ReportDataSource("DataSet1", tabla);

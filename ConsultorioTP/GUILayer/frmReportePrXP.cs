@@ -24,7 +24,7 @@ namespace Consultorio.GUILayer
         private void frmReportePrXP_Load(object sender, EventArgs e)
         {
             LlenarCombo(cboProfesional, oProfesionalService.recuperarProfesional(), "apellido", "matricula");
-            this.profesionalTableAdapter1.Fill(this.consultorio_odontologicoDataSet31.profesional);
+            //this.profesionalTableAdapter1.Fill(this.consultorio_odontologicoDataSet31.profesional);
             this.reportViewer1.RefreshReport();
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, string value)
@@ -37,16 +37,24 @@ namespace Consultorio.GUILayer
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            DataTable tabla = new DataTable();
-            tabla = oPracticaService.recuPracticasProfesional(IdProfesional());
+            
+            if (cboProfesional.SelectedValue != null)
+            {
+                DataTable tabla = new DataTable();
+                tabla = oPracticaService.recuPracticasProfesional(IdProfesional());
 
-            ReportDataSource rp = new ReportDataSource("dsPractica", tabla);
+                ReportDataSource rp = new ReportDataSource("dsPractica", tabla);
 
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(rp);
-            reportViewer1.LocalReport.Refresh();
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(rp);
+                reportViewer1.LocalReport.Refresh();
 
-            this.reportViewer1.RefreshReport();
+                this.reportViewer1.RefreshReport();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Profesional", "Campo vacio!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private int IdProfesional()
         {

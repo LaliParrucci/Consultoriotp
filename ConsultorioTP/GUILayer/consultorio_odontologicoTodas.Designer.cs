@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Consultorio {
+namespace Consultorio.GUILayer {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace Consultorio {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("consultorio_odontologicoDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("consultorio_odontologicoTodas")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class consultorio_odontologicoDataSet : global::System.Data.DataSet {
+    public partial class consultorio_odontologicoTodas : global::System.Data.DataSet {
         
         private consultaDataTable tableconsulta;
         
@@ -90,7 +90,7 @@ namespace Consultorio {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public consultorio_odontologicoDataSet() {
+        public consultorio_odontologicoTodas() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -101,7 +101,7 @@ namespace Consultorio {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected consultorio_odontologicoDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected consultorio_odontologicoTodas(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -356,7 +356,7 @@ namespace Consultorio {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            consultorio_odontologicoDataSet cln = ((consultorio_odontologicoDataSet)(base.Clone()));
+            consultorio_odontologicoTodas cln = ((consultorio_odontologicoTodas)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -562,9 +562,9 @@ namespace Consultorio {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "consultorio_odontologicoDataSet";
+            this.DataSetName = "consultorio_odontologicoTodas";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/consultorio_odontologicoDataSet.xsd";
+            this.Namespace = "http://tempuri.org/consultorio_odontologicoTodas.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableconsulta = new consultaDataTable();
@@ -760,7 +760,7 @@ namespace Consultorio {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+            consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -1155,7 +1155,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1479,7 +1479,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1807,7 +1807,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2184,7 +2184,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2489,7 +2489,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2797,7 +2797,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3102,7 +3102,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3450,7 +3450,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3771,7 +3771,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4066,7 +4066,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4361,7 +4361,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4646,6 +4646,7 @@ namespace Consultorio {
                 this.columnnombre.MaxLength = 50;
                 this.columnapellido.MaxLength = 50;
                 this.columndomicilio.MaxLength = 50;
+                this.columnborrado.AllowDBNull = false;
                 this.columnespecialidad.MaxLength = 50;
             }
             
@@ -4714,7 +4715,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5088,7 +5089,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5397,7 +5398,7 @@ namespace Consultorio {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                consultorio_odontologicoDataSet ds = new consultorio_odontologicoDataSet();
+                consultorio_odontologicoTodas ds = new consultorio_odontologicoTodas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -7002,12 +7003,7 @@ namespace Consultorio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool borrado {
                 get {
-                    try {
-                        return ((bool)(this[this.tableprofesional.borradoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'borrado\' de la tabla \'profesional\' es DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableprofesional.borradoColumn]));
                 }
                 set {
                     this[this.tableprofesional.borradoColumn] = value;
@@ -7087,18 +7083,6 @@ namespace Consultorio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_usuarioNull() {
                 this[this.tableprofesional.id_usuarioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsborradoNull() {
-                return this.IsNull(this.tableprofesional.borradoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetborradoNull() {
-                this[this.tableprofesional.borradoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7903,7 +7887,7 @@ namespace Consultorio {
         }
     }
 }
-namespace Consultorio.consultorio_odontologicoDataSetTableAdapters {
+namespace Consultorio.GUILayer.consultorio_odontologicoTodasTableAdapters {
     
     
     /// <summary>
@@ -8097,7 +8081,7 @@ SELECT id_consulta, fecha, id_paciente, practicas_realizadas, practicas_a_realiz
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8115,7 +8099,7 @@ SELECT id_consulta, fecha, id_paciente, practicas_realizadas, practicas_a_realiz
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.consultaDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.consultaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8128,9 +8112,9 @@ SELECT id_consulta, fecha, id_paciente, practicas_realizadas, practicas_a_realiz
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.consultaDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.consultaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.consultaDataTable dataTable = new consultorio_odontologicoDataSet.consultaDataTable();
+            consultorio_odontologicoTodas.consultaDataTable dataTable = new consultorio_odontologicoTodas.consultaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8138,14 +8122,14 @@ SELECT id_consulta, fecha, id_paciente, practicas_realizadas, practicas_a_realiz
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.consultaDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.consultaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "consulta");
         }
         
@@ -8572,7 +8556,7 @@ SELECT matricula, fecha, hora, disponible, borrado FROM disponibilidad_profesion
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8590,7 +8574,7 @@ SELECT matricula, fecha, hora, disponible, borrado FROM disponibilidad_profesion
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.disponibilidad_profesionalDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.disponibilidad_profesionalDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8603,9 +8587,9 @@ SELECT matricula, fecha, hora, disponible, borrado FROM disponibilidad_profesion
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.disponibilidad_profesionalDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.disponibilidad_profesionalDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.disponibilidad_profesionalDataTable dataTable = new consultorio_odontologicoDataSet.disponibilidad_profesionalDataTable();
+            consultorio_odontologicoTodas.disponibilidad_profesionalDataTable dataTable = new consultorio_odontologicoTodas.disponibilidad_profesionalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8613,14 +8597,14 @@ SELECT matricula, fecha, hora, disponible, borrado FROM disponibilidad_profesion
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.disponibilidad_profesionalDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.disponibilidad_profesionalDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "disponibilidad_profesional");
         }
         
@@ -8899,7 +8883,7 @@ SELECT id_historial, id_paciente, fecha_consulta, id_consulta, borrado FROM hist
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8917,7 +8901,7 @@ SELECT id_historial, id_paciente, fecha_consulta, id_consulta, borrado FROM hist
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.historial_clinicoDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.historial_clinicoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8930,9 +8914,9 @@ SELECT id_historial, id_paciente, fecha_consulta, id_consulta, borrado FROM hist
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.historial_clinicoDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.historial_clinicoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.historial_clinicoDataTable dataTable = new consultorio_odontologicoDataSet.historial_clinicoDataTable();
+            consultorio_odontologicoTodas.historial_clinicoDataTable dataTable = new consultorio_odontologicoTodas.historial_clinicoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8940,14 +8924,14 @@ SELECT id_historial, id_paciente, fecha_consulta, id_consulta, borrado FROM hist
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.historial_clinicoDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.historial_clinicoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "historial_clinico");
         }
         
@@ -9262,7 +9246,7 @@ SELECT id_historial, num_turno, borrado, estado, id_paciente, fecha, hora, id_pr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9280,7 +9264,7 @@ SELECT id_historial, num_turno, borrado, estado, id_paciente, fecha, hora, id_pr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.historial_turnosDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.historial_turnosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9293,9 +9277,9 @@ SELECT id_historial, num_turno, borrado, estado, id_paciente, fecha, hora, id_pr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.historial_turnosDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.historial_turnosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.historial_turnosDataTable dataTable = new consultorio_odontologicoDataSet.historial_turnosDataTable();
+            consultorio_odontologicoTodas.historial_turnosDataTable dataTable = new consultorio_odontologicoTodas.historial_turnosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9303,14 +9287,14 @@ SELECT id_historial, num_turno, borrado, estado, id_paciente, fecha, hora, id_pr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.historial_turnosDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.historial_turnosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "historial_turnos");
         }
         
@@ -9636,7 +9620,7 @@ SELECT id_insumo, nombre, borrado, stock FROM insumo WHERE (id_insumo = @id_insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9653,7 +9637,7 @@ SELECT id_insumo, nombre, borrado, stock FROM insumo WHERE (id_insumo = @id_insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.insumoDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.insumoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9666,9 +9650,9 @@ SELECT id_insumo, nombre, borrado, stock FROM insumo WHERE (id_insumo = @id_insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.insumoDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.insumoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.insumoDataTable dataTable = new consultorio_odontologicoDataSet.insumoDataTable();
+            consultorio_odontologicoTodas.insumoDataTable dataTable = new consultorio_odontologicoTodas.insumoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9676,14 +9660,14 @@ SELECT id_insumo, nombre, borrado, stock FROM insumo WHERE (id_insumo = @id_insu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.insumoDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.insumoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "insumo");
         }
         
@@ -10027,7 +10011,7 @@ SELECT id_insumo, id_consulta, cant_usada, borrado FROM insumo_x_consulta WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10044,7 +10028,7 @@ SELECT id_insumo, id_consulta, cant_usada, borrado FROM insumo_x_consulta WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.insumo_x_consultaDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.insumo_x_consultaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10057,9 +10041,9 @@ SELECT id_insumo, id_consulta, cant_usada, borrado FROM insumo_x_consulta WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.insumo_x_consultaDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.insumo_x_consultaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.insumo_x_consultaDataTable dataTable = new consultorio_odontologicoDataSet.insumo_x_consultaDataTable();
+            consultorio_odontologicoTodas.insumo_x_consultaDataTable dataTable = new consultorio_odontologicoTodas.insumo_x_consultaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10067,14 +10051,14 @@ SELECT id_insumo, id_consulta, cant_usada, borrado FROM insumo_x_consulta WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.insumo_x_consultaDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.insumo_x_consultaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "insumo_x_consulta");
         }
         
@@ -10397,7 +10381,7 @@ SELECT cod_obra_social, nombre, borrado, porcentaje FROM obra_social WHERE (cod_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10414,7 +10398,7 @@ SELECT cod_obra_social, nombre, borrado, porcentaje FROM obra_social WHERE (cod_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.obra_socialDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.obra_socialDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10427,9 +10411,9 @@ SELECT cod_obra_social, nombre, borrado, porcentaje FROM obra_social WHERE (cod_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.obra_socialDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.obra_socialDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.obra_socialDataTable dataTable = new consultorio_odontologicoDataSet.obra_socialDataTable();
+            consultorio_odontologicoTodas.obra_socialDataTable dataTable = new consultorio_odontologicoTodas.obra_socialDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10437,14 +10421,14 @@ SELECT cod_obra_social, nombre, borrado, porcentaje FROM obra_social WHERE (cod_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.obra_socialDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.obra_socialDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "obra_social");
         }
         
@@ -10809,7 +10793,7 @@ SELECT dni, nombre, apellido, domicilio, borrado, telefono, email FROM paciente 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10827,7 +10811,7 @@ SELECT dni, nombre, apellido, domicilio, borrado, telefono, email FROM paciente 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.pacienteDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.pacienteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10840,9 +10824,9 @@ SELECT dni, nombre, apellido, domicilio, borrado, telefono, email FROM paciente 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.pacienteDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.pacienteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.pacienteDataTable dataTable = new consultorio_odontologicoDataSet.pacienteDataTable();
+            consultorio_odontologicoTodas.pacienteDataTable dataTable = new consultorio_odontologicoTodas.pacienteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10850,14 +10834,14 @@ SELECT dni, nombre, apellido, domicilio, borrado, telefono, email FROM paciente 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.pacienteDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.pacienteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "paciente");
         }
         
@@ -11265,7 +11249,7 @@ SELECT nombre, descripcion, importe, id_practica, borrado FROM practica WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11282,7 +11266,7 @@ SELECT nombre, descripcion, importe, id_practica, borrado FROM practica WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.practicaDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.practicaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11295,9 +11279,9 @@ SELECT nombre, descripcion, importe, id_practica, borrado FROM practica WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.practicaDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.practicaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.practicaDataTable dataTable = new consultorio_odontologicoDataSet.practicaDataTable();
+            consultorio_odontologicoTodas.practicaDataTable dataTable = new consultorio_odontologicoTodas.practicaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11305,14 +11289,14 @@ SELECT nombre, descripcion, importe, id_practica, borrado FROM practica WHERE (i
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.practicaDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.practicaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "practica");
         }
         
@@ -11659,7 +11643,7 @@ SELECT id_consulta, id_practica, borrado FROM practicas_a_realizar WHERE (id_con
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11676,7 +11660,7 @@ SELECT id_consulta, id_practica, borrado FROM practicas_a_realizar WHERE (id_con
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.practicas_a_realizarDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.practicas_a_realizarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11689,9 +11673,9 @@ SELECT id_consulta, id_practica, borrado FROM practicas_a_realizar WHERE (id_con
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.practicas_a_realizarDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.practicas_a_realizarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.practicas_a_realizarDataTable dataTable = new consultorio_odontologicoDataSet.practicas_a_realizarDataTable();
+            consultorio_odontologicoTodas.practicas_a_realizarDataTable dataTable = new consultorio_odontologicoTodas.practicas_a_realizarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11699,14 +11683,14 @@ SELECT id_consulta, id_practica, borrado FROM practicas_a_realizar WHERE (id_con
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.practicas_a_realizarDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.practicas_a_realizarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "practicas_a_realizar");
         }
         
@@ -11993,7 +11977,7 @@ SELECT id_consulta, id_practica, borrado FROM practicas_realizadas WHERE (id_con
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12010,7 +11994,7 @@ SELECT id_consulta, id_practica, borrado FROM practicas_realizadas WHERE (id_con
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.practicas_realizadasDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.practicas_realizadasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12023,9 +12007,9 @@ SELECT id_consulta, id_practica, borrado FROM practicas_realizadas WHERE (id_con
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.practicas_realizadasDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.practicas_realizadasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.practicas_realizadasDataTable dataTable = new consultorio_odontologicoDataSet.practicas_realizadasDataTable();
+            consultorio_odontologicoTodas.practicas_realizadasDataTable dataTable = new consultorio_odontologicoTodas.practicas_realizadasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12033,14 +12017,14 @@ SELECT id_consulta, id_practica, borrado FROM practicas_realizadas WHERE (id_con
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.practicas_realizadasDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.practicas_realizadasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "practicas_realizadas");
         }
         
@@ -12297,7 +12281,7 @@ SELECT id_consulta, id_practica, borrado FROM practicas_realizadas WHERE (id_con
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[profesional] WHERE (([matricula] = @Original_matricula) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_apellido = 1 AND [apellido] IS NULL) OR ([apellido] = @Original_apellido)) AND ((@IsNull_domicilio = 1 AND [domicilio] IS NULL) OR ([domicilio] = @Original_domicilio)) AND ((@IsNull_id_usuario = 1 AND [id_usuario] IS NULL) OR ([id_usuario] = @Original_id_usuario)) AND ((@IsNull_borrado = 1 AND [borrado] IS NULL) OR ([borrado] = @Original_borrado)) AND ((@IsNull_especialidad = 1 AND [especialidad] IS NULL) OR ([especialidad] = @Original_especialidad)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[profesional] WHERE (([matricula] = @Original_matricula) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_apellido = 1 AND [apellido] IS NULL) OR ([apellido] = @Original_apellido)) AND ((@IsNull_domicilio = 1 AND [domicilio] IS NULL) OR ([domicilio] = @Original_domicilio)) AND ((@IsNull_id_usuario = 1 AND [id_usuario] IS NULL) OR ([id_usuario] = @Original_id_usuario)) AND ([borrado] = @Original_borrado) AND ((@IsNull_especialidad = 1 AND [especialidad] IS NULL) OR ([especialidad] = @Original_especialidad)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_matricula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "matricula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -12308,7 +12292,6 @@ SELECT id_consulta, id_practica, borrado FROM practicas_realizadas WHERE (id_con
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_domicilio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "domicilio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_borrado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "borrado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_borrado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "borrado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -12325,7 +12308,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[profesional] SET [nombre] = @nombre, [apellido] = @apellido, [domicilio] = @domicilio, [id_usuario] = @id_usuario, [borrado] = @borrado, [especialidad] = @especialidad WHERE (([matricula] = @Original_matricula) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_apellido = 1 AND [apellido] IS NULL) OR ([apellido] = @Original_apellido)) AND ((@IsNull_domicilio = 1 AND [domicilio] IS NULL) OR ([domicilio] = @Original_domicilio)) AND ((@IsNull_id_usuario = 1 AND [id_usuario] IS NULL) OR ([id_usuario] = @Original_id_usuario)) AND ((@IsNull_borrado = 1 AND [borrado] IS NULL) OR ([borrado] = @Original_borrado)) AND ((@IsNull_especialidad = 1 AND [especialidad] IS NULL) OR ([especialidad] = @Original_especialidad)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[profesional] SET [nombre] = @nombre, [apellido] = @apellido, [domicilio] = @domicilio, [id_usuario] = @id_usuario, [borrado] = @borrado, [especialidad] = @especialidad WHERE (([matricula] = @Original_matricula) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_apellido = 1 AND [apellido] IS NULL) OR ([apellido] = @Original_apellido)) AND ((@IsNull_domicilio = 1 AND [domicilio] IS NULL) OR ([domicilio] = @Original_domicilio)) AND ((@IsNull_id_usuario = 1 AND [id_usuario] IS NULL) OR ([id_usuario] = @Original_id_usuario)) AND ([borrado] = @Original_borrado) AND ((@IsNull_especialidad = 1 AND [especialidad] IS NULL) OR ([especialidad] = @Original_especialidad)));
 SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad FROM profesional WHERE (matricula = @matricula)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12343,7 +12326,6 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_domicilio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "domicilio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_borrado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "borrado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_borrado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "borrado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -12354,7 +12336,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12372,7 +12354,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.profesionalDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.profesionalDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12385,9 +12367,9 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.profesionalDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.profesionalDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.profesionalDataTable dataTable = new consultorio_odontologicoDataSet.profesionalDataTable();
+            consultorio_odontologicoTodas.profesionalDataTable dataTable = new consultorio_odontologicoTodas.profesionalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12395,14 +12377,14 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.profesionalDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.profesionalDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "profesional");
         }
         
@@ -12425,7 +12407,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_matricula, string Original_nombre, string Original_apellido, string Original_domicilio, global::System.Nullable<int> Original_id_usuario, global::System.Nullable<bool> Original_borrado, string Original_especialidad) {
+        public virtual int Delete(int Original_matricula, string Original_nombre, string Original_apellido, string Original_domicilio, global::System.Nullable<int> Original_id_usuario, bool Original_borrado, string Original_especialidad) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_matricula));
             if ((Original_nombre == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -12459,21 +12441,14 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_borrado.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_borrado.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_borrado));
             if ((Original_especialidad == null)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_especialidad));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_especialidad));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -12495,7 +12470,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nombre, string apellido, string domicilio, global::System.Nullable<int> id_usuario, global::System.Nullable<bool> borrado, string especialidad) {
+        public virtual int Insert(string nombre, string apellido, string domicilio, global::System.Nullable<int> id_usuario, bool borrado, string especialidad) {
             if ((nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -12520,12 +12495,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((borrado.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(borrado.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(borrado));
             if ((especialidad == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
@@ -12552,7 +12522,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, string apellido, string domicilio, global::System.Nullable<int> id_usuario, global::System.Nullable<bool> borrado, string especialidad, int Original_matricula, string Original_nombre, string Original_apellido, string Original_domicilio, global::System.Nullable<int> Original_id_usuario, global::System.Nullable<bool> Original_borrado, string Original_especialidad, int matricula) {
+        public virtual int Update(string nombre, string apellido, string domicilio, global::System.Nullable<int> id_usuario, bool borrado, string especialidad, int Original_matricula, string Original_nombre, string Original_apellido, string Original_domicilio, global::System.Nullable<int> Original_id_usuario, bool Original_borrado, string Original_especialidad, int matricula) {
             if ((nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -12577,12 +12547,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((borrado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(borrado.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(borrado));
             if ((especialidad == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
@@ -12622,23 +12587,16 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_borrado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_borrado.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_borrado));
             if ((Original_especialidad == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_especialidad));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_especialidad));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(matricula));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(matricula));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12659,7 +12617,7 @@ SELECT matricula, nombre, apellido, domicilio, id_usuario, borrado, especialidad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, string apellido, string domicilio, global::System.Nullable<int> id_usuario, global::System.Nullable<bool> borrado, string especialidad, int Original_matricula, string Original_nombre, string Original_apellido, string Original_domicilio, global::System.Nullable<int> Original_id_usuario, global::System.Nullable<bool> Original_borrado, string Original_especialidad) {
+        public virtual int Update(string nombre, string apellido, string domicilio, global::System.Nullable<int> id_usuario, bool borrado, string especialidad, int Original_matricula, string Original_nombre, string Original_apellido, string Original_domicilio, global::System.Nullable<int> Original_id_usuario, bool Original_borrado, string Original_especialidad) {
             return this.Update(nombre, apellido, domicilio, id_usuario, borrado, especialidad, Original_matricula, Original_nombre, Original_apellido, Original_domicilio, Original_id_usuario, Original_borrado, Original_especialidad, Original_matricula);
         }
     }
@@ -12851,7 +12809,7 @@ SELECT num_turno, fecha, hora, id_paciente, id_profesional, borrado, id_obra_soc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12869,7 +12827,7 @@ SELECT num_turno, fecha, hora, id_paciente, id_profesional, borrado, id_obra_soc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.turnoDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.turnoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12882,9 +12840,9 @@ SELECT num_turno, fecha, hora, id_paciente, id_profesional, borrado, id_obra_soc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.turnoDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.turnoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.turnoDataTable dataTable = new consultorio_odontologicoDataSet.turnoDataTable();
+            consultorio_odontologicoTodas.turnoDataTable dataTable = new consultorio_odontologicoTodas.turnoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12892,14 +12850,14 @@ SELECT num_turno, fecha, hora, id_paciente, id_profesional, borrado, id_obra_soc
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.turnoDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.turnoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "turno");
         }
         
@@ -13273,7 +13231,7 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionString1;
+            this._connection.ConnectionString = global::Consultorio.Properties.Settings.Default.consultorio_odontologicoConnectionCami;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13290,7 +13248,7 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(consultorio_odontologicoDataSet.usuarioDataTable dataTable) {
+        public virtual int Fill(consultorio_odontologicoTodas.usuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13303,9 +13261,9 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual consultorio_odontologicoDataSet.usuarioDataTable GetData() {
+        public virtual consultorio_odontologicoTodas.usuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            consultorio_odontologicoDataSet.usuarioDataTable dataTable = new consultorio_odontologicoDataSet.usuarioDataTable();
+            consultorio_odontologicoTodas.usuarioDataTable dataTable = new consultorio_odontologicoTodas.usuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13313,14 +13271,14 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet.usuarioDataTable dataTable) {
+        public virtual int Update(consultorio_odontologicoTodas.usuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(consultorio_odontologicoDataSet dataSet) {
+        public virtual int Update(consultorio_odontologicoTodas dataSet) {
             return this.Adapter.Update(dataSet, "usuario");
         }
         
@@ -13856,7 +13814,7 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(consultorio_odontologicoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(consultorio_odontologicoTodas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -13992,7 +13950,7 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(consultorio_odontologicoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(consultorio_odontologicoTodas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -14114,7 +14072,7 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(consultorio_odontologicoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(consultorio_odontologicoTodas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._practicas_realizadasTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.practicas_realizadas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -14260,7 +14218,7 @@ SELECT id_usuario, nombre_usuario, contraseña, borrado FROM usuario WHERE (id_u
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(consultorio_odontologicoDataSet dataSet) {
+        public virtual int UpdateAll(consultorio_odontologicoTodas dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

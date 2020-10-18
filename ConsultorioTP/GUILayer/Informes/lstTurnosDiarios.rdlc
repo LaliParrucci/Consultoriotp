@@ -6,25 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.58254cm</Width>
+              <Width>3.86569cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.57712cm</Width>
+              <Width>3.63431cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.32879cm</Width>
+              <Width>4.52735cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.17589cm</Width>
+              <Width>4.52735cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.7276cm</Height>
+              <Height>0.93073cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -38,12 +38,13 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -54,7 +55,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox18">
+                    <Textbox Name="Textbox10">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -68,12 +69,13 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox18</rd:DefaultName>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -84,7 +86,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
+                    <Textbox Name="Textbox12">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -98,12 +100,13 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -114,7 +117,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox22">
+                    <Textbox Name="Textbox14">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -128,12 +131,13 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Turquoise</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -145,7 +149,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.7276cm</Height>
+              <Height>0.93073cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -265,6 +269,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -290,10 +295,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.60854cm</Top>
-        <Left>3.25438cm</Left>
-        <Height>1.4552cm</Height>
-        <Width>16.66434cm</Width>
+        <Top>0.80821cm</Top>
+        <Left>0.75098cm</Left>
+        <Height>1.86146cm</Height>
+        <Width>16.5547cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -304,7 +309,7 @@
     <Height>1.22917in</Height>
     <Style />
   </Body>
-  <Width>10.19084in</Width>
+  <Width>7.00384in</Width>
   <Page>
     <PageHeader>
       <Height>2.70757cm</Height>
@@ -340,11 +345,41 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.26458cm</Top>
-          <Left>2.1791cm</Left>
-          <Height>0.94396cm</Height>
+          <Top>0.87312cm</Top>
+          <Left>2.73472cm</Left>
+          <Height>0.65292cm</Height>
           <Width>5.1723cm</Width>
           <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Today</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox16</rd:DefaultName>
+          <Top>0.26141cm</Top>
+          <Left>14.80568cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -411,7 +446,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>2.21051cm</Top>
-          <Left>14.01cm</Left>
+          <Left>14.80568cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>1</ZIndex>
@@ -443,32 +478,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsTurnosDiario">
+    <DataSource Name="consultorio_odontologicoTodas">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>65d527e4-1700-4deb-a192-6beacb265ce6</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="consultorio_odontologicoDataSet1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>f8199b08-eb1d-45b9-91b2-d460ebcd2a5e</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="consultorio_odontologicoDataSet2">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>c8034120-a51e-412b-91af-52db85535a3e</rd:DataSourceID>
+      <rd:DataSourceID>66910169-2dff-435f-8498-96f0c9fc41c3</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>consultorio_odontologicoDataSet2</DataSourceName>
+        <DataSourceName>consultorio_odontologicoTodas</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -506,8 +527,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>consultorio_odontologicoDataSet2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\lucca\OneDrive\Escritorio\Juan\Flor pav\consultorio_odontologicoDataSet2.xsd</rd:SchemaPath>
+        <rd:DataSetName>consultorio_odontologicoTodas</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\GUILayer\Informes\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
         <rd:TableName>turno</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

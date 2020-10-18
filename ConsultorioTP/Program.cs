@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Consultorio.GUILayer;
 using Consultorio.GUILayer.Usuario;
-using Consultorio.GUILayer.Informes;
+
 
 namespace Consultorio
 {
@@ -19,7 +19,7 @@ namespace Consultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmReportes());
         }
     }
 }

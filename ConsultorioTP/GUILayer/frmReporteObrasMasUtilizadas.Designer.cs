@@ -39,7 +39,7 @@
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.rpObrasMasUtilizadas = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorio_odontologicoTodas = new Consultorio.consultorio_odontologicoTodas();
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultorioodontologicoTodasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gbxFiltros.SuspendLayout();
