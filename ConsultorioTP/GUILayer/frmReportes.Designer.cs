@@ -46,6 +46,8 @@
             this.pnlTitulo2 = new System.Windows.Forms.Panel();
             this.lblEstadis = new System.Windows.Forms.Label();
             this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
+            this.lblOdonConMasPacientes = new System.Windows.Forms.Label();
+            this.btnOconMasPacientes = new System.Windows.Forms.Button();
             this.btnLInsumos = new System.Windows.Forms.Button();
             this.btnPrXP = new System.Windows.Forms.Button();
             this.btnMontosCobrar = new System.Windows.Forms.Button();
@@ -57,6 +59,7 @@
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
+            this.pnlCuerpoEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitulo1
@@ -231,11 +234,35 @@
             // 
             // pnlCuerpoEstadisticas
             // 
+            this.pnlCuerpoEstadisticas.Controls.Add(this.lblOdonConMasPacientes);
+            this.pnlCuerpoEstadisticas.Controls.Add(this.btnOconMasPacientes);
             this.pnlCuerpoEstadisticas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlCuerpoEstadisticas.Location = new System.Drawing.Point(0, 336);
             this.pnlCuerpoEstadisticas.Name = "pnlCuerpoEstadisticas";
             this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoEstadisticas.TabIndex = 3;
+            // 
+            // lblOdonConMasPacientes
+            // 
+            this.lblOdonConMasPacientes.Location = new System.Drawing.Point(33, 69);
+            this.lblOdonConMasPacientes.Name = "lblOdonConMasPacientes";
+            this.lblOdonConMasPacientes.Size = new System.Drawing.Size(127, 56);
+            this.lblOdonConMasPacientes.TabIndex = 20;
+            this.lblOdonConMasPacientes.Text = "Odontólogos que más pacientes atienden";
+            this.lblOdonConMasPacientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnOconMasPacientes
+            // 
+            this.btnOconMasPacientes.BackgroundImage = global::Consultorio.Properties.Resources.dentist;
+            this.btnOconMasPacientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOconMasPacientes.FlatAppearance.BorderSize = 0;
+            this.btnOconMasPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOconMasPacientes.Location = new System.Drawing.Point(71, 6);
+            this.btnOconMasPacientes.Name = "btnOconMasPacientes";
+            this.btnOconMasPacientes.Size = new System.Drawing.Size(60, 60);
+            this.btnOconMasPacientes.TabIndex = 20;
+            this.btnOconMasPacientes.UseVisualStyleBackColor = true;
+            this.btnOconMasPacientes.Click += new System.EventHandler(this.btnOconMasPacientes_Click);
             // 
             // btnLInsumos
             // 
@@ -366,6 +393,7 @@
             this.pnlCuerpoListados.PerformLayout();
             this.pnlTitulo2.ResumeLayout(false);
             this.pnlTitulo2.PerformLayout();
+            this.pnlCuerpoEstadisticas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -397,5 +425,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnLInsumos;
         private System.Windows.Forms.Button btnTurnosDiarios;
+        private System.Windows.Forms.Label lblOdonConMasPacientes;
+        private System.Windows.Forms.Button btnOconMasPacientes;
     }
 }

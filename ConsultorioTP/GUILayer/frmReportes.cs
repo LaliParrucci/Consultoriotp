@@ -78,5 +78,13 @@ namespace Consultorio.GUILayer
             frmReporteListadoInsumos ventana = new frmReporteListadoInsumos();
             ventana.ShowDialog();
         }
+
+       
+
+        private void btnOconMasPacientes_Click(object sender, EventArgs e)
+        {
+            frmEstadisticasOconMasPacientes ventana = new frmEstadisticasOconMasPacientes();
+            ventana.ShowDialog();
+        }
     }
 }

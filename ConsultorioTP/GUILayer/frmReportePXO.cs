@@ -66,7 +66,7 @@ namespace Consultorio.GUILayer
             tabla = oPacienteService.recuperarPacientePorFecha(_profesional, dtpDesde.Value, dtpHasta.Value);
             if (tabla.Rows.Count == 0)
             {
-                MessageBox.Show("No existen Bugs con esas condiciones...");
+                MessageBox.Show("No existen datos con esas condiciones...");
                 dtpDesde.Value = DateTime.Today;
                 dtpHasta.Value = DateTime.Today;
                 cboProfesional.SelectedIndex = -1;
@@ -79,6 +79,7 @@ namespace Consultorio.GUILayer
                 rpPXO.LocalReport.DataSources.Clear();
                 rpPXO.LocalReport.DataSources.Add(ds);
                 this.rpPXO.RefreshReport();
+                
             }
 
             cboProfesional.SelectedIndex = -1;

@@ -59,6 +59,15 @@ namespace Consultorio.DataAccessLayer
             return oConsulta;
         }
 
+        internal DataTable recuperarPacientePorProfesionalPorFecha(DateTime desde, DateTime hasta)
+        {
+            String consultaSql = string.Concat("Select p.apellido, COUNT(c.id_paciente) as 'cantidad de paceintes'",
+                                               " From consulta c Join profesional p on(c.id_profesional = p.matricula) ",
+                                               "Where fecha between '", desde.ToString("yyyy-MM-dd"), "' and '", hasta.ToString("yyyy-MM-dd"), " 23:59:59' ",
+                                                "Group by p.apellido");
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+        }
+
         public bool crearConsulta(Consulta oConsulta)
         {
             DataManager dm = new DataManager();

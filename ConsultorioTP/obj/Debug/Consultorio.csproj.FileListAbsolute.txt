@@ -555,3 +555,4 @@ C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.cs
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.csproj.CopyComplete
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.exe
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.pdb
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasOconMasPacientes.resources

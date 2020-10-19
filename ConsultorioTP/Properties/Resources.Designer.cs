@@ -143,6 +143,16 @@ namespace Consultorio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dentist {
+            get {
+                object obj = ResourceManager.GetObject("dentist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dentistry {
             get {
                 object obj = ResourceManager.GetObject("dentistry", resourceCulture);

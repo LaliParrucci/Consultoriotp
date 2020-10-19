@@ -30,17 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.consultorioOdontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Consultorio_OdontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblProfesional = new System.Windows.Forms.Label();
             this.cboProfesional = new System.Windows.Forms.ComboBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Consultorio_OdontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioOdontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // consultorioOdontologicoTodasBindingSource
+            // 
+            this.consultorioOdontologicoTodasBindingSource.DataSource = this.Consultorio_OdontologicoTodas;
+            this.consultorioOdontologicoTodasBindingSource.Position = 0;
+            // 
+            // Consultorio_OdontologicoTodas
+            // 
+            this.Consultorio_OdontologicoTodas.DataSetName = "Consultorio_OdontologicoTodas";
+            this.Consultorio_OdontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -49,9 +59,9 @@
             this.groupBox1.Controls.Add(this.btnGenerar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(18, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(842, 147);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -71,7 +81,7 @@
             // 
             this.cboProfesional.FormattingEnabled = true;
             this.cboProfesional.Location = new System.Drawing.Point(356, 48);
-            this.cboProfesional.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboProfesional.Margin = new System.Windows.Forms.Padding(4);
             this.cboProfesional.Name = "cboProfesional";
             this.cboProfesional.Size = new System.Drawing.Size(197, 26);
             this.cboProfesional.TabIndex = 1;
@@ -79,7 +89,7 @@
             // btnGenerar
             // 
             this.btnGenerar.Location = new System.Drawing.Point(593, 97);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(97, 30);
             this.btnGenerar.TabIndex = 0;
@@ -95,21 +105,11 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Informes.rpPrXP.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(18, 176);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(842, 322);
             this.reportViewer1.TabIndex = 1;
-            // 
-            // Consultorio_OdontologicoTodas
-            // 
-            this.Consultorio_OdontologicoTodas.DataSetName = "Consultorio_OdontologicoTodas";
-            this.Consultorio_OdontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultorioOdontologicoTodasBindingSource
-            // 
-            this.consultorioOdontologicoTodasBindingSource.DataSource = this.Consultorio_OdontologicoTodas;
-            this.consultorioOdontologicoTodasBindingSource.Position = 0;
             // 
             // frmReportePrXP
             // 
@@ -119,14 +119,14 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReportePrXP";
             this.Text = "Listado de Practicas por Profesional";
             this.Load += new System.EventHandler(this.frmReportePrXP_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

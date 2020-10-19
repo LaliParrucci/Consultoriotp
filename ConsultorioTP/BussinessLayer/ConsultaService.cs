@@ -49,6 +49,11 @@ namespace Consultorio.BussinessLayer
             }
             return true;
         }
+
+        internal DataTable recuperarPacientesPorProfesionalPorfecha(DateTime desde, DateTime hasta)
+        {
+            return oConsultaDao.recuperarPacientePorProfesionalPorFecha(desde, hasta);
+        }
         //public bool existeInsumo(int id)
         //{
         //    if (this.recuperarInsumoPorId(id) != null) { return true; }
