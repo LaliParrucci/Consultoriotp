@@ -104,5 +104,16 @@ namespace Consultorio.GUILayer
             frmEstadisticasPracticasAño frm = new frmEstadisticasPracticasAño();
             frm.ShowDialog();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmEstadisticaPracticaPorConsulta frm = new frmEstadisticaPracticaPorConsulta();
+            frm.ShowDialog();
+        }
     }
 }

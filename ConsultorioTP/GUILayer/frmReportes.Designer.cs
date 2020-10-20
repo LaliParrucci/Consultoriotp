@@ -33,35 +33,37 @@
             this.lblListados = new System.Windows.Forms.Label();
             this.pnlCuerpoListados = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnLInsumos = new System.Windows.Forms.Button();
             this.lblPrXP2 = new System.Windows.Forms.Label();
             this.lblPRXP1 = new System.Windows.Forms.Label();
-            this.btnPrXP = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnMontosCobrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnOMUtilizadas = new System.Windows.Forms.Button();
             this.lblLPrXOb2 = new System.Windows.Forms.Label();
             this.lblLPrXOb1 = new System.Windows.Forms.Label();
-            this.btnPrXOb = new System.Windows.Forms.Button();
-            this.btnPracticas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTurnosDiarios = new System.Windows.Forms.Button();
             this.lblLpXo1 = new System.Windows.Forms.Label();
-            this.btnPXO = new System.Windows.Forms.Button();
             this.lblpXo2 = new System.Windows.Forms.Label();
             this.pnlTitulo2 = new System.Windows.Forms.Panel();
             this.lblEstadis = new System.Windows.Forms.Label();
             this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
+            this.lblPracticasAño = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTurnosConcretados = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEstadisticaOOSSmasUsadas = new System.Windows.Forms.Button();
             this.lblOdonConMasPacientes = new System.Windows.Forms.Label();
-            this.btnOconMasPacientes = new System.Windows.Forms.Button();
             this.btnPracticasAño = new System.Windows.Forms.Button();
-            this.lblPracticasAño = new System.Windows.Forms.Label();
+            this.btnOconMasPacientes = new System.Windows.Forms.Button();
+            this.btnLInsumos = new System.Windows.Forms.Button();
+            this.btnPrXP = new System.Windows.Forms.Button();
+            this.btnMontosCobrar = new System.Windows.Forms.Button();
+            this.btnOMUtilizadas = new System.Windows.Forms.Button();
+            this.btnPrXOb = new System.Windows.Forms.Button();
+            this.btnPracticas = new System.Windows.Forms.Button();
+            this.btnTurnosDiarios = new System.Windows.Forms.Button();
+            this.btnPXO = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -84,7 +86,7 @@
             this.lblListados.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListados.Location = new System.Drawing.Point(12, 9);
             this.lblListados.Name = "lblListados";
-            this.lblListados.Size = new System.Drawing.Size(132, 33);
+            this.lblListados.Size = new System.Drawing.Size(193, 52);
             this.lblListados.TabIndex = 0;
             this.lblListados.Text = "Listados";
             // 
@@ -121,29 +123,16 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(203, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.Size = new System.Drawing.Size(187, 29);
             this.label5.TabIndex = 19;
             this.label5.Text = "Listado Insumos";
-            // 
-            // btnLInsumos
-            // 
-            this.btnLInsumos.BackgroundImage = global::Consultorio.Properties.Resources.asistencia_medica;
-            this.btnLInsumos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLInsumos.FlatAppearance.BorderSize = 0;
-            this.btnLInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLInsumos.Location = new System.Drawing.Point(232, 113);
-            this.btnLInsumos.Name = "btnLInsumos";
-            this.btnLInsumos.Size = new System.Drawing.Size(60, 60);
-            this.btnLInsumos.TabIndex = 18;
-            this.btnLInsumos.UseVisualStyleBackColor = true;
-            this.btnLInsumos.Click += new System.EventHandler(this.btnLInsumos_Click);
             // 
             // lblPrXP2
             // 
             this.lblPrXP2.AutoSize = true;
             this.lblPrXP2.Location = new System.Drawing.Point(532, 197);
             this.lblPrXP2.Name = "lblPrXP2";
-            this.lblPrXP2.Size = new System.Drawing.Size(180, 18);
+            this.lblPrXP2.Size = new System.Drawing.Size(293, 29);
             this.lblPrXP2.TabIndex = 17;
             this.lblPrXP2.Text = "realizadas por Profesional";
             // 
@@ -152,23 +141,9 @@
             this.lblPRXP1.AutoSize = true;
             this.lblPRXP1.Location = new System.Drawing.Point(549, 179);
             this.lblPRXP1.Name = "lblPRXP1";
-            this.lblPRXP1.Size = new System.Drawing.Size(142, 18);
+            this.lblPRXP1.Size = new System.Drawing.Size(229, 29);
             this.lblPRXP1.TabIndex = 16;
             this.lblPRXP1.Text = "Listado de Practicas";
-            // 
-            // btnPrXP
-            // 
-            this.btnPrXP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.btnPrXP.BackgroundImage = global::Consultorio.Properties.Resources.lista_de_verificacion;
-            this.btnPrXP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrXP.FlatAppearance.BorderSize = 0;
-            this.btnPrXP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrXP.Location = new System.Drawing.Point(593, 113);
-            this.btnPrXP.Name = "btnPrXP";
-            this.btnPrXP.Size = new System.Drawing.Size(60, 60);
-            this.btnPrXP.TabIndex = 15;
-            this.btnPrXP.UseVisualStyleBackColor = false;
-            this.btnPrXP.Click += new System.EventHandler(this.btnPrXP_Click);
             // 
             // label4
             // 
@@ -188,48 +163,22 @@
             this.label3.Text = "Listado de turnos diarios";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnMontosCobrar
-            // 
-            this.btnMontosCobrar.BackgroundImage = global::Consultorio.Properties.Resources.perfiles;
-            this.btnMontosCobrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMontosCobrar.FlatAppearance.BorderSize = 0;
-            this.btnMontosCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMontosCobrar.Location = new System.Drawing.Point(71, 116);
-            this.btnMontosCobrar.Name = "btnMontosCobrar";
-            this.btnMontosCobrar.Size = new System.Drawing.Size(60, 60);
-            this.btnMontosCobrar.TabIndex = 12;
-            this.btnMontosCobrar.UseVisualStyleBackColor = true;
-            this.btnMontosCobrar.Click += new System.EventHandler(this.btnMontosCobrar_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(359, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 18);
+            this.label2.Size = new System.Drawing.Size(262, 29);
             this.label2.TabIndex = 11;
             this.label2.Text = "Listado Obras Sociales";
-            // 
-            // btnOMUtilizadas
-            // 
-            this.btnOMUtilizadas.BackgroundImage = global::Consultorio.Properties.Resources.medical_book;
-            this.btnOMUtilizadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOMUtilizadas.FlatAppearance.BorderSize = 0;
-            this.btnOMUtilizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOMUtilizadas.Location = new System.Drawing.Point(410, 113);
-            this.btnOMUtilizadas.Name = "btnOMUtilizadas";
-            this.btnOMUtilizadas.Size = new System.Drawing.Size(60, 60);
-            this.btnOMUtilizadas.TabIndex = 10;
-            this.btnOMUtilizadas.UseVisualStyleBackColor = true;
-            this.btnOMUtilizadas.Click += new System.EventHandler(this.btnOMUtilizadas_Click);
             // 
             // lblLPrXOb2
             // 
             this.lblLPrXOb2.AutoSize = true;
             this.lblLPrXOb2.Location = new System.Drawing.Point(574, 86);
             this.lblLPrXOb2.Name = "lblLPrXOb2";
-            this.lblLPrXOb2.Size = new System.Drawing.Size(112, 18);
+            this.lblLPrXOb2.Size = new System.Drawing.Size(182, 29);
             this.lblLPrXOb2.TabIndex = 9;
             this.lblLPrXOb2.Text = "por Obra Social";
             // 
@@ -238,36 +187,9 @@
             this.lblLPrXOb1.AutoSize = true;
             this.lblLPrXOb1.Location = new System.Drawing.Point(569, 69);
             this.lblLPrXOb1.Name = "lblLPrXOb1";
-            this.lblLPrXOb1.Size = new System.Drawing.Size(122, 18);
+            this.lblLPrXOb1.Size = new System.Drawing.Size(195, 29);
             this.lblLPrXOb1.TabIndex = 8;
             this.lblLPrXOb1.Text = "Listado Practicas";
-            // 
-            // btnPrXOb
-            // 
-            this.btnPrXOb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.btnPrXOb.BackgroundImage = global::Consultorio.Properties.Resources.dentistry;
-            this.btnPrXOb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrXOb.FlatAppearance.BorderSize = 0;
-            this.btnPrXOb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrXOb.Location = new System.Drawing.Point(593, 10);
-            this.btnPrXOb.Name = "btnPrXOb";
-            this.btnPrXOb.Size = new System.Drawing.Size(60, 60);
-            this.btnPrXOb.TabIndex = 7;
-            this.btnPrXOb.UseVisualStyleBackColor = false;
-            this.btnPrXOb.Click += new System.EventHandler(this.btnPrXOb_Click);
-            // 
-            // btnPracticas
-            // 
-            this.btnPracticas.BackgroundImage = global::Consultorio.Properties.Resources.comfortable1;
-            this.btnPracticas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPracticas.FlatAppearance.BorderSize = 0;
-            this.btnPracticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPracticas.Location = new System.Drawing.Point(232, 10);
-            this.btnPracticas.Name = "btnPracticas";
-            this.btnPracticas.Size = new System.Drawing.Size(60, 60);
-            this.btnPracticas.TabIndex = 6;
-            this.btnPracticas.UseVisualStyleBackColor = true;
-            this.btnPracticas.Click += new System.EventHandler(this.btnPracticas_Click);
             // 
             // label1
             // 
@@ -275,22 +197,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(203, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 18);
+            this.label1.Size = new System.Drawing.Size(195, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Listado Practicas";
-            // 
-            // btnTurnosDiarios
-            // 
-            this.btnTurnosDiarios.BackgroundImage = global::Consultorio.Properties.Resources.calendario;
-            this.btnTurnosDiarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTurnosDiarios.FlatAppearance.BorderSize = 0;
-            this.btnTurnosDiarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTurnosDiarios.Location = new System.Drawing.Point(71, 5);
-            this.btnTurnosDiarios.Name = "btnTurnosDiarios";
-            this.btnTurnosDiarios.Size = new System.Drawing.Size(60, 60);
-            this.btnTurnosDiarios.TabIndex = 3;
-            this.btnTurnosDiarios.UseVisualStyleBackColor = true;
-            this.btnTurnosDiarios.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblLpXo1
             // 
@@ -298,22 +207,9 @@
             this.lblLpXo1.AutoSize = true;
             this.lblLpXo1.Location = new System.Drawing.Point(385, 68);
             this.lblLpXo1.Name = "lblLpXo1";
-            this.lblLpXo1.Size = new System.Drawing.Size(117, 18);
+            this.lblLpXo1.Size = new System.Drawing.Size(191, 29);
             this.lblLpXo1.TabIndex = 0;
             this.lblLpXo1.Text = "Listado Paciente";
-            // 
-            // btnPXO
-            // 
-            this.btnPXO.BackgroundImage = global::Consultorio.Properties.Resources.equipo;
-            this.btnPXO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPXO.FlatAppearance.BorderSize = 0;
-            this.btnPXO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPXO.Location = new System.Drawing.Point(410, 5);
-            this.btnPXO.Name = "btnPXO";
-            this.btnPXO.Size = new System.Drawing.Size(60, 60);
-            this.btnPXO.TabIndex = 2;
-            this.btnPXO.UseVisualStyleBackColor = true;
-            this.btnPXO.Click += new System.EventHandler(this.btnPXO_Click);
             // 
             // lblpXo2
             // 
@@ -321,7 +217,7 @@
             this.lblpXo2.AutoSize = true;
             this.lblpXo2.Location = new System.Drawing.Point(385, 86);
             this.lblpXo2.Name = "lblpXo2";
-            this.lblpXo2.Size = new System.Drawing.Size(113, 18);
+            this.lblpXo2.Size = new System.Drawing.Size(183, 29);
             this.lblpXo2.TabIndex = 1;
             this.lblpXo2.Text = "por Odontologo";
             // 
@@ -340,12 +236,14 @@
             this.lblEstadis.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadis.Location = new System.Drawing.Point(12, 10);
             this.lblEstadis.Name = "lblEstadis";
-            this.lblEstadis.Size = new System.Drawing.Size(184, 33);
+            this.lblEstadis.Size = new System.Drawing.Size(268, 52);
             this.lblEstadis.TabIndex = 0;
             this.lblEstadis.Text = "Estadísticas";
             // 
             // pnlCuerpoEstadisticas
             // 
+            this.pnlCuerpoEstadisticas.Controls.Add(this.label8);
+            this.pnlCuerpoEstadisticas.Controls.Add(this.button1);
             this.pnlCuerpoEstadisticas.Controls.Add(this.lblPracticasAño);
             this.pnlCuerpoEstadisticas.Controls.Add(this.btnPracticasAño);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label6);
@@ -359,6 +257,15 @@
             this.pnlCuerpoEstadisticas.Name = "pnlCuerpoEstadisticas";
             this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoEstadisticas.TabIndex = 3;
+            // 
+            // lblPracticasAño
+            // 
+            this.lblPracticasAño.AutoSize = true;
+            this.lblPracticasAño.Location = new System.Drawing.Point(488, 69);
+            this.lblPracticasAño.Name = "lblPracticasAño";
+            this.lblPracticasAño.Size = new System.Drawing.Size(201, 29);
+            this.lblPracticasAño.TabIndex = 27;
+            this.lblPracticasAño.Text = "Practicas por Año";
             // 
             // label6
             // 
@@ -407,6 +314,18 @@
             this.lblOdonConMasPacientes.Text = "Odontólogos que más pacientes atienden";
             this.lblOdonConMasPacientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnPracticasAño
+            // 
+            this.btnPracticasAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.btnPracticasAño.BackgroundImage = global::Consultorio.Properties.Resources.medical_book;
+            this.btnPracticasAño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPracticasAño.Location = new System.Drawing.Point(521, 6);
+            this.btnPracticasAño.Name = "btnPracticasAño";
+            this.btnPracticasAño.Size = new System.Drawing.Size(60, 60);
+            this.btnPracticasAño.TabIndex = 26;
+            this.btnPracticasAño.UseVisualStyleBackColor = false;
+            this.btnPracticasAño.Click += new System.EventHandler(this.btnPracticasAño_Click);
+            // 
             // btnOconMasPacientes
             // 
             this.btnOconMasPacientes.BackgroundImage = global::Consultorio.Properties.Resources.dentist;
@@ -420,30 +339,139 @@
             this.btnOconMasPacientes.UseVisualStyleBackColor = true;
             this.btnOconMasPacientes.Click += new System.EventHandler(this.btnOconMasPacientes_Click);
             // 
-            // btnPracticasAño
+            // btnLInsumos
             // 
-            this.btnPracticasAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.btnPracticasAño.BackgroundImage = global::Consultorio.Properties.Resources.medical_book;
-            this.btnPracticasAño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPracticasAño.Location = new System.Drawing.Point(521, 6);
-            this.btnPracticasAño.Name = "btnPracticasAño";
-            this.btnPracticasAño.Size = new System.Drawing.Size(60, 60);
-            this.btnPracticasAño.TabIndex = 26;
-            this.btnPracticasAño.UseVisualStyleBackColor = false;
-            this.btnPracticasAño.Click += new System.EventHandler(this.btnPracticasAño_Click);
+            this.btnLInsumos.BackgroundImage = global::Consultorio.Properties.Resources.asistencia_medica;
+            this.btnLInsumos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLInsumos.FlatAppearance.BorderSize = 0;
+            this.btnLInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLInsumos.Location = new System.Drawing.Point(232, 113);
+            this.btnLInsumos.Name = "btnLInsumos";
+            this.btnLInsumos.Size = new System.Drawing.Size(60, 60);
+            this.btnLInsumos.TabIndex = 18;
+            this.btnLInsumos.UseVisualStyleBackColor = true;
+            this.btnLInsumos.Click += new System.EventHandler(this.btnLInsumos_Click);
             // 
-            // lblPracticasAño
+            // btnPrXP
             // 
-            this.lblPracticasAño.AutoSize = true;
-            this.lblPracticasAño.Location = new System.Drawing.Point(488, 69);
-            this.lblPracticasAño.Name = "lblPracticasAño";
-            this.lblPracticasAño.Size = new System.Drawing.Size(126, 18);
-            this.lblPracticasAño.TabIndex = 27;
-            this.lblPracticasAño.Text = "Practicas por Año";
+            this.btnPrXP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.btnPrXP.BackgroundImage = global::Consultorio.Properties.Resources.lista_de_verificacion;
+            this.btnPrXP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrXP.FlatAppearance.BorderSize = 0;
+            this.btnPrXP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrXP.Location = new System.Drawing.Point(593, 113);
+            this.btnPrXP.Name = "btnPrXP";
+            this.btnPrXP.Size = new System.Drawing.Size(60, 60);
+            this.btnPrXP.TabIndex = 15;
+            this.btnPrXP.UseVisualStyleBackColor = false;
+            this.btnPrXP.Click += new System.EventHandler(this.btnPrXP_Click);
+            // 
+            // btnMontosCobrar
+            // 
+            this.btnMontosCobrar.BackgroundImage = global::Consultorio.Properties.Resources.perfiles;
+            this.btnMontosCobrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMontosCobrar.FlatAppearance.BorderSize = 0;
+            this.btnMontosCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMontosCobrar.Location = new System.Drawing.Point(71, 116);
+            this.btnMontosCobrar.Name = "btnMontosCobrar";
+            this.btnMontosCobrar.Size = new System.Drawing.Size(60, 60);
+            this.btnMontosCobrar.TabIndex = 12;
+            this.btnMontosCobrar.UseVisualStyleBackColor = true;
+            this.btnMontosCobrar.Click += new System.EventHandler(this.btnMontosCobrar_Click);
+            // 
+            // btnOMUtilizadas
+            // 
+            this.btnOMUtilizadas.BackgroundImage = global::Consultorio.Properties.Resources.medical_book;
+            this.btnOMUtilizadas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOMUtilizadas.FlatAppearance.BorderSize = 0;
+            this.btnOMUtilizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOMUtilizadas.Location = new System.Drawing.Point(410, 113);
+            this.btnOMUtilizadas.Name = "btnOMUtilizadas";
+            this.btnOMUtilizadas.Size = new System.Drawing.Size(60, 60);
+            this.btnOMUtilizadas.TabIndex = 10;
+            this.btnOMUtilizadas.UseVisualStyleBackColor = true;
+            this.btnOMUtilizadas.Click += new System.EventHandler(this.btnOMUtilizadas_Click);
+            // 
+            // btnPrXOb
+            // 
+            this.btnPrXOb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.btnPrXOb.BackgroundImage = global::Consultorio.Properties.Resources.dentistry;
+            this.btnPrXOb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrXOb.FlatAppearance.BorderSize = 0;
+            this.btnPrXOb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrXOb.Location = new System.Drawing.Point(593, 10);
+            this.btnPrXOb.Name = "btnPrXOb";
+            this.btnPrXOb.Size = new System.Drawing.Size(60, 60);
+            this.btnPrXOb.TabIndex = 7;
+            this.btnPrXOb.UseVisualStyleBackColor = false;
+            this.btnPrXOb.Click += new System.EventHandler(this.btnPrXOb_Click);
+            // 
+            // btnPracticas
+            // 
+            this.btnPracticas.BackgroundImage = global::Consultorio.Properties.Resources.comfortable1;
+            this.btnPracticas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPracticas.FlatAppearance.BorderSize = 0;
+            this.btnPracticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPracticas.Location = new System.Drawing.Point(232, 10);
+            this.btnPracticas.Name = "btnPracticas";
+            this.btnPracticas.Size = new System.Drawing.Size(60, 60);
+            this.btnPracticas.TabIndex = 6;
+            this.btnPracticas.UseVisualStyleBackColor = true;
+            this.btnPracticas.Click += new System.EventHandler(this.btnPracticas_Click);
+            // 
+            // btnTurnosDiarios
+            // 
+            this.btnTurnosDiarios.BackgroundImage = global::Consultorio.Properties.Resources.calendario;
+            this.btnTurnosDiarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTurnosDiarios.FlatAppearance.BorderSize = 0;
+            this.btnTurnosDiarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTurnosDiarios.Location = new System.Drawing.Point(71, 5);
+            this.btnTurnosDiarios.Name = "btnTurnosDiarios";
+            this.btnTurnosDiarios.Size = new System.Drawing.Size(60, 60);
+            this.btnTurnosDiarios.TabIndex = 3;
+            this.btnTurnosDiarios.UseVisualStyleBackColor = true;
+            this.btnTurnosDiarios.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnPXO
+            // 
+            this.btnPXO.BackgroundImage = global::Consultorio.Properties.Resources.equipo;
+            this.btnPXO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPXO.FlatAppearance.BorderSize = 0;
+            this.btnPXO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPXO.Location = new System.Drawing.Point(410, 5);
+            this.btnPXO.Name = "btnPXO";
+            this.btnPXO.Size = new System.Drawing.Size(60, 60);
+            this.btnPXO.TabIndex = 2;
+            this.btnPXO.UseVisualStyleBackColor = true;
+            this.btnPXO.Click += new System.EventHandler(this.btnPXO_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Consultorio.Properties.Resources.comfortable1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(537, 118);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(453, 198);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(248, 29);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Practicas por consulta";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // frmReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -505,5 +533,7 @@
         private System.Windows.Forms.Button btnTurnosConcretados;
         private System.Windows.Forms.Label lblPracticasAño;
         private System.Windows.Forms.Button btnPracticasAño;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }

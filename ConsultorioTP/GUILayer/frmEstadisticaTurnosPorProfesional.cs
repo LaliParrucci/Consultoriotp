@@ -59,7 +59,7 @@ namespace Consultorio.GUILayer
                 _profesional = cboProfesional.SelectedValue.ToString();
 
             DataTable tabla1 = new DataTable();
-            tabla1 = oTurnoService.recuperarTurnoFechaProfesional(_profesional, dtpDesde1.Value, dtpHasta1.Value, dtpDesde2.Value, dtpHasta2.Value);
+            /*tabla1 = oTurnoService.recuperarTurnoFechaProfesional(_profesional, dtpDesde1.Value, dtpHasta1.Value, dtpDesde2.Value, dtpHasta2.Value);
             if (tabla1.Rows.Count == 0 )
             {
                 MessageBox.Show("No existen datos con esas condiciones...");
@@ -80,7 +80,12 @@ namespace Consultorio.GUILayer
 
             }
 
-            cboProfesional.SelectedIndex = -1;
+            cboProfesional.SelectedIndex = -1;*/
+        }
+
+        private void cboProfesional_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
