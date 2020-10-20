@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Consultorio.DataAccessLayer;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Consultorio.BussinessLayer
 {
@@ -61,6 +62,11 @@ namespace Consultorio.BussinessLayer
         public bool modificarTurnoConHistorialS(Turno oTurno, string observacion, Turno turnoViejo)
         {
             return oTurnoDao.modificarTurnoConHistorial(oTurno, observacion, turnoViejo);
+        }
+
+        public DataTable estadisticaConcretados(string desde, string hasta)
+        {
+            return oTurnoDao.estadisticaConcretados(desde, hasta);
         }
     }
 }

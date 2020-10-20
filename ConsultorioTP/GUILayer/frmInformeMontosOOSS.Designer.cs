@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.dsMontosOOSSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorioOdontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Consultorio_OdontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
+            this.dsMontosOOSSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rpvMontos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.grpFiltros = new System.Windows.Forms.GroupBox();
@@ -39,22 +40,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.consultorioOdontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dsMontosOOSSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).BeginInit();
-            this.grpFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMontosOOSSBindingSource)).BeginInit();
+            this.grpFiltros.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dsMontosOOSSBindingSource
+            // consultorioOdontologicoTodasBindingSource
             // 
-            this.dsMontosOOSSBindingSource.DataSource = this.Consultorio_OdontologicoTodas;
-            this.dsMontosOOSSBindingSource.Position = 0;
+            this.consultorioOdontologicoTodasBindingSource.DataSource = this.Consultorio_OdontologicoTodas;
+            this.consultorioOdontologicoTodasBindingSource.Position = 0;
             // 
             // Consultorio_OdontologicoTodas
             // 
             this.Consultorio_OdontologicoTodas.DataSetName = "Consultorio_OdontologicoTodas";
             this.Consultorio_OdontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsMontosOOSSBindingSource
+            // 
+            this.dsMontosOOSSBindingSource.DataSource = this.Consultorio_OdontologicoTodas;
+            this.dsMontosOOSSBindingSource.Position = 0;
             // 
             // rpvMontos
             // 
@@ -67,7 +72,7 @@
             this.rpvMontos.ServerReport.BearerToken = null;
             this.rpvMontos.Size = new System.Drawing.Size(775, 529);
             this.rpvMontos.TabIndex = 0;
-            this.rpvMontos.Load += new System.EventHandler(this.rptMontosOOSS_Load);
+            this.rpvMontos.Load += new System.EventHandler(this.rpvMontos_Load);
             // 
             // btnGenerar
             // 
@@ -131,11 +136,6 @@
             this.dtpDesde.TabIndex = 2;
             this.dtpDesde.Value = new System.DateTime(2020, 10, 1, 0, 0, 0, 0);
             // 
-            // consultorioOdontologicoTodasBindingSource
-            // 
-            this.consultorioOdontologicoTodasBindingSource.DataSource = this.Consultorio_OdontologicoTodas;
-            this.consultorioOdontologicoTodasBindingSource.Position = 0;
-            // 
             // frmInformeMontosOOSS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,11 +146,11 @@
             this.Name = "frmInformeMontosOOSS";
             this.Text = "frmInformeMontosOOSS";
             this.Load += new System.EventHandler(this.frmInformeMontosOOSS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsMontosOOSSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMontosOOSSBindingSource)).EndInit();
             this.grpFiltros.ResumeLayout(false);
             this.grpFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

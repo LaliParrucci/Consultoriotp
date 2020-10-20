@@ -30,19 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.gpbInsumos = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gpbInsumos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.rpvReporteInsumos = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.gpbInsumos.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gpbInsumos
             // 
@@ -50,11 +60,11 @@
             this.gpbInsumos.Controls.Add(this.textBox1);
             this.gpbInsumos.Controls.Add(this.label2);
             this.gpbInsumos.Controls.Add(this.label1);
-            this.gpbInsumos.Controls.Add(this.button1);
+            this.gpbInsumos.Controls.Add(this.btnConsultar);
             this.gpbInsumos.Location = new System.Drawing.Point(8, 8);
-            this.gpbInsumos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbInsumos.Margin = new System.Windows.Forms.Padding(2);
             this.gpbInsumos.Name = "gpbInsumos";
-            this.gpbInsumos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbInsumos.Padding = new System.Windows.Forms.Padding(2);
             this.gpbInsumos.Size = new System.Drawing.Size(667, 106);
             this.gpbInsumos.TabIndex = 0;
             this.gpbInsumos.TabStop = false;
@@ -63,7 +73,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(146, 40);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(114, 20);
             this.textBox2.TabIndex = 4;
@@ -71,7 +81,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(358, 40);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(115, 20);
             this.textBox1.TabIndex = 3;
@@ -96,55 +106,46 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Stock desde:";
             // 
-            // button1
+            // btnConsultar
             // 
-            this.button1.Location = new System.Drawing.Point(554, 67);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultar.Location = new System.Drawing.Point(554, 67);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(93, 34);
+            this.btnConsultar.TabIndex = 0;
+            this.btnConsultar.Text = "Generar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // reportViewer2
+            // rpvReporteInsumos
             // 
             reportDataSource1.Name = "DataInsumos";
             reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Informes.ReporteListadoInsumos.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(8, 118);
-            this.reportViewer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(667, 292);
-            this.reportViewer2.TabIndex = 1;
-            // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultorioodontologicoTodasBindingSource
-            // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            this.rpvReporteInsumos.LocalReport.DataSources.Add(reportDataSource1);
+            this.rpvReporteInsumos.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Informes.ReporteListadoInsumos.rdlc";
+            this.rpvReporteInsumos.Location = new System.Drawing.Point(8, 118);
+            this.rpvReporteInsumos.Margin = new System.Windows.Forms.Padding(2);
+            this.rpvReporteInsumos.Name = "rpvReporteInsumos";
+            this.rpvReporteInsumos.ServerReport.BearerToken = null;
+            this.rpvReporteInsumos.Size = new System.Drawing.Size(667, 292);
+            this.rpvReporteInsumos.TabIndex = 1;
+            this.rpvReporteInsumos.Load += new System.EventHandler(this.rpvReporteInsumos_Load);
             // 
             // frmReporteListadoInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 417);
-            this.Controls.Add(this.reportViewer2);
+            this.Controls.Add(this.rpvReporteInsumos);
             this.Controls.Add(this.gpbInsumos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReporteListadoInsumos";
             this.Text = "Listado de Insumos por stock";
             this.Load += new System.EventHandler(this.frmReporteListadoInsumos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.gpbInsumos.ResumeLayout(false);
             this.gpbInsumos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,8 +153,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpbInsumos;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
-        private System.Windows.Forms.Button button1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvReporteInsumos;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;

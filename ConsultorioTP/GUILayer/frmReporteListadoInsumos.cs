@@ -25,20 +25,6 @@ namespace Consultorio.GUILayer
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DataTable table = new DataTable();
-            table = generador();
-
-            ReportDataSource rp = new ReportDataSource("DataInsumos", table);
-
-            reportViewer2.LocalReport.DataSources.Clear();
-            reportViewer2.LocalReport.DataSources.Add(rp);
-            reportViewer2.LocalReport.Refresh();
-
-            this.reportViewer2.RefreshReport();
-        }
-
         private DataTable generador()
         {
             String msg = "";
@@ -60,6 +46,30 @@ namespace Consultorio.GUILayer
 
             }
             return filtros.ObtenerListadoInsumos();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            cargar();
+        }
+
+        private void rpvReporteInsumos_Load(object sender, EventArgs e)
+        {
+            cargar();
+        }
+
+        private void cargar()
+        {
+            DataTable table = new DataTable();
+            table = generador();
+
+            ReportDataSource rp = new ReportDataSource("DataInsumos", table);
+
+            rpvReporteInsumos.LocalReport.DataSources.Clear();
+            rpvReporteInsumos.LocalReport.DataSources.Add(rp);
+            rpvReporteInsumos.LocalReport.Refresh();
+
+            this.rpvReporteInsumos.RefreshReport();
         }
     }
 }

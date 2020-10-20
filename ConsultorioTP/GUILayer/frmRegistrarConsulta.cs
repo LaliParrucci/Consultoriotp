@@ -40,6 +40,12 @@ namespace Consultorio.GUILayer
            txtPaciente.Enabled = txtObraSocial.Enabled = txtNombreProfesional.Enabled = txtObservaciones.Enabled = cboPracticas.Enabled = txtImporte.Enabled = txtImporteTotal.Enabled = txtDescuento.Enabled = x;
         }
 
+        private void limpiarCampos()
+        {
+            dgvPracticas.Rows.Clear();
+            txtApellidoProfesional.Text = txtDescuento.Text = txtDni.Text = txtImporte.Text = txtImporteTotal.Text = txtNombreProfesional.Text = txtObraSocial.Text = txtObservaciones.Text = txtPaciente.Text = "";
+        }
+
         private void frmRegistrarConsulta_Load(object sender, EventArgs e)
         {
             this.habilitar(false);
@@ -57,17 +63,25 @@ namespace Consultorio.GUILayer
                 else { MessageBox.Show("Ingrese un número de DNI válido", "DNI incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 if (oPaciente != null)
                 {
-                    oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
-                    oObraSocial = oObraSocialService.recuperarObraSocialPorCodigo(oTurno.Id_obra_social);
-                    oProfesionalE = oProfesionalService.recuperarProfesionalPorMatricula(oTurno.Id_profesional);
+                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020/10/12"), txtDni.Text);
+                    //oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
+                    if (oTurno != null)
+                    {
+                        oObraSocial = oObraSocialService.recuperarObraSocialPorCodigo(oTurno.Id_obra_social);
+                        oProfesionalE = oProfesionalService.recuperarProfesionalPorMatricula(oTurno.Id_profesional);
 
-                    txtPaciente.Text = oPaciente.Apellido + ", " + oPaciente.Nombre;
-                    txtObraSocial.Text = oObraSocial.Nombre;
-                    txtNombreProfesional.Text = oProfesionalE.Nombre;
-                    txtApellidoProfesional.Text = oProfesionalE.Apellido;
-                    txtDescuento.Text = oObraSocial.Porcentaje.ToString();
+                        txtPaciente.Text = oPaciente.Apellido + ", " + oPaciente.Nombre;
+                        txtObraSocial.Text = oObraSocial.Nombre;
+                        txtNombreProfesional.Text = oProfesionalE.Nombre;
+                        txtApellidoProfesional.Text = oProfesionalE.Apellido;
+                        txtDescuento.Text = oObraSocial.Porcentaje.ToString();
 
-                    cargarCombo(cboPracticas, oPracticaService.recuperarPracticas(), "nombre", "id_practica");
+                        cargarCombo(cboPracticas, oPracticaService.recuperarPracticas(), "nombre", "id_practica");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El paciente que seleccionó no tiene ningún turno asignado", "No se encontró el turno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
@@ -98,10 +112,9 @@ namespace Consultorio.GUILayer
 
             cargarGrilla(dgvPracticas, oPractica);
 
-            this.importeS += oPractica.Importe;
-            this.importeTotal = importeS * oObraSocial.Porcentaje;
+            this.importeTotal = importeTotal + (oPractica.Importe * oObraSocial.Porcentaje);
 
-            txtImporte.Text = importeS.ToString();
+            txtImporte.Text = oPractica.Importe.ToString();
             txtImporteTotal.Text = importeTotal.ToString();
             
         }
@@ -148,18 +161,30 @@ namespace Consultorio.GUILayer
                         practicas += oPracticaService.recuperarPracticasPorNom(Datarow.Cells[0].Value.ToString()).Id_practica + ", ";
                     }
                 }
-                
-                oConsulta.Fecha = DateTime.Today;
+
+                //oConsulta.Fecha = DateTime.Today;
+                oConsulta.Fecha = Convert.ToDateTime("2020-10-12");
                 oConsulta.Id_paciente = oPaciente.Dni;
                 oConsulta.Practicas_realizadas = practicas;
-                oConsulta.Cobrado = Convert.ToBoolean(chCobrado);
+                oConsulta.Cobrado = Convert.ToBoolean(chCobrado.Checked);
                 oConsulta.Id_profesional = oProfesionalE.Matricula;
-                oConsulta.Monto = Convert.ToInt32(txtImporteTotal);
+                oConsulta.Monto = Convert.ToSingle(txtImporteTotal.Text);
                 oConsulta.Num_turno = oTurno.Num_turno;
                 oConsulta.Observacion = txtObservaciones.Text;
 
-                oConsultaService.crearConsultaTransaccion(oConsulta);
+                if (oConsultaService.crearConsultaTransaccion(oConsulta))
+                {
+                    MessageBox.Show("La consulta se registró correctamente", "Consulta registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un problema con el registro de la consulta", "Consulta no registrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                importeS = 0; importeTotal = 500;
             }
+
+            
         }
 
         private bool validarCampos()
@@ -169,11 +194,11 @@ namespace Consultorio.GUILayer
                 MessageBox.Show("Debe ingresar un dni...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if(txtPaciente.Text == "")
-            {
-                MessageBox.Show("Debe ingresar un paciente primero...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
+            //if(txtPaciente.Text == "")
+            //{
+            //    MessageBox.Show("Debe ingresar un paciente primero...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return false;
+            //}
             return true;
         }
     }

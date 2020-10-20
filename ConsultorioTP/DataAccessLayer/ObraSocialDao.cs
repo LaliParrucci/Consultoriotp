@@ -113,9 +113,21 @@ namespace Consultorio.DataAccessLayer
                 " from obra_social o" +
                 " join turno t on t.id_obra_social = o.cod_obra_social" +
                 " join consulta c on c.num_turno = t.num_turno" +
-                " where t.borrado = 0 and o.borrado = 0 and (t.fecha BETWEEN '"+fechaDesde+"' and '"+fechaHasta+
+                " where t.borrado = 0 and o.borrado = 0 and (t.fecha BETWEEN '" + fechaDesde + "' and '" + fechaHasta +
                 "') group by o.cod_obra_social, o.nombre";
             return DBHelper.GetDBHelper().reporte(sql);
         }
+
+        public DataTable obrasSocialesEstadistica(string fechaDesde, string fechaHasta)
+        {
+            string sql = "select o.nombre, count(t.id_obra_social) as cantidad" +
+                " from obra_social o" +
+                " join turno t on t.id_obra_social = o.cod_obra_social" +
+                " join consulta c on c.num_turno = t.num_turno" +
+                " where c.fecha between '" + fechaDesde + "' and '" + fechaHasta +
+                "' group by o.cod_obra_social, o.nombre";
+            return DBHelper.GetDBHelper().reporte(sql);
+
+        }
     }
-}
+} 

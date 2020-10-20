@@ -86,5 +86,17 @@ namespace Consultorio.GUILayer
             frmEstadisticasOconMasPacientes ventana = new frmEstadisticasOconMasPacientes();
             ventana.ShowDialog();
         }
+
+        private void btnEstadisticaOOSSmasUsadas_Click(object sender, EventArgs e)
+        {
+            frmEstadísticaOOSS ventana = new frmEstadísticaOOSS();
+            ventana.ShowDialog();
+        }
+
+        private void btnTurnosConcretados_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaTurnosConcretados ventana = new frmEstadisticaTurnosConcretados();
+            ventana.ShowDialog();
+        }
     }
 }

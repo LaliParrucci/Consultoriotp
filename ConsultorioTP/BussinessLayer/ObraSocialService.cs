@@ -77,6 +77,11 @@ namespace Consultorio.BussinessLayer
         {
             oObraSocialDao.baja(codigo);
         }
+
+        public DataTable obrasSocialesEstadistica(string fechaDesde, string fechaHasta)
+        {
+            return oObraSocialDao.obrasSocialesEstadistica(fechaDesde, fechaHasta);
+        }
     }
 
 

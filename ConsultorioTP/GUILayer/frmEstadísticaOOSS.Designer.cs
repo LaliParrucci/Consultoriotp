@@ -1,6 +1,6 @@
 ﻿namespace Consultorio.GUILayer
 {
-    partial class frmReporteObrasMasUtilizadas
+    partial class frmEstadísticaOOSS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteObrasMasUtilizadas));
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblFechaHasta = new System.Windows.Forms.Label();
@@ -40,23 +35,9 @@
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
-            this.rpObrasMasUtilizadas = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorioodontologicoTodasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.rpvEstadisticaOOSS = new Microsoft.Reporting.WinForms.ReportViewer();
             this.gbxFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // consultorioodontologicoTodasBindingSource
-            // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
-            // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gbxFiltros
             // 
@@ -67,12 +48,12 @@
             this.gbxFiltros.Controls.Add(this.lblPeriodo);
             this.gbxFiltros.Controls.Add(this.lblFechaDesde);
             this.gbxFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxFiltros.Location = new System.Drawing.Point(13, 13);
+            this.gbxFiltros.Location = new System.Drawing.Point(1, 0);
             this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
             this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Size = new System.Drawing.Size(634, 128);
-            this.gbxFiltros.TabIndex = 1;
+            this.gbxFiltros.TabIndex = 2;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
             // 
@@ -102,6 +83,7 @@
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(113, 24);
             this.dtpHasta.TabIndex = 5;
+            this.dtpHasta.Value = new System.DateTime(2020, 10, 31, 0, 0, 0, 0);
             // 
             // dtpDesde
             // 
@@ -110,6 +92,7 @@
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(111, 24);
             this.dtpDesde.TabIndex = 4;
+            this.dtpDesde.Value = new System.DateTime(2020, 10, 1, 0, 0, 0, 0);
             // 
             // lblPeriodo
             // 
@@ -130,39 +113,29 @@
             this.lblFechaDesde.TabIndex = 2;
             this.lblFechaDesde.Text = "Fecha Desde:";
             // 
-            // rpObrasMasUtilizadas
+            // rpvEstadisticaOOSS
             // 
-            reportDataSource1.Name = "dsOmasUtilizadas";
-            reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
-            this.rpObrasMasUtilizadas.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpObrasMasUtilizadas.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Informes.rpObrasMasUtilizadas.rdlc";
-            this.rpObrasMasUtilizadas.Location = new System.Drawing.Point(13, 148);
-            this.rpObrasMasUtilizadas.Name = "rpObrasMasUtilizadas";
-            this.rpObrasMasUtilizadas.ServerReport.BearerToken = null;
-            this.rpObrasMasUtilizadas.Size = new System.Drawing.Size(634, 290);
-            this.rpObrasMasUtilizadas.TabIndex = 2;
+            this.rpvEstadisticaOOSS.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.estadisticaOOSSMasUsadas.rdlc";
+            this.rpvEstadisticaOOSS.Location = new System.Drawing.Point(1, 135);
+            this.rpvEstadisticaOOSS.Name = "rpvEstadisticaOOSS";
+            this.rpvEstadisticaOOSS.ServerReport.BearerToken = null;
+            this.rpvEstadisticaOOSS.Size = new System.Drawing.Size(634, 318);
+            this.rpvEstadisticaOOSS.TabIndex = 3;
+            this.rpvEstadisticaOOSS.Load += new System.EventHandler(this.rpvEstadisticaOOSS_Load);
             // 
-            // consultorioodontologicoTodasBindingSource1
-            // 
-            this.consultorioodontologicoTodasBindingSource1.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource1.Position = 0;
-            // 
-            // frmReporteObrasMasUtilizadas
+            // frmEstadísticaOOSS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 450);
-            this.Controls.Add(this.rpObrasMasUtilizadas);
+            this.ClientSize = new System.Drawing.Size(644, 453);
+            this.Controls.Add(this.rpvEstadisticaOOSS);
             this.Controls.Add(this.gbxFiltros);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmReporteObrasMasUtilizadas";
-            this.Text = "Visualizador reporte de Obras Sociales más utilizadas";
-            this.Load += new System.EventHandler(this.frmReporteObrasMasUtilizadas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
+            this.Name = "frmEstadísticaOOSS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Visualizador estadística de Obras Sociales más utilizadas";
+            this.Load += new System.EventHandler(this.frmEstadísticaOOSS_Load);
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,9 +149,6 @@
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.Label lblFechaDesde;
-        private Microsoft.Reporting.WinForms.ReportViewer rpObrasMasUtilizadas;
-        private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
-        private consultorio_odontologicoTodas consultorio_odontologicoTodas;
-        private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvEstadisticaOOSS;
     }
 }

@@ -26,12 +26,18 @@ namespace Consultorio.GUILayer
             this.rpvMontos.RefreshReport();
         }
 
-        private void rptMontosOOSS_Load(object sender, EventArgs e)
+        private void btnGenerar_Click(object sender, EventArgs e)
         {
-
+            cargar();
         }
 
-        private void btnGenerar_Click(object sender, EventArgs e)
+
+        private void rpvMontos_Load(object sender, EventArgs e)
+        {
+            cargar();
+        }
+
+        private void cargar()
         {
             DataTable tabla = new DataTable();
 
@@ -50,7 +56,10 @@ namespace Consultorio.GUILayer
 
                 this.rpvMontos.RefreshReport();
             }
-            else { MessageBox.Show("Seleccione un rango de fechas válido", "Error en rango de fechas", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else
+            {
+                MessageBox.Show("Seleccione un rango de fechas válido", "Error en rango de fechas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

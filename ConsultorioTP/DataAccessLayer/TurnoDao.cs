@@ -53,7 +53,7 @@ namespace Consultorio.DataAccessLayer
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoTodosTurnos.Add(crearObjDisponibilidad(row));
+                listadoTodosTurnos.Add(crearObjDisponibilidadPaciente(row));
             }
 
             return listadoTodosTurnos;
@@ -149,18 +149,13 @@ namespace Consultorio.DataAccessLayer
             oDisponibilidad.Fecha = Convert.ToDateTime(row["fecha"].ToString());
             oDisponibilidad.Hora = row["Hora"].ToString();
             oDisponibilidad.Disponible =Convert.ToBoolean(row["Disponible"]);
-            oDisponibilidad.Paciente = Service.convertirA0(row["id_paciente"].ToString());
-            return oDisponibilidad;
-        }
-
-        private Disponibilidad crearObjDisponibilidad(DataRow row)
-        {//creo nueva instancia de usuario con los parámetros de abajo
-            Disponibilidad oDisponibilidad = new Disponibilidad();
-            oDisponibilidad.Matricula = Convert.ToInt32(row["Matricula"].ToString());
-            oDisponibilidad.Fecha = Convert.ToDateTime(row["fecha"].ToString());
-            oDisponibilidad.Hora = row["Hora"].ToString();
-            oDisponibilidad.Disponible = Convert.ToBoolean(row["Disponible"]);
-            //oDisponibilidad.Paciente = Service.convertirA0(row["id_paciente"].ToString());
+            try
+            {
+                oDisponibilidad.Paciente = Service.convertirA0(row["id_paciente"].ToString());
+            }catch(Exception e)
+            {
+                return oDisponibilidad;
+            }
             return oDisponibilidad;
         }
 
@@ -305,5 +300,14 @@ namespace Consultorio.DataAccessLayer
             return DBHelper.GetDBHelper().reporte(sql);
         }
 
+        public DataTable estadisticaConcretados(string desde, string hasta)
+        {
+            string sql = "select count(*) as no_concretados, count(c.num_turno) as concretados" +
+                " from turno t" +
+                " left join consulta c on t.num_turno = c.num_turno" +
+                " where t.fecha between '" + desde + "' and '" + hasta + "'";
+            return DBHelper.GetDBHelper().reporte(sql);
+
+        }
     }
 }
