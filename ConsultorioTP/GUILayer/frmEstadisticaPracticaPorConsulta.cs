@@ -76,7 +76,7 @@ namespace Consultorio.GUILayer
                 return;
             }
             DataTable tabla = new DataTable();
-            tabla = oConsultaService.recuperarPacientesPorProfesionalPorfecha(dtpDsd.Value, dtpHst.Value);
+            tabla = oConsultaService.;
             if (tabla.Rows.Count == 0)
             {
                 MessageBox.Show("No existen datos con esas condiciones...");
