@@ -87,5 +87,10 @@ namespace Consultorio.GUILayer
         {
 
         }
+
+        private void dtpDesde1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

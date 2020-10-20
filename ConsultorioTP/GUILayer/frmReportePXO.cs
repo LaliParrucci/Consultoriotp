@@ -84,5 +84,10 @@ namespace Consultorio.GUILayer
 
             cboProfesional.SelectedIndex = -1;
         }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

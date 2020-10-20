@@ -82,6 +82,7 @@
             this.dtpDesde1.Name = "dtpDesde1";
             this.dtpDesde1.Size = new System.Drawing.Size(111, 33);
             this.dtpDesde1.TabIndex = 4;
+            this.dtpDesde1.ValueChanged += new System.EventHandler(this.dtpDesde1_ValueChanged);
             // 
             // lblDesde1
             // 

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.dtpDsd = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtpHst = new System.Windows.Forms.DateTimePicker();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.cboPractica = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Fecha Desde:";
             // 
-            // dtpDesde
+            // dtpDsd
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(238, 140);
-            this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(200, 26);
-            this.dtpDesde.TabIndex = 4;
+            this.dtpDsd.Location = new System.Drawing.Point(238, 140);
+            this.dtpDsd.Name = "dtpDsd";
+            this.dtpDsd.Size = new System.Drawing.Size(200, 26);
+            this.dtpDsd.TabIndex = 4;
             // 
             // label2
             // 
@@ -64,12 +64,12 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Fecha Hasta:";
             // 
-            // dtpHasta
+            // dtpHst
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(607, 140);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 26);
-            this.dtpHasta.TabIndex = 6;
+            this.dtpHst.Location = new System.Drawing.Point(609, 134);
+            this.dtpHst.Name = "dtpHst";
+            this.dtpHst.Size = new System.Drawing.Size(200, 26);
+            this.dtpHst.TabIndex = 6;
             // 
             // btnConsultar
             // 
@@ -80,6 +80,7 @@
             this.btnConsultar.TabIndex = 8;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cboPractica
             // 
@@ -117,9 +118,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboPractica);
             this.Controls.Add(this.btnConsultar);
-            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.dtpHst);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtpDesde);
+            this.Controls.Add(this.dtpDsd);
             this.Controls.Add(this.label1);
             this.Name = "frmEstadisticaPracticaPorConsulta";
             this.Text = "Visualizacion de estadisticas de practicas por consulta";
@@ -132,9 +133,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.DateTimePicker dtpDsd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.DateTimePicker dtpHst;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.ComboBox cboPractica;
         private System.Windows.Forms.Label label3;

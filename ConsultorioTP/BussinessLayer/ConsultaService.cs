@@ -64,6 +64,9 @@ namespace Consultorio.BussinessLayer
         //    if (this.recuperarInsumoPorId(id) != null) { return true; }
         //    return false;
         //}
-
+        public DataTable estadisticasConsulta(string desde, string hasta)
+        {
+            return oConsultaDao.estadisticasConsulta(desde, hasta);
+        }
     }
 }

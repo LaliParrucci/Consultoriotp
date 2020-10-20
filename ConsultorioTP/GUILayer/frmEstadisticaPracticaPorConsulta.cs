@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 
 namespace Consultorio.GUILayer
@@ -16,6 +17,8 @@ namespace Consultorio.GUILayer
     {
 
         PracticaService oPracticaService = new PracticaService();
+        ConsultaService oConsultaService = new ConsultaService();
+        
 
         public frmEstadisticaPracticaPorConsulta()
         {
@@ -27,6 +30,7 @@ namespace Consultorio.GUILayer
 
             this.reportViewer1.RefreshReport();
             cargarCombo(cboPractica, oPracticaService.recuperarPracticas(), "Nombre", "id_practica");
+
         }
         private void cargarCombo(ComboBox combo, Object source, string display, string value)
         {
@@ -36,12 +40,32 @@ namespace Consultorio.GUILayer
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
             combo.SelectedIndex = -1;
         }
+        public void cargar()
+        {
+            if (dtpDsd.Value < dtpHst.Value)
+            {
+                string fecha_desde = dtpDsd.Value.Date.ToString("yyyy-MM-dd");
+                string fecha_hasta = dtpHst.Value.Date.ToString("yyyy-MM-dd");
+                DataTable tabla = oConsultaService.estadisticasConsulta(fecha_desde,fecha_hasta);
+
+                ReportDataSource ds = new ReportDataSource("DatosConsulta", tabla);
+
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(ds);
+                reportViewer1.LocalReport.Refresh();
+            }
+        }
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
         }
 
         private void cboProfesional_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
 
         }

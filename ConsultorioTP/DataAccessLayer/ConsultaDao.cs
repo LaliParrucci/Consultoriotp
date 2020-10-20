@@ -79,6 +79,16 @@ namespace Consultorio.DataAccessLayer
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
 
+        public DataTable estadisticasConsulta(string desde, string hasta)
+        {
+            string sql = "select count(*) as cant" +
+                " from consulta c" +
+                " left join practica p on t.num_turno = c.num_turno" +
+                " where t.fecha between '" + desde + "' and '" + hasta + "'";
+            return DBHelper.GetDBHelper().reporte(sql);
+
+        }
+
         public bool crearConsulta(Consulta oConsulta)
         {
             DataManager dm = new DataManager();
@@ -142,6 +152,7 @@ namespace Consultorio.DataAccessLayer
                 // Cierra la conexión 
                 dm.Close();
             }
+          
         }
     }
 }
