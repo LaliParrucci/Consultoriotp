@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticasOconMasPacientes));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,7 +38,9 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.rpOmP = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,12 +93,20 @@
             // 
             // rpOmP
             // 
+            reportDataSource1.Name = "DataSetOdont";
+            reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
+            this.rpOmP.LocalReport.DataSources.Add(reportDataSource1);
             this.rpOmP.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.esOconMasPaciente.rdlc";
             this.rpOmP.Location = new System.Drawing.Point(12, 142);
             this.rpOmP.Name = "rpOmP";
             this.rpOmP.ServerReport.BearerToken = null;
             this.rpOmP.Size = new System.Drawing.Size(784, 469);
             this.rpOmP.TabIndex = 6;
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
             // 
             // frmEstadisticasOconMasPacientes
             // 
@@ -109,11 +121,12 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEstadisticasOconMasPacientes";
             this.Text = "Visualizador estadísticas Odontólogos";
             this.Load += new System.EventHandler(this.frmEstadisticasOconMasPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button btnGenerar;
         private consultorio_odontologicoTodas consultorio_odontologicoTodas;
         private Microsoft.Reporting.WinForms.ReportViewer rpOmP;
+        private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
     }
 }
