@@ -54,12 +54,14 @@
             this.pnlTitulo2 = new System.Windows.Forms.Panel();
             this.lblEstadis = new System.Windows.Forms.Label();
             this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnTurnosConcretados = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEstadisticaOOSSmasUsadas = new System.Windows.Forms.Button();
             this.lblOdonConMasPacientes = new System.Windows.Forms.Label();
             this.btnOconMasPacientes = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnTurnosConcretados = new System.Windows.Forms.Button();
+            this.btnPracticasAño = new System.Windows.Forms.Button();
+            this.lblPracticasAño = new System.Windows.Forms.Label();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -344,6 +346,8 @@
             // 
             // pnlCuerpoEstadisticas
             // 
+            this.pnlCuerpoEstadisticas.Controls.Add(this.lblPracticasAño);
+            this.pnlCuerpoEstadisticas.Controls.Add(this.btnPracticasAño);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label6);
             this.pnlCuerpoEstadisticas.Controls.Add(this.btnTurnosConcretados);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label7);
@@ -355,6 +359,25 @@
             this.pnlCuerpoEstadisticas.Name = "pnlCuerpoEstadisticas";
             this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoEstadisticas.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(338, 69);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 56);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Turnos concretados";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnTurnosConcretados
+            // 
+            this.btnTurnosConcretados.Location = new System.Drawing.Point(362, 25);
+            this.btnTurnosConcretados.Name = "btnTurnosConcretados";
+            this.btnTurnosConcretados.Size = new System.Drawing.Size(75, 23);
+            this.btnTurnosConcretados.TabIndex = 24;
+            this.btnTurnosConcretados.Text = "button1";
+            this.btnTurnosConcretados.UseVisualStyleBackColor = true;
+            this.btnTurnosConcretados.Click += new System.EventHandler(this.btnTurnosConcretados_Click);
             // 
             // label7
             // 
@@ -397,24 +420,26 @@
             this.btnOconMasPacientes.UseVisualStyleBackColor = true;
             this.btnOconMasPacientes.Click += new System.EventHandler(this.btnOconMasPacientes_Click);
             // 
-            // label6
+            // btnPracticasAño
             // 
-            this.label6.Location = new System.Drawing.Point(338, 69);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 56);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Turnos concretados";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPracticasAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
+            this.btnPracticasAño.BackgroundImage = global::Consultorio.Properties.Resources.medical_book;
+            this.btnPracticasAño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPracticasAño.Location = new System.Drawing.Point(521, 6);
+            this.btnPracticasAño.Name = "btnPracticasAño";
+            this.btnPracticasAño.Size = new System.Drawing.Size(60, 60);
+            this.btnPracticasAño.TabIndex = 26;
+            this.btnPracticasAño.UseVisualStyleBackColor = false;
+            this.btnPracticasAño.Click += new System.EventHandler(this.btnPracticasAño_Click);
             // 
-            // btnTurnosConcretados
+            // lblPracticasAño
             // 
-            this.btnTurnosConcretados.Location = new System.Drawing.Point(362, 25);
-            this.btnTurnosConcretados.Name = "btnTurnosConcretados";
-            this.btnTurnosConcretados.Size = new System.Drawing.Size(75, 23);
-            this.btnTurnosConcretados.TabIndex = 24;
-            this.btnTurnosConcretados.Text = "button1";
-            this.btnTurnosConcretados.UseVisualStyleBackColor = true;
-            this.btnTurnosConcretados.Click += new System.EventHandler(this.btnTurnosConcretados_Click);
+            this.lblPracticasAño.AutoSize = true;
+            this.lblPracticasAño.Location = new System.Drawing.Point(488, 69);
+            this.lblPracticasAño.Name = "lblPracticasAño";
+            this.lblPracticasAño.Size = new System.Drawing.Size(126, 18);
+            this.lblPracticasAño.TabIndex = 27;
+            this.lblPracticasAño.Text = "Practicas por Año";
             // 
             // frmReportes
             // 
@@ -440,6 +465,7 @@
             this.pnlTitulo2.ResumeLayout(false);
             this.pnlTitulo2.PerformLayout();
             this.pnlCuerpoEstadisticas.ResumeLayout(false);
+            this.pnlCuerpoEstadisticas.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -477,5 +503,7 @@
         private System.Windows.Forms.Button btnEstadisticaOOSSmasUsadas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTurnosConcretados;
+        private System.Windows.Forms.Label lblPracticasAño;
+        private System.Windows.Forms.Button btnPracticasAño;
     }
 }

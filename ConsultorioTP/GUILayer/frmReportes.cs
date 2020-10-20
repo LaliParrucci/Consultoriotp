@@ -98,5 +98,11 @@ namespace Consultorio.GUILayer
             frmEstadisticaTurnosConcretados ventana = new frmEstadisticaTurnosConcretados();
             ventana.ShowDialog();
         }
+
+        private void btnPracticasAño_Click(object sender, EventArgs e)
+        {
+            frmEstadisticasPracticasAño frm = new frmEstadisticasPracticasAño();
+            frm.ShowDialog();
+        }
     }
 }

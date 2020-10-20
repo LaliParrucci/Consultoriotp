@@ -44,6 +44,15 @@ namespace Consultorio.DataAccessLayer
 
             return null;
         }
+
+        internal DataTable recuperarPracticasAño(string año)
+        {
+            String consultaSql = string.Concat("Select c.practicas_realizadas, COUNT(c.practicas_realizadas) as Cantidad de prácticas",
+                                                " From consulta c ",
+                                                " Where fecha like '%", año, "%' group by practicas_realizadas");
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+        }
+
         private Consulta crearObjConsulta(DataRow row)
         {
             Consulta oConsulta = new Consulta();
