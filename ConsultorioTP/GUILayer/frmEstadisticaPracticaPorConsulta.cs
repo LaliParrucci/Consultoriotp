@@ -27,7 +27,8 @@ namespace Consultorio.GUILayer
 
         private void frmEstadisticaPracticaPorConsulta_Load(object sender, EventArgs e)
         {
-
+            dtpDsd.Value = DateTime.Today;
+            dtpHst.Value = DateTime.Today;
             this.reportViewer1.RefreshReport();
             cargarCombo(cboPractica, oPracticaService.recuperarPracticas(), "Nombre", "id_practica");
 
@@ -68,6 +69,28 @@ namespace Consultorio.GUILayer
         private void btnConsultar_Click(object sender, EventArgs e)
         {
 
+            if (dtpDsd.Value > dtpHst.Value)
+            {
+                MessageBox.Show("Las fechas no son correctas");
+                dtpDsd.Focus();
+                return;
+            }
+            DataTable tabla = new DataTable();
+            tabla = oConsultaService.recuperarPacientesPorProfesionalPorfecha(dtpDsd.Value, dtpHst.Value);
+            if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("No existen datos con esas condiciones...");
+                dtpDsd.Value = DateTime.Today;
+                dtpHst.Value = DateTime.Today;
+
+            }
+            else
+            {
+                ReportDataSource ds = new ReportDataSource("DatosConsulta", tabla);
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(ds);
+                this.reportViewer1.RefreshReport();
+            }
         }
     }
 }
