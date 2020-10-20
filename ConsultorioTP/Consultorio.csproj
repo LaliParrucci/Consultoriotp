@@ -173,6 +173,12 @@
     <Compile Include="GUILayer\frmEstadisticaTurnosConcretados.Designer.cs">
       <DependentUpon>frmEstadisticaTurnosConcretados.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmEstadisticaTurnosPorProfesional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmEstadisticaTurnosPorProfesional.Designer.cs">
+      <DependentUpon>frmEstadisticaTurnosPorProfesional.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmEstadísticaOOSS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,7 @@
     <EmbeddedResource Include="GUILayer\Estadisticas\estadisticaOOSSMasUsadas.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\estadisticaTurnosConcretados.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\esPracticasAño.rdlc" />
+    <EmbeddedResource Include="GUILayer\Estadisticas\esTrunoPorProfesional.rdlc" />
     <EmbeddedResource Include="GUILayer\frmAbmInsumo.resx">
       <DependentUpon>frmAbmInsumo.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmEstadisticaTurnosConcretados.resx">
       <DependentUpon>frmEstadisticaTurnosConcretados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmEstadisticaTurnosPorProfesional.resx">
+      <DependentUpon>frmEstadisticaTurnosPorProfesional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmEstadísticaOOSS.resx">
       <DependentUpon>frmEstadísticaOOSS.cs</DependentUpon>
