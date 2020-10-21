@@ -16,7 +16,7 @@ namespace Consultorio.DataAccessLayer
         {
             List<Consulta> listadoConsultas = new List<Consulta>();
 
-            var strSql = "SELECT id_consulta, fecha, id_paciente, practicas_realizadas, cobrado, id_profesional" +
+            var strSql = "SELECT id_consulta, fecha, id_paciente, cobrado, id_profesional" +
                 ", monto, num_turno, observacion FROM consulta";
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
@@ -47,9 +47,9 @@ namespace Consultorio.DataAccessLayer
 
         internal DataTable recuperarPracticasAño(string año)
         {
-            String consultaSql = string.Concat(("Select p.id_practica as id_practica, count(p.id_practica) as id_paciente from practicas_x_consulta p left join  consulta c  on ",
-                                                " (p.id_consulta = c.id_consulta), ",
-                                                " Where c.fecha like '%", año, "%' group by p.id_practica");
+            String consultaSql = string.Concat("Select c.practicas_realizadas, COUNT(c.practicas_realizadas) as Cantidad de prácticas",
+                                                " From consulta c ",
+                                                " Where fecha like '%", año, "%' group by practicas_realizadas");
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
 
@@ -59,7 +59,6 @@ namespace Consultorio.DataAccessLayer
             oConsulta.Fecha = Convert.ToDateTime(row["fecha"].ToString());
             oConsulta.Id_consulta = Convert.ToInt32(row["id_consulta"].ToString());
             oConsulta.Id_paciente = Convert.ToInt32(row["id_paciente"].ToString());
-            oConsulta.Practicas_realizadas = row["practicas_realizadas"].ToString();
             oConsulta.Id_profesional = Convert.ToInt32(row["id_profesional"].ToString());
             oConsulta.Monto = Convert.ToInt32(row["monto"].ToString());
             oConsulta.Observacion = row["observacion"].ToString();
@@ -74,36 +73,34 @@ namespace Consultorio.DataAccessLayer
             String consultaSql = string.Concat("Select p.apellido as id_profesional, COUNT(c.id_paciente) as id_paciente",
                                                " From consulta c Join profesional p on(c.id_profesional = p.matricula) ",
                                                " Where fecha between '", desde.ToString("yyyy-MM-dd"), "' and '",
-                                               hasta.ToString("yyyy-MM-dd"), 
+                                               hasta.ToString("yyyy-MM-dd"),
                                                 "' Group by p.apellido");
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
 
         public DataTable estadisticasConsulta(string desde, string hasta)
         {
-            String consultaSql = string.Concat(("Select p.id_practica as id_practica, count(p.id_practica) as id_paciente from practicas_x_consulta p left join  consulta c  on ",
-                                                            " (p.id_consulta = c.id_consulta), ",
-                                                            " Where c.fecha >'", desde, "' AND c.fecha <'", hasta, "'"));
-            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+            string sql = "select count(*) as cant" +
+                " from consulta c" +
+                " left join practica p on t.num_turno = c.num_turno" +
+                " where t.fecha between '" + desde + "' and '" + hasta + "'";
+            return DBHelper.GetDBHelper().reporte(sql);
 
         }
 
-        public bool crearConsulta(Consulta oConsulta)
+        public bool crearConsulta(Consulta oConsulta, int[] practicas)
         {
             DataManager dm = new DataManager();
             try
             {
                 int cobrado = 0;
-                string[] listaPracticas;
-                listaPracticas = new[] { oConsulta.Practicas_realizadas };
                 if (oConsulta.Cobrado) { cobrado = 1; }
 
-                string sql = "INSERT INTO consulta(fecha, id_paciente, id_profesional, practicas_realizadas, cobrado, monto, num_turno, observacion) " +
+                string sql = "INSERT INTO consulta(fecha, id_paciente, id_profesional, cobrado, monto, num_turno, observacion) " +
                             "   VALUES('"
                             + oConsulta.Fecha.ToString("yyyy-MM-dd") + "', "
                             + oConsulta.Id_paciente + ", "
-                            + oConsulta.Id_profesional + ", '"
-                            + oConsulta.Practicas_realizadas + "' , "
+                            + oConsulta.Id_profesional + ", "
                             + cobrado + ", "
                             + (oConsulta.Monto.ToString().Replace(",", ".")) + ", "
                             + oConsulta.Num_turno + ", '"
@@ -125,18 +122,15 @@ namespace Consultorio.DataAccessLayer
 
                 dm.EjecutarSQL(sqlhisto);
 
-                string sqlhistoClin = "INSERT INTO historial_clinico(id_paciente, fecha_consulta, id_consulta, borrado) VALUES("+ oConsulta.Id_paciente + ", '" + oConsulta.Fecha.ToString("yyyy-MM-dd") + "', " + oConsulta.Id_consulta + ", 0)";
+                string sqlhistoClin = "INSERT INTO historial_clinico(id_paciente, fecha_consulta, id_consulta, borrado) VALUES(" + oConsulta.Id_paciente + ", '" + oConsulta.Fecha.ToString("yyyy-MM-dd") + "', " + oConsulta.Id_consulta + ", 0)";
 
                 dm.EjecutarSQL(sqlhistoClin);
+                foreach (int id_prac in practicas)
+                {
 
-                //string sqlInsumos;
-
-                //foreach(string id_prac in listaPracticas)
-                //{
-                //    sqlInsumos = "UPDATE insumo SET stock = (stock - (SELECT cantidad FROM insumo_x_practica WHERE id_practica = " + id_prac + " AND id_insumo = " + /*buscar id insumo + */ ")) WHERE id_insumo = ";
-                //    dm.EjecutarSQL(sqlInsumos);
-                //}
-
+                    string sqlPracticas = "INSERT INTO practicas_x_consulta VALUES(" + oConsulta.Id_consulta + ", " + id_prac + ")";
+                    dm.EjecutarSQL(sqlPracticas);
+                }
 
                 dm.Commit();
                 return true;

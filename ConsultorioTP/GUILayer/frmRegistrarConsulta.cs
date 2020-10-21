@@ -28,7 +28,7 @@ namespace Consultorio.GUILayer
         Consulta oConsulta = new Consulta();
         ConsultaService oConsultaService = new ConsultaService();
         int importeS;
-        string practicas="";
+        int[] practicas;
         float importeTotal = 500;
         public frmRegistrarConsulta()
         {
@@ -153,26 +153,28 @@ namespace Consultorio.GUILayer
         {
             if (validarCampos())
             {
-                string[] listaPracticas;
+                practicas = new int[(dgvPracticas.Rows.Count) - 1];
+                int i = 0;
                 foreach (DataGridViewRow Datarow in dgvPracticas.Rows)
                 {
                     if (Datarow.Cells[0].Value != null)
                     {
-                        practicas += oPracticaService.recuperarPracticasPorNom(Datarow.Cells[0].Value.ToString()).Id_practica + ", ";
+                        int id = oPracticaService.recuperarPracticasPorNom(Datarow.Cells[0].Value.ToString()).Id_practica;
+                        practicas[i] = id;
+                        i++;
                     }
                 }
 
                 //oConsulta.Fecha = DateTime.Today;
                 oConsulta.Fecha = Convert.ToDateTime("2020-10-12");
                 oConsulta.Id_paciente = oPaciente.Dni;
-                oConsulta.Practicas_realizadas = practicas;
                 oConsulta.Cobrado = Convert.ToBoolean(chCobrado.Checked);
                 oConsulta.Id_profesional = oProfesionalE.Matricula;
                 oConsulta.Monto = Convert.ToSingle(txtImporteTotal.Text);
                 oConsulta.Num_turno = oTurno.Num_turno;
                 oConsulta.Observacion = txtObservaciones.Text;
 
-                if (oConsultaService.crearConsultaTransaccion(oConsulta))
+                if (oConsultaService.crearConsultaTransaccion(oConsulta, practicas))
                 {
                     MessageBox.Show("La consulta se registró correctamente", "Consulta registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();

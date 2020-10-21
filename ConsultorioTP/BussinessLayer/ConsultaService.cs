@@ -29,9 +29,9 @@ namespace Consultorio.BussinessLayer
         }
 
 
-        public bool crearConsultaTransaccion(Consulta consulta)
+        public bool crearConsultaTransaccion(Consulta consulta, int[] practicas)
         {
-            return oConsultaDao.crearConsulta(consulta);
+            return oConsultaDao.crearConsulta(consulta, practicas);
         }
 
         internal DataTable recuperarPracticaPorAño(string año)
