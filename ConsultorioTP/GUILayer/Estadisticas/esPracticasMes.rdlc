@@ -537,21 +537,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="practicas_realizadas1">
+                        <Textbox Name="id_paciente">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!practicas_realizadas.Value</Value>
+                                  <Value>=Fields!id_paciente.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>practicas_realizadas1</rd:DefaultName>
+                          <rd:DefaultName>id_paciente</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>

@@ -54,6 +54,7 @@
             this.dtpDsd.Name = "dtpDsd";
             this.dtpDsd.Size = new System.Drawing.Size(200, 26);
             this.dtpDsd.TabIndex = 4;
+            this.dtpDsd.ValueChanged += new System.EventHandler(this.dtpDsd_ValueChanged);
             // 
             // label2
             // 
