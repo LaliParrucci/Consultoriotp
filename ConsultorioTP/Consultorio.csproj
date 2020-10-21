@@ -471,6 +471,11 @@
     <None Include="Resources\asistencia-medica.png" />
     <None Include="Resources\perfiles.png" />
     <None Include="Resources\dentist.png" />
+    <None Include="Resources\obras sociales mas utilizadas.png" />
+    <None Include="Resources\dentistry1.png" />
+    <None Include="Resources\practicas por año.png" />
+    <None Include="Resources\turnos concretados.png" />
+    <None Include="Resources\TrunoPorPofesional.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
