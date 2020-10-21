@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rpPracticas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblAño = new System.Windows.Forms.Label();
-            this.txtAño = new System.Windows.Forms.TextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.consultorio_odontologicoTodas1 = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioodontologicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtAño = new System.Windows.Forms.TextBox();
+            this.lblAño = new System.Windows.Forms.Label();
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rpPracticas
             // 
+            reportDataSource1.Name = "dsConsulta";
+            reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
+            this.rpPracticas.LocalReport.DataSources.Add(reportDataSource1);
             this.rpPracticas.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.esPracticasAño.rdlc";
             this.rpPracticas.Location = new System.Drawing.Point(12, 192);
             this.rpPracticas.Name = "rpPracticas";
@@ -62,22 +66,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // lblAño
-            // 
-            this.lblAño.AutoSize = true;
-            this.lblAño.Location = new System.Drawing.Point(316, 61);
-            this.lblAño.Name = "lblAño";
-            this.lblAño.Size = new System.Drawing.Size(29, 13);
-            this.lblAño.TabIndex = 0;
-            this.lblAño.Text = "Año:";
-            // 
-            // txtAño
-            // 
-            this.txtAño.Location = new System.Drawing.Point(351, 58);
-            this.txtAño.Name = "txtAño";
-            this.txtAño.Size = new System.Drawing.Size(136, 20);
-            this.txtAño.TabIndex = 1;
-            // 
             // btnGenerar
             // 
             this.btnGenerar.Location = new System.Drawing.Point(677, 134);
@@ -88,10 +76,31 @@
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // consultorio_odontologicoTodas1
+            // txtAño
             // 
-            this.consultorio_odontologicoTodas1.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtAño.Location = new System.Drawing.Point(351, 58);
+            this.txtAño.Name = "txtAño";
+            this.txtAño.Size = new System.Drawing.Size(136, 20);
+            this.txtAño.TabIndex = 1;
+            // 
+            // lblAño
+            // 
+            this.lblAño.AutoSize = true;
+            this.lblAño.Location = new System.Drawing.Point(316, 61);
+            this.lblAño.Name = "lblAño";
+            this.lblAño.Size = new System.Drawing.Size(29, 13);
+            this.lblAño.TabIndex = 0;
+            this.lblAño.Text = "Año:";
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
             // 
             // frmEstadisticasPracticasAño
             // 
@@ -105,8 +114,8 @@
             this.Load += new System.EventHandler(this.frmEstadisticasPracticasAño_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,7 +127,7 @@
         private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.Label lblAño;
         private System.Windows.Forms.Button btnGenerar;
-        private consultorio_odontologicoTodas consultorio_odontologicoTodas1;
-        private System.Windows.Forms.BindingSource consultorioodontologicoBindingSource;
+        private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
+        private consultorio_odontologicoTodas consultorio_odontologicoTodas;
     }
 }

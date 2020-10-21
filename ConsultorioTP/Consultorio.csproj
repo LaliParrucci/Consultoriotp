@@ -95,11 +95,6 @@
     <Compile Include="GUILayer\consultorio_odontologicoTodas.cs">
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\consultorio_odontologicoTodas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataAccessLayer\ConsultaDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="DataAccessLayer\DBHelper.cs" />
@@ -122,6 +117,11 @@
     <Compile Include="Entities\ProfesionalE.cs" />
     <Compile Include="Entities\Turno.cs" />
     <Compile Include="Entities\UsuarioE.cs" />
+    <Compile Include="GUILayer\consultorio_odontologicoTodas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmAbmInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,8 +389,8 @@
     </None>
     <None Include="GUILayer\consultorio_odontologicoTodas.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>consultorio_odontologicoTodas.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>consultorio_odontologicoTodas.Designer.cs</LastGenOutput>
     </None>
     <None Include="GUILayer\consultorio_odontologicoTodas.xss">
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>

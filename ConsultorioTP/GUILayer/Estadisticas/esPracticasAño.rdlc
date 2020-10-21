@@ -490,7 +490,7 @@
                   <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.63771cm</Width>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -536,7 +536,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cantidad de prácticas</Value>
+                                  <Value>Cantidad</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -594,21 +594,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="practicas_realizadas">
+                        <Textbox Name="id_paciente">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!practicas_realizadas.Value</Value>
+                                  <Value>=Fields!id_paciente.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>practicas_realizadas</rd:DefaultName>
+                          <rd:DefaultName>id_paciente</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -620,6 +620,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -646,7 +647,7 @@
             <Top>4.41536cm</Top>
             <Left>10.76537cm</Left>
             <Height>1.2cm</Height>
-            <Width>6.13771cm</Width>
+            <Width>5cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
