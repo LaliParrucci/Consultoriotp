@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.rpvEstadisticaOOSS = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.gbxFiltros.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,16 +56,6 @@
             this.gbxFiltros.TabIndex = 2;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Location = new System.Drawing.Point(524, 87);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(96, 30);
-            this.btnConsultar.TabIndex = 7;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblFechaHasta
             // 
@@ -92,7 +82,7 @@
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(111, 24);
             this.dtpDesde.TabIndex = 4;
-            this.dtpDesde.Value = new System.DateTime(2020, 10, 1, 0, 0, 0, 0);
+            this.dtpDesde.Value = new System.DateTime(2020, 9, 1, 0, 0, 0, 0);
             // 
             // lblPeriodo
             // 
@@ -123,6 +113,16 @@
             this.rpvEstadisticaOOSS.TabIndex = 3;
             this.rpvEstadisticaOOSS.Load += new System.EventHandler(this.rpvEstadisticaOOSS_Load);
             // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Location = new System.Drawing.Point(529, 98);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(82, 23);
+            this.btnConsultar.TabIndex = 7;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
             // frmEstadísticaOOSS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,12 +143,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbxFiltros;
-        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.Label lblFechaDesde;
         private Microsoft.Reporting.WinForms.ReportViewer rpvEstadisticaOOSS;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }

@@ -121,5 +121,11 @@ namespace Consultorio.GUILayer
             frmEstadisticasPracticasMes frm = new frmEstadisticasPracticasMes();
             frm.ShowDialog();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            frmEstadisticaTurnosPorProfesional frm = new frmEstadisticaTurnosPorProfesional();
+            frm.ShowDialog();
+        }
     }
 }

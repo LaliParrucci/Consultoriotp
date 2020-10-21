@@ -27,7 +27,39 @@ namespace Consultorio.GUILayer
         }
 
 
-        public void cargar()
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (dtpDesde.Value < dtpHasta.Value)
+            {
+                DataTable tabla = new DataTable();
+                string fecha_desde = dtpDesde.Value.Date.ToString("yyyy-MM-dd");
+                string fecha_hasta = dtpHasta.Value.Date.ToString("yyyy-MM-dd");
+                tabla = oTServ.estadisticaConcretados(fecha_desde, fecha_hasta);
+                if (tabla.Rows.Count == 0)
+                {
+                    MessageBox.Show("No existen datos con esas condiciones...");
+                    dtpDesde.Value = DateTime.Today;
+                    dtpHasta.Value = DateTime.Today;
+
+                }
+                else
+                {
+                    ReportDataSource ds = new ReportDataSource("DataSet1", tabla);
+                    rpvTurnosConcretados.LocalReport.DataSources.Clear();
+                    rpvTurnosConcretados.LocalReport.DataSources.Add(ds);
+                    this.rpvTurnosConcretados.RefreshReport();
+                }
+            }
+        }
+
+
+        private void frmEstadisticaTurnosConcretados_Load_1(object sender, EventArgs e)
+        {
+
+            this.rpvTurnosConcretados.RefreshReport();
+        }
+
+        private void rpvTurnosConcretados_Load(object sender, EventArgs e)
         {
             if (dtpDesde.Value < dtpHasta.Value)
             {
@@ -41,24 +73,6 @@ namespace Consultorio.GUILayer
                 rpvTurnosConcretados.LocalReport.DataSources.Add(ds);
                 rpvTurnosConcretados.LocalReport.Refresh();
             }
-        }
-
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            cargar();
-        }
-
-
-        private void frmEstadisticaTurnosConcretados_Load_1(object sender, EventArgs e)
-        {
-
-            this.rpvTurnosConcretados.RefreshReport();
-        }
-
-        private void rpvTurnosConcretados_Load(object sender, EventArgs e)
-        {
-            cargar();
         }
     }
 }

@@ -47,12 +47,38 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                ReportDataSource ds = new ReportDataSource("DataSetOdon", tabla);
+                ReportDataSource ds = new ReportDataSource("DataSetOdont", tabla);
                 rpOmP.LocalReport.DataSources.Clear();
                 rpOmP.LocalReport.DataSources.Add(ds);
                 this.rpOmP.RefreshReport();
             }
 
+        }
+
+        private void rpOmP_Load(object sender, EventArgs e)
+        {
+            if (dtpDesde.Value > dtpHasta.Value)
+            {
+                MessageBox.Show("Fechas erroneas!!!");
+                dtpDesde.Focus();
+                return;
+            }
+            DataTable tabla = new DataTable();
+            tabla = oConsultaService.recuperarPacientesPorProfesionalPorfecha(dtpDesde.Value, dtpHasta.Value);
+            if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("No existen datos con esas condiciones...");
+                dtpDesde.Value = DateTime.Today;
+                dtpHasta.Value = DateTime.Today;
+
+            }
+            else
+            {
+                ReportDataSource ds = new ReportDataSource("DataSetOdont", tabla);
+                rpOmP.LocalReport.DataSources.Clear();
+                rpOmP.LocalReport.DataSources.Add(ds);
+                this.rpOmP.RefreshReport();
+            }
         }
     }
 }

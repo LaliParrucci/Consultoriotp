@@ -348,5 +348,10 @@ namespace Consultorio.GUILayer
         {
 
         }
+
+        private void pnlFechas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

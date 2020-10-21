@@ -32,6 +32,8 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticaTurnosPorProfesional));
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.rpEsTrunoPorProfesional = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblProfesional = new System.Windows.Forms.Label();
             this.dtpDesde1 = new System.Windows.Forms.DateTimePicker();
@@ -46,12 +48,20 @@
             this.lblDesde2 = new System.Windows.Forms.Label();
             this.dbFiltros = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.dbFiltros.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpEsTrunoPorProfesional
             // 
@@ -68,6 +78,7 @@
             this.rpEsTrunoPorProfesional.ServerReport.BearerToken = null;
             this.rpEsTrunoPorProfesional.Size = new System.Drawing.Size(823, 376);
             this.rpEsTrunoPorProfesional.TabIndex = 0;
+            this.rpEsTrunoPorProfesional.Load += new System.EventHandler(this.rpEsTrunoPorProfesional_Load);
             // 
             // lblProfesional
             // 
@@ -196,16 +207,6 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Periódo 2:";
             // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultorioodontologicoTodasBindingSource
-            // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
-            // 
             // frmEstadisticaTurnosPorProfesional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -220,10 +221,10 @@
             this.Name = "frmEstadisticaTurnosPorProfesional";
             this.Text = "Estadística Turnos Por Profesional";
             this.Load += new System.EventHandler(this.frmEstadisticaTurnosPorProfesional_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.dbFiltros.ResumeLayout(false);
             this.dbFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -95,7 +95,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!id_paciente.Value)</Y>
+                        <Y>=CountDistinct(Fields!id_paciente.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />

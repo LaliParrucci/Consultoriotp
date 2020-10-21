@@ -374,6 +374,7 @@
             this.pnlFechas.Name = "pnlFechas";
             this.pnlFechas.Size = new System.Drawing.Size(750, 211);
             this.pnlFechas.TabIndex = 14;
+            this.pnlFechas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFechas_Paint);
             // 
             // grdTurnosDisp
             // 

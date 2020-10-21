@@ -54,6 +54,8 @@
             this.pnlTitulo2 = new System.Windows.Forms.Panel();
             this.lblEstadis = new System.Windows.Forms.Label();
             this.pnlCuerpoEstadisticas = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnPracticasMes = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblPracticasAño = new System.Windows.Forms.Label();
@@ -64,8 +66,8 @@
             this.btnEstadisticaOOSSmasUsadas = new System.Windows.Forms.Button();
             this.lblOdonConMasPacientes = new System.Windows.Forms.Label();
             this.btnOconMasPacientes = new System.Windows.Forms.Button();
-            this.btnPracticasMes = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -88,7 +90,7 @@
             this.lblListados.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListados.Location = new System.Drawing.Point(12, 9);
             this.lblListados.Name = "lblListados";
-            this.lblListados.Size = new System.Drawing.Size(193, 52);
+            this.lblListados.Size = new System.Drawing.Size(132, 33);
             this.lblListados.TabIndex = 0;
             this.lblListados.Text = "Listados";
             // 
@@ -125,7 +127,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(203, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 29);
+            this.label5.Size = new System.Drawing.Size(117, 18);
             this.label5.TabIndex = 19;
             this.label5.Text = "Listado Insumos";
             // 
@@ -147,7 +149,7 @@
             this.lblPrXP2.AutoSize = true;
             this.lblPrXP2.Location = new System.Drawing.Point(532, 197);
             this.lblPrXP2.Name = "lblPrXP2";
-            this.lblPrXP2.Size = new System.Drawing.Size(293, 29);
+            this.lblPrXP2.Size = new System.Drawing.Size(180, 18);
             this.lblPrXP2.TabIndex = 17;
             this.lblPrXP2.Text = "realizadas por Profesional";
             // 
@@ -156,7 +158,7 @@
             this.lblPRXP1.AutoSize = true;
             this.lblPRXP1.Location = new System.Drawing.Point(549, 179);
             this.lblPRXP1.Name = "lblPRXP1";
-            this.lblPRXP1.Size = new System.Drawing.Size(229, 29);
+            this.lblPRXP1.Size = new System.Drawing.Size(142, 18);
             this.lblPRXP1.TabIndex = 16;
             this.lblPRXP1.Text = "Listado de Practicas";
             // 
@@ -211,7 +213,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(359, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 29);
+            this.label2.Size = new System.Drawing.Size(162, 18);
             this.label2.TabIndex = 11;
             this.label2.Text = "Listado Obras Sociales";
             // 
@@ -233,7 +235,7 @@
             this.lblLPrXOb2.AutoSize = true;
             this.lblLPrXOb2.Location = new System.Drawing.Point(574, 86);
             this.lblLPrXOb2.Name = "lblLPrXOb2";
-            this.lblLPrXOb2.Size = new System.Drawing.Size(182, 29);
+            this.lblLPrXOb2.Size = new System.Drawing.Size(112, 18);
             this.lblLPrXOb2.TabIndex = 9;
             this.lblLPrXOb2.Text = "por Obra Social";
             // 
@@ -242,7 +244,7 @@
             this.lblLPrXOb1.AutoSize = true;
             this.lblLPrXOb1.Location = new System.Drawing.Point(569, 69);
             this.lblLPrXOb1.Name = "lblLPrXOb1";
-            this.lblLPrXOb1.Size = new System.Drawing.Size(195, 29);
+            this.lblLPrXOb1.Size = new System.Drawing.Size(122, 18);
             this.lblLPrXOb1.TabIndex = 8;
             this.lblLPrXOb1.Text = "Listado Practicas";
             // 
@@ -279,7 +281,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(203, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 29);
+            this.label1.Size = new System.Drawing.Size(122, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Listado Practicas";
             // 
@@ -302,7 +304,7 @@
             this.lblLpXo1.AutoSize = true;
             this.lblLpXo1.Location = new System.Drawing.Point(385, 68);
             this.lblLpXo1.Name = "lblLpXo1";
-            this.lblLpXo1.Size = new System.Drawing.Size(191, 29);
+            this.lblLpXo1.Size = new System.Drawing.Size(117, 18);
             this.lblLpXo1.TabIndex = 0;
             this.lblLpXo1.Text = "Listado Paciente";
             // 
@@ -325,7 +327,7 @@
             this.lblpXo2.AutoSize = true;
             this.lblpXo2.Location = new System.Drawing.Point(385, 86);
             this.lblpXo2.Name = "lblpXo2";
-            this.lblpXo2.Size = new System.Drawing.Size(183, 29);
+            this.lblpXo2.Size = new System.Drawing.Size(113, 18);
             this.lblpXo2.TabIndex = 1;
             this.lblpXo2.Text = "por Odontologo";
             // 
@@ -344,12 +346,14 @@
             this.lblEstadis.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadis.Location = new System.Drawing.Point(12, 10);
             this.lblEstadis.Name = "lblEstadis";
-            this.lblEstadis.Size = new System.Drawing.Size(268, 52);
+            this.lblEstadis.Size = new System.Drawing.Size(184, 33);
             this.lblEstadis.TabIndex = 0;
             this.lblEstadis.Text = "Estadísticas";
             // 
             // pnlCuerpoEstadisticas
             // 
+            this.pnlCuerpoEstadisticas.Controls.Add(this.label10);
+            this.pnlCuerpoEstadisticas.Controls.Add(this.button2);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label9);
             this.pnlCuerpoEstadisticas.Controls.Add(this.btnPracticasMes);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label8);
@@ -368,13 +372,35 @@
             this.pnlCuerpoEstadisticas.Size = new System.Drawing.Size(734, 236);
             this.pnlCuerpoEstadisticas.TabIndex = 3;
             // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(33, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(228, 56);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Practicas por Mes";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnPracticasMes
+            // 
+            this.btnPracticasMes.BackgroundImage = global::Consultorio.Properties.Resources.dentist;
+            this.btnPracticasMes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPracticasMes.FlatAppearance.BorderSize = 0;
+            this.btnPracticasMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPracticasMes.Location = new System.Drawing.Point(71, 118);
+            this.btnPracticasMes.Name = "btnPracticasMes";
+            this.btnPracticasMes.Size = new System.Drawing.Size(60, 60);
+            this.btnPracticasMes.TabIndex = 28;
+            this.btnPracticasMes.UseVisualStyleBackColor = true;
+            this.btnPracticasMes.Click += new System.EventHandler(this.btnPracticasMes_Click);
+            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(453, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(248, 29);
+            this.label8.Size = new System.Drawing.Size(156, 18);
             this.label8.TabIndex = 20;
             this.label8.Text = "Practicas por consulta";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -397,7 +423,7 @@
             this.lblPracticasAño.AutoSize = true;
             this.lblPracticasAño.Location = new System.Drawing.Point(488, 69);
             this.lblPracticasAño.Name = "lblPracticasAño";
-            this.lblPracticasAño.Size = new System.Drawing.Size(201, 29);
+            this.lblPracticasAño.Size = new System.Drawing.Size(126, 18);
             this.lblPracticasAño.TabIndex = 27;
             this.lblPracticasAño.Text = "Practicas por Año";
             // 
@@ -473,31 +499,28 @@
             this.btnOconMasPacientes.UseVisualStyleBackColor = true;
             this.btnOconMasPacientes.Click += new System.EventHandler(this.btnOconMasPacientes_Click);
             // 
-            // btnPracticasMes
+            // button2
             // 
-            this.btnPracticasMes.BackgroundImage = global::Consultorio.Properties.Resources.dentist;
-            this.btnPracticasMes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPracticasMes.FlatAppearance.BorderSize = 0;
-            this.btnPracticasMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPracticasMes.Location = new System.Drawing.Point(71, 118);
-            this.btnPracticasMes.Name = "btnPracticasMes";
-            this.btnPracticasMes.Size = new System.Drawing.Size(60, 60);
-            this.btnPracticasMes.TabIndex = 28;
-            this.btnPracticasMes.UseVisualStyleBackColor = true;
-            this.btnPracticasMes.Click += new System.EventHandler(this.btnPracticasMes_Click);
+            this.button2.Location = new System.Drawing.Point(232, 145);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // label9
+            // label10
             // 
-            this.label9.Location = new System.Drawing.Point(33, 171);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(228, 56);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Practicas por Mes";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(219, 175);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 18);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Turnos por profesional";
             // 
             // frmReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -563,5 +586,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnPracticasMes;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
     }
 }

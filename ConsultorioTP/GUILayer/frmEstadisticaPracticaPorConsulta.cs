@@ -58,7 +58,28 @@ namespace Consultorio.GUILayer
         }
         private void reportViewer1_Load(object sender, EventArgs e)
         {
+            if (dtpDsd.Value > dtpHst.Value)
+            {
+                MessageBox.Show("Las fechas no son correctas");
+                dtpDsd.Focus();
+                return;
+            }
+            DataTable tabla = new DataTable();
+            tabla = oConsultaService.recuperarPracticaPorAño("2020");
+            if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("No existen datos con esas condiciones...");
+                dtpDsd.Value = DateTime.Today;
+                dtpHst.Value = DateTime.Today;
 
+            }
+            else
+            {
+                ReportDataSource ds = new ReportDataSource("DataSet1", tabla);
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(ds);
+                this.reportViewer1.RefreshReport();
+            }
         }
 
         private void cboProfesional_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,7 +107,7 @@ namespace Consultorio.GUILayer
             }
             else
             {
-                ReportDataSource ds = new ReportDataSource("DatosConsulta", tabla);
+                ReportDataSource ds = new ReportDataSource("DataSet1", tabla);
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(ds);
                 this.reportViewer1.RefreshReport();

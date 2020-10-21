@@ -31,17 +31,27 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticasOconMasPacientes));
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.rpOmP = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             this.SuspendLayout();
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -68,13 +78,7 @@
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 24);
             this.dtpDesde.TabIndex = 3;
-            // 
-            // dtpHasta
-            // 
-            this.dtpHasta.Location = new System.Drawing.Point(510, 37);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 24);
-            this.dtpHasta.TabIndex = 4;
+            this.dtpDesde.Value = new System.DateTime(2020, 10, 1, 0, 0, 0, 0);
             // 
             // btnGenerar
             // 
@@ -85,11 +89,6 @@
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpOmP
             // 
@@ -102,20 +101,24 @@
             this.rpOmP.ServerReport.BearerToken = null;
             this.rpOmP.Size = new System.Drawing.Size(784, 469);
             this.rpOmP.TabIndex = 6;
+            this.rpOmP.Load += new System.EventHandler(this.rpOmP_Load);
             // 
-            // consultorioodontologicoTodasBindingSource
+            // dtpHasta
             // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            this.dtpHasta.Location = new System.Drawing.Point(532, 37);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(200, 24);
+            this.dtpHasta.TabIndex = 7;
+            this.dtpHasta.Value = new System.DateTime(2020, 10, 31, 0, 0, 0, 0);
             // 
             // frmEstadisticasOconMasPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 623);
+            this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.rpOmP);
             this.Controls.Add(this.btnGenerar);
-            this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,10 +126,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEstadisticasOconMasPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizador estadísticas Odontólogos";
             this.Load += new System.EventHandler(this.frmEstadisticasOconMasPacientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,10 +140,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpDesde;
-        private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.Button btnGenerar;
         private consultorio_odontologicoTodas consultorio_odontologicoTodas;
         private Microsoft.Reporting.WinForms.ReportViewer rpOmP;
         private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
     }
 }
