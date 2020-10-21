@@ -30,11 +30,11 @@
         {
             this.rpPracticasMes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dptFecha = new System.Windows.Forms.DateTimePicker();
+            this.fechaHastaa = new System.Windows.Forms.DateTimePicker();
+            this.fechaHasta = new System.Windows.Forms.Label();
+            this.fechaDesdee = new System.Windows.Forms.DateTimePicker();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.desdeDesde = new System.Windows.Forms.Label();
-            this.fechaHasta = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,9 +50,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.fechaHastaa);
             this.groupBox1.Controls.Add(this.fechaHasta);
-            this.groupBox1.Controls.Add(this.dptFecha);
+            this.groupBox1.Controls.Add(this.fechaDesdee);
             this.groupBox1.Controls.Add(this.btnGenerar);
             this.groupBox1.Controls.Add(this.desdeDesde);
             this.groupBox1.Location = new System.Drawing.Point(18, 18);
@@ -64,14 +64,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // dptFecha
+            // fechaHastaa
             // 
-            this.dptFecha.Location = new System.Drawing.Point(216, 59);
-            this.dptFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dptFecha.Name = "dptFecha";
-            this.dptFecha.Size = new System.Drawing.Size(298, 26);
-            this.dptFecha.TabIndex = 3;
-            this.dptFecha.ValueChanged += new System.EventHandler(this.dptFecha_ValueChanged);
+            this.fechaHastaa.Location = new System.Drawing.Point(216, 146);
+            this.fechaHastaa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fechaHastaa.Name = "fechaHastaa";
+            this.fechaHastaa.Size = new System.Drawing.Size(298, 26);
+            this.fechaHastaa.TabIndex = 5;
+            // 
+            // fechaHasta
+            // 
+            this.fechaHasta.AutoSize = true;
+            this.fechaHasta.Location = new System.Drawing.Point(43, 146);
+            this.fechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fechaHasta.Name = "fechaHasta";
+            this.fechaHasta.Size = new System.Drawing.Size(102, 20);
+            this.fechaHasta.TabIndex = 4;
+            this.fechaHasta.Text = "Fecha hasta:";
+            // 
+            // fechaDesdee
+            // 
+            this.fechaDesdee.Location = new System.Drawing.Point(216, 59);
+            this.fechaDesdee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fechaDesdee.Name = "fechaDesdee";
+            this.fechaDesdee.Size = new System.Drawing.Size(298, 26);
+            this.fechaDesdee.TabIndex = 3;
+            this.fechaDesdee.ValueChanged += new System.EventHandler(this.dptFecha_ValueChanged);
             // 
             // btnGenerar
             // 
@@ -93,24 +111,6 @@
             this.desdeDesde.Size = new System.Drawing.Size(106, 20);
             this.desdeDesde.TabIndex = 0;
             this.desdeDesde.Text = "Fecha desde:";
-            // 
-            // fechaHasta
-            // 
-            this.fechaHasta.AutoSize = true;
-            this.fechaHasta.Location = new System.Drawing.Point(43, 146);
-            this.fechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.fechaHasta.Name = "fechaHasta";
-            this.fechaHasta.Size = new System.Drawing.Size(102, 20);
-            this.fechaHasta.TabIndex = 4;
-            this.fechaHasta.Text = "Fecha hasta:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(216, 146);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(298, 26);
-            this.dateTimePicker1.TabIndex = 5;
             // 
             // frmEstadisticasPracticasMes
             // 
@@ -135,8 +135,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Label desdeDesde;
-        private System.Windows.Forms.DateTimePicker dptFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaDesdee;
+        private System.Windows.Forms.DateTimePicker fechaHastaa;
         private System.Windows.Forms.Label fechaHasta;
     }
 }

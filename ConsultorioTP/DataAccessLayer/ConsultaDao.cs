@@ -47,9 +47,9 @@ namespace Consultorio.DataAccessLayer
 
         internal DataTable recuperarPracticasAño(string año)
         {
-            String consultaSql = string.Concat("Select practicas_realizadas as practicas_realizadas, COUNT(practicas_realizadas) as id_paciente",
-                                                " From consulta ",
-                                                " Where fecha like '%", año, "%' group by practicas_realizadas");
+            String consultaSql = string.Concat(("Select p.id_practica as id_practica, count(p.id_practica) as id_paciente from practicas_x_consulta p left join  consulta c  on ",
+                                                " (p.id_consulta = c.id_consulta), ",
+                                                " Where c.fecha like '%", año, "%' group by p.id_practica");
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
 
@@ -81,11 +81,10 @@ namespace Consultorio.DataAccessLayer
 
         public DataTable estadisticasConsulta(string desde, string hasta)
         {
-            string sql = "select count(*) as cant" +
-                " from consulta c" +
-                " left join practica p on t.num_turno = c.num_turno" +
-                " where t.fecha between '" + desde + "' and '" + hasta + "'";
-            return DBHelper.GetDBHelper().reporte(sql);
+            String consultaSql = string.Concat(("Select p.id_practica as id_practica, count(p.id_practica) as id_paciente from practicas_x_consulta p left join  consulta c  on ",
+                                                            " (p.id_consulta = c.id_consulta), ",
+                                                            " Where c.fecha >'", desde, "' AND c.fecha <'", hasta, "'"));
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
 
         }
 

@@ -92,5 +92,10 @@ namespace Consultorio.GUILayer
                 this.reportViewer1.RefreshReport();
             }
         }
+
+        private void dtpDsd_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
