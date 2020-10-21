@@ -72,7 +72,7 @@ namespace Consultorio.GUILayer
         {
             if (dtpDesde1.Value > dtpHasta1.Value || dtpDesde2.Value > dtpHasta2.Value)
             {
-                MessageBox.Show("Fechas erroneas!!!");
+                MessageBox.Show("Fechas erroneas!!");
                 dtpDesde1.Focus();
                 return;
             }
