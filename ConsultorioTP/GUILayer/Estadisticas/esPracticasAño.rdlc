@@ -114,32 +114,32 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!practicas_realizadas.Value</GroupExpression>
+                      <GroupExpression>=Fields!nombre.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!practicas_realizadas.Value</Value>
+                      <Value>=Fields!nombre.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!practicas_realizadas.Value</Label>
+                  <Label>=Fields!nombre.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>practicas realizadas</Label>
+                  <Label>id practica</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="practicas_realizadas">
+                <ChartSeries Name="id_practica">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!practicas_realizadas.Value)</Y>
+                        <Y>=Sum(Fields!id_practica.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -456,6 +456,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
+            <DataSetName>DsPractica</DataSetName>
             <Top>3.46287cm</Top>
             <Left>1.69016cm</Left>
             <Height>6.74625cm</Height>
@@ -542,7 +543,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -554,7 +554,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>cantidad</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -612,21 +612,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox6">
+                        <Textbox Name="id_practica">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!id_practica.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <rd:DefaultName>id_practica</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
