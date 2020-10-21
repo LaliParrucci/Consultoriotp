@@ -30,7 +30,7 @@ namespace Consultorio.GUILayer
             DataTable tabla = new DataTable();
             tabla = oConsultaService.recuperarPracticaPorAño(txtAño.Text);
 
-            ReportDataSource ds = new ReportDataSource("dsConsulta", tabla);
+            ReportDataSource ds = new ReportDataSource("dsPractica", tabla);
             rpPracticas.LocalReport.DataSources.Clear();
             rpPracticas.LocalReport.DataSources.Add(ds);
             this.rpPracticas.RefreshReport();

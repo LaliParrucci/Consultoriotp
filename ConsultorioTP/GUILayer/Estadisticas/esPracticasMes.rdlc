@@ -11,38 +11,26 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dsConsulta">
+    <DataSet Name="DatosPractica">
       <Query>
         <DataSourceName>consultorio_odontologicoTodas</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="id_consulta">
-          <DataField>id_consulta</DataField>
+        <Field Name="nombre">
+          <DataField>nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="importe">
+          <DataField>importe</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="fecha">
-          <DataField>fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="id_paciente">
-          <DataField>id_paciente</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="practicas_realizadas">
-          <DataField>practicas_realizadas</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="practicas_a_realizar">
-          <DataField>practicas_a_realizar</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cobrado">
-          <DataField>cobrado</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="id_profesional">
-          <DataField>id_profesional</DataField>
+        <Field Name="id_practica">
+          <DataField>id_practica</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="borrado">
@@ -52,11 +40,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>consultorio_odontologicoTodas</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
-        <rd:TableName>consulta</rd:TableName>
+        <rd:SchemaPath>C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
+        <rd:TableName>practica</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>consultaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>practicaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -412,7 +400,6 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>dsConsulta</DataSetName>
             <Top>0.89958cm</Top>
             <Left>0.73766cm</Left>
             <Height>6.29328cm</Height>

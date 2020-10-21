@@ -19,7 +19,7 @@ namespace Consultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrarConsulta());
+            Application.Run(new frmEstadisticasPracticasMes());
         }
     }
 }

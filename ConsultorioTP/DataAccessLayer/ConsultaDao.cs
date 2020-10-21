@@ -47,9 +47,13 @@ namespace Consultorio.DataAccessLayer
 
         internal DataTable recuperarPracticasAño(string año)
         {
-            String consultaSql = string.Concat("Select c.practicas_realizadas, COUNT(c.practicas_realizadas) as Cantidad de prácticas",
-                                                " From consulta c ",
-                                                " Where fecha like '%", año, "%' group by practicas_realizadas");
+            String consultaSql = string.Concat("select prac.nombre as 'Practicas realizadas', count(p.id_practica) as Cantidad" +
+                                                        " from practicas_x_consulta p" +
+                                                         " join consulta c on c.id_consulta = p.id_consulta" +
+                                                           " join practica prac on p.id_practica = prac.id_practica" +
+                                                          " where c.fecha LIKE '%" + año + "%'" +
+                                                           " group by p.id_practica, prac.nombre");
+               
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
 
@@ -80,10 +84,12 @@ namespace Consultorio.DataAccessLayer
 
         public DataTable estadisticasConsulta(string desde, string hasta)
         {
-            string sql = "select count(*) as cant" +
-                " from consulta c" +
-                " left join practica p on t.num_turno = c.num_turno" +
-                " where t.fecha between '" + desde + "' and '" + hasta + "'";
+            String sql = string.Concat("select prac.nombre as 'Practicas realizadas', count(p.id_practica) as Cantidad" +
+                                                          " from practicas_x_consulta p" +
+                                                           " join consulta c on c.id_consulta = p.id_consulta" +
+                                                             " join practica prac on p.id_practica = prac.id_practica" +
+                                                            " where c.fecha between '"+ desde +"' and '"+hasta+"'"+
+                                                             " group by p.id_practica, prac.nombre");
             return DBHelper.GetDBHelper().reporte(sql);
 
         }

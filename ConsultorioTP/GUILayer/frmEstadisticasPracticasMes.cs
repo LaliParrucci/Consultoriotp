@@ -40,7 +40,7 @@ namespace Consultorio.GUILayer
             string fecha_hasta = fechaHastaa.Value.Date.ToString("yyyy-MM-dd");
             tabla = oConsultaService.estadisticasConsulta(fecha_desde, fecha_hasta);
 
-            ReportDataSource ds = new ReportDataSource("dsConsulta", tabla);
+            ReportDataSource ds = new ReportDataSource("DatosPractica", tabla);
             rpPracticasMes.LocalReport.DataSources.Clear();
             rpPracticasMes.LocalReport.DataSources.Add(ds);
             this.rpPracticasMes.RefreshReport();
