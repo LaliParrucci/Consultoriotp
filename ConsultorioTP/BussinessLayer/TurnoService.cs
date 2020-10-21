@@ -44,6 +44,11 @@ namespace Consultorio.BussinessLayer
             return true;
         }
 
+        internal DataTable recuperarTurnoFechaProfesional(DateTime desde, DateTime hasta)
+        {
+            return oTurnoDao.recuperarTurnoFechaProfesional(desde, hasta);
+        }
+
         public Turno getTurnoFechaHoraProfesional(DateTime fecha, string hora, int id)
         {
             return oTurnoDao.getTurnoFechaHoraProf(fecha, hora, id);

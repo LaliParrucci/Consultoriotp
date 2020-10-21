@@ -847,3 +847,9 @@ C:\Users\flor\Desktop\00facu\3ro\Programación de aplicaciones visuales\trabajo 
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaPracticaPorConsulta.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasMes.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosPorProfesional.resources
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaPracticaPorConsulta.resources
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasAño.resources
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasMes.resources
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosConcretados.resources
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosPorProfesional.resources
+C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadísticaOOSS.resources
