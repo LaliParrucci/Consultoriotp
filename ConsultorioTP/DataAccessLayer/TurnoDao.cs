@@ -42,6 +42,15 @@ namespace Consultorio.DataAccessLayer
             return listadoTodosTurnos;
         }
 
+        internal DataTable recuperarTurnoFechaProfesional(DateTime desde, DateTime hasta)
+        {
+            String consultaSql = string.Concat("Select p.apellido as id_profesional, T.num_turno ",
+                                               "FROM profesional p JOIN turno t ON(p.matricula = t.id_profesional) ",
+                                               "WHERE t.fecha BETWEEN '", desde.ToString("yyyy-MM-dd"), "' AND ' ", hasta.ToString("yyyy-MM-dd"), " 23:59:59'");
+            
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+        }
+
         internal IList<Disponibilidad> GetTodosDisp(string matricula, DateTime fecha)
         {
             List<Disponibilidad> listadoTodosTurnos = new List<Disponibilidad>();
