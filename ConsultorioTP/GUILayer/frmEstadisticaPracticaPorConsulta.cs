@@ -76,7 +76,7 @@ namespace Consultorio.GUILayer
                 return;
             }
             DataTable tabla = new DataTable();
-            tabla = oConsultaService.;
+            tabla = oConsultaService.recuperarPracticaPorAño("2020");
             if (tabla.Rows.Count == 0)
             {
                 MessageBox.Show("No existen datos con esas condiciones...");

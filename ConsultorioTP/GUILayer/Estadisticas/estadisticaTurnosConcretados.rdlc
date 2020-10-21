@@ -17,13 +17,13 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="todos">
+          <DataField>todos</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="concretados">
           <DataField>concretados</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="no_concretados">
-          <DataField>no_concretados</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
@@ -40,11 +40,21 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Chart Name="tortaTurnosConcretados">
+          <Chart Name="Chart2">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label />
+                  <Group Name="Chart2_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!concretados.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!concretados.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!concretados.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -52,9 +62,6 @@
               <ChartMembers>
                 <ChartMember>
                   <Label>concretados</Label>
-                </ChartMember>
-                <ChartMember>
-                  <Label>no concretados</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
@@ -64,42 +71,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!concretados.Value)</Y>
-                      </ChartDataPointValues>
-                      <ChartDataLabel>
-                        <Style />
-                      </ChartDataLabel>
-                      <Style />
-                      <ChartMarker>
-                        <Style />
-                      </ChartMarker>
-                      <DataElementOutput>Output</DataElementOutput>
-                    </ChartDataPoint>
-                  </ChartDataPoints>
-                  <Type>Shape</Type>
-                  <Subtype>ExplodedPie</Subtype>
-                  <Style />
-                  <ChartEmptyPoints>
-                    <Style />
-                    <ChartMarker>
-                      <Style />
-                    </ChartMarker>
-                    <ChartDataLabel>
-                      <Style />
-                    </ChartDataLabel>
-                  </ChartEmptyPoints>
-                  <ValueAxisName>Primary</ValueAxisName>
-                  <CategoryAxisName>Primary</CategoryAxisName>
-                  <ChartSmartLabel>
-                    <CalloutLineColor>Black</CalloutLineColor>
-                    <MinMovingDistance>0pt</MinMovingDistance>
-                  </ChartSmartLabel>
-                </ChartSeries>
-                <ChartSeries Name="no_concretados">
-                  <ChartDataPoints>
-                    <ChartDataPoint>
-                      <ChartDataPointValues>
-                        <Y>=Count(Fields!no_concretados.Value)</Y>
+                        <Y>=Sum(Fields!concretados.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -414,10 +386,10 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.52688cm</Top>
-            <Left>3.22474cm</Left>
-            <Height>6.19062cm</Height>
-            <Width>10.48979cm</Width>
+            <Top>1.0825cm</Top>
+            <Left>4.28308cm</Left>
+            <Height>5.66146cm</Height>
+            <Width>8.21438cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -428,7 +400,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.99885in</Height>
+        <Height>3.14469in</Height>
         <Style />
       </Body>
       <Width>6.81326in</Width>

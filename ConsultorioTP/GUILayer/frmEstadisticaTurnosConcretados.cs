@@ -53,10 +53,5 @@ namespace Consultorio.GUILayer
         {
             cargar();
         }
-
-        private void dtpDesde_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -92,6 +92,9 @@
     <Compile Include="BussinessLayer\ProfesionalService.cs" />
     <Compile Include="BussinessLayer\TurnoService.cs" />
     <Compile Include="BussinessLayer\UsuarioService.cs" />
+    <Compile Include="GUILayer\consultorio_odontologicoTodas.cs">
+      <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\consultorio_odontologicoTodas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
