@@ -5830,7 +5830,7 @@ namespace Consultorio.GUILayer {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class turnos_concretadosDataTable : global::System.Data.TypedTableBase<turnos_concretadosRow> {
             
-            private global::System.Data.DataColumn columntodos;
+            private global::System.Data.DataColumn columnno_concretados;
             
             private global::System.Data.DataColumn columnconcretados;
             
@@ -5869,9 +5869,9 @@ namespace Consultorio.GUILayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn todosColumn {
+            public global::System.Data.DataColumn no_concretadosColumn {
                 get {
-                    return this.columntodos;
+                    return this.columnno_concretados;
                 }
             }
             
@@ -5920,10 +5920,10 @@ namespace Consultorio.GUILayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public turnos_concretadosRow Addturnos_concretadosRow(int todos, int concretados) {
+            public turnos_concretadosRow Addturnos_concretadosRow(int no_concretados, int concretados) {
                 turnos_concretadosRow rowturnos_concretadosRow = ((turnos_concretadosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        todos,
+                        no_concretados,
                         concretados};
                 rowturnos_concretadosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowturnos_concretadosRow);
@@ -5947,15 +5947,15 @@ namespace Consultorio.GUILayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columntodos = base.Columns["todos"];
+                this.columnno_concretados = base.Columns["no_concretados"];
                 this.columnconcretados = base.Columns["concretados"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columntodos = new global::System.Data.DataColumn("todos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntodos);
+                this.columnno_concretados = new global::System.Data.DataColumn("no_concretados", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnno_concretados);
                 this.columnconcretados = new global::System.Data.DataColumn("concretados", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnconcretados);
             }
@@ -8385,17 +8385,18 @@ namespace Consultorio.GUILayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int todos {
+            public int no_concretados {
                 get {
                     try {
-                        return ((int)(this[this.tableturnos_concretados.todosColumn]));
+                        return ((int)(this[this.tableturnos_concretados.no_concretadosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'todos\' de la tabla \'turnos_concretados\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'no_concretados\' de la tabla \'turnos_concretados\' es DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableturnos_concretados.todosColumn] = value;
+                    this[this.tableturnos_concretados.no_concretadosColumn] = value;
                 }
             }
             
@@ -8417,14 +8418,14 @@ namespace Consultorio.GUILayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IstodosNull() {
-                return this.IsNull(this.tableturnos_concretados.todosColumn);
+            public bool Isno_concretadosNull() {
+                return this.IsNull(this.tableturnos_concretados.no_concretadosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SettodosNull() {
-                this[this.tableturnos_concretados.todosColumn] = global::System.Convert.DBNull;
+            public void Setno_concretadosNull() {
+                this[this.tableturnos_concretados.no_concretadosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

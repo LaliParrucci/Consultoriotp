@@ -311,14 +311,11 @@ namespace Consultorio.DataAccessLayer
 
         public DataTable estadisticaConcretados(string desde, string hasta)
         {
-            //string sql = "select count(*) as no_concretados, count(c.num_turno) as concretados" +
-            //    " from turno t" +
-            //    " left join consulta c on t.num_turno = c.num_turno" +
-            //    " where t.fecha between '" + desde + "' and '" + hasta + "'";
-            string sql = "select t.num_turno as todos, c.num_turno as concretados" +
+            string sql = "select (count(*)-count(c.num_turno)) as no_concretados, count(c.num_turno) as concretados" +
                 " from turno t" +
                 " left join consulta c on t.num_turno = c.num_turno" +
                 " where t.fecha between '" + desde + "' and '" + hasta + "'";
+            
             return DBHelper.GetDBHelper().reporte(sql);
 
         }

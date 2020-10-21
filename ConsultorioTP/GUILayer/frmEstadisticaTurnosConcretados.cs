@@ -49,6 +49,13 @@ namespace Consultorio.GUILayer
             cargar();
         }
 
+
+        private void frmEstadisticaTurnosConcretados_Load_1(object sender, EventArgs e)
+        {
+
+            this.rpvTurnosConcretados.RefreshReport();
+        }
+
         private void rpvTurnosConcretados_Load(object sender, EventArgs e)
         {
             cargar();

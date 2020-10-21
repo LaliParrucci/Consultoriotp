@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblFechaHasta = new System.Windows.Forms.Label();
@@ -38,12 +40,20 @@
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.rpvTurnosConcretados = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gbxFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.gbxFiltros.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gbxFiltros
             // 
@@ -125,22 +135,12 @@
             reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
             this.rpvTurnosConcretados.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvTurnosConcretados.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.estadisticaTurnosConcretados.rdlc";
-            this.rpvTurnosConcretados.Location = new System.Drawing.Point(38, 135);
+            this.rpvTurnosConcretados.Location = new System.Drawing.Point(10, 135);
             this.rpvTurnosConcretados.Name = "rpvTurnosConcretados";
             this.rpvTurnosConcretados.ServerReport.BearerToken = null;
-            this.rpvTurnosConcretados.Size = new System.Drawing.Size(618, 329);
+            this.rpvTurnosConcretados.Size = new System.Drawing.Size(646, 340);
             this.rpvTurnosConcretados.TabIndex = 4;
             this.rpvTurnosConcretados.Load += new System.EventHandler(this.rpvTurnosConcretados_Load);
-            // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultorioodontologicoTodasBindingSource
-            // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
             // 
             // frmEstadisticaTurnosConcretados
             // 
@@ -152,10 +152,11 @@
             this.Name = "frmEstadisticaTurnosConcretados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizador estadística de turnos concretados";
+            this.Load += new System.EventHandler(this.frmEstadisticaTurnosConcretados_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,8 +170,8 @@
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.Label lblFechaDesde;
-        private Microsoft.Reporting.WinForms.ReportViewer rpvTurnosConcretados;
         private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
         private consultorio_odontologicoTodas consultorio_odontologicoTodas;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvTurnosConcretados;
     }
 }
