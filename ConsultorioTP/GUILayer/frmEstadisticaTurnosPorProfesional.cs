@@ -40,7 +40,7 @@ namespace Consultorio.GUILayer
             DataTable tabla1 = new DataTable();
             DataTable tabla2 = new DataTable();
             tabla1 = oTurnoService.recuperarTurnoFechaProfesional(dtpDesde1.Value, dtpHasta1.Value);
-            tabla2 = oTurnoService.recuperarTurnoFechaProfesional(dtpDesde1.Value, dtpHasta1.Value);
+            tabla2 = oTurnoService.recuperarTurnoFechaProfesional(dtpDesde2.Value, dtpHasta2.Value);
             if (tabla1.Rows.Count == 0 || tabla2.Rows.Count == 0)
             {
                 MessageBox.Show("No existen datos con esas condiciones...");
@@ -80,7 +80,7 @@ namespace Consultorio.GUILayer
             DataTable tabla1 = new DataTable();
             DataTable tabla2 = new DataTable();
             tabla1 = oTurnoService.recuperarTurnoFechaProfesional(dtpDesde1.Value, dtpHasta1.Value);
-            tabla2 = oTurnoService.recuperarTurnoFechaProfesional(dtpDesde1.Value, dtpHasta1.Value);
+            tabla2 = oTurnoService.recuperarTurnoFechaProfesional(dtpDesde2.Value, dtpHasta2.Value);
             if (tabla1.Rows.Count == 0 || tabla2.Rows.Count == 0)
             {
                 MessageBox.Show("No existen datos con esas condiciones...");

@@ -96,6 +96,7 @@
             this.dtpDesde1.Name = "dtpDesde1";
             this.dtpDesde1.Size = new System.Drawing.Size(111, 24);
             this.dtpDesde1.TabIndex = 4;
+            this.dtpDesde1.Value = new System.DateTime(2020, 9, 1, 0, 0, 0, 0);
             // 
             // lblDesde1
             // 
@@ -113,6 +114,7 @@
             this.dtpHasta1.Name = "dtpHasta1";
             this.dtpHasta1.Size = new System.Drawing.Size(113, 24);
             this.dtpHasta1.TabIndex = 5;
+            this.dtpHasta1.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
             // 
             // lblHasta1
             // 
@@ -159,6 +161,7 @@
             this.dtpHasta2.Name = "dtpHasta2";
             this.dtpHasta2.Size = new System.Drawing.Size(113, 24);
             this.dtpHasta2.TabIndex = 12;
+            this.dtpHasta2.Value = new System.DateTime(2020, 10, 31, 0, 0, 0, 0);
             // 
             // dtpDesde2
             // 
@@ -167,6 +170,7 @@
             this.dtpDesde2.Name = "dtpDesde2";
             this.dtpDesde2.Size = new System.Drawing.Size(111, 24);
             this.dtpDesde2.TabIndex = 11;
+            this.dtpDesde2.Value = new System.DateTime(2020, 10, 1, 0, 0, 0, 0);
             // 
             // lblDesde2
             // 
@@ -219,6 +223,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEstadisticaTurnosPorProfesional";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadística Turnos Por Profesional";
             this.Load += new System.EventHandler(this.frmEstadisticaTurnosPorProfesional_Load);
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
