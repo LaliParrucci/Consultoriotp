@@ -84,7 +84,7 @@ namespace Consultorio.DataAccessLayer
 
         public DataTable estadisticasConsulta(string desde, string hasta)
         {
-            String sql = string.Concat("select prac.nombre as nombre, count(p.id_practica) as id_practica" +
+            string sql = string.Concat("select prac.nombre as nombre, count(p.id_practica) as id_practica" +
                                                           " from practicas_x_consulta p" +
                                                            " join consulta c on c.id_consulta = p.id_consulta" +
                                                              " join practica prac on p.id_practica = prac.id_practica" +
@@ -92,6 +92,14 @@ namespace Consultorio.DataAccessLayer
                                                              " group by p.id_practica, prac.nombre");
             return DBHelper.GetDBHelper().reporte(sql);
 
+        }
+
+        public DataTable existeConsultaDeTurno(int numTurno)
+        {
+            string sql = string.Concat("select id_consulta" +
+                                      " from consulta" +
+                                      " where num_turno = " + numTurno);
+            return DBHelper.GetDBHelper().reporte(sql);
         }
 
         public bool crearConsulta(Consulta oConsulta, int[] practicas)

@@ -15,15 +15,22 @@ namespace Consultorio.DataAccessLayer
         {
             List<ProfesionalE> listadoProfe = new List<ProfesionalE>();
 
-            var strSQL = "SELECT matricula,nombre, apellido, especialidad, domicilio FROM profesional WHERE  borrado = 0";
-
-            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSQL);
+            DataTable resultadoConsulta = getAllTabla();
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
                 listadoProfe.Add(crearObjProfe(row));
             }
             return listadoProfe;
+        }
+        public DataTable getAllTabla()
+        {
+
+            string strSQL = "SELECT matricula, nombre, apellido, especialidad, domicilio " +
+                " FROM profesional " +
+                " WHERE  borrado = 0";
+
+            return DBHelper.GetDBHelper().ConsultaSQL(strSQL);
         }
 
         private ProfesionalE crearObjProfe(DataRow row)
@@ -125,14 +132,6 @@ namespace Consultorio.DataAccessLayer
                                                             "' WHERE matricula = ", mat);
             }
             DBHelper.GetDBHelper().abm(sentencia);
-        }
-
-        public DataTable recuperarTodos()
-        {
-            string sentencia = string.Concat("SELECT matricula, nombre, apellido",
-                                               " FROM profesional",
-                                               " WHERE borrado = 0");
-            return DataManager.GetInstance().ConsultaSQL(sentencia);
         }
     }
 }

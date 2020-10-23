@@ -323,6 +323,12 @@ namespace Consultorio.GUILayer
         {
             if (validarCampos())
             {
+                if((oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime(txtFecha.Text), txtDni.Text) != null))
+                {
+                    MessageBox.Show("El paciente ingresado ya tiene un turno asignado para la fecha seleccionada", "Turno no asignado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    limpiarCampos();
+                    return;
+                }
                 oTurno.Fecha = Convert.ToDateTime(txtFecha.Text);
                 oTurno.Id_profesional = oProfesional.Matricula;
                 oTurno.Id_obra_social = (oObraSocialService.recuperarObraSocialPorNom(cboObraSocial.Text)).Codigo;
@@ -333,7 +339,7 @@ namespace Consultorio.GUILayer
                 {
                     if (oTurnoService.crearTurnoConHistorial(oTurno, txtObservaciones.Text))
                     {
-                        MessageBox.Show("Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Se registró el turno correctamente", "Turno registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clickChBox();
                     }
                     else
@@ -342,16 +348,6 @@ namespace Consultorio.GUILayer
                     }
                 }
             }
-        }
-
-        private void txtApellidoProfesional_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlFechas_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

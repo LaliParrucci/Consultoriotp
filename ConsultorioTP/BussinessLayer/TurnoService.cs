@@ -69,9 +69,9 @@ namespace Consultorio.BussinessLayer
             return oTurnoDao.modificarTurnoConHistorial(oTurno, observacion, turnoViejo);
         }
 
-        public DataTable estadisticaConcretados(string desde, string hasta)
+        public DataTable estadisticaConcretados(string desde, string hasta, int id)
         {
-            return oTurnoDao.estadisticaConcretados(desde, hasta);
+            return oTurnoDao.estadisticaConcretados(desde, hasta, id);
         }
     }
 }

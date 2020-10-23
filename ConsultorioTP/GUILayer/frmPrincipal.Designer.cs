@@ -519,6 +519,7 @@
             this.Name = "frmPrincipal";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.pnlLogo.ResumeLayout(false);

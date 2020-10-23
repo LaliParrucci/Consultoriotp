@@ -35,5 +35,16 @@ namespace Consultorio.GUILayer
             rpPracticas.LocalReport.DataSources.Add(ds);
             this.rpPracticas.RefreshReport();
         }
+
+        private void rpPracticas_Load(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = oConsultaService.recuperarPracticaPorAño(txtAño.Text);
+
+            ReportDataSource ds = new ReportDataSource("DsPractica", tabla);
+            rpPracticas.LocalReport.DataSources.Clear();
+            rpPracticas.LocalReport.DataSources.Add(ds);
+            this.rpPracticas.RefreshReport();
+        }
     }
 }

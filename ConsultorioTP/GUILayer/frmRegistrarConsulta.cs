@@ -27,7 +27,7 @@ namespace Consultorio.GUILayer
         Practica oPractica = new Practica();
         Consulta oConsulta = new Consulta();
         ConsultaService oConsultaService = new ConsultaService();
-        int importeS;
+        bool pacienteEncontrado = false;
         int[] practicas;
         float importeTotal = 500;
         public frmRegistrarConsulta()
@@ -44,6 +44,7 @@ namespace Consultorio.GUILayer
         {
             dgvPracticas.Rows.Clear();
             txtApellidoProfesional.Text = txtDescuento.Text = txtDni.Text = txtImporte.Text = txtImporteTotal.Text = txtNombreProfesional.Text = txtObraSocial.Text = txtObservaciones.Text = txtPaciente.Text = "";
+            txtDni.Focus();
         }
 
         private void frmRegistrarConsulta_Load(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace Consultorio.GUILayer
                 else { MessageBox.Show("Ingrese un número de DNI válido", "DNI incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 if (oPaciente != null)
                 {
-                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020-09-13"), txtDni.Text);
+                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020-09-15"), txtDni.Text);
                     //oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
                     if (oTurno != null)
                     {
@@ -75,17 +76,21 @@ namespace Consultorio.GUILayer
                         txtNombreProfesional.Text = oProfesionalE.Nombre;
                         txtApellidoProfesional.Text = oProfesionalE.Apellido;
                         txtDescuento.Text = oObraSocial.Porcentaje.ToString();
+                        oConsulta.Fecha = oTurno.Fecha;
 
                         cargarCombo(cboPracticas, oPracticaService.recuperarPracticas(), "nombre", "id_practica");
+                        pacienteEncontrado = true;
                     }
                     else
                     {
                         MessageBox.Show("El paciente que seleccionó no tiene ningún turno asignado", "No se encontró el turno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        pacienteEncontrado = false;
                     }
                 }
                 else
                 {
                     MessageBox.Show("No se encontró al paciente que busca", "Búsqueda finalizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    pacienteEncontrado = false;
                     return;
                 }
             }
@@ -151,7 +156,7 @@ namespace Consultorio.GUILayer
 
         private void btnRegistrarTurno_Click(object sender, EventArgs e)
         {
-            if (validarCampos())
+            if (validarCampos() && pacienteEncontrado)
             {
                 practicas = new int[(dgvPracticas.Rows.Count) - 1];
                 int i = 0;
@@ -166,24 +171,30 @@ namespace Consultorio.GUILayer
                 }
 
                 //oConsulta.Fecha = DateTime.Today;
-                oConsulta.Fecha = Convert.ToDateTime("2020-09-13");
+               // oConsulta.Fecha = Convert.ToDateTime("2020-10-14");
                 oConsulta.Id_paciente = oPaciente.Dni;
                 oConsulta.Cobrado = Convert.ToBoolean(chCobrado.Checked);
                 oConsulta.Id_profesional = oProfesionalE.Matricula;
                 oConsulta.Monto = Convert.ToSingle(txtImporteTotal.Text);
                 oConsulta.Num_turno = oTurno.Num_turno;
                 oConsulta.Observacion = txtObservaciones.Text;
-
+                if(oConsultaService.existeConsultaDeTurno(oConsulta.Num_turno).Rows.Count > 1)
+                {
+                    MessageBox.Show("Ya hay una consulta registrada para ese turno", "Consulta no registrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
                 if (oConsultaService.crearConsultaTransaccion(oConsulta, practicas))
                 {
                     MessageBox.Show("La consulta se registró correctamente", "Consulta registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();
+                    pacienteEncontrado = false;
                 }
                 else
                 {
                     MessageBox.Show("Hubo un problema con el registro de la consulta", "Consulta no registrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                 }
-                importeS = 0; importeTotal = 500;
+                importeTotal = 500;
+                
             }
 
             
@@ -196,11 +207,8 @@ namespace Consultorio.GUILayer
                 MessageBox.Show("Debe ingresar un dni...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            //if(txtPaciente.Text == "")
-            //{
-            //    MessageBox.Show("Debe ingresar un paciente primero...", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return false;
-            //}
+            
+
             return true;
         }
     }

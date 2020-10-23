@@ -188,7 +188,6 @@
             this.txtApellidoProfesional.Name = "txtApellidoProfesional";
             this.txtApellidoProfesional.Size = new System.Drawing.Size(175, 24);
             this.txtApellidoProfesional.TabIndex = 1;
-            this.txtApellidoProfesional.TextChanged += new System.EventHandler(this.txtApellidoProfesional_TextChanged);
             this.txtApellidoProfesional.Enter += new System.EventHandler(this.txtApellidoProfesional_Enter);
             // 
             // label4
@@ -374,7 +373,6 @@
             this.pnlFechas.Name = "pnlFechas";
             this.pnlFechas.Size = new System.Drawing.Size(750, 211);
             this.pnlFechas.TabIndex = 14;
-            this.pnlFechas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFechas_Paint);
             // 
             // grdTurnosDisp
             // 

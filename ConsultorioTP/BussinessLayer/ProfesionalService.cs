@@ -24,6 +24,11 @@ namespace Consultorio.BussinessLayer
             return oProfesionalDao.GetAll();
         }
 
+        public DataTable recuperarTodos()
+        {
+            return oProfesionalDao.getAllTabla();
+        }
+
         public void bajaProfesional(int matricula)
         {
             oProfesionalDao.baja(matricula);
@@ -82,10 +87,6 @@ namespace Consultorio.BussinessLayer
             oProfesionalDao.actualizacion(mat, nom, ape, esp, dom, esAlta);
         }
 
-        public DataTable recuperarTodos()
-        {
-            return oProfesionalDao.recuperarTodos();
-        }
     }
 
 }

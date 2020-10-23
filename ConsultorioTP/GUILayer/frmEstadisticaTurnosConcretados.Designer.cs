@@ -40,6 +40,9 @@
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.rpvTurnosConcretados = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboOdontologos = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             this.gbxFiltros.SuspendLayout();
@@ -57,6 +60,9 @@
             // 
             // gbxFiltros
             // 
+            this.gbxFiltros.Controls.Add(this.label2);
+            this.gbxFiltros.Controls.Add(this.cboOdontologos);
+            this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.btnConsultar);
             this.gbxFiltros.Controls.Add(this.lblFechaHasta);
             this.gbxFiltros.Controls.Add(this.dtpHasta);
@@ -68,14 +74,14 @@
             this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
             this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxFiltros.Size = new System.Drawing.Size(656, 128);
+            this.gbxFiltros.Size = new System.Drawing.Size(683, 139);
             this.gbxFiltros.TabIndex = 3;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(524, 87);
+            this.btnConsultar.Location = new System.Drawing.Point(519, 87);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(96, 30);
             this.btnConsultar.TabIndex = 7;
@@ -86,7 +92,7 @@
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(310, 50);
+            this.lblFechaHasta.Location = new System.Drawing.Point(43, 99);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(96, 18);
             this.lblFechaHasta.TabIndex = 6;
@@ -95,7 +101,7 @@
             // dtpHasta
             // 
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(412, 45);
+            this.dtpHasta.Location = new System.Drawing.Point(149, 96);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(113, 24);
             this.dtpHasta.TabIndex = 5;
@@ -104,7 +110,7 @@
             // dtpDesde
             // 
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(149, 45);
+            this.dtpDesde.Location = new System.Drawing.Point(149, 50);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(111, 24);
             this.dtpDesde.TabIndex = 4;
@@ -123,7 +129,7 @@
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
-            this.lblFechaDesde.Location = new System.Drawing.Point(43, 50);
+            this.lblFechaDesde.Location = new System.Drawing.Point(43, 53);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(100, 18);
             this.lblFechaDesde.TabIndex = 2;
@@ -135,18 +141,45 @@
             reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
             this.rpvTurnosConcretados.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvTurnosConcretados.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.estadisticaTurnosConcretados.rdlc";
-            this.rpvTurnosConcretados.Location = new System.Drawing.Point(10, 135);
+            this.rpvTurnosConcretados.Location = new System.Drawing.Point(10, 157);
             this.rpvTurnosConcretados.Name = "rpvTurnosConcretados";
             this.rpvTurnosConcretados.ServerReport.BearerToken = null;
-            this.rpvTurnosConcretados.Size = new System.Drawing.Size(646, 340);
+            this.rpvTurnosConcretados.Size = new System.Drawing.Size(673, 441);
             this.rpvTurnosConcretados.TabIndex = 4;
             this.rpvTurnosConcretados.Load += new System.EventHandler(this.rpvTurnosConcretados_Load);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(317, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 18);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Profesional";
+            // 
+            // cboOdontologos
+            // 
+            this.cboOdontologos.FormattingEnabled = true;
+            this.cboOdontologos.Location = new System.Drawing.Point(440, 50);
+            this.cboOdontologos.Name = "cboOdontologos";
+            this.cboOdontologos.Size = new System.Drawing.Size(175, 26);
+            this.cboOdontologos.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(347, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Odontólogo";
             // 
             // frmEstadisticaTurnosConcretados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 487);
+            this.ClientSize = new System.Drawing.Size(693, 631);
             this.Controls.Add(this.rpvTurnosConcretados);
             this.Controls.Add(this.gbxFiltros);
             this.Name = "frmEstadisticaTurnosConcretados";
@@ -173,5 +206,8 @@
         private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
         private consultorio_odontologicoTodas consultorio_odontologicoTodas;
         private Microsoft.Reporting.WinForms.ReportViewer rpvTurnosConcretados;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboOdontologos;
+        private System.Windows.Forms.Label label1;
     }
 }

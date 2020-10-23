@@ -301,20 +301,24 @@ namespace Consultorio.DataAccessLayer
         public DataTable datasetTurnosReporte(DateTime fecha)
         {
             string sql = "SELECT t.num_turno, t.hora, pa.dni as id_paciente , prof.matricula as id_profesional, prof.apellido" +
-                " FROM paciente pa INNER JOIN" +
-                " turno t ON pa.dni = t.id_paciente INNER JOIN" +
-                " profesional prof ON t.id_profesional = prof.matricula" +
+                " FROM paciente pa " +
+                " INNER JOIN turno t ON pa.dni = t.id_paciente" +
+                " INNER JOIN profesional prof ON t.id_profesional = prof.matricula" +
                 " WHERE (t.borrado = 0) AND t.fecha = '" + fecha.ToString("yyyy-MM-dd") + "' " +
                 " ORDER BY t.num_turno";
             return DBHelper.GetDBHelper().reporte(sql);
         }
 
-        public DataTable estadisticaConcretados(string desde, string hasta)
+        public DataTable estadisticaConcretados(string desde, string hasta, int id)
         {
             string sql = "select (count(*)-count(c.num_turno)) as no_concretados, count(c.num_turno) as concretados" +
                 " from turno t" +
                 " left join consulta c on t.num_turno = c.num_turno" +
                 " where t.fecha between '" + desde + "' and '" + hasta + "'";
+            if(id != -1)
+            {
+                sql += " and t.id_profesional = " + id;
+            }
             
             return DBHelper.GetDBHelper().reporte(sql);
 

@@ -28,6 +28,10 @@ namespace Consultorio.BussinessLayer
             return oConsultaDao.GetAll();
         }
 
+        public DataTable existeConsultaDeTurno(int numTurno)
+        {
+            return oConsultaDao.existeConsultaDeTurno(numTurno);
+        }
 
         public bool crearConsultaTransaccion(Consulta consulta, int[] practicas)
         {

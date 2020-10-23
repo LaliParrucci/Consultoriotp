@@ -30,17 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.rpPracticas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.txtAño = new System.Windows.Forms.TextBox();
             this.lblAño = new System.Windows.Forms.Label();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpPracticas
             // 
@@ -53,6 +63,7 @@
             this.rpPracticas.ServerReport.BearerToken = null;
             this.rpPracticas.Size = new System.Drawing.Size(776, 246);
             this.rpPracticas.TabIndex = 0;
+            this.rpPracticas.Load += new System.EventHandler(this.rpPracticas_Load);
             // 
             // groupBox1
             // 
@@ -92,16 +103,6 @@
             this.lblAño.TabIndex = 0;
             this.lblAño.Text = "Año:";
             // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultorioodontologicoTodasBindingSource
-            // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
-            // 
             // frmEstadisticasPracticasAño
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,10 +113,10 @@
             this.Name = "frmEstadisticasPracticasAño";
             this.Text = "Visualizador estadísticas de prácticas";
             this.Load += new System.EventHandler(this.frmEstadisticasPracticasAño_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
