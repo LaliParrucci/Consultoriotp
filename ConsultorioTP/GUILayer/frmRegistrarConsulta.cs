@@ -43,6 +43,7 @@ namespace Consultorio.GUILayer
         private void limpiarCampos()
         {
             dgvPracticas.Rows.Clear();
+            cboPracticas.SelectedIndex = -1;
             txtApellidoProfesional.Text = txtDescuento.Text = txtDni.Text = txtImporte.Text = txtImporteTotal.Text = txtNombreProfesional.Text = txtObraSocial.Text = txtObservaciones.Text = txtPaciente.Text = "";
             txtDni.Focus();
         }
@@ -64,7 +65,7 @@ namespace Consultorio.GUILayer
                 else { MessageBox.Show("Ingrese un número de DNI válido", "DNI incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 if (oPaciente != null)
                 {
-                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020-09-15"), txtDni.Text);
+                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020-10-25"), txtDni.Text);
                     //oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
                     if (oTurno != null)
                     {
@@ -175,12 +176,17 @@ namespace Consultorio.GUILayer
                 oConsulta.Id_paciente = oPaciente.Dni;
                 oConsulta.Cobrado = Convert.ToBoolean(chCobrado.Checked);
                 oConsulta.Id_profesional = oProfesionalE.Matricula;
-                oConsulta.Monto = Convert.ToSingle(txtImporteTotal.Text);
+                if (dgvPracticas.Rows.Count > 0)
+                {
+                    oConsulta.Monto = Convert.ToSingle(txtImporteTotal.Text);
+                }
+                else { oConsulta.Monto = 0; }
                 oConsulta.Num_turno = oTurno.Num_turno;
                 oConsulta.Observacion = txtObservaciones.Text;
-                if(oConsultaService.existeConsultaDeTurno(oConsulta.Num_turno).Rows.Count > 1)
+                if(oConsultaService.existeConsultaDeTurno(oConsulta.Num_turno).Rows.Count >= 1)
                 {
                     MessageBox.Show("Ya hay una consulta registrada para ese turno", "Consulta no registrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
                 }
                 if (oConsultaService.crearConsultaTransaccion(oConsulta, practicas))
                 {
@@ -191,13 +197,12 @@ namespace Consultorio.GUILayer
                 else
                 {
                     MessageBox.Show("Hubo un problema con el registro de la consulta", "Consulta no registrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    limpiarCampos();
 
                 }
                 importeTotal = 500;
                 
             }
-
-            
         }
 
         private bool validarCampos()

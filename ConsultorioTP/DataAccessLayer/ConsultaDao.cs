@@ -141,11 +141,22 @@ namespace Consultorio.DataAccessLayer
                 dm.EjecutarSQL(sqlhistoClin);
                 foreach (int id_prac in practicas)
                 {
-
+                    //inserto las practicas q se realizaron en la consulta
                     string sqlPracticas = "INSERT INTO practicas_x_consulta VALUES(" + oConsulta.Id_consulta + ", " + id_prac + ")";
                     dm.EjecutarSQL(sqlPracticas);
-                }
+                    //consulto la cantidad de insumos q se usan para cada practica
+                    string sqlSelectCantInsumos = "SELECT * from insumo_x_practica WHERE id_practica = " + id_prac;
+                    var resultado = DBHelper.GetDBHelper().ConsultaSQL(sqlSelectCantInsumos);
+                    int cant = resultado.Rows.Count;
+                    //y según esa cantidad, recorro el datatable para actualizar el stock de insumos
+                    for (int i = 0; i < cant; i++)
+                    {
+                        string sqlInsumos = "UPDATE insumo SET stock = (stock - (SELECT cantidad FROM insumo_x_practica WHERE id_practica =" + id_prac + " AND id_insumo = insumo.id_insumo))" +
+                            " WHERE id_insumo in (SELECT id_insumo FROM insumo_x_practica WHERE id_practica  =" + id_prac + ")";
 
+                        dm.EjecutarSQL(sqlInsumos);
+                    }
+                }
                 dm.Commit();
                 return true;
             }
