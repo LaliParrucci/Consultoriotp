@@ -853,3 +853,4 @@ C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GU
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosConcretados.resources
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosPorProfesional.resources
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadísticaOOSS.resources
+C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources

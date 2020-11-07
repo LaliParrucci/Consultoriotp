@@ -26,7 +26,10 @@ namespace Consultorio.BussinessLayer
         {
             return oInsumoDao.ObtenerListadoInsumos();
         }
-
+        public DataTable recuperarInsumosEstadisticas(string desde, string hasta, string practica)
+        {
+            return oInsumoDao.obtenerDatosEstadisticas(desde, hasta, practica);
+        }
         public Insumo recuperarInsumoPorId(int id)
         {
             return oInsumoDao.GetInsumo(id);

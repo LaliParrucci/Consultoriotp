@@ -99,12 +99,6 @@ namespace Consultorio.GUILayer
             ventana.ShowDialog();
         }
 
-        private void btnPracticasAño_Click(object sender, EventArgs e)
-        {
-            frmEstadisticasPracticasAño frm = new frmEstadisticasPracticasAño();
-            frm.ShowDialog();
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -125,6 +119,12 @@ namespace Consultorio.GUILayer
         private void button2_Click_1(object sender, EventArgs e)
         {
             frmEstadisticaTurnosPorProfesional frm = new frmEstadisticaTurnosPorProfesional();
+            frm.ShowDialog();
+        }
+
+        private void btnInsumoPractica_Click(object sender, EventArgs e)
+        {
+            frmEstadisticasInsumosPractica frm = new frmEstadisticasInsumosPractica();
             frm.ShowDialog();
         }
     }

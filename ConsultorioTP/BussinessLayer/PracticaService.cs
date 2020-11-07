@@ -22,10 +22,6 @@ namespace Consultorio.BussinessLayer
         {
             return oPracticaDao.GetAll();
         }
-        public DataTable recuPracticas()
-        {
-            return oPracticaDao.ObtenerListadoPracticas();
-        }
         public DataTable recuPracticasObraSocial(int id)
         {
             return oPracticaDao.ObtenerListadoPracticasConObraSocial(id);
