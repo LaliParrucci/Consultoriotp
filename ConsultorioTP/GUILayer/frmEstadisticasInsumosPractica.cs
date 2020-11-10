@@ -23,7 +23,6 @@ namespace Consultorio.GUILayer
         private void frmEstadisticasInsumosPractica_Load(object sender, EventArgs e)
         {
             LlenarCombo(cboPracticas, oInsumoService.recuperarInsumo(), "nombre", "id_insumo");
-            fechaDesde.Value = DateTime.Today;
             this.rpInsumo.RefreshReport();
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, string value)
@@ -37,18 +36,22 @@ namespace Consultorio.GUILayer
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             DataTable tabla = new DataTable();
-            string practica = cboPracticas.Text;
-            string fecha_desde = fechaDesde.Value.Date.ToString("yyyy-MM-dd");
-            string fecha_hasta = fechaHasta.Value.Date.ToString("yyyy-MM-dd");
-            tabla = oInsumoService.recuperarInsumosEstadisticas(fecha_desde, fecha_hasta, practica);
+            //int practica = ;
+            //tabla = oInsumoService.recuperarInsumosEstadisticas(practica);
 
-            ReportDataSource ds = new ReportDataSource("dsPractica", tabla);
+            ReportDataSource ds = new ReportDataSource("dsInsumo", tabla);
             rpInsumo.LocalReport.DataSources.Clear();
             rpInsumo.LocalReport.DataSources.Add(ds);
             this.rpInsumo.RefreshReport();
         }
 
         private void frmEstadisticasInsumosPractica_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'consultorio_odontologicoTodas.practica' Puede moverla o quitarla según sea necesario.
+            this.practicaTableAdapter.Fill(this.consultorio_odontologicoTodas.practica);
+        }
+
+        private void lblPractica_Click(object sender, EventArgs e)
         {
 
         }

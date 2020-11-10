@@ -60,14 +60,12 @@
             this.btnPracticasMes = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblInsumosPractica = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTurnosConcretados = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEstadisticaOOSSmasUsadas = new System.Windows.Forms.Button();
             this.lblOdonConMasPacientes = new System.Windows.Forms.Label();
             this.btnOconMasPacientes = new System.Windows.Forms.Button();
-            this.btnInsumoPractica = new System.Windows.Forms.Button();
             this.pnlTitulo1.SuspendLayout();
             this.pnlCuerpoListados.SuspendLayout();
             this.pnlTitulo2.SuspendLayout();
@@ -352,14 +350,12 @@
             // 
             // pnlCuerpoEstadisticas
             // 
-            this.pnlCuerpoEstadisticas.Controls.Add(this.btnInsumoPractica);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label10);
             this.pnlCuerpoEstadisticas.Controls.Add(this.button2);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label9);
             this.pnlCuerpoEstadisticas.Controls.Add(this.btnPracticasMes);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label8);
             this.pnlCuerpoEstadisticas.Controls.Add(this.button1);
-            this.pnlCuerpoEstadisticas.Controls.Add(this.lblInsumosPractica);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label6);
             this.pnlCuerpoEstadisticas.Controls.Add(this.btnTurnosConcretados);
             this.pnlCuerpoEstadisticas.Controls.Add(this.label7);
@@ -400,7 +396,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(175, 18);
             this.label9.TabIndex = 29;
-            this.label9.Text = "Practicas por Mes";
+            this.label9.Text = "Practicas por Profesional";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnPracticasMes
@@ -420,7 +416,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(530, 189);
+            this.label8.Location = new System.Drawing.Point(197, 189);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(156, 18);
             this.label8.TabIndex = 20;
@@ -433,21 +429,12 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(593, 108);
+            this.button1.Location = new System.Drawing.Point(232, 117);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 60);
             this.button1.TabIndex = 20;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // lblInsumosPractica
-            // 
-            this.lblInsumosPractica.AutoSize = true;
-            this.lblInsumosPractica.Location = new System.Drawing.Point(549, 69);
-            this.lblInsumosPractica.Name = "lblInsumosPractica";
-            this.lblInsumosPractica.Size = new System.Drawing.Size(157, 18);
-            this.lblInsumosPractica.TabIndex = 27;
-            this.lblInsumosPractica.Text = "Insumos por Practicas";
             // 
             // label6
             // 
@@ -515,18 +502,6 @@
             this.btnOconMasPacientes.UseVisualStyleBackColor = true;
             this.btnOconMasPacientes.Click += new System.EventHandler(this.btnOconMasPacientes_Click);
             // 
-            // btnInsumoPractica
-            // 
-            this.btnInsumoPractica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(200)))), ((int)(((byte)(177)))));
-            this.btnInsumoPractica.BackgroundImage = global::Consultorio.Properties.Resources.practicas_por_año;
-            this.btnInsumoPractica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInsumoPractica.Location = new System.Drawing.Point(593, 6);
-            this.btnInsumoPractica.Name = "btnInsumoPractica";
-            this.btnInsumoPractica.Size = new System.Drawing.Size(60, 60);
-            this.btnInsumoPractica.TabIndex = 32;
-            this.btnInsumoPractica.UseVisualStyleBackColor = false;
-            this.btnInsumoPractica.Click += new System.EventHandler(this.btnInsumoPractica_Click);
-            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -589,13 +564,11 @@
         private System.Windows.Forms.Button btnEstadisticaOOSSmasUsadas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTurnosConcretados;
-        private System.Windows.Forms.Label lblInsumosPractica;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnPracticasMes;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnInsumoPractica;
     }
 }

@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="dsPractica">
       <Query>
         <DataSourceName>consultorio_odontologicoTodas</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -28,7 +28,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>consultorio_odontologicoTodas</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
         <rd:TableName>pracxcons</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -83,8 +83,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Shape</Type>
-                  <Subtype>ExplodedPie</Subtype>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -95,6 +93,12 @@
                       <Style />
                     </ChartDataLabel>
                   </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>DrawingStyle</Name>
+                      <Value>Cylinder</Value>
+                    </CustomProperty>
+                  </CustomProperties>
                   <ValueAxisName>Primary</ValueAxisName>
                   <CategoryAxisName>Primary</CategoryAxisName>
                   <ChartSmartLabel>
@@ -330,6 +334,9 @@
                     </ChartAxisScaleBreak>
                   </ChartAxis>
                 </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                </ChartThreeDProperties>
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
@@ -342,6 +349,7 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
+                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -356,7 +364,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption />
+                <Caption>Título del gráfico</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -368,7 +376,7 @@
                 <Position>TopLeft</Position>
               </ChartTitle>
             </ChartTitles>
-            <Palette>Pacific</Palette>
+            <Palette>PacificSemiTransparent</Palette>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -385,11 +393,10 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>0.17639cm</Top>
-            <Left>2.9337cm</Left>
-            <Height>6.44639cm</Height>
-            <Width>10.44569cm</Width>
+            <Top>0.89641cm</Top>
+            <Left>3.03953cm</Left>
+            <Height>5cm</Height>
+            <Width>7.5cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>

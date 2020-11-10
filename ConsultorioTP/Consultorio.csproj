@@ -170,12 +170,6 @@
     <Compile Include="GUILayer\frmEstadisticasOconMasPacientes.Designer.cs">
       <DependentUpon>frmEstadisticasOconMasPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasPracticasAño.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\frmEstadisticasPracticasAño.Designer.cs">
-      <DependentUpon>frmEstadisticasPracticasAño.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUILayer\frmEstadisticasPracticasMes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,7 +287,6 @@
     <EmbeddedResource Include="GUILayer\Estadisticas\esPracticasMes.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\estadisticaOOSSMasUsadas.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\estadisticaTurnosConcretados.rdlc" />
-    <EmbeddedResource Include="GUILayer\Estadisticas\esPracticasAño.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\esTrunoPorProfesional.rdlc" />
     <EmbeddedResource Include="GUILayer\frmAbmInsumo.resx">
       <DependentUpon>frmAbmInsumo.cs</DependentUpon>
@@ -321,9 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmEstadisticasOconMasPacientes.resx">
       <DependentUpon>frmEstadisticasOconMasPacientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticasPracticasAño.resx">
-      <DependentUpon>frmEstadisticasPracticasAño.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmEstadisticasPracticasMes.resx">
       <DependentUpon>frmEstadisticasPracticasMes.cs</DependentUpon>

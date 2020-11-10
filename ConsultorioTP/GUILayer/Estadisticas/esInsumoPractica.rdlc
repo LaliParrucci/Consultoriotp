@@ -54,15 +54,15 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!id_insumo.Value</GroupExpression>
+                      <GroupExpression>=Fields!nombre.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!id_insumo.Value</Value>
+                      <Value>=Fields!nombre.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!id_insumo.Value</Label>
+                  <Label>=Fields!nombre.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -367,7 +367,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Título del gráfico</Caption>
+                <Caption>Insumos por prácticas</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -410,7 +410,7 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
-          <Tablix Name="Tablix1">
+          <Tablix Name="Tablix2">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
@@ -429,7 +429,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox5">
+                        <Textbox Name="Textbox9">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -443,7 +443,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -459,7 +459,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox7">
+                        <Textbox Name="Textbox11">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -473,7 +473,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -496,7 +496,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>cantidad</Value>
+                                  <Value>stock</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -635,7 +635,7 @@
             </TablixRowHierarchy>
             <DataSetName>dsInsumo</DataSetName>
             <Top>2.23063cm</Top>
-            <Left>9.68058cm</Left>
+            <Left>10.05162cm</Left>
             <Height>1.2cm</Height>
             <Width>7.5cm</Width>
             <ZIndex>1</ZIndex>

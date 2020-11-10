@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDsd = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,48 +37,56 @@
             this.cboPractica = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.practicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.practicaTableAdapter = new Consultorio.GUILayer.consultorio_odontologicoTodasTableAdapters.practicaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.practicaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 140);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(81, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Fecha Desde:";
             // 
             // dtpDsd
             // 
-            this.dtpDsd.Location = new System.Drawing.Point(238, 140);
+            this.dtpDsd.Location = new System.Drawing.Point(159, 91);
+            this.dtpDsd.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDsd.Name = "dtpDsd";
-            this.dtpDsd.Size = new System.Drawing.Size(200, 26);
+            this.dtpDsd.Size = new System.Drawing.Size(135, 20);
             this.dtpDsd.TabIndex = 4;
             this.dtpDsd.ValueChanged += new System.EventHandler(this.dtpDsd_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 140);
+            this.label2.Location = new System.Drawing.Point(321, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Fecha Hasta:";
             // 
             // dtpHst
             // 
-            this.dtpHst.Location = new System.Drawing.Point(609, 134);
+            this.dtpHst.Location = new System.Drawing.Point(406, 87);
+            this.dtpHst.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHst.Name = "dtpHst";
-            this.dtpHst.Size = new System.Drawing.Size(200, 26);
+            this.dtpHst.Size = new System.Drawing.Size(135, 20);
             this.dtpHst.TabIndex = 6;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(836, 198);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnConsultar.Location = new System.Drawing.Point(557, 129);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(144, 46);
+            this.btnConsultar.Size = new System.Drawing.Size(96, 30);
             this.btnConsultar.TabIndex = 8;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -85,37 +94,60 @@
             // 
             // cboPractica
             // 
+            this.cboPractica.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.practicaBindingSource, "nombre", true));
+            this.cboPractica.DataSource = this.practicaBindingSource;
             this.cboPractica.FormattingEnabled = true;
-            this.cboPractica.Location = new System.Drawing.Point(419, 48);
+            this.cboPractica.Location = new System.Drawing.Point(279, 31);
+            this.cboPractica.Margin = new System.Windows.Forms.Padding(2);
             this.cboPractica.Name = "cboPractica";
-            this.cboPractica.Size = new System.Drawing.Size(167, 28);
+            this.cboPractica.Size = new System.Drawing.Size(113, 21);
             this.cboPractica.TabIndex = 9;
+            this.cboPractica.Text = "System.Data.DataViewManagerListItemTypeDescriptor";
             this.cboPractica.SelectedIndexChanged += new System.EventHandler(this.cboProfesional_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(311, 48);
+            this.label3.Location = new System.Drawing.Point(207, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Practica:";
             // 
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.esPracticaPorConsulta.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 274);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 174);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1011, 452);
+            this.reportViewer1.Size = new System.Drawing.Size(666, 293);
             this.reportViewer1.TabIndex = 11;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // practicaBindingSource
+            // 
+            this.practicaBindingSource.DataMember = "practica";
+            this.practicaBindingSource.DataSource = this.consultorioodontologicoTodasBindingSource;
+            // 
+            // practicaTableAdapter
+            // 
+            this.practicaTableAdapter.ClearBeforeFill = true;
             // 
             // frmEstadisticaPracticaPorConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 737);
+            this.ClientSize = new System.Drawing.Size(690, 479);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboPractica);
@@ -124,9 +156,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDsd);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEstadisticaPracticaPorConsulta";
             this.Text = "Visualizacion de estadisticas de practicas por consulta";
             this.Load += new System.EventHandler(this.frmEstadisticaPracticaPorConsulta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.practicaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +178,9 @@
         private System.Windows.Forms.ComboBox cboPractica;
         private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource consultorioodontologicoTodasBindingSource;
+        private consultorio_odontologicoTodas consultorio_odontologicoTodas;
+        private System.Windows.Forms.BindingSource practicaBindingSource;
+        private consultorio_odontologicoTodasTableAdapters.practicaTableAdapter practicaTableAdapter;
     }
 }

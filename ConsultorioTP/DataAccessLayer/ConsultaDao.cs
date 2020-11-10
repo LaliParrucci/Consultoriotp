@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Consultorio.Entities;
 using System.Data;
+using System.Reflection.Emit;
 
 namespace Consultorio.DataAccessLayer
 {
@@ -81,14 +82,24 @@ namespace Consultorio.DataAccessLayer
                                                 "' Group by p.apellido");
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
+        public DataTable recuperarPracticaConsulta(string desde, string hasta, int practica)
+        {
+            String consultaSql = string.Concat("select p.id_consulta, p.id_practica, pr.nombre as id_consulta",
+                                               " from pracXcons p join consulta c on(p.id_consulta = c.id_consulta)",
+                                               "  join practica pr on(p.id_practica = pr.id_practica)",
+                                               " Where fecha between '", desde, "' and '", hasta, "'",
+                                               " and p.id_practica = ", practica);
+            return DataManager.GetInstance().ConsultaSQL(consultaSql);
+        }
 
-        public DataTable estadisticasConsulta(string desde, string hasta)
+        public DataTable estadisticasConsulta(string desde, string hasta, int profesional)
         {
             string sql = string.Concat("select prac.nombre as nombre, count(p.id_practica) as id_practica" +
                                                           " from practicas_x_consulta p" +
                                                            " join consulta c on c.id_consulta = p.id_consulta" +
                                                              " join practica prac on p.id_practica = prac.id_practica" +
                                                             " where c.fecha between '"+ desde +"' and '"+hasta+"'"+
+                                                            " and c.id_profesional = " + profesional +
                                                              " group by p.id_practica, prac.nombre");
             return DBHelper.GetDBHelper().reporte(sql);
 

@@ -25,14 +25,12 @@ namespace Consultorio.DataAccessLayer
 
             return listadoPrac;
         }
-        public DataTable obtenerDatosEstadisticas(string desde, string hasta, string practica)
+        public DataTable obtenerDatosEstadisticas(int practica)
         {
-            String consultaSql = string.Concat("Select i.id_insumo, i.nombre, COUNT(i.id_insumo) as stock",
-                                               " From insumo i Join insumo_x_practica ip on(i.id_insumo = ip.id_insumo) ",
-                                               " Where fecha between '", desde, "' and '",
-                                               hasta, "' and '",
-                                               practica, "' = 'ip.id_practica'",
-                                                " Group by p.apellido") ;
+            String consultaSql = string.Concat("select i.id_insumo, i.nombre, COUNT(i.id_insumo) as stock ",
+                                                "from insumo i join insumo_x_practica ixp on(i.id_insumo = ixp.id_insumo) ",
+                                                "where ixp.id_practica = ", practica,
+                                                "group by i.id_insumo, i.nombre") ;
             return DataManager.GetInstance().ConsultaSQL(consultaSql);
         }
         public DataTable ObtenerListadoInsumos()

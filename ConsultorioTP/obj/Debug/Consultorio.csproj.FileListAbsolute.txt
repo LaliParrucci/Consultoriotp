@@ -719,7 +719,6 @@ C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmAbmProfesional.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.Usuario.frmAbmUsuario.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasOconMasPacientes.resources
-C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasAño.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosConcretados.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadísticaOOSS.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmInformeMontosOOSS.resources
