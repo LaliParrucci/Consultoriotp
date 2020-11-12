@@ -65,7 +65,7 @@ namespace Consultorio.GUILayer
                 else { MessageBox.Show("Ingrese un número de DNI válido", "DNI incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 if (oPaciente != null)
                 {
-                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020-10-25"), txtDni.Text);
+                    oTurno = oTurnoService.recuperarTurnoFechaDni(Convert.ToDateTime("2020-10-14"), txtDni.Text);
                     //oTurno = oTurnoService.recuperarTurnoFechaDni(DateTime.Today, txtDni.Text);
                     if (oTurno != null)
                     {

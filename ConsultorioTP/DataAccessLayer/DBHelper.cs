@@ -17,9 +17,9 @@ namespace Consultorio.DataAccessLayer
         {
             //string_conexion = @"Server =MYSQL5009.site4now.net; Database = db_a68759_odonbd; Uid = a68759_odonbd; Pwd = consultorio2020";
             //string_conexion = @"Data Source=desktop-7t95495;Initial Catalog=consultorio_odontologico;Integrated Security=True";
-            //string_conexion = @"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Persist Security Info=True;User ID=sa;Password=19671970";
+            string_conexion = @"Data Source=DESKTOP-LNM71CI\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Persist Security Info=True;User ID=sa;Password=19671970";
             //string_conexion = @"Data Source=LAPTOP-E7G93F2V\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
-            string_conexion = @"Data Source=DESKTOP-0RHOTN8\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
+            //string_conexion = @"Data Source=DESKTOP-0RHOTN8\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
             //string_conexion = @"Data Source=DESKTOP-TQQ8R9R\SQLEXPRESS;Initial Catalog=consultorio_odontologico;Integrated Security=True";
         }
 
