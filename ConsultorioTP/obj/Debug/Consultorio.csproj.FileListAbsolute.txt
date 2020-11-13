@@ -751,7 +751,6 @@ C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Con
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.Usuario.frmAbmUsuario.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaPracticaPorConsulta.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasOconMasPacientes.resources
-C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasAño.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasMes.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosConcretados.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosPorProfesional.resources
@@ -853,3 +852,4 @@ C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GU
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadísticaOOSS.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
+C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
