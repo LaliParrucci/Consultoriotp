@@ -187,6 +187,7 @@
             // 
             // grdPaciente
             // 
+            this.grdPaciente.AllowUserToAddRows = false;
             this.grdPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

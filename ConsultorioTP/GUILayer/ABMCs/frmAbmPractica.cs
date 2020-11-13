@@ -59,10 +59,18 @@ namespace Consultorio.GUILayer
             if (txtImp.Text == "") { oPractica.Importe = 0; }
             else
             {
-                oPractica.Importe = Convert.ToInt32(txtImp.Text);
+                try
+                {
+                    oPractica.Importe = Convert.ToInt32(txtImp.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Debe ingresar un valor válido para el importe de la práctica", "Importe inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
-            if (oPracticaService.validarPractica())
+            if (oPracticaService.validarPractica(oPractica))
             {
                 sentenciaYCarga(oPractica, grdPractica, oPracticaService, esNuevo);
             }

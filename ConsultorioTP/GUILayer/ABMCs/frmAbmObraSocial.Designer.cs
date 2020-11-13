@@ -255,6 +255,7 @@
             // 
             // grdObraSocial
             // 
+            this.grdObraSocial.AllowUserToAddRows = false;
             this.grdObraSocial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdObraSocial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdObraSocial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -286,11 +287,11 @@
             // 
             // Porcentaje
             // 
-            this.Porcentaje.HeaderText = "Porcentaje";
+            this.Porcentaje.HeaderText = "Porcentaje de descuento";
             this.Porcentaje.MinimumWidth = 8;
             this.Porcentaje.Name = "Porcentaje";
             this.Porcentaje.ReadOnly = true;
-            this.Porcentaje.Width = 150;
+            this.Porcentaje.Width = 180;
             // 
             // frmAbmObraSocial
             // 
@@ -341,10 +342,10 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Panel pnlGrilla;
         private System.Windows.Forms.DataGridView grdObraSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.Label lblPorcentaje;
         private System.Windows.Forms.TextBox txtPorcentaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Porcentaje;
     }
 }

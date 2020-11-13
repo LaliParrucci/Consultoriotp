@@ -123,7 +123,7 @@ namespace Consultorio.GUILayer.Usuario
             oUsuario.Nombre_usuario = txtNombre.Text;
             oUsuario.Contraseña = txtContraseña.Text;
 
-            if (oUsuarioService.validarCampo())
+            if (oUsuarioService.validarCampo(oUsuario))
             {
                 if (this.esNuevo)
                 {

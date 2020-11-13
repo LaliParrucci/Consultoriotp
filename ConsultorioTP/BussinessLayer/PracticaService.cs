@@ -40,13 +40,13 @@ namespace Consultorio.BussinessLayer
             return oPracticaDao.GetPracticaNom(nom);
         }
 
-        public bool validarPractica()
+        public bool validarPractica(Practica obPractica)
         {
-            if (oPractica.Nombre == string.Empty)
+            if (obPractica.Nombre == string.Empty)
             {
-                MessageBox.Show("El nombre está vacío...");
+                MessageBox.Show("Debe ingresar un nombre para la práctica", "Nombre de práctica vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            } //SEGUIR VALIDACIONES
+            }
             return true;
         }
         public bool existePractica(int id)

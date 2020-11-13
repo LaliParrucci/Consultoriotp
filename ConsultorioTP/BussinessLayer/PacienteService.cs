@@ -28,23 +28,18 @@ namespace Consultorio.BussinessLayer
             return oPacienteDao.GetPaciente(dni);
         }
 
-        public bool validarPaciente()
+        public bool validarPaciente(PacienteE obPaciente)
         {
-            if (oPaciente.Nombre == string.Empty)
+            if (obPaciente.Nombre == string.Empty)
             {
-                MessageBox.Show("El nombre está vacío...");
+                MessageBox.Show("Debe ingresar un nombre para el paciente", "Nombre de paciente vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (oPaciente.Apellido == string.Empty)
+            if (obPaciente.Apellido == string.Empty)
             {
-                MessageBox.Show("El apellido está vacío...");
+                MessageBox.Show("Debe ingresar un apellido para el paciente", "Apellido de paciente vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (oPaciente.Domicilio == string.Empty)
-            {
-                MessageBox.Show("El domicilio está vacío...");
-                return false;
-            }//seguir validaciones!!!!!
             return true;
         }
         public bool existePaciente(int dni)

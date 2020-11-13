@@ -112,6 +112,7 @@ namespace Consultorio.GUILayer
             {
                 oInsumo.Nombre = txtNombre.Text;
                 oInsumo.Stock = Convert.ToInt32(txtStock.Text);
+                
                 if (this.esNuevo)
                 {
                     sentenciaYCarga(oInsumo, grdInsumo, oInsumoService, esNuevo);                    

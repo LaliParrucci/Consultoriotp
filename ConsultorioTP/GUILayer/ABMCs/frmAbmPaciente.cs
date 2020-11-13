@@ -141,15 +141,23 @@ namespace Consultorio.GUILayer
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            oPaciente.Dni = Convert.ToInt32(txtDNI.Text);
+            try
+            {
+                oPaciente.Dni = Convert.ToInt32(txtDNI.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe ingresar un número de DNI válido para el paciente", "DNI inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             oPaciente.Nombre = txtNombre.Text;
             oPaciente.Apellido = txtApellido.Text;
             oPaciente.Telefono = txtTelefono.Text;
             oPaciente.Domicilio = txtDomicilio.Text;
             oPaciente.Email = txtEmail.Text;
 
-            //oPractica.Id_practica = Convert.ToInt32(grdPractica.SelectedValue);
-            if (oPacienteService.validarPaciente())
+            
+            if (oPacienteService.validarPaciente(oPaciente))
             {
                 if (this.esNuevo)
                 {

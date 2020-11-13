@@ -277,6 +277,7 @@
             // 
             // grdPractica
             // 
+            this.grdPractica.AllowUserToAddRows = false;
             this.grdPractica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdPractica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPractica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

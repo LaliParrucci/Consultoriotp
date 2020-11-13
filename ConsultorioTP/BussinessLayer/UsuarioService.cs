@@ -62,16 +62,16 @@ namespace Consultorio.BusinessLayer
             oUsuarioDao.actualizacion(id, nom, contra, esAlta);
         }
 
-        internal bool validarCampo()
+        internal bool validarCampo(UsuarioE usu)
         {
-            if (oUsuario.Nombre_usuario == string.Empty)
+            if (usu.Nombre_usuario == string.Empty)
             {
-                MessageBox.Show("El nomobre está vacio...");
+                MessageBox.Show("Debe ingresar un nombre para el usuario", "Nombre de usuario vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (oUsuario.Contraseña == string.Empty)
+            if (usu.Contraseña == string.Empty)
             {
-                MessageBox.Show("El apellido está vacío...");
+                MessageBox.Show("Debe ingresar un apellido para el usuario", "Apellido de usuario vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

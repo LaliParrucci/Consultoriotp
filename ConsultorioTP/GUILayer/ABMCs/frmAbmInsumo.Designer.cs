@@ -32,6 +32,8 @@
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.pnlGrilla = new System.Windows.Forms.Panel();
             this.grdInsumo = new System.Windows.Forms.DataGridView();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +90,24 @@
             this.pnlCuerpo.Name = "pnlCuerpo";
             this.pnlCuerpo.Size = new System.Drawing.Size(661, 118);
             this.pnlCuerpo.TabIndex = 1;
+            // 
+            // txtStock
+            // 
+            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStock.Location = new System.Drawing.Point(139, 77);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(136, 24);
+            this.txtStock.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 18);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Stock:";
             // 
             // txtNombre
             // 
@@ -236,6 +254,7 @@
             // 
             // grdInsumo
             // 
+            this.grdInsumo.AllowUserToAddRows = false;
             this.grdInsumo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdInsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -247,24 +266,6 @@
             this.grdInsumo.Size = new System.Drawing.Size(618, 161);
             this.grdInsumo.TabIndex = 0;
             this.grdInsumo.SelectionChanged += new System.EventHandler(this.grdInsumo_SelectionChanged);
-            // 
-            // txtStock
-            // 
-            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(139, 77);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(136, 24);
-            this.txtStock.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 18);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Stock:";
             // 
             // id
             // 

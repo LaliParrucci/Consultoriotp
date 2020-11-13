@@ -839,7 +839,6 @@ C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\bin\Debug\zh-
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.csproj.CopyComplete
 C:\Users\flor\Desktop\00facu\3ro\Programación de aplicaciones visuales\trabajo practico\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaPracticaPorConsulta.resources
-C:\Users\flor\Desktop\00facu\3ro\Programación de aplicaciones visuales\trabajo practico\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasAño.resources
 C:\Users\flor\Desktop\00facu\3ro\Programación de aplicaciones visuales\trabajo practico\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasPracticasMes.resources
 C:\Users\flor\Desktop\00facu\3ro\Programación de aplicaciones visuales\trabajo practico\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaTurnosPorProfesional.resources
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticaPracticaPorConsulta.resources
@@ -853,3 +852,4 @@ C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GU
 C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
 C:\Users\besac\source\repos\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
 C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
+C:\Users\flor\Desktop\00facu\3ro\Programación de aplicaciones visuales\trabajo practico\ConsultorioTP\obj\Debug\Consultorio.GUILayer.frmEstadisticasInsumosPractica.resources
