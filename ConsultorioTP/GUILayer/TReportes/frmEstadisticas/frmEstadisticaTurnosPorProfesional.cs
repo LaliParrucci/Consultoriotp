@@ -98,6 +98,7 @@ namespace Consultorio.GUILayer
                 rpEsTrunoPorProfesional.LocalReport.DataSources.Clear();
                 rpEsTrunoPorProfesional.LocalReport.DataSources.Add(ds1);
                 rpEsTrunoPorProfesional.LocalReport.DataSources.Add(ds2);
+                rpEsTrunoPorProfesional.LocalReport.SetParameters(new ReportParameter[] { new ReportParameter("prmFecha1", dtpDesde1.Value.ToShortDateString()), new ReportParameter("prmFecha2", dtpHasta1.Value.ToShortDateString()), new ReportParameter("prmFecha3", dtpDesde2.Value.ToShortDateString()), new ReportParameter("prmFecha4", dtpHasta2.Value.ToShortDateString()) });
                 this.rpEsTrunoPorProfesional.RefreshReport();
 
             }

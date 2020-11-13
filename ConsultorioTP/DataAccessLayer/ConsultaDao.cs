@@ -46,17 +46,6 @@ namespace Consultorio.DataAccessLayer
             return null;
         }
 
-        internal DataTable recuperarPracticasAño(string año)
-        {
-            String consultaSql = string.Concat("select prac.nombre as id_practica" +
-                                                        " from pracxcons p" +
-                                                         " join consulta c on c.id_consulta = p.id_consulta" +
-                                                           " join practica prac on p.id_practica = prac.id_practica" +
-                                                          " where c.fecha LIKE '%" + año + "%'" +
-                                                           " group by p.id_practica, prac.nombre");
-               
-            return DataManager.GetInstance().ConsultaSQL(consultaSql);
-        }
 
         private Consulta crearObjConsulta(DataRow row)
         {
@@ -84,7 +73,7 @@ namespace Consultorio.DataAccessLayer
         }
         public DataTable recuperarPracticaConsulta(string desde, string hasta, int practica)
         {
-            String consultaSql = string.Concat("select p.id_consulta, p.id_practica, pr.nombre as id_consulta",
+            String consultaSql = string.Concat("select p.id_consulta, pr.nombre as id_practica",
                                                " from pracXcons p join consulta c on(p.id_consulta = c.id_consulta)",
                                                "  join practica pr on(p.id_practica = pr.id_practica)",
                                                " Where fecha between '", desde, "' and '", hasta, "'",

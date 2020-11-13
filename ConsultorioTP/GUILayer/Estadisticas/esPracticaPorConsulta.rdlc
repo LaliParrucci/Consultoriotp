@@ -162,6 +162,8 @@
                     <CrossAt>NaN</CrossAt>
                     <Minimum>NaN</Minimum>
                     <Maximum>NaN</Maximum>
+                    <AllowLabelRotation>Rotate45</AllowLabelRotation>
+                    <MaxFontSize>9pt</MaxFontSize>
                     <ChartAxisScaleBreak>
                       <Style />
                     </ChartAxisScaleBreak>
@@ -364,7 +366,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Título del gráfico</Caption>
+                <Caption>consultas por práctica</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -393,9 +395,9 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <Top>0.89641cm</Top>
-            <Left>3.03953cm</Left>
-            <Height>5cm</Height>
+            <Top>2.11349cm</Top>
+            <Left>9.4689cm</Left>
+            <Height>5.50271cm</Height>
             <Width>7.5cm</Width>
             <Style>
               <Border>
@@ -407,10 +409,10 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.83878in</Height>
+        <Height>3.58878in</Height>
         <Style />
       </Body>
-      <Width>9.8022in</Width>
+      <Width>7.49342in</Width>
       <Page>
         <PageHeader>
           <Height>2.54cm</Height>
@@ -421,7 +423,6 @@
               <Source>Embedded</Source>
               <Value>Logocompleto</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.19334cm</Top>
               <Height>2.24083cm</Height>
               <Width>2.02917cm</Width>
               <Style>
@@ -448,10 +449,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.97cm</Top>
-              <Left>6.33046cm</Left>
+              <Top>1.55208cm</Top>
+              <Left>5.3515cm</Left>
               <Height>0.6cm</Height>
-              <Width>10.01417cm</Width>
+              <Width>8.05625cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -470,6 +471,47 @@
             </Border>
           </Style>
         </PageHeader>
+        <PageFooter>
+          <Height>2.54cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="PageNumber">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PageNumber</rd:DefaultName>
+              <Top>1.4382cm</Top>
+              <Left>16.10995cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
         <LeftMargin>2cm</LeftMargin>

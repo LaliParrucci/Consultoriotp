@@ -122,94 +122,94 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>consultorio_odontologicoTodas.xsd</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmAbmInsumo.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmAbmInsumo.Designer.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmInsumo.Designer.cs">
       <DependentUpon>frmAbmInsumo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmAbmObraSocial.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmObraSocial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmAbmObraSocial.Designer.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmObraSocial.Designer.cs">
       <DependentUpon>frmAbmObraSocial.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmAbmPaciente.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmAbmPaciente.Designer.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmPaciente.Designer.cs">
       <DependentUpon>frmAbmPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmAbmPractica.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmPractica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmAbmPractica.Designer.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmPractica.Designer.cs">
       <DependentUpon>frmAbmPractica.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmAbmProfesional.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmProfesional.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmAbmProfesional.Designer.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmProfesional.Designer.cs">
       <DependentUpon>frmAbmProfesional.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasInsumosPractica.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasInsumosPractica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasInsumosPractica.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasInsumosPractica.Designer.cs">
       <DependentUpon>frmEstadisticasInsumosPractica.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticaPracticaPorConsulta.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaPracticaPorConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticaPracticaPorConsulta.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaPracticaPorConsulta.Designer.cs">
       <DependentUpon>frmEstadisticaPracticaPorConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasOconMasPacientes.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasOconMasPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasOconMasPacientes.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasOconMasPacientes.Designer.cs">
       <DependentUpon>frmEstadisticasOconMasPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasPracticasMes.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasPracticasMes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticasPracticasMes.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasPracticasMes.Designer.cs">
       <DependentUpon>frmEstadisticasPracticasMes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticaTurnosConcretados.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaTurnosConcretados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticaTurnosConcretados.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaTurnosConcretados.Designer.cs">
       <DependentUpon>frmEstadisticaTurnosConcretados.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticaTurnosPorProfesional.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaTurnosPorProfesional.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadisticaTurnosPorProfesional.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaTurnosPorProfesional.Designer.cs">
       <DependentUpon>frmEstadisticaTurnosPorProfesional.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmEstadísticaOOSS.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadísticaOOSS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmEstadísticaOOSS.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmEstadisticas\frmEstadísticaOOSS.Designer.cs">
       <DependentUpon>frmEstadísticaOOSS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmInformeMontosOOSS.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmInformeMontosOOSS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmInformeMontosOOSS.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmInformeMontosOOSS.Designer.cs">
       <DependentUpon>frmInformeMontosOOSS.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmListadoTurnos.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmListadoTurnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmListadoTurnos.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmListadoTurnos.Designer.cs">
       <DependentUpon>frmListadoTurnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmLogin.cs">
+    <Compile Include="GUILayer\InicioSesion\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmLogin.Designer.cs">
+    <Compile Include="GUILayer\InicioSesion\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\frmPrincipal.cs">
@@ -218,64 +218,64 @@
     <Compile Include="GUILayer\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmAbmUsuario.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmAbmUsuario.Designer.cs">
+    <Compile Include="GUILayer\ABMCs\frmAbmUsuario.Designer.cs">
       <DependentUpon>frmAbmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmRegistrarConsulta.cs">
+    <Compile Include="GUILayer\Transacciones\frmRegistrarConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmRegistrarConsulta.Designer.cs">
+    <Compile Include="GUILayer\Transacciones\frmRegistrarConsulta.Designer.cs">
       <DependentUpon>frmRegistrarConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmRegistrarTurno.cs">
+    <Compile Include="GUILayer\Transacciones\frmRegistrarTurno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmRegistrarTurno.Designer.cs">
+    <Compile Include="GUILayer\Transacciones\frmRegistrarTurno.Designer.cs">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmReporteListadoInsumos.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReporteListadoInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmReporteListadoInsumos.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReporteListadoInsumos.Designer.cs">
       <DependentUpon>frmReporteListadoInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReporteObrasMasUtilizadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmReporteObrasMasUtilizadas.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReporteObrasMasUtilizadas.Designer.cs">
       <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmReportePrXOb.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReportePrXOb.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmReportePrXOb.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReportePrXOb.Designer.cs">
       <DependentUpon>frmReportePrXOb.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmReportePrXP.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReportePrXP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmReportePrXP.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReportePrXP.Designer.cs">
       <DependentUpon>frmReportePrXP.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmReportePXO.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReportePXO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmReportePXO.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\frmReportePXO.Designer.cs">
       <DependentUpon>frmReportePXO.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmReportes.cs">
+    <Compile Include="GUILayer\TReportes\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\frmReportes.Designer.cs">
+    <Compile Include="GUILayer\TReportes\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ReporteListadoPracticas.cs">
+    <Compile Include="GUILayer\TReportes\TListados\ReporteListadoPracticas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ReporteListadoPracticas.Designer.cs">
+    <Compile Include="GUILayer\TReportes\TListados\ReporteListadoPracticas.Designer.cs">
       <DependentUpon>ReporteListadoPracticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -288,79 +288,79 @@
     <EmbeddedResource Include="GUILayer\Estadisticas\estadisticaOOSSMasUsadas.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\estadisticaTurnosConcretados.rdlc" />
     <EmbeddedResource Include="GUILayer\Estadisticas\esTrunoPorProfesional.rdlc" />
-    <EmbeddedResource Include="GUILayer\frmAbmInsumo.resx">
+    <EmbeddedResource Include="GUILayer\ABMCs\frmAbmInsumo.resx">
       <DependentUpon>frmAbmInsumo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmAbmObraSocial.resx">
+    <EmbeddedResource Include="GUILayer\ABMCs\frmAbmObraSocial.resx">
       <DependentUpon>frmAbmObraSocial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmAbmPaciente.resx">
+    <EmbeddedResource Include="GUILayer\ABMCs\frmAbmPaciente.resx">
       <DependentUpon>frmAbmPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmAbmPractica.resx">
+    <EmbeddedResource Include="GUILayer\ABMCs\frmAbmPractica.resx">
       <DependentUpon>frmAbmPractica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmAbmProfesional.resx">
+    <EmbeddedResource Include="GUILayer\ABMCs\frmAbmProfesional.resx">
       <DependentUpon>frmAbmProfesional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmAbmUsuario.resx">
+    <EmbeddedResource Include="GUILayer\ABMCs\frmAbmUsuario.resx">
       <DependentUpon>frmAbmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticaPracticaPorConsulta.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaPracticaPorConsulta.resx">
       <DependentUpon>frmEstadisticaPracticaPorConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticasInsumosPractica.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasInsumosPractica.resx">
       <DependentUpon>frmEstadisticasInsumosPractica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticasOconMasPacientes.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasOconMasPacientes.resx">
       <DependentUpon>frmEstadisticasOconMasPacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticasPracticasMes.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticasPracticasMes.resx">
       <DependentUpon>frmEstadisticasPracticasMes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticaTurnosConcretados.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaTurnosConcretados.resx">
       <DependentUpon>frmEstadisticaTurnosConcretados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadisticaTurnosPorProfesional.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadisticaTurnosPorProfesional.resx">
       <DependentUpon>frmEstadisticaTurnosPorProfesional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmEstadísticaOOSS.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmEstadisticas\frmEstadísticaOOSS.resx">
       <DependentUpon>frmEstadísticaOOSS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmInformeMontosOOSS.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmInformeMontosOOSS.resx">
       <DependentUpon>frmInformeMontosOOSS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmListadoTurnos.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmListadoTurnos.resx">
       <DependentUpon>frmListadoTurnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmLogin.resx">
+    <EmbeddedResource Include="GUILayer\InicioSesion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmRegistrarConsulta.resx">
+    <EmbeddedResource Include="GUILayer\Transacciones\frmRegistrarConsulta.resx">
       <DependentUpon>frmRegistrarConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmRegistrarTurno.resx">
+    <EmbeddedResource Include="GUILayer\Transacciones\frmRegistrarTurno.resx">
       <DependentUpon>frmRegistrarTurno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmReporteListadoInsumos.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmReporteListadoInsumos.resx">
       <DependentUpon>frmReporteListadoInsumos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmReporteObrasMasUtilizadas.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmReporteObrasMasUtilizadas.resx">
       <DependentUpon>frmReporteObrasMasUtilizadas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmReportePrXOb.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmReportePrXOb.resx">
       <DependentUpon>frmReportePrXOb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmReportePrXP.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmReportePrXP.resx">
       <DependentUpon>frmReportePrXP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmReportePXO.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\frmReportePXO.resx">
       <DependentUpon>frmReportePXO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmReportes.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Informes\lstTurnosDiarios.rdlc" />
@@ -370,7 +370,7 @@
     <EmbeddedResource Include="GUILayer\Informes\ReporteListadoPracticas.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpObrasMasUtilizadas.rdlc" />
     <EmbeddedResource Include="GUILayer\Informes\rpPXO.rdlc" />
-    <EmbeddedResource Include="GUILayer\ReporteListadoPracticas.resx">
+    <EmbeddedResource Include="GUILayer\TReportes\TListados\ReporteListadoPracticas.resx">
       <DependentUpon>ReporteListadoPracticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -504,5 +504,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

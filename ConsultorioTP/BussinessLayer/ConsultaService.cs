@@ -38,11 +38,6 @@ namespace Consultorio.BussinessLayer
             return oConsultaDao.crearConsulta(consulta, practicas);
         }
 
-        internal DataTable recuperarPracticaPorAño(string año)
-        {
-            return oConsultaDao.recuperarPracticasAño(año);
-        }
-
         public bool validarInsumo(string n, string s)
         {
             if (n == string.Empty)
