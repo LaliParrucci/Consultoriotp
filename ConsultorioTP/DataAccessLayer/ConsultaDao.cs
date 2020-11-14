@@ -84,7 +84,7 @@ namespace Consultorio.DataAccessLayer
         public DataTable estadisticasConsulta(string desde, string hasta, int profesional)
         {
             string sql = string.Concat("select prac.nombre as nombre, count(p.id_practica) as id_practica" +
-                                                          " from practicas_x_consulta p" +
+                                                          " from pracXcons p" +
                                                            " join consulta c on c.id_consulta = p.id_consulta" +
                                                              " join practica prac on p.id_practica = prac.id_practica" +
                                                             " where c.fecha between '"+ desde +"' and '"+hasta+"'"+

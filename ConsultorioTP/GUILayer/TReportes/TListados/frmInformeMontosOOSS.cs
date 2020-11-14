@@ -22,6 +22,8 @@ namespace Consultorio.GUILayer
 
         private void frmInformeMontosOOSS_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'Consultorio_OdontologicoTodas.obra_social' Puede moverla o quitarla según sea necesario.
+            this.obra_socialTableAdapter.Fill(this.Consultorio_OdontologicoTodas.obra_social);
 
             this.rpvMontos.RefreshReport();
         }

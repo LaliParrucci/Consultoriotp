@@ -845,26 +845,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Datos considerados entre fechas:</Value>
+                    <Value>Datos considerados en el primer período</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve"> </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!prmFecha1.Value</Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>  y </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!prmFecha2.Value</Value>
-                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -893,26 +877,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Datos considerados entre fechas:</Value>
+                    <Value>Datos considerados en el segundo período</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve"> </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!prmFecha3.Value</Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value> y </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!prmFecha4.Value</Value>
-                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -1006,7 +974,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Estadísticas Trunos Por profesional comparados en dos períodos</Value>
+                      <Value>Estadísticas Turnos Por profesional comparados en dos períodos</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1164,50 +1132,10 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParameters>
-    <ReportParameter Name="prmFecha1">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="prmFecha2">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="prmFecha3">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="prmFecha4">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
-      <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>prmFecha1</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>prmFecha2</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>prmFecha3</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>prmFecha4</ParameterName>
-        </CellDefinition>
-      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <EmbeddedImages>
