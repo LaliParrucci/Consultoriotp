@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticasPracticasMes));
             this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.rpPracticasMes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblProfesional = new System.Windows.Forms.Label();
+            this.cboProfesional = new System.Windows.Forms.ComboBox();
+            this.profesionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaHastaa = new System.Windows.Forms.DateTimePicker();
             this.fechaHasta = new System.Windows.Forms.Label();
             this.fechaDesdee = new System.Windows.Forms.DateTimePicker();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.desdeDesde = new System.Windows.Forms.Label();
-            this.cboProfesional = new System.Windows.Forms.ComboBox();
-            this.lblProfesional = new System.Windows.Forms.Label();
-            this.profesionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profesionalTableAdapter = new Consultorio.GUILayer.consultorio_odontologicoTodasTableAdapters.profesionalTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
@@ -61,9 +62,9 @@
             // 
             // rpPracticasMes
             // 
-            reportDataSource2.Name = "DatosPractica";
-            reportDataSource2.Value = this.consultorioodontologicoTodasBindingSource;
-            this.rpPracticasMes.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DatosPractica";
+            reportDataSource1.Value = this.consultorioodontologicoTodasBindingSource;
+            this.rpPracticasMes.LocalReport.DataSources.Add(reportDataSource1);
             this.rpPracticasMes.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.esPracticasMes.rdlc";
             this.rpPracticasMes.Location = new System.Drawing.Point(12, 192);
             this.rpPracticasMes.Name = "rpPracticasMes";
@@ -86,6 +87,30 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            // 
+            // lblProfesional
+            // 
+            this.lblProfesional.AutoSize = true;
+            this.lblProfesional.Location = new System.Drawing.Point(424, 68);
+            this.lblProfesional.Name = "lblProfesional";
+            this.lblProfesional.Size = new System.Drawing.Size(62, 13);
+            this.lblProfesional.TabIndex = 7;
+            this.lblProfesional.Text = "Profesional:";
+            // 
+            // cboProfesional
+            // 
+            this.cboProfesional.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.profesionalBindingSource, "nombre", true));
+            this.cboProfesional.DataSource = this.profesionalBindingSource;
+            this.cboProfesional.FormattingEnabled = true;
+            this.cboProfesional.Location = new System.Drawing.Point(492, 65);
+            this.cboProfesional.Name = "cboProfesional";
+            this.cboProfesional.Size = new System.Drawing.Size(121, 21);
+            this.cboProfesional.TabIndex = 6;
+            // 
+            // profesionalBindingSource
+            // 
+            this.profesionalBindingSource.DataMember = "profesional";
+            this.profesionalBindingSource.DataSource = this.consultorioodontologicoTodasBindingSource;
             // 
             // fechaHastaa
             // 
@@ -130,30 +155,6 @@
             this.desdeDesde.TabIndex = 0;
             this.desdeDesde.Text = "Fecha desde:";
             // 
-            // cboProfesional
-            // 
-            this.cboProfesional.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.profesionalBindingSource, "nombre", true));
-            this.cboProfesional.DataSource = this.profesionalBindingSource;
-            this.cboProfesional.FormattingEnabled = true;
-            this.cboProfesional.Location = new System.Drawing.Point(492, 65);
-            this.cboProfesional.Name = "cboProfesional";
-            this.cboProfesional.Size = new System.Drawing.Size(121, 21);
-            this.cboProfesional.TabIndex = 6;
-            // 
-            // lblProfesional
-            // 
-            this.lblProfesional.AutoSize = true;
-            this.lblProfesional.Location = new System.Drawing.Point(424, 68);
-            this.lblProfesional.Name = "lblProfesional";
-            this.lblProfesional.Size = new System.Drawing.Size(62, 13);
-            this.lblProfesional.TabIndex = 7;
-            this.lblProfesional.Text = "Profesional:";
-            // 
-            // profesionalBindingSource
-            // 
-            this.profesionalBindingSource.DataMember = "profesional";
-            this.profesionalBindingSource.DataSource = this.consultorioodontologicoTodasBindingSource;
-            // 
             // profesionalTableAdapter
             // 
             this.profesionalTableAdapter.ClearBeforeFill = true;
@@ -165,8 +166,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rpPracticasMes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEstadisticasPracticasMes";
-            this.Text = "frmEstadisticasPracticasMes";
+            this.Text = "Visualizador de prácticas por mes";
             this.Load += new System.EventHandler(this.frmEstadisticasPracticasMes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();

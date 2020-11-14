@@ -35,17 +35,17 @@ namespace Consultorio.DataAccessLayer
 
             return resultadoConsulta;
         }
-        public DataTable ObtenerListadoPracticasConObraSocial(int id_obra_social)
+        public DataTable ObtenerListadoPracticasConObraSocial(int id_obra_social, string desde, string hasta)
         {
-          var strSql = "SELECT id_practica, nombre, descripcion, importe FROM practica pr RIGHT JOIN consulta c ON(pr.id_practica = c.practicas_realizadas) LEFT JOIN turno t ON(c.fecha=t.fecha and c.id_paciente=t.id_paciente and c.id_profesional=t.id_profesional) WHERE t.id_obra_social = " + id_obra_social + "";
+          var strSql = "SELECT pr.id_practica, pr.nombre, pr.descripcion, pr.importe FROM practica pr JOIN pracxcons p ON(pr.id_practica = p.id_practica) RIGHT JOIN consulta c ON(p.id_consulta = c.id_consulta) LEFT JOIN turno t ON(c.fecha=t.fecha and c.id_paciente=t.id_paciente and c.id_profesional=t.id_profesional) WHERE t.id_obra_social = " + id_obra_social + "AND c.fecha between '"+ desde + "' and '" + hasta +"'";
             
            var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
             return resultadoConsulta;
         }
-        public DataTable ObtenerListadoPracticasConProfesional(int id_profesional)
+        public DataTable ObtenerListadoPracticasConProfesional(int id_profesional, string desde, string hasta)
         {
-            var strSql = "SELECT id_practica, nombre, descripcion FROM practica pr JOIN consulta c ON (pr.id_practica = c.practicas_realizadas) WHERE c.id_profesional = " + id_profesional + "";
+            var strSql = "SELECT pr.id_practica, pr.nombre, pr.descripcion FROM practica pr JOIN pracxcons p on(pr.id_practica = p.id_practica) JOIN consulta c ON (p.id_consulta = c.id_consulta) WHERE c.id_profesional = " + id_profesional + "AND c.fecha between'" + desde + "' and '" + hasta + "'";
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
             return resultadoConsulta;

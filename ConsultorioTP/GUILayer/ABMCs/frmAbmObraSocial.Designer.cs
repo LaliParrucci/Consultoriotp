@@ -79,6 +79,8 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Controls.Add(this.lblPorcentaje);
+            this.pnlCuerpo.Controls.Add(this.txtPorcentaje);
             this.pnlCuerpo.Controls.Add(this.txtNombre);
             this.pnlCuerpo.Controls.Add(this.txtCodigo);
             this.pnlCuerpo.Controls.Add(this.lblNombre);
@@ -92,7 +94,7 @@
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(428, 35);
+            this.txtNombre.Location = new System.Drawing.Point(400, 12);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(130, 24);
             this.txtNombre.TabIndex = 3;
@@ -100,7 +102,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigo.Location = new System.Drawing.Point(123, 35);
+            this.txtCodigo.Location = new System.Drawing.Point(154, 12);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(130, 24);
             this.txtCodigo.TabIndex = 2;
@@ -109,7 +111,7 @@
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(356, 38);
+            this.lblNombre.Location = new System.Drawing.Point(328, 12);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 1;
@@ -119,7 +121,7 @@
             // 
             this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(57, 38);
+            this.lblCodigo.Location = new System.Drawing.Point(88, 12);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(60, 18);
             this.lblCodigo.TabIndex = 0;
@@ -225,8 +227,6 @@
             // 
             // pnlGrilla
             // 
-            this.pnlGrilla.Controls.Add(this.txtPorcentaje);
-            this.pnlGrilla.Controls.Add(this.lblPorcentaje);
             this.pnlGrilla.Controls.Add(this.grdObraSocial);
             this.pnlGrilla.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrilla.Location = new System.Drawing.Point(0, 144);
@@ -237,7 +237,7 @@
             // txtPorcentaje
             // 
             this.txtPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPorcentaje.Location = new System.Drawing.Point(234, 203);
+            this.txtPorcentaje.Location = new System.Drawing.Point(276, 51);
             this.txtPorcentaje.Name = "txtPorcentaje";
             this.txtPorcentaje.Size = new System.Drawing.Size(130, 24);
             this.txtPorcentaje.TabIndex = 4;
@@ -246,7 +246,7 @@
             // 
             this.lblPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPorcentaje.AutoSize = true;
-            this.lblPorcentaje.Location = new System.Drawing.Point(98, 203);
+            this.lblPorcentaje.Location = new System.Drawing.Point(187, 57);
             this.lblPorcentaje.Name = "lblPorcentaje";
             this.lblPorcentaje.Size = new System.Drawing.Size(83, 18);
             this.lblPorcentaje.TabIndex = 4;
@@ -318,7 +318,6 @@
             this.pnlCuerpo.PerformLayout();
             this.pnlBotones.ResumeLayout(false);
             this.pnlGrilla.ResumeLayout(false);
-            this.pnlGrilla.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdObraSocial)).EndInit();
             this.ResumeLayout(false);
 

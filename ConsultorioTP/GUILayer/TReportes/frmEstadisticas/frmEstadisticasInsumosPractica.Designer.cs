@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticasInsumosPractica));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.lblPractica = new System.Windows.Forms.Label();
             this.cboPracticas = new System.Windows.Forms.ComboBox();
-            this.rpInsumo = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.practicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
+            this.rpInsumo = new Microsoft.Reporting.WinForms.ReportViewer();
             this.practicaTableAdapter = new Consultorio.GUILayer.consultorio_odontologicoTodasTableAdapters.practicaTableAdapter();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.practicaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,7 +71,7 @@
             this.lblPractica.Name = "lblPractica";
             this.lblPractica.Size = new System.Drawing.Size(49, 13);
             this.lblPractica.TabIndex = 1;
-            this.lblPractica.Text = "Practica:";
+            this.lblPractica.Text = "Práctica:";
             this.lblPractica.Click += new System.EventHandler(this.lblPractica_Click);
             // 
             // cboPracticas
@@ -83,6 +84,16 @@
             this.cboPracticas.Size = new System.Drawing.Size(143, 21);
             this.cboPracticas.TabIndex = 0;
             // 
+            // practicaBindingSource
+            // 
+            this.practicaBindingSource.DataMember = "practica";
+            this.practicaBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rpInsumo
             // 
             this.rpInsumo.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Estadisticas.esInsumoPractica.rdlc";
@@ -91,16 +102,6 @@
             this.rpInsumo.ServerReport.BearerToken = null;
             this.rpInsumo.Size = new System.Drawing.Size(776, 265);
             this.rpInsumo.TabIndex = 1;
-            // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // practicaBindingSource
-            // 
-            this.practicaBindingSource.DataMember = "practica";
-            this.practicaBindingSource.DataSource = this.consultorio_odontologicoTodas;
             // 
             // practicaTableAdapter
             // 
@@ -113,13 +114,14 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpInsumo);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEstadisticasInsumosPractica";
-            this.Text = "frmEstadiscticasInsumosPractica";
+            this.Text = "Visualizador de insumos por práctica";
             this.Load += new System.EventHandler(this.frmEstadisticasInsumosPractica_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.practicaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.ResumeLayout(false);
 
         }

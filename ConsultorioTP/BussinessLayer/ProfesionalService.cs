@@ -48,23 +48,19 @@ namespace Consultorio.BussinessLayer
             return oProfesionalDao.GetProfesional(matricula);
         }
 
-        internal bool validarProfesional()
+        internal bool validarProfesional(string nombre, string apellido)
         {
-            if(oProfesional.Nombre == string.Empty)
+            if(nombre == string.Empty)
             {
                 MessageBox.Show("Debe ingresar un nombre para el profesional", "Nombre de profesional vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (oProfesional.Apellido == string.Empty)
+            if (apellido == string.Empty)
             {
                 MessageBox.Show("Debe ingresar un apellido para el profesional", "Apellido de profesional vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (oProfesional.Domicilio == string.Empty)
-            {
-                MessageBox.Show("Debe ingresar un domicilio para el profesional", "Domicilio de profesional vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            
             return true;
         }
 

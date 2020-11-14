@@ -30,9 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticaTurnosConcretados));
             this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboOdontologos = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
@@ -40,9 +44,6 @@
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.rpvTurnosConcretados = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboOdontologos = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             this.gbxFiltros.SuspendLayout();
@@ -78,6 +79,33 @@
             this.gbxFiltros.TabIndex = 3;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(347, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Odontólogo";
+            // 
+            // cboOdontologos
+            // 
+            this.cboOdontologos.FormattingEnabled = true;
+            this.cboOdontologos.Location = new System.Drawing.Point(440, 50);
+            this.cboOdontologos.Name = "cboOdontologos";
+            this.cboOdontologos.Size = new System.Drawing.Size(175, 26);
+            this.cboOdontologos.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(317, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 18);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Profesional";
             // 
             // btnConsultar
             // 
@@ -148,33 +176,6 @@
             this.rpvTurnosConcretados.TabIndex = 4;
             this.rpvTurnosConcretados.Load += new System.EventHandler(this.rpvTurnosConcretados_Load);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(317, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 18);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Profesional";
-            // 
-            // cboOdontologos
-            // 
-            this.cboOdontologos.FormattingEnabled = true;
-            this.cboOdontologos.Location = new System.Drawing.Point(440, 50);
-            this.cboOdontologos.Name = "cboOdontologos";
-            this.cboOdontologos.Size = new System.Drawing.Size(175, 26);
-            this.cboOdontologos.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(347, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 18);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Odontólogo";
-            // 
             // frmEstadisticaTurnosConcretados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +183,7 @@
             this.ClientSize = new System.Drawing.Size(693, 631);
             this.Controls.Add(this.rpvTurnosConcretados);
             this.Controls.Add(this.gbxFiltros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEstadisticaTurnosConcretados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizador estadística de turnos concretados";

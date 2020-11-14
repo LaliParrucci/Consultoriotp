@@ -25,6 +25,7 @@ namespace Consultorio.GUILayer
         {
             LlenarCombo(cboProfesional, oProfesionalService.recuperarProfesional(), "apellido", "matricula");
             //this.profesionalTableAdapter1.Fill(this.consultorio_odontologicoDataSet31.profesional);
+            fechaDesde.Value = DateTime.Today;
             this.reportViewer1.RefreshReport();
         }
         private void LlenarCombo(ComboBox cbo, Object source, string display, string value)
@@ -40,8 +41,10 @@ namespace Consultorio.GUILayer
             
             if (cboProfesional.SelectedValue != null)
             {
+                string fecha_desde = fechaDesde.Value.Date.ToString("yyyy-MM-dd");
+                string fecha_hasta = fechaHasta.Value.Date.ToString("yyyy-MM-dd");
                 DataTable tabla = new DataTable();
-                tabla = oPracticaService.recuPracticasProfesional(IdProfesional());
+                tabla = oPracticaService.recuPracticasProfesional(IdProfesional(), fecha_desde, fecha_hasta);
 
                 ReportDataSource rp = new ReportDataSource("dsPractica", tabla);
 

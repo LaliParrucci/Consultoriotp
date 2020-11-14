@@ -411,7 +411,7 @@
             </ChartNoDataMessage>
             <DataSetName>DataSetOdont</DataSetName>
             <Top>1.31974cm</Top>
-            <Left>0.81703cm</Left>
+            <Left>1.29328cm</Left>
             <Height>5cm</Height>
             <Width>7.5cm</Width>
             <Style>
@@ -446,7 +446,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Apellido Profesioonal</Value>
+                                  <Value>Apellido Profesional</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -584,7 +584,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSetOdont</DataSetName>
             <Top>1.31974cm</Top>
-            <Left>8.94037cm</Left>
+            <Left>9.41662cm</Left>
             <Height>1.49104cm</Height>
             <Width>7.84396cm</Width>
             <ZIndex>1</ZIndex>
@@ -594,11 +594,24 @@
               </Border>
             </Style>
           </Tablix>
+          <Line Name="Line1">
+            <Top>0.17639cm</Top>
+            <Height>0cm</Height>
+            <Width>18.34474cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Color>Turquoise</Color>
+                <Style>Solid</Style>
+                <Width>5pt</Width>
+              </Border>
+            </Style>
+          </Line>
         </ReportItems>
         <Height>3.15475in</Height>
         <Style />
       </Body>
-      <Width>6.84734in</Width>
+      <Width>7.22234in</Width>
       <Page>
         <PageHeader>
           <Height>2.54cm</Height>
@@ -624,7 +637,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>1.69016cm</Top>
-              <Left>3.27766cm</Left>
+              <Left>3.75391cm</Left>
               <Height>0.6cm</Height>
               <Width>10.01417cm</Width>
               <Style>
@@ -641,6 +654,7 @@
               <Source>Embedded</Source>
               <Value>Logocompleto</Value>
               <Sizing>FitProportional</Sizing>
+              <Left>0.47625cm</Left>
               <Height>1.97625cm</Height>
               <Width>2.16146cm</Width>
               <ZIndex>1</ZIndex>
@@ -666,7 +680,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>0.26141cm</Top>
-              <Left>14.28433cm</Left>
+              <Left>14.76058cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>2</ZIndex>
@@ -708,7 +722,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>1.90183cm</Top>
-              <Left>14.41662cm</Left>
+              <Left>14.89287cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <Style>
@@ -737,9 +751,40 @@
               </Paragraphs>
               <rd:DefaultName>ReportName</rd:DefaultName>
               <Top>1.90183cm</Top>
+              <Left>0.47625cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="UserID">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=User!UserID</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>UserID</rd:DefaultName>
+              <Top>1.12544cm</Top>
+              <Left>0.47625cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

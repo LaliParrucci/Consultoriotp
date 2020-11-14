@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticaPracticaPorConsulta));
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDsd = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpHst = new System.Windows.Forms.DateTimePicker();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.cboPractica = new System.Windows.Forms.ComboBox();
+            this.practicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.label3 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
-            this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.practicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.practicaTableAdapter = new Consultorio.GUILayer.consultorio_odontologicoTodasTableAdapters.practicaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.practicaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,8 +103,22 @@
             this.cboPractica.Name = "cboPractica";
             this.cboPractica.Size = new System.Drawing.Size(113, 21);
             this.cboPractica.TabIndex = 9;
-            this.cboPractica.Text = "System.Data.DataViewManagerListItemTypeDescriptor";
             this.cboPractica.SelectedIndexChanged += new System.EventHandler(this.cboProfesional_SelectedIndexChanged);
+            // 
+            // practicaBindingSource
+            // 
+            this.practicaBindingSource.DataMember = "practica";
+            this.practicaBindingSource.DataSource = this.consultorioodontologicoTodasBindingSource;
+            // 
+            // consultorioodontologicoTodasBindingSource
+            // 
+            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
+            this.consultorioodontologicoTodasBindingSource.Position = 0;
+            // 
+            // consultorio_odontologicoTodas
+            // 
+            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
+            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -113,7 +128,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Practica:";
+            this.label3.Text = "Práctica:";
             // 
             // reportViewer1
             // 
@@ -123,21 +138,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(666, 293);
             this.reportViewer1.TabIndex = 11;
-            // 
-            // consultorio_odontologicoTodas
-            // 
-            this.consultorio_odontologicoTodas.DataSetName = "consultorio_odontologicoTodas";
-            this.consultorio_odontologicoTodas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultorioodontologicoTodasBindingSource
-            // 
-            this.consultorioodontologicoTodasBindingSource.DataSource = this.consultorio_odontologicoTodas;
-            this.consultorioodontologicoTodasBindingSource.Position = 0;
-            // 
-            // practicaBindingSource
-            // 
-            this.practicaBindingSource.DataMember = "practica";
-            this.practicaBindingSource.DataSource = this.consultorioodontologicoTodasBindingSource;
             // 
             // practicaTableAdapter
             // 
@@ -156,13 +156,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDsd);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEstadisticaPracticaPorConsulta";
-            this.Text = "Visualizacion de estadisticas de practicas por consulta";
+            this.Text = "Visualización de estadísticas de prácticas por consulta";
             this.Load += new System.EventHandler(this.frmEstadisticaPracticaPorConsulta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.practicaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorioodontologicoTodasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultorio_odontologicoTodas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

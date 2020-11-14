@@ -77,16 +77,16 @@
             this.lblOdontologo.Location = new System.Drawing.Point(27, 21);
             this.lblOdontologo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOdontologo.Name = "lblOdontologo";
-            this.lblOdontologo.Size = new System.Drawing.Size(147, 29);
+            this.lblOdontologo.Size = new System.Drawing.Size(91, 18);
             this.lblOdontologo.TabIndex = 0;
-            this.lblOdontologo.Text = "Odontologo:";
+            this.lblOdontologo.Text = "Odontólogo:";
             // 
             // cboProfesional
             // 
             this.cboProfesional.FormattingEnabled = true;
             this.cboProfesional.Location = new System.Drawing.Point(125, 18);
             this.cboProfesional.Name = "cboProfesional";
-            this.cboProfesional.Size = new System.Drawing.Size(165, 37);
+            this.cboProfesional.Size = new System.Drawing.Size(165, 26);
             this.cboProfesional.TabIndex = 1;
             // 
             // lblFechaDesde
@@ -94,7 +94,7 @@
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Location = new System.Drawing.Point(52, 85);
             this.lblFechaDesde.Name = "lblFechaDesde";
-            this.lblFechaDesde.Size = new System.Drawing.Size(163, 29);
+            this.lblFechaDesde.Size = new System.Drawing.Size(100, 18);
             this.lblFechaDesde.TabIndex = 2;
             this.lblFechaDesde.Text = "Fecha Desde:";
             // 
@@ -104,7 +104,7 @@
             this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodo.Location = new System.Drawing.Point(17, 54);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(106, 29);
+            this.lblPeriodo.Size = new System.Drawing.Size(67, 18);
             this.lblPeriodo.TabIndex = 3;
             this.lblPeriodo.Text = "Periódo";
             // 
@@ -113,7 +113,7 @@
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDesde.Location = new System.Drawing.Point(158, 80);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(111, 33);
+            this.dtpDesde.Size = new System.Drawing.Size(111, 24);
             this.dtpDesde.TabIndex = 4;
             this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
@@ -122,7 +122,7 @@
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHasta.Location = new System.Drawing.Point(430, 80);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(113, 33);
+            this.dtpHasta.Size = new System.Drawing.Size(113, 24);
             this.dtpHasta.TabIndex = 5;
             // 
             // lblFechaHasta
@@ -130,7 +130,7 @@
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Location = new System.Drawing.Point(328, 85);
             this.lblFechaHasta.Name = "lblFechaHasta";
-            this.lblFechaHasta.Size = new System.Drawing.Size(153, 29);
+            this.lblFechaHasta.Size = new System.Drawing.Size(96, 18);
             this.lblFechaHasta.TabIndex = 6;
             this.lblFechaHasta.Text = "Fecha Hasta:";
             // 
@@ -165,7 +165,7 @@
             // 
             // frmReportePXO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 591);
             this.Controls.Add(this.rpPXO);

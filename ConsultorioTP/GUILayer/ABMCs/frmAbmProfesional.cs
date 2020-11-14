@@ -124,7 +124,7 @@ namespace Consultorio.GUILayer
             oProfesional.Especialidad = txtEspecialidad.Text;
             oProfesional.Domicilio = txtDomicilio.Text;
 
-            if (oProfesionalService.validarProfesional())
+            if (oProfesionalService.validarProfesional(oProfesional.Nombre, oProfesional.Apellido))
             {
                 if (this.esNuevo)
                 {                     

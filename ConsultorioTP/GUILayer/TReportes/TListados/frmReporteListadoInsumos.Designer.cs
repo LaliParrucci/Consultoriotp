@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteListadoInsumos));
             this.consultorioodontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultorio_odontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.gpbInsumos = new System.Windows.Forms.GroupBox();
@@ -138,6 +139,7 @@
             this.ClientSize = new System.Drawing.Size(682, 417);
             this.Controls.Add(this.rpvReporteInsumos);
             this.Controls.Add(this.gpbInsumos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReporteListadoInsumos";
             this.Text = "Listado de Insumos por stock";

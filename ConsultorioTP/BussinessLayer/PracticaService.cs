@@ -22,13 +22,13 @@ namespace Consultorio.BussinessLayer
         {
             return oPracticaDao.GetAll();
         }
-        public DataTable recuPracticasObraSocial(int id)
+        public DataTable recuPracticasObraSocial(int id, string desde, string hasta)
         {
-            return oPracticaDao.ObtenerListadoPracticasConObraSocial(id);
+            return oPracticaDao.ObtenerListadoPracticasConObraSocial(id, desde, hasta);
         }
-        public DataTable recuPracticasProfesional(int id)
+        public DataTable recuPracticasProfesional(int id, string desde, string hasta)
         {
-            return oPracticaDao.ObtenerListadoPracticasConProfesional(id);
+            return oPracticaDao.ObtenerListadoPracticasConProfesional(id, desde, hasta);
         }
         public Practica recuperarPracticasPorId(int id)
         {

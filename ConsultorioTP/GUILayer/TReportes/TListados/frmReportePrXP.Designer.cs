@@ -30,9 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePrXP));
             this.consultorioOdontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Consultorio_OdontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblHasta = new System.Windows.Forms.Label();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.fechaHasta = new System.Windows.Forms.DateTimePicker();
+            this.fechaDesde = new System.Windows.Forms.DateTimePicker();
             this.lblProfesional = new System.Windows.Forms.Label();
             this.cboProfesional = new System.Windows.Forms.ComboBox();
             this.btnGenerar = new System.Windows.Forms.Button();
@@ -54,6 +59,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblHasta);
+            this.groupBox1.Controls.Add(this.lblDesde);
+            this.groupBox1.Controls.Add(this.fechaHasta);
+            this.groupBox1.Controls.Add(this.fechaDesde);
             this.groupBox1.Controls.Add(this.lblProfesional);
             this.groupBox1.Controls.Add(this.cboProfesional);
             this.groupBox1.Controls.Add(this.btnGenerar);
@@ -67,10 +76,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
+            // lblHasta
+            // 
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.Location = new System.Drawing.Point(72, 97);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(93, 18);
+            this.lblHasta.TabIndex = 6;
+            this.lblHasta.Text = "Fecha hasta:";
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Location = new System.Drawing.Point(69, 30);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(97, 18);
+            this.lblDesde.TabIndex = 5;
+            this.lblDesde.Text = "Fecha desde:";
+            // 
+            // fechaHasta
+            // 
+            this.fechaHasta.Location = new System.Drawing.Point(172, 97);
+            this.fechaHasta.Name = "fechaHasta";
+            this.fechaHasta.Size = new System.Drawing.Size(200, 24);
+            this.fechaHasta.TabIndex = 4;
+            // 
+            // fechaDesde
+            // 
+            this.fechaDesde.Location = new System.Drawing.Point(172, 30);
+            this.fechaDesde.Name = "fechaDesde";
+            this.fechaDesde.Size = new System.Drawing.Size(200, 24);
+            this.fechaDesde.TabIndex = 3;
+            // 
             // lblProfesional
             // 
             this.lblProfesional.AutoSize = true;
-            this.lblProfesional.Location = new System.Drawing.Point(261, 51);
+            this.lblProfesional.Location = new System.Drawing.Point(498, 25);
             this.lblProfesional.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfesional.Name = "lblProfesional";
             this.lblProfesional.Size = new System.Drawing.Size(87, 18);
@@ -80,7 +121,7 @@
             // cboProfesional
             // 
             this.cboProfesional.FormattingEnabled = true;
-            this.cboProfesional.Location = new System.Drawing.Point(356, 48);
+            this.cboProfesional.Location = new System.Drawing.Point(593, 25);
             this.cboProfesional.Margin = new System.Windows.Forms.Padding(4);
             this.cboProfesional.Name = "cboProfesional";
             this.cboProfesional.Size = new System.Drawing.Size(197, 26);
@@ -119,6 +160,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReportePrXP";
             this.Text = "Listado de Practicas por Profesional";
@@ -140,6 +182,10 @@
         private System.Windows.Forms.Button btnGenerar;
         private consultorio_odontologicoTodas Consultorio_OdontologicoTodas;
         private System.Windows.Forms.BindingSource consultorioOdontologicoTodasBindingSource;
+        private System.Windows.Forms.Label lblHasta;
+        private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.DateTimePicker fechaHasta;
+        private System.Windows.Forms.DateTimePicker fechaDesde;
         //private consultorio_odontologicoDataSet3TableAdapters.profesionalTableAdapter profesionalTableAdapter1;
     }
 }

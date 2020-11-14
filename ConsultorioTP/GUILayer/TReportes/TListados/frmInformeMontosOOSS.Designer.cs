@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInformeMontosOOSS));
             this.consultorioOdontologicoTodasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Consultorio_OdontologicoTodas = new Consultorio.GUILayer.consultorio_odontologicoTodas();
             this.dsMontosOOSSBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,9 +63,6 @@
             // 
             // rpvMontos
             // 
-            reportDataSource1.Name = "DataSetMontos";
-            reportDataSource1.Value = this.consultorioOdontologicoTodasBindingSource;
-            this.rpvMontos.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvMontos.LocalReport.ReportEmbeddedResource = "Consultorio.GUILayer.Informes.informeMontosOOSS.rdlc";
             this.rpvMontos.Location = new System.Drawing.Point(13, 137);
             this.rpvMontos.Name = "rpvMontos";
@@ -143,8 +140,9 @@
             this.ClientSize = new System.Drawing.Size(810, 727);
             this.Controls.Add(this.grpFiltros);
             this.Controls.Add(this.rpvMontos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInformeMontosOOSS";
-            this.Text = "frmInformeMontosOOSS";
+            this.Text = "Visualizador de Informe";
             this.Load += new System.EventHandler(this.frmInformeMontosOOSS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.consultorioOdontologicoTodasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Consultorio_OdontologicoTodas)).EndInit();

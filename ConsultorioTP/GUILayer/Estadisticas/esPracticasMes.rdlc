@@ -40,7 +40,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>consultorio_odontologicoTodas</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\54266\Desktop\2020\PAV\CONSUL\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\usuario\Source\Repos\LaliParrucci\Consultoriotp\ConsultorioTP\GUILayer\consultorio_odontologicoTodas.xsd</rd:SchemaPath>
         <rd:TableName>practica</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -402,7 +402,7 @@
             </ChartNoDataMessage>
             <DataSetName>DatosPractica</DataSetName>
             <Top>0.89958cm</Top>
-            <Left>0.73766cm</Left>
+            <Left>1.05515cm</Left>
             <Height>6.29328cm</Height>
             <Width>8.87583cm</Width>
             <Style>
@@ -575,7 +575,7 @@
             </TablixRowHierarchy>
             <DataSetName>DatosPractica</DataSetName>
             <Top>2.40453cm</Top>
-            <Left>11.57676cm</Left>
+            <Left>11.89425cm</Left>
             <Height>1.2cm</Height>
             <Width>5cm</Width>
             <ZIndex>1</ZIndex>
@@ -585,11 +585,24 @@
               </Border>
             </Style>
           </Tablix>
+          <Line Name="Line1">
+            <Top>0.17639cm</Top>
+            <Height>0cm</Height>
+            <Width>18.34474cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Color>Turquoise</Color>
+                <Style>Solid</Style>
+                <Width>5pt</Width>
+              </Border>
+            </Style>
+          </Line>
         </ReportItems>
         <Height>3.10267in</Height>
         <Style />
       </Body>
-      <Width>7.63901in</Width>
+      <Width>7.233in</Width>
       <Page>
         <PageHeader>
           <Height>2.54cm</Height>
@@ -615,7 +628,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>1.37266cm</Top>
-              <Left>4.78578cm</Left>
+              <Left>5.10327cm</Left>
               <Height>0.6cm</Height>
               <Width>6.97146cm</Width>
               <Style>
@@ -632,6 +645,7 @@
               <Source>Embedded</Source>
               <Value>Logocompleto</Value>
               <Sizing>FitProportional</Sizing>
+              <Left>0.31749cm</Left>
               <Height>2.36361cm</Height>
               <Width>2.08208cm</Width>
               <ZIndex>1</ZIndex>
@@ -641,6 +655,36 @@
                 </Border>
               </Style>
             </Image>
+            <Textbox Name="Textbox2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value />
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.42016cm</Top>
+              <Left>14.91933cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style>
             <Border>
@@ -668,8 +712,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>1.63724cm</Top>
-              <Left>15.92474cm</Left>
+              <Top>1.18745cm</Top>
+              <Left>15.84474cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <Style>
@@ -697,10 +741,41 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>UserID</rd:DefaultName>
-              <Top>1.18745cm</Top>
+              <Top>0.60537cm</Top>
+              <Left>0.31749cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ReportName">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ReportName</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ReportName</rd:DefaultName>
+              <Top>1.42938cm</Top>
+              <Left>0.31749cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
